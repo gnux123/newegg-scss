@@ -1,0 +1,11 @@
+// out: ../css/common.css, compress: true,﻿  includePath: includes/﻿
+@import "compass/compass";
+@import "compass/reset";
+
+@import "_base";
+@import "common/_layout";
+@import "common/_header";
+@import "common/_footer";
+@import "common/_btns";
+@import "common/_pageNums";
+@import "common/_popup";

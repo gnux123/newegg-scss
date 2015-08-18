@@ -1,0 +1,7 @@
+.container {
+    width: $min-width#{px};
+    margin:0 auto;
+    padding-bottom: $gutter#{px};
+
+    @include fontSize();
+}
