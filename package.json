@@ -1,0 +1,13 @@
+{
+  "name": "best-practices",
+  "description": "A package using versioning best-practices",
+  "author": "Charlie Robbins <charlie@nodejitsu.com>",
+  "dependencies": {
+      "del": "^1.2.0",
+      "gulp": "^3.9.0",
+      "gulp-autoprefixer": "^2.3.1",
+      "gulp-sass": "^2.0.4",
+      "gulp-rename": "^1.2.2"
+  },
+  "engine": "node >= 0.4.1"
+}
