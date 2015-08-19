@@ -1,0 +1,60 @@
+@import "_importSCSS";
+
+$BorderWidth:1px;
+$TableWidth:$RWDMinWidth - $BorderWidth * 2;
+$TrWidth:$TableWidth - $BorderWidth * 2;
+$SevenTdWidth:$TrWidth - $BorderWidth * 18;
+.AdBox{width:$RWDMinWidth;}
+.TabAreaNoBorder{
+	width:$RWDMinWidth;
+	border:0;
+}
+.BorderTab{
+	border-top:1px solid #d5d5d5;
+}
+.BorderTab:first-child{
+	border-left:1px solid #d5d5d5;
+}
+.SmallBorderTab{
+	margin:10px 0;font-weight: normal;
+}
+
+
+.table{
+	width:$RWDMinWidth;
+	border:1px solid #d5d5d5;
+	line-height: 1.5;
+}
+.tr{width:$TrWidth;}
+.ColorBgTr{background:#f5f5f5;}
+.OtherColortr{background:#ec8b54;}
+.th{
+	border:1px solid #d5d5d5;
+	height:48px;
+	text-align:center;
+	vertical-align: middle;
+}
+.td{
+	border:1px solid #d5d5d5;
+	height:70px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+div.SpecialDeal{
+	span.SpecialDeal{
+		padding: 3px 10px 2px 10px;
+		margin:0;
+	}
+}
+p.RemainDay{font-size:14px;}
+p.Member{line-height:50px;}
+
+.NoBorder{border:0;}
+.Remark{width:100px;}
+.ActivityName{width:300px;}
+.ActivityTime{width:100px;}
+.ActivityNameListTit{ color:#ec7375;font-size:20px;line-height:37px; margin-left:-80px;}
+.Tit{font-size:18px;line-height:25px;}
+
+.ActivityName {text-align: left; padding-left:20px;}

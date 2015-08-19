@@ -1,0 +1,59 @@
+//out: ../css/CategoryGeneral.css, compress: true, includePath: includes/
+@import "_importSCSS";
+
+.content {
+	@media screen and (max-width: 1280px) {
+		margin-left:52px;
+	}
+}
+.content {
+	@media screen and (max-width: 1024px) {
+		margin-left:22px;
+	}
+}
+
+.categoryBanner {
+	margin-bottom:30px;
+	width:$RWDMaxWidth;
+	@media screen and (max-width: 1280px) {
+		width:$RWDMinWidth;
+	}
+	.list .box {
+		@media screen and (max-width: 1280px) {
+			width:30%;
+			margin:0 1%;
+		}
+	}
+}
+
+select {
+	/*padding-right:30px;*/
+}
+.categoryTopBar {
+	@include clearAfter;
+}
+
+.CategoryArea {
+	@include clearAfter;
+	$aside2Width:206px;
+	.aside2 {
+		/*屬性篩選*/
+		float:left;
+		width:$aside2Width;
+	}
+	.subCategory {
+		/*float:right;
+		width:($RWDMaxWidth - $aside2Width);*/
+		@media screen and (max-width: 1280px) {
+			width:($RWDMinWidth - $aside2Width);
+		}
+		.box {
+			width:24%;
+			margin-left:0.75%;
+			@media screen and (max-width: 1280px) {
+				width:32%;
+				margin-left:1%;
+			}
+		}
+	}
+}

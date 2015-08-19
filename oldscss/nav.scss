@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+@import "_importSCSS";
+
+/*下拉*/
+.pullDown{
+	z-index: 4;
+	position: relative;
+	width: 206px;
+    height:486px;
+	float: left;
+}
+.pullDownList{width: 206px;height: 486px;background-color: #e6e4e7;position: relative;z-index: 2;}
+.pullDownList3{width: 206px;height: 386px;background-color: rgba(0,0,0,0);position: relative;z-index: 2;}
+.pullDownList2{
+	width: 206px;
+	height: 516px;
+	background-color: #e6e4e7;
+	position: relative;
+	z-index: 2;
+	margin-top: -30px;
+}
+.pullDownList li{
+	height: 48.5px;
+	/*padding-left: 11px;*/
+	position: relative;
+	line-height: 50px;
+}
+.pullDownList li i{display: inline-block;position:relative;top:4px;margin-right: 10px;margin-left: 20px;left:0;-webkit-transition: margin-left .2s linear;-moz-transition: margin-left .2s linear;-o-transition: margin-left .2s linear; width: 25px;height: 19px;background: url(../img/nav-icon.png) no-repeat;}
+/*.pullDownList li i:hover{display: inline-block;position:relative;top:4px;margin-right: 15px;margin-left: 35px;left:0;-webkit-transition: margin-left .2s linear;-moz-transition: margin-left .2s linear;-o-transition: margin-left .2s linear; width: 25px;height: 19px;background: url(../img/nav-icon-hover.png) no-repeat;}*/
+.pullDownList li.menulihover i{display: inline-block;position:relative;top:4px;margin-right: 15px;margin-left: 35px;left:0;-webkit-transition: margin-left .2s linear;-moz-transition: margin-left .2s linear;-o-transition: margin-left .2s linear; width: 25px;height: 19px;/*background: url(../img/nav-icon-hover.png) no-repeat;*/}
+.pullDownList li.menulihover i{margin-left: 30px;}
+.pullDownList li.menulihover a {color:#fff;border-bottom:0;}
+.pullDownList li i.listi1{background-position: 0 0px}
+.pullDownList li i.listi2{background-position: 0 -50px}
+.pullDownList li i.listi3{background-position: 0 -96px}
+.pullDownList li i.listi4{background-position: 0 -144px}
+.pullDownList li i.listi5{background-position: 0 -190px}
+.pullDownList li i.listi6{background-position: 0 -240px}
+.pullDownList li i.listi7{background-position: 0 -286px}
+.pullDownList li i.listi8{background-position: 0 -334px}
+.pullDownList li i.listi9{background-position: 0 -382px}
+.pullDownList li i.listi10{background-position: 0 -428px}
+
+.pullDownList li a:hover i.listi1{background-position: 0 0px;border-bottom:0;}
+.pullDownList li a:hover i.listi2{background-position: 0 -50px;border-bottom:0;}
+.pullDownList li a:hover i.listi3{background-position: 0 -96px;border-bottom:0;}
+.pullDownList li a:hover i.listi4{background-position: 0 -144px;border-bottom:0;}
+.pullDownList li a:hover i.listi5{background-position: 0 -190px;border-bottom:0;}
+.pullDownList li a:hover i.listi6{background-position: 0 -240px;border-bottom:0;}
+.pullDownList li a:hover i.listi7{background-position: 0 -286px;border-bottom:0;}
+.pullDownList li a:hover i.listi8{background-position: 0 -334px;border-bottom:0;}
+.pullDownList li a:hover i.listi9{background-position: 0 -382px;border-bottom:0;}
+.pullDownList li a:hover i.listi10{background-position: 0 -428px;border-bottom:0;}
+/*以下代码是使用图片精灵需要图片的定位信息*/
+/*.pullDownList li i.listi1{background-position: 0 -1240px}   
+.pullDownList li i.listi2{background-position: 0 -1271px}
+.pullDownList li i.listi3{background-position: 0 -1302px}
+.pullDownList li i.listi4{background-position: 0 -1332px}
+.pullDownList li i.listi5{background-position: 0 -1362px}
+.pullDownList li i.listi6{background-position: 0 -1395px}
+.pullDownList li i.listi7{background-position: 0 -1425px}
+.pullDownList li i.listi8{background-position: 0 -1457px}
+.pullDownList li i.listi9{background-position: 0 -1489px}
+.pullDownList li i.listi10{background-position: 0 -1519px}
+.pullDownList li i.listi11{background-position: 0 -1552px}
+.pullDownList li i.listi12{background-position: 0 -1582px}
+.pullDownList li i.listi13{background-position: 0 -1612px}
+.pullDownList li i.listi14{background-position: 0 -1644px}
+.pullDownList li i.listi15{background-position: 0 -1674px}*/
+.pullDownList li a{
+    display:block;
+	color: #5E5E63;
+	font-size: 20px;
+	text-decoration: none;
+	border-bottom:0;
+}
+.pullDownList li a:hover{color: #fff;}
+.pullDownList li a:hover i{display: inline-block;position:relative;top:4px;margin-right: 15px;left:0;-webkit-transition: margin-left .2s linear;-moz-transition: margin-left .2s linear;-o-transition: margin-left .2s linear; width: 25px;height: 19px;/*background: url(../img/nav-icon-hover.png) no-repeat;*/}
+.pullDownList li.menuliselected{background: #eda16f;}
+.pullDownList li.menuliselected span{position: absolute;z-index: 1;}
+.pullDownList li.menulihover{background: #eda16f;}
+
+.pullDownList li span{display: inline-block; width: 0;height: 0;position: absolute;top: 12px;right: 8px;}
+.pullDownList li.menulihover span{top: 10px;right: -20px;border-left: 22px solid #eda16f;border-top: 15px solid transparent;border-bottom: 15px solid transparent;border-right: 0;}
+/*下拉详细列表具体分类*/
+.yMenuListCon{width: 600px;height:486px;position: absolute;top: 0px;left: 217px;overflow: scroll;overflow-x:hidden;}
+.yMenuListCon2{width: 600px;height:486px;position: absolute;top: -30px;left: 217px;overflow: scroll;}
+.yMenuListCon p{width:690px;color: #656565;font-size: 14px;margin: 0;float: left;}
+.yMenuListCon p a{
+	color: #7f7e7e;
+	padding: 0 8px 1px 5px;
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+	text-decoration: none;
+	border-right: thin solid #656565;
+	margin-right: 4px;
+	border-bottom:0;
+}
+.yMenuListCon p a.ecolor610{color: #a90000;border-bottom:0;}
+.yMenuListCon p a:hover{color: #eda16f;text-decoration: underline;border-bottom:0;}
+/*.yMenuListConin{background: #fff;opacity: 0.9; -moz-opacity:0.9;filter: alpha(opacity=90);padding:0 20px;width: 540px;height:auto;position: absolute;left: 0;top: 0;}*/
+	.yMenuListConin h2, .yMenuListConin h2 a {
+	font-size: 24px;
+	color: #8dc88c;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	width: 550px;
+	border-bottom:0;
+}
+.yMenuLCinList{
+	overflow: hidden;
+	width: 690px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+	/*详细分类标题*/
+	.yMenuLCinList h3{
+	font-size: 17px;
+	color: #233223;
+	position: relative;
+	width: auto;
+	margin: 0 auto 2px;
+	float: left;
+	font-weight: bold;
+}
+	.yMenuLCinList h3 a{font-size: 17px;color: #233223;position: absolute;bottom: 0px;display: block;border-bottom:0;}
+	.yMenuLCinList h3 .yListMore{color: #666666;font-weight: normal;right: 0;with: 40px;height: 20px;}
+	.yMenuLCinList h3 .yListName{-webkit-transition: left .2s linear;-moz-transition: left .2s linear;-o-transition: left .2s linear;display: block;width: 90px;height: 20px;line-height: 20px;padding-top: 17px;padding-left: 30px;left: 0;background:url(../img/yListNameicon.png) no-repeat 0 5px;}
+	.yMenuLCinList h3 .yListName:hover{left:6px;}
+/*导航   end*/
+/*顶部    end*/

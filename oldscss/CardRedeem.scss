@@ -1,0 +1,133 @@
+@import "_importSCSS";
+
+.AdBox{
+	height:612px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	margin: 0;
+	background-color:#0ca39a;
+	position:relative;
+	.AdImg{
+		width:1280px;
+		height:609px;
+		margin: 0 auto;
+		background:url(/Themes/img/CreditCaredProgram/CardInstallment_Bg_01.jpg) no-repeat top center;
+		position: relative;
+	}
+}
+.ShoppingGoBtn{
+	position:absolute;
+	top:28px;
+	right:50px;
+}
+.logo{
+	position:absolute;
+	display:block;
+	left:53px;
+}
+
+$BorderWidth:1px;
+$OneTabWidth:( $RWDMinWidth - $BorderWidth *8 ) / 4;
+.mainPadding{
+	min-width:$RWDMinWidth;
+	width:100%;
+	padding:0;
+}
+.TabArea{
+	margin-top: -46px;
+	margin-bottom:50px;
+	border:0;
+	width:$RWDMinWidth;
+}
+.Tab{
+	width:$OneTabWidth;
+	border:1px solid #d5d5d5;
+	border-bottom:0;
+}
+.RadiusTab{
+	background-color:#fff;
+	border-bottom: 0;
+	a,a:visited{color:#8a8a8a;}
+	a:hover{color:#fff;}
+}
+.TabSelected{
+	background: #ec8B54;
+	a,a:visited{color:#fff;}
+}
+
+.table{
+	width:$RWDMinWidth;
+	margin:20px 0;
+	border:none;
+}
+.tr{border:1px solid;}
+.th{
+	text-align:center;
+	height:48px;
+}
+.td{
+	border:1px solid;
+	height:98px;
+	text-align:center;
+	text-align:center;
+	img{
+		display:block;
+		margin:0 auto;
+	}
+}
+.grayBorder{border-color:#d5d5d5;}
+.UnderLine{
+	cursor:pointer;
+}
+
+.BottomExplanationArea{
+	&>p{font-size:18px;line-height:25px;}
+	li.list{list-style-type:decimal;}
+}
+
+//LightBox CSS
+.BankName{
+	padding:13px 0;
+	border-bottom:1px solid #d5d5d5;
+	img{
+		display:block;
+		margin:0 auto;
+		height:50px;
+		width:auto;
+	}
+}
+.Style-2{
+	img{
+		display:block;
+		margin:0 auto;
+		width:100%;
+	}
+	p{
+		font-size:16px;
+		span{
+			font-size:16px;
+			margin:0 5px;
+			color:#000;
+		}
+	}
+	.ul{
+		margin:30px 0;
+		.item{
+			list-style-type:decimal;
+			list-style-position:inside;
+			margin:10px 22px;
+			line-height:18px;
+			font-size:14px;
+		}
+	}
+}
+
+/*footer CSS*/
+.simpleFooterArea{
+	text-align:center;
+	padding:5px auto;
+	h2,p{
+		display: inline;
+		margin-right:10px;
+	}
+}

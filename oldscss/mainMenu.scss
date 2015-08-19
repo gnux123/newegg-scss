@@ -1,0 +1,120 @@
+﻿@charset "utf-8";
+@import "_importSCSS";
+
+/* nav.css */
+.yMenuListCon{width:738px;height:486px;position: absolute;top: 0px;left: 206px;overflow: auto;overflow-x:hidden;}
+.yMenuListConin h2, .yMenuListConin h2 a {
+	font-size: 24px;
+	color: #8dc88c;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	width: 550px;
+	border-bottom:0;
+}
+
+.pullDownList {
+	li {
+		&:hover, &.menulihover {
+			i {
+				background-image:url(/Themes/img/nav-icon-hover.png);
+			}
+		}
+	}
+	a {}
+	i {
+		background-image:url(/Themes/img/nav-icon.png);
+		background-repeat:no-repeat;
+		/*設計風尚*/&.storeClothing {
+			background-position: 0 0;
+		}
+		/*國際精品*/&.storeFashion {
+			background-position: 0 -50px;
+		}
+		/*家電用品*/&.storeappliance {
+			background-position: 0 -96px;
+		}
+		/*居家生活*/&.storeLiving {
+			background-position: 0 -144px;
+		}
+		/*運動健身*/&.storeHealth {
+			background-position: 0 -190px;
+		}
+		/*戶外休旅*/&.storeOutdoor {
+			background-position: 0 -240px;
+		}
+		/*電腦周邊*/&.storeComputer {
+			background-position: 0 -286px;
+		}
+		/*數位3C*/&.store3C {
+			background-position: 0 -334px;
+		}
+		/*好食市集*/&.storeFoods {
+			background-position: 0 -382px;
+		}
+		/*美蛋直購*/&.storeNeweggUSA {
+			background-position: 0 -428px;
+		}
+	}
+}
+
+.yMenuListConin {
+	display:none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding:0 20px;
+	width: 737px;
+	/*height:486px;*/
+	background:#fff;
+	background:rgba(255,255,255,.95);
+	h2 {
+		a {
+			text-decoration:underline;
+			border-bottom:0;
+		}
+	}
+	.pullDownUS & {
+		height:400px;
+	}
+}
+
+/*Category color*/
+a {
+	/*設計風尚*/.yMenuListCon .yMenuListConin.storeClothing h2 & {
+		color:#C4C2C2;
+	}
+	/*國際精品*/.yMenuListCon .yMenuListConin.storeFashion h2 & {
+		color:#D6AE7A;
+	}
+	/*家電用品*/.yMenuListCon .yMenuListConin.storeappliance h2 & {
+		color:#82C5ED;
+	}
+	/*居家生活*/.yMenuListCon .yMenuListConin.storeLiving h2 & {
+		color:#87CDCF;
+	}
+	/*運動健身*/.yMenuListCon .yMenuListConin.storeHealth h2 & {
+		color:#8DC88C;
+	}
+	/*戶外休旅*/.yMenuListCon .yMenuListConin.storeOutdoor h2 & {
+		color:#90DDB4;
+	}
+	/*電腦周邊*/.yMenuListCon .yMenuListConin.storeComputer h2 & {
+		color:#669BD3;
+	}
+	/*數位3C*/.yMenuListCon .yMenuListConin.store3C h2 & {
+		color:#70B0E1;
+	}
+	/*好食市集*/.yMenuListCon .yMenuListConin.storeFoods h2 & {
+		color:#F29F7F;
+	}
+	/*美蛋直購*/.yMenuListCon .yMenuListConin.storeNeweggUSA h2 & {
+		color:#EC7375;
+	}
+}
+
+.banner-ad2 {
+	background:#e6e4e7;
+	width:206px;
+	height:36px;
+	overflow:hidden;
+}
