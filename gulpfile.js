@@ -3,14 +3,14 @@ var gulp = require('gulp')
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     del = require('del');
-    //git = require('git-semver-tags');
+    git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
 
-// gulp.task('rev',function(){
-//     git(function(err,data){ console.log(data); });
-//
-// });
+gulp.task('rev',function(){
+    git(function(err,data){ console.log(data); });
+
+});
 
 gulp.task('sass', ['clean'], function(){
     gulp.src('./scss/{*/,**/}*.scss')
