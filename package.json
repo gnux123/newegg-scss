@@ -1,7 +1,7 @@
 {
-  "name": "best-practices",
-  "description": "A package using versioning best-practices",
-  "author": "Charlie Robbins <charlie@nodejitsu.com>",
+  "name": "newegg-scss enviorment",
+  "description": "A package for newegg company use.",
+  "author": "vincent.C.sue <gnux123@gmail.com>",
   "dependencies": {
       "del": "^1.2.0",
       "gulp": "^3.9.0",
