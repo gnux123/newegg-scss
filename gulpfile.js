@@ -3,8 +3,14 @@ var gulp = require('gulp')
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     del = require('del');
+    //git = require('git-semver-tags');
 
-var vers = "1.0.0.0.0";
+var vers = '1.0.0'; //version
+
+// gulp.task('rev',function(){
+//     git(function(err,data){ console.log(data); });
+//
+// });
 
 gulp.task('sass', ['clean'], function(){
     gulp.src('./scss/{*/,**/}*.scss')
@@ -13,19 +19,19 @@ gulp.task('sass', ['clean'], function(){
               outputStyle: 'nested'
           }).on('error', sass.logError)
         )
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('./.csscache'))
         .pipe(rename({ suffix: "-" + vers }))
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', function () {
+gulp.task('sass:watch', ['clean'], function () {
   gulp.watch('./scss/{*/,**/}*.scss', ['sass']);
 });
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['.csscache'], {read: false}, cb);
+    del(['.csscache','css'], {read: false}, cb);
 });
 
 
