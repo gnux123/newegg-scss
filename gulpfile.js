@@ -7,30 +7,36 @@ var gulp = require('gulp')
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
+var paths = {
+  sass: './scss/{*/,**/}*.scss',
+  cache: './.csscache',
+  css: './css',
+  include: './scss/includes/'
+}
 
 gulp.task('sass', ['clean'], function(){
-    gulp.src('./scss/{*/,**/}*.scss')
+    gulp.src(paths.sass)
         .pipe(sass({
-              includePaths: ['./scss/includes/'],
+              includePaths: [paths.include],
               outputStyle: 'expanded'
           }).on('error', sass.logError)
         )
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('./.csscache'))
+        .pipe(gulp.dest(paths.cache))
         .pipe(rename({ suffix: "-" + vers }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest(paths.css));
 });
 
 //sass watch livetype
 gulp.task('sass:watch', ['clean'], function () {
-  gulp.watch('./scss/{*/,**/}*.scss', ['sass']);
+  gulp.watch(paths.sass, ['sass']);
 });
 
 //cssminify settings
 gulp.task('cssmin', function(){
-  gulp.src('./css/*.css')
+  gulp.src(paths.css+'/*.css')
       .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest(paths.css));
 });
 
 //clean temp
