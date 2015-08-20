@@ -1,3 +1,5 @@
+
+
 .topper .searchbar .input { background:#fff; }
 
 .banner {
@@ -73,12 +75,20 @@
 
 }
 
+/* # 首頁欄位-右邊
+An example of a CSS file using most of StyleDocco's features.
+
+    <div class="IndexRightBanner"><img src=""></div>
+*/
+
+
 .IndexRightBanner {
 	position:relative;
 	z-index:1;
 	width:223px;
 	height:520px;
 	overflow:hidden;
+    background:#ccc;
 	img {
 		display:block;
 	}

@@ -5,7 +5,7 @@ var gulp = require('gulp')
     del = require('del'),
     minifyCss = require('gulp-minify-css'),
     concatCss = require('gulp-concat-css'),
-    hologram = require('gulp-hologram');
+    styleguide = require('gulp-styledocco');
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
@@ -32,33 +32,33 @@ gulp.task('sass', function(){
 
 //sass watch livetype
 gulp.task('sass:watch', function () {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.sass, ['sass','styleguide']);
 });
 
 //cssminify settings
 gulp.task('cssmin', function(){
-    gulp.src('./css/*.css')
+    gulp.src(paths.css+'/*.css')
       .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest(paths.css));
 });
 
 //styleguide build
 gulp.task('styleguide', function(){
-    gulp.src('./.csscache/*.css')
-        .pipe(concatCss('styleguide.css'))
-        .pipe(gulp.dest(paths.styleguide))
-        .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest(paths.styleguide));
+    gulp.src(paths.cache+'/*.css')
+        .pipe(styleguide({
+          out: 'styleguide',
+          name: 'Newegg-CSS documents',
+          'no-minify': true
+        }));
 });
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['.csscache','css'], {read: false}, cb);
+    del(['css'], {read: false}, cb);
 });
 
+//watch task
+gulp.task('watch', ['clean','sass:watch']);
 
-gulp.task('default', ['clean'], function(){
-    gulp.start('sass:watch');
-});
-
-gulp.task('build', ['styleguide','cssmin']);
+//build task
+gulp.task('build', ['clean','sass','styleguide','cssmin']);
