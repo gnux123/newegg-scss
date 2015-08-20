@@ -5,9 +5,12 @@
 #<p></p>
 ##首頁Banner樣式
     <div class="banner">
+        <div class="banner-img">
+            <a href="#"><img src="http://placehold.it/744x486"></a>
+        </div>
         <div class="tab">
             <ul>
-                <li><span class="arrow"></span>nav1</li>
+                <li class="selected"><span class="arrow"></span>nav1</li>
                 <li><span class="arrow"></span>nav2</li>
                 <li><span class="arrow"></span>nav3</li>
                 <li><span class="arrow"></span>nav4</li>
@@ -63,13 +66,14 @@
             position:absolute;
             top:-4px;
             left:50%;
+            margin-left:-2.5px;
             width: 0;
             height: 0;
             border-style: solid;
             border-width: 0 4px 5px 4px;
-            border-color: transparent transparent #9d9d9d transparent;
+            border-color: transparent transparent rgba(217, 217, 217, 0.8) transparent;
             line-height: 0px;
-            _border-color: #000 #000 #9d9d9d #000;
+            _border-color: #000 #000 rgba(217, 217, 217, 0.8) #000;
             _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
         }
 

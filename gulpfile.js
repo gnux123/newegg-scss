@@ -10,6 +10,7 @@ var gulp = require('gulp')
 
 var vers = '1.0.0'; //version
 var paths = {
+  Address: '.', //'D:/projects/NETWWebsite2.0/01_Branch/Branch_Task20150820-CSS/TWNewEgg.ECWeb/TWNewEgg.ECWeb/Themes'
   sass: './scss/{*/,**/}*.scss',
   cache: './.csscache',
   css: './css',
@@ -54,7 +55,7 @@ gulp.task('styleguide', function(){
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['css'], {read: false}, cb);
+    del([paths.css], {force: true, read: false}, cb);
 });
 
 //watch task
