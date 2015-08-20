@@ -3,7 +3,9 @@ var gulp = require('gulp')
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     del = require('del'),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    concatCss = require('gulp-concat-css'),
+    hologram = require('gulp-hologram');
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
@@ -11,10 +13,11 @@ var paths = {
   sass: './scss/{*/,**/}*.scss',
   cache: './.csscache',
   css: './css',
+  styleguide: './styleguide/styles',
   include: './scss/includes/'
 }
 
-gulp.task('sass', ['clean'], function(){
+gulp.task('sass', function(){
     gulp.src(paths.sass)
         .pipe(sass({
               includePaths: [paths.include],
@@ -28,15 +31,24 @@ gulp.task('sass', ['clean'], function(){
 });
 
 //sass watch livetype
-gulp.task('sass:watch', ['clean'], function () {
+gulp.task('sass:watch', function () {
   gulp.watch(paths.sass, ['sass']);
 });
 
 //cssminify settings
 gulp.task('cssmin', function(){
-  gulp.src(paths.css+'/*.css')
+    gulp.src('./css/*.css')
       .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(gulp.dest(paths.css));
+      .pipe(gulp.dest('./css'));
+});
+
+//styleguide build
+gulp.task('styleguide', function(){
+    gulp.src('./.csscache/*.css')
+        .pipe(concatCss('styleguide.css'))
+        .pipe(gulp.dest(paths.styleguide))
+        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.styleguide));
 });
 
 //clean temp
@@ -49,6 +61,4 @@ gulp.task('default', ['clean'], function(){
     gulp.start('sass:watch');
 });
 
-gulp.task('build', function() {
-     gulp.start('cssmin');
-});
+gulp.task('build', ['styleguide','cssmin']);
