@@ -1,7 +1,22 @@
-
-
 .topper .searchbar .input { background:#fff; }
 
+
+/*
+#<p></p>
+##首頁Banner樣式
+    <div class="banner">
+        <div class="tab">
+            <ul>
+                <li><span class="arrow"></span>nav1</li>
+                <li><span class="arrow"></span>nav2</li>
+                <li><span class="arrow"></span>nav3</li>
+                <li><span class="arrow"></span>nav4</li>
+                <li><span class="arrow"></span>nav5</li>
+                <li><span class="arrow"></span>nav6</li>
+            </ul>
+        </div>
+    </div>
+*/
 .banner {
     @include float(left);
     margin-left:0;
@@ -75,10 +90,12 @@
 
 }
 
-/* # 首頁欄位-右邊
+/*
+#<p></p>
+##首頁欄位-右邊
 An example of a CSS file using most of StyleDocco's features.
 
-    <div class="IndexRightBanner"><img src=""></div>
+    <div class="IndexRightBanner"><img src="http://placehold.it/223x520"></div>
 */
 
 
@@ -93,6 +110,7 @@ An example of a CSS file using most of StyleDocco's features.
 		display:block;
 	}
 }
+
 
 .indexBoxArea {
 	@include pie-clearfix;

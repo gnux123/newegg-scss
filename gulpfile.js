@@ -47,7 +47,7 @@ gulp.task('styleguide', function(){
     gulp.src(paths.cache+'/*.css')
         .pipe(styleguide({
           out: 'styleguide',
-          name: 'Newegg-CSS documents',
+          name: 'Newegg-CSS documents v'+ vers,
           'no-minify': true
         }));
 });
