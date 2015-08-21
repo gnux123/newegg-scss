@@ -27,8 +27,9 @@ gulp.task('sass', function(){
         )
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest(paths.cache))
-        .pipe(rename({ suffix: "-" + vers }))
         .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.styleguide))
+        .pipe(rename({ suffix: "-" + vers }))
         .pipe(gulp.dest(paths.css));
 });
 
@@ -37,12 +38,20 @@ gulp.task('sass:watch', function () {
   gulp.watch(paths.sass, ['sass','styleguide']);
 });
 
+//concatcss
+// gulp.task('concat-common-css', function(){
+//     gulp.src(paths.cache+'/common.css')
+//         .pipe(gulp.dest(paths.styleguide))
+//         .pipe(minifyCss({compatibility: 'ie8'});
+// });
+
 //styleguide build
 gulp.task('styleguide', function(){
     gulp.src('./.csscache/*.css')
         .pipe(styleguide({
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
+          include: ['styles/common.css'],
           'no-minify': true
         }));
 });
