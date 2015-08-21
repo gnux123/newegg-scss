@@ -1,4 +1,19 @@
-// out: ../css/common.css, compress: true,﻿  includePath: includes/﻿
+/*##commom.css說明
+common.css為全站共用的css。不管在哪裡均要load進這支CSS。
+<p>1. compass reset style<br/>
+   2. 全站版面配置<br/>
+   3. Header樣式<br/>
+   4. Footer樣式<br/>
+   5. 全站按鈕樣式<br/>
+   6. 全站頁碼樣式<br/>
+   7. 全站彈跳視窗樣式
+</p>
+*/
+
+/*
+#Compass reset css
+放置在common.css裡面共用，用來統一清除所有頁面html tag樣式。
+*/
 @import "compass/compass";
 @import "compass/reset";
 
@@ -9,3 +24,5 @@
 @import "common/_btns";
 @import "common/_pageNums";
 @import "common/_popup";
+
+@import "common/_product";

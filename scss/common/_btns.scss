@@ -1,0 +1,9 @@
+/* Provides extra visual weight and identifies the primary action in a set of buttons.
+
+    <button class="btn primary">Primary</button>
+*/
+.btn.primary {
+    background: steelblue;
+    color: snow;
+    border: 2px outset steelblue;
+}

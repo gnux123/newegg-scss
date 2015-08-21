@@ -1,48 +1,68 @@
-var gulp = require('gulp')
+var gulp = require('gulp'),
+    del = require('del'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    del = require('del'),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    concatCss = require('gulp-concat-css'),
+    styleguide = require('gulp-styledocco');
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
+var paths = {
+  Address: '.', //'D:/projects/NETWWebsite2.0/01_Branch/Branch_Task20150820-CSS/TWNewEgg.ECWeb/TWNewEgg.ECWeb/Themes'
+  sass: './scss/{*/,**/}*.scss',
+  cache: './.csscache',
+  css: './css',
+  styleguide: './styleguide/styles',
+  include: './scss/includes/'
+}
 
-gulp.task('sass', ['clean'], function(){
-    gulp.src('./scss/{*/,**/}*.scss')
+gulp.task('sass', function(){
+    gulp.src(paths.sass)
         .pipe(sass({
-              includePaths: ['./scss/includes/'],
+              includePaths: [paths.include],
               outputStyle: 'expanded'
           }).on('error', sass.logError)
         )
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('./.csscache'))
+        .pipe(gulp.dest(paths.cache))
+        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.styleguide))
         .pipe(rename({ suffix: "-" + vers }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest(paths.css));
 });
 
 //sass watch livetype
-gulp.task('sass:watch', ['clean'], function () {
-  gulp.watch('./scss/{*/,**/}*.scss', ['sass']);
+gulp.task('sass:watch', function () {
+  gulp.watch(paths.sass, ['sass','styleguide']);
 });
 
-//cssminify settings
-gulp.task('cssmin', function(){
-  gulp.src('./css/*.css')
-      .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(gulp.dest('./css'));
+//concatcss
+// gulp.task('concat-common-css', function(){
+//     gulp.src(paths.cache+'/common.css')
+//         .pipe(gulp.dest(paths.styleguide))
+//         .pipe(minifyCss({compatibility: 'ie8'});
+// });
+
+//styleguide build
+gulp.task('styleguide', function(){
+    gulp.src('./.csscache/*.css')
+        .pipe(styleguide({
+          out: 'styleguide',
+          name: 'Newegg-CSS documents v'+ vers,
+          include: ['styles/common.css','styles/RWD.css'],
+          'no-minify': true
+        }));
 });
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['.csscache','css'], {read: false}, cb);
+    del([paths.css], {force: true, read: false}, cb);
 });
 
+//build task
+gulp.task('build', ['clean','sass','styleguide']);
 
-gulp.task('default', ['clean'], function(){
-    gulp.start('sass:watch');
-});
-
-gulp.task('build', function() {
-     gulp.start('cssmin');
-});
+//watch task
+gulp.task('watch', ['clean','sass:watch']);

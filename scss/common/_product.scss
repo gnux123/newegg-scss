@@ -1,0 +1,123 @@
+.box-extend {
+    //float:left;
+    margin-left:10px;
+    margin-bottom:10px;
+    border:1px solid #dfdfdf;
+
+    .pic {
+		margin:10px auto 5px;
+		text-align:center;
+    }
+
+    .pic a { border-bottom:0; }
+}
+
+.box {
+
+    a { text-decoration: none; }
+    .pic,
+    .txt {
+    	width:$prod-s-width#{px};
+    }
+
+	.pic {
+		height:$prod-s-width#{px};
+
+		a { display:block; }
+		img {
+            width:100%;
+            height:100%;
+		}
+	}
+
+	.txt {
+		@include pie-clearfix;
+        margin:0 auto;
+        margin-top:5px;
+
+		@include fontSize($defFont);
+		color:#666;
+
+        a { @include pie-clearfix; }
+	}
+
+    h3,
+    .marketPrice,
+    .price {
+		@include wrapWord;
+		line-height:20px;
+    }
+
+	h3 {
+        width:94%;
+		height:40px;
+        padding: 0 3%;
+        margin-bottom: 5px;
+		overflow:hidden;
+	}
+
+	.marketPrice {
+        @include float(left);
+		margin:0 5px;
+
+		font-size:13px;
+		text-decoration:line-through;
+		color:#b3b3b3;
+	}
+
+	.price {
+        @include float(right);
+		margin:0 5px;
+
+		font-weight:bold;
+		color:#c94141;
+	}
+
+	.specSelect {
+		margin:15px auto;
+		width:170px;
+		select {
+			width:170px;
+		}
+	}
+
+    .chooseBar {
+		$chooseBarHeight:40px;
+		@include pie-clearfix;
+		@extend .clear;
+		height:$chooseBarHeight;
+		border-top:1px solid #d8d8d8;
+		line-height:$chooseBarHeight;
+		.numTit {
+			float:left;
+			margin-left:13px;
+		}
+		.numTxt {
+			float:left;
+		}
+		select {
+			margin-top:-2px;
+			width:60px;
+			background-color:#fff;
+		}
+		.status {
+			float:right;
+			margin-right:13px;
+			.btn {
+				padding:2px 10px;
+				font-size:13px;
+			}
+			.btn-selected {
+				background:#f60;
+			}
+		}
+	}
+
+	&.choose {
+		border-color:#fbb486;
+		.chooseBar {
+			background:#fbb486;
+			border-color:#fbb486;
+		}
+	}
+}
