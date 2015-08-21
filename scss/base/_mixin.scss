@@ -2,3 +2,8 @@
   font-size: $size#{px}; //Fallback in px
   font-size: calculateRem($size);
 }
+
+@mixin wrapWord {
+	word-wrap:break-word;
+	word-break:break-all;
+}

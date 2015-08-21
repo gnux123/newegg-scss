@@ -51,7 +51,7 @@ gulp.task('styleguide', function(){
         .pipe(styleguide({
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
-          include: ['styles/common.css'],
+          include: ['styles/common.css','styles/RWD.css'],
           'no-minify': true
         }));
 });
