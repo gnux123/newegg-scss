@@ -1,8 +1,8 @@
-var gulp = require('gulp')
+var gulp = require('gulp'),
+    del = require('del'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    del = require('del'),
     minifyCss = require('gulp-minify-css'),
     concatCss = require('gulp-concat-css'),
     styleguide = require('gulp-styledocco');
@@ -28,6 +28,7 @@ gulp.task('sass', function(){
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest(paths.cache))
         .pipe(rename({ suffix: "-" + vers }))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest(paths.css));
 });
 
@@ -36,16 +37,9 @@ gulp.task('sass:watch', function () {
   gulp.watch(paths.sass, ['sass','styleguide']);
 });
 
-//cssminify settings
-gulp.task('cssmin', function(){
-    gulp.src(paths.css+'/*.css')
-      .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(gulp.dest(paths.css));
-});
-
 //styleguide build
 gulp.task('styleguide', function(){
-    gulp.src(paths.cache+'/*.css')
+    gulp.src('./.csscache/*.css')
         .pipe(styleguide({
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
@@ -58,8 +52,8 @@ gulp.task('clean', function(cb){
     del([paths.css], {force: true, read: false}, cb);
 });
 
+//build task
+gulp.task('build', ['clean','sass','styleguide']);
+
 //watch task
 gulp.task('watch', ['clean','sass:watch']);
-
-//build task
-gulp.task('build', ['clean','sass','styleguide','cssmin']);
