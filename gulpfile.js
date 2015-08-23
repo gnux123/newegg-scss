@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     del = require('del'),
+    copy = require('gulp-copy'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
@@ -9,60 +10,55 @@ var gulp = require('gulp'),
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
-var paths = {
+var _address = {
   Address: '.', //'D:/projects/NETWWebsite2.0/01_Branch/Branch_Task20150820-CSS/TWNewEgg.ECWeb/TWNewEgg.ECWeb/Themes'
-  sass: './scss/{*/,**/}*.scss',
-  cache: './.csscache',
-  css: './css',
-  styleguide: './styleguide/styles',
-  include: './scss/includes/'
+  sass: 'scss/{*/,**/}*.scss',
+  css: 'css',
+  cache: 'css/_csstmp/',
+  styleguide: 'styleguide/styles/',
+  include: 'scss/includes/'
 }
 
 gulp.task('sass', function(){
-    gulp.src(paths.sass)
-        .pipe(sass({
-              includePaths: [paths.include],
-              outputStyle: 'expanded'
-          }).on('error', sass.logError)
-        )
-        //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest(paths.cache))
-        .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest(paths.styleguide))
-        .pipe(rename({ suffix: "-" + vers }))
-        .pipe(gulp.dest(paths.css));
+  gulp.src(_address.sass)
+      .pipe(sass({
+            includePaths: [_address.include],
+            outputStyle: 'expanded',
+            precision: 10
+        }).on('error', sass.logError)
+      )
+      //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+      .pipe(gulp.dest(_address.cache))
+      .pipe(gulp.dest(_address.styleguide))
+      .pipe(styleguide({
+        out: 'styleguide',
+        name: 'Newegg-CSS documents v'+ vers,
+        include: [_address.styleguide+'/common.css',_address.styleguide+'/RWD.css'],
+        'no-minify': false
+      }));
+
 });
 
-//sass watch livetype
-gulp.task('sass:watch', function () {
-  gulp.watch(paths.sass, ['sass','styleguide']);
-});
-
-//concatcss
-// gulp.task('concat-common-css', function(){
-//     gulp.src(paths.cache+'/common.css')
-//         .pipe(gulp.dest(paths.styleguide))
-//         .pipe(minifyCss({compatibility: 'ie8'});
-// });
-
-//styleguide build
-gulp.task('styleguide', function(){
-    gulp.src('./.csscache/*.css')
-        .pipe(styleguide({
-          out: 'styleguide',
-          name: 'Newegg-CSS documents v'+ vers,
-          include: ['styles/common.css','styles/RWD.css'],
-          'no-minify': true
-        }));
+//cssmin task
+gulp.task('cssmin', function(){
+  gulp.src(_address.cache+'*.css')
+      .pipe(minifyCss({compatibility: 'ie8'}))
+      .pipe(rename({ suffix: "-" + vers }))
+      .pipe(gulp.dest(_address.css));
 });
 
 //clean temp
 gulp.task('clean', function(cb){
-    del([paths.css], {force: true, read: false}, cb);
+    del(['css','styleguide'],cb);
+});
+
+//sass watch livetype
+gulp.task('sass:watch', function () {
+  gulp.watch(_address.sass, ['sass','cssmin']);
 });
 
 //build task
-gulp.task('build', ['clean','sass','styleguide']);
+gulp.task('build',['sass','cssmin']);
 
 //watch task
-gulp.task('watch', ['clean','sass:watch']);
+gulp.task('server', ['clean','sass:watch']);
