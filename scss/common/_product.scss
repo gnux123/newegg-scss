@@ -1,3 +1,21 @@
+/*#[box]單一商品共用模組
+
+   商品單一模組共用樣式設計<br/>
+
+    <div class="box box-extend">
+        <div class="pic">
+            <a href="#"><img src="http://placehold.it/200x200"></a>
+        </div>
+        <a href="#">
+            <div class="txt">
+               <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+               <span class="price">$3,188</span>
+               <span class="marketPrice">$4,680</span>
+            </div>
+        </a>
+    </div>
+*/
+
 .box-extend {
     //float:left;
     margin-left:10px;

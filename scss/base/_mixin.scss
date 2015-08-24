@@ -7,3 +7,13 @@
 	word-wrap:break-word;
 	word-break:break-all;
 }
+
+//select客製化樣式mixin
+@mixin selectorStyle {
+	@include box-sizing(border-box);
+	width:100%;
+	width:90% \9;
+	position:relative;
+	padding:5px;
+	border-style:solid;
+}

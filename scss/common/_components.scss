@@ -1,0 +1,257 @@
+/*#[Form]表單元件基礎樣式 */
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+	padding:5px 10px;
+	*padding:5px 10px;		/*IE7*/
+	margin:0 5px;
+	vertical-align: middle;
+	border-width: 1px;
+	border-color:#808080;
+	border-style: solid;
+	font-family: "Microsoft JhengHei", sans-serif;
+	background-color: white;
+	outline: none;
+}
+
+
+/*#[Input]輸入框樣式
+
+###[input_xs]
+
+    <input type="text" class="input_xs" id="" name="" tabindex="4" maxlength="" placeholder="名字" value="">
+
+###[input_sm]
+
+    <input type="text" class="input_sm" id="" name="" tabindex="4" maxlength="" placeholder="名字" value="">
+
+###[input_md]
+
+    <input type="text" class="input_md" id="" name="" tabindex="4" maxlength="" placeholder="名字" value="">
+
+###[input_lg]
+
+    <input type="text" class="input_lg" id="" name="" tabindex="4" maxlength="" placeholder="名字" value="">
+
+###[input_radius_md]
+
+    <input type="text" class="input_radius_md" id="" name="" tabindex="4" maxlength="" placeholder="名字" value="">
+*/
+.input_xs {
+	width:45px;
+}
+.input_sm {
+	width:100px;
+}
+.input_md {
+	width:235px;
+}
+.input_lg {
+	width:700px;
+}
+.input_radius_md {
+	width:200px;
+	border-radius:7px;
+}
+
+/*#[selector]select元件樣式
+
+###[select_sm]
+
+    <select class="select_sm" style="background: url(http://www.newegg.com.tw/Themes/img/Icon/SelectImg.png) right no-repeat;">
+        <option value="/Category?CategoryID=1195">陸寶 Lohas</option>
+        <option value="/Category?CategoryID=1237">開化堂</option>
+        <option value="/Category?CategoryID=1238" selected="true" id="$pgId_6">金網つじ</option>
+        <option value="/Category?CategoryID=1239">朝日燒</option><option value="/Category?CategoryID=1240">公長齋小菅</option>
+        <option value="/Category?CategoryID=1467">WANTZ 享瓷</option>
+    </select>
+
+###[select_md]
+
+    <select class="select_md" style="background: url(http://www.newegg.com.tw/Themes/img/Icon/SelectImg.png) right no-repeat;">
+        <option value="/Category?CategoryID=1195">陸寶 Lohas</option>
+        <option value="/Category?CategoryID=1237">開化堂</option>
+        <option value="/Category?CategoryID=1238" selected="true" id="$pgId_6">金網つじ</option>
+        <option value="/Category?CategoryID=1239">朝日燒</option><option value="/Category?CategoryID=1240">公長齋小菅</option>
+        <option value="/Category?CategoryID=1467">WANTZ 享瓷</option>
+    </select>
+
+###[select_other]
+
+    <select class="select_other" style="background: url(http://www.newegg.com.tw/Themes/img/Icon/SelectImg.png) right no-repeat;">
+        <option value="/Category?CategoryID=1195">陸寶 Lohas</option>
+        <option value="/Category?CategoryID=1237">開化堂</option>
+        <option value="/Category?CategoryID=1238" selected="true" id="$pgId_6">金網つじ</option>
+        <option value="/Category?CategoryID=1239">朝日燒</option><option value="/Category?CategoryID=1240">公長齋小菅</option>
+        <option value="/Category?CategoryID=1467">WANTZ 享瓷</option>
+    </select>
+
+###[select_birth]
+    <div class="selector-birth">
+        <input type="text" id="Birthday" name="Birthday" tabindex="4" maxlength="10" placeholder="年/月/日" value="1911/01/01" class="hasDatepicker" style="background:url(https://secure.newegg.com.tw/Themes/img/Icon/DateFarToNearImg.png) right no-repeat;">
+   </div>
+
+*/
+select {
+	z-index:1;
+	padding: 4px 3px;
+	padding: 40px 3px \9;
+	height:29px \9;
+	margin:0 5px;
+	background: url(#{$img-path}Icon/SelectImg.png) right no-repeat;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+    color: #666;
+	text-indent:0.01px;
+
+    &.select_sm {
+    	width:120px;
+    }
+
+    &.select_md {
+    	width:235px;
+    }
+
+    &.select_other {
+    	padding-right:30px;
+    	padding-right:3px \9;
+    	background-imeage:none\9;
+    }
+}
+
+//客製化select
+.selector {
+    position:relative;
+    cursor:pointer;
+
+    ul {
+        position:absolute;
+        top:28px;
+        z-index:0;
+        overflow:auto;
+        overflow-x:hidden;
+        width:100%;
+        max-height:90px;
+        border-width:1px;
+        border-style:solid;
+        li {
+            @include selectorStyle;
+            display:none;
+            margin-top:-1px;
+        }
+    }
+
+    &:active, &:focus, &.active {
+        ul {
+            z-index:1;
+            background:#fff;
+        }
+
+        ul li { display:block; }
+    }
+
+
+    .default {
+		@include selectorStyle;
+		border-width:1px;
+
+		.icon-arrow {
+			position:absolute;
+			top:-1px;
+			right:-1px;
+			width:33px;
+			height:100%;
+			background:url(#{$img-path}Icon/SelectImg.png) no-repeat center;
+			border-width:1px;
+			border-style:solid;
+		}
+	}
+
+}
+
+
+.selector-birth input {
+    background:url(#{$img-path}Icon/DateFarToNearImg.png) right no-repeat;
+}
+
+
+
+
+/*#[checkbox]核取輸入框樣式
+    <input type="checkbox" name="" id="" tabindex="5">
+    <input type="checkbox" name="" id="" tabindex="5" checked>
+*/
+input[type="checkbox"] {
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin:0 5px;
+}
+
+
+/*#[Radio]單選輸入框樣式
+    <input type="radio">
+    <input type="radio" checked>
+*/
+input[type=radio], .radio {
+	width:20px;
+	height:20px;
+	vertical-align: middle;
+	margin:0 10px;
+	border:0;
+}
+
+
+
+/*#[breads]麵包屑
+
+    <div class="pathLink"><a href="#">首頁</a><span>&gt;</span><a href="#" id="$pgId_5">手作工藝</a><span>&gt;</span>
+*/
+.bread {
+	@include pie-clearfix;
+	width: 500px;
+	margin-left: 10px;
+	position: relative;
+	z-index:1;
+	color: #808080;
+	font-size: 14px;
+    height:45px;
+    line-height:54px;
+    padding-left:8px;
+	margin-left: -58.5px;
+	a {
+		margin:0 3px;
+	}
+}
+
+.pathLink {
+	@include fontSize($defFont - 1);
+	span {
+		margin:0 3px;
+	}
+}
+
+/*#[hr]水平線*/
+hr {
+	border:0;
+	border-top-width:1px;
+	border-style:solid;
+	&.verticalDir {
+		display:inline-block;
+		position:relative;
+		top:-1px;
+		border-left:1px solid;
+		vertical-align:middle;
+		width:0;
+		height:100%;
+	}
+}

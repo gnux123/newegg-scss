@@ -1,20 +1,61 @@
-/* # Structured
-An example of a CSS file using most of StyleDocco's features.
+/*#[Font]全站字體設定
 
-## Second level heading
-Lorem ipsum
----
-A new section
-    <p>With a code preview</p>
+    <p>12345678</p>
+    <p>一二三四五六七八</p>
 */
-
-.container {
-    width: $min-width#{px};
-    height: auto;
-    margin:0 auto;
-    padding-bottom: $gutter#{px};
-
-    @include fontSize(16);
+body,input {
+	font-family:arial,"微軟正黑體";
+	color: $font-color;
 }
 
-.header { width:200px; }
+/*#[a-links]全站連結基礎樣式
+
+    <a href="#">連結樣式</a>
+*/
+a,
+a:hover,
+a:visited{
+    color:$link-color;
+    border-bottom:1px solid $link-color;
+    text-decoration:none;
+    outline:none;
+}
+
+/*#[H1~H3]全站標題樣式
+
+###[H1]
+
+    <h1><a href="#">LOGO USE</a></h1>
+
+###[H3]
+
+    <h3>產品名稱</h3>
+*/
+
+//for logo
+h1{
+    a,
+    a:hover,
+    a:visited{ border-bottom:0; }
+}
+
+//For Footer CopyRight
+h2{}
+
+//For 產品名稱
+h3 {
+	@include fontSize($defFont + 2);
+	margin-top:5px;
+	overflow: hidden;
+	color:$font-color;
+}
+
+
+
+/*#[template]全站共用版面樣式
+*/
+.wrapper {
+	@include pie-clearfix;
+	margin:0 auto;
+    width:1024px;
+}
