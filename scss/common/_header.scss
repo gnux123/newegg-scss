@@ -1,0 +1,169 @@
+/*###[header]Header版面樣式
+
+    
+*/
+
+//header
+.header .welcome {
+    @include fontSize($defFont - 4);
+    line-height: 20px;
+    text-indent: 0px;
+    letter-spacing: 2px;
+    margin-left: 11px;
+}
+
+.header .icon a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+    	color: #F37225;
+    }
+}
+
+
+.header .icon li {
+    text-align: center;
+    border-right: thin solid #000;
+}
+
+.header .icon li i {
+    background: url(#{img-path}header-icon.png) no-repeat;
+
+    &.listi1 { background-position: 0 1px; }
+    &.listi2 { background-position: 0 -29px; }
+    &.listi3 { background-position: 0 -59px; }
+    &.listi4 { background-position: 0 -89px; }
+    &.listi5 { background-position: 0 -119px; }
+    &.listi6 { background-position: 0 -150px; }
+}
+
+.header {
+    .fb {
+        background: url(../img/fb.png)  no-repeat;
+    }
+
+    .music {
+        background: url(../img/music-off.png) no-repeat;
+    }
+}
+
+//header-panel
+.header .panel {
+	background-color: #fff;
+
+    .icon { text-align: center; }
+
+    .icon a {
+    	color: #000;
+    	text-decoration: none;
+
+        &:hover { color: #F37225; }
+    }
+
+
+    .icon ul li i {
+        background: url(../img/panel-icon.png) no-repeat;
+
+        &.listi1 { background-position: 0 0px; }
+        &.listi2 { background-position: 0 -50px; }
+        &.listi3 { background-position: 0 -100px; }
+        &.listi4 { background-position: 0 -150px; }
+        &.listi5 { background-position: 0 -200px; }
+        &.listi6 { background-position: 0 -250px; }
+    }
+
+    .icon ul li .text {
+    	color: #000;
+    	@include fontSize($defFont - 4);
+    }
+
+}
+
+
+//topper
+.topper .searchbar {
+    .input, .input2 {
+        @include fontSize($defFont - 3);
+        color: $font-color;
+        border: thin solid #fff;
+    }
+
+    .input {
+    	padding: 6px 15px;
+    	border: thin solid #fff;
+    }
+
+    .input2 {
+        padding: 7px 15px;
+        background-color: #F0F0F0;
+    }
+
+    .btn {
+        cursor: pointer;
+        color: #fff;
+        border: thin solid $link-color;
+        background-image: url(../img/searchBtn.jpg);
+   }
+
+   .keyword {
+        @include fontSize($defFont - 3);
+        word-spacing: 10px;
+        letter-spacing: 2px;
+   }
+
+   .keyword .word {
+        text-align:center;
+        border-right:1.5px solid #5E5E63;
+
+        &:last-child { border:none; }
+
+        a{
+            color:#5E5E63;
+            border-bottom:none;
+
+            &:hover { color:#f37225; }
+        }
+   }
+
+}
+
+.topper {
+    a {
+       color: #5E5E63;
+       text-decoration: none;
+    }
+
+    .dropdown {
+        @include float(left);
+        width: 206px;
+        height: 20px;
+
+        background-color: #E6E4E6;
+        text-align: center;
+        color: #5E5E63;
+        font-size: 16px;
+    }
+
+    .top,
+    .down {
+        line-height: 20px;
+    	color: #000;
+    	text-indent: 0px;
+    	text-align: center;
+        @include fontSize($defFont + 4);
+
+    }
+
+    .top {
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .down {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}

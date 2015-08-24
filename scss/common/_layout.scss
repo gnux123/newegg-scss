@@ -1,36 +1,45 @@
-/*#[Font]全站字體設定
+/*#[wholeSite]全站基礎樣式設定
+
+###[Font]全站字體設定
 
     <p>12345678</p>
     <p>一二三四五六七八</p>
-*/
-body,input {
-	font-family:arial,"微軟正黑體";
-	color: $font-color;
-}
 
-/*#[a-links]全站連結基礎樣式
+###[a-links]全站連結基礎樣式
 
     <a href="#">連結樣式</a>
-*/
-a,
-a:hover,
-a:visited{
-    color:$link-color;
-    border-bottom:1px solid $link-color;
-    text-decoration:none;
-    outline:none;
-}
 
-/*#[H1~H3]全站標題樣式
+###[H1~H3]全站標題樣式
 
-###[H1]
+####[H1]
 
     <h1><a href="#">LOGO USE</a></h1>
 
-###[H3]
+####[H3]
 
     <h3>產品名稱</h3>
 */
+body,input {
+	font-family:arial, "微軟正黑體", "Microsoft JhengHei";
+	color: $font-color;
+}
+
+img { vertical-align: middle; }
+
+
+a {
+	@include transition(100);
+    outline:none;
+    border-bottom:1px solid $link-color;
+
+    color:$link-color;
+    text-decoration:none;
+
+	&:hover,
+    &:visited {
+		color:$link-color;
+	}
+}
 
 //for logo
 h1{
@@ -58,4 +67,190 @@ h3 {
 	@include pie-clearfix;
 	margin:0 auto;
     width:1024px;
+}
+
+//所有內頁共同Padding
+.mainPadding {
+	@include mainPaddingArea;
+}
+
+.header,
+.topper {
+    margin: 0 auto;
+    @include pie-clearfix;
+}
+
+.header {
+    .logo {
+        @include float(left);
+        display: block;
+    	width: 206px;
+    	height: 100px;
+    }
+
+    .logo a { border-bottom:0; }
+
+    .group {
+        @include float(left);
+    	width: 380px;
+
+    }
+
+    .welcome {
+        @include float(left);
+    	width: 380px;
+    	height: 40px;
+
+    }
+
+    .IDheight {
+        height: 40px;
+    }
+
+    .ad {
+        @include float(left);
+    	width: 300px;
+    	height: 40px;
+        overflow:hidden;
+    	margin-left: 11px;
+    }
+
+    .icon {
+        @include float(right);
+    	position: relative;
+    	z-index: 2;
+    	margin-top: 25px;
+    	margin-right: 0px;
+
+        .divider-none {
+        	border-right: 0;
+        }
+    }
+
+
+    .icon li {
+    	@include float(left);
+    	padding-right: 5px;
+    	padding-left: 5px;
+    }
+
+    .icon li i {
+    	display: inline-block;
+    	position: relative;
+    	width: 25px;
+    	height: 25px;
+    }
+
+    .fb {
+        @include float(right);
+    	width: 37px;
+    	height: 34px;
+    }
+
+    .music {
+        @include float(right);
+    	width: 37px;
+    	height: 34px;
+    	margin-right: -45px;
+    	margin-top: 50px;
+    }
+
+}
+
+//panel
+.header .panel {
+	@include float(left);
+    position: relative;
+	z-index: -1;
+	width: 70px;
+	height: auto;
+    margin-left: -7px;
+
+    .icon { @include float(left); }
+
+    .icon ul {
+    	@include float(left);
+    	margin-top: -25px;
+    	margin-bottom: 10px;
+    }
+
+    .icon ul li {
+        @include float(left);
+        width: 65px;
+        border-right: 0px solid #000;
+        margin-left: -5px;
+
+        i{
+        	display: inline-block;
+        	position: relative;
+        	width: 29px;
+        	height: 29px;
+        	margin-top: 20px;
+        }
+    }
+}
+
+//topper
+.topper {
+    .searchbar {
+    	@include float(left);
+    	margin-left: 11px;
+
+        .input,
+        .input2 {
+            margin: 0;
+            width: 610px;
+        }
+
+        .btn {
+            padding: 0;
+            width: 89px;
+            height: 30px;
+        }
+
+        .keyword {
+             @include float(left);
+             margin-left: 11px;
+             width: 700px;
+        }
+
+        .keyword .word {
+              @include float(left);
+              margin-top:4px;
+              padding:0 15px;
+
+              &:first-child { padding-left:8px; }
+        }
+    }
+
+    .group {
+        @include float(left);
+    	width: 206px;
+    }
+
+    .top,
+    .down {
+        @include float(right);
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .ad,
+    .ad3,
+    .ad4 {
+        @include float(left);
+    }
+
+    .ad {
+        width: 206px;
+        height: 50px;
+    }
+
+    .ad3,
+    .ad4 {
+        width: 103px;
+        height: 30px;
+    }
+
 }

@@ -27,12 +27,14 @@
 		text-align:center;
     }
 
-    .pic a { border-bottom:0; }
 }
 
 .box {
 
-    a { text-decoration: none; }
+    a {
+        text-decoration: none;
+        border:0;
+    }
     .pic,
     .txt {
     	width:$prod-s-width#{px};

@@ -8,6 +8,13 @@
 	word-break:break-all;
 }
 
+//transition mixins
+@mixin transition($time) {
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(linear);
+}
+
 //select客製化樣式mixin
 @mixin selectorStyle {
 	@include box-sizing(border-box);
