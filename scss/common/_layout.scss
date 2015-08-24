@@ -70,14 +70,25 @@ h3 {
 }
 
 //所有內頁共同Padding
-.mainPadding {
-	@include mainPaddingArea;
-}
+// .mainPadding {
+// 	@include mainPaddingArea;
+// }
 
 .header,
 .topper {
     margin: 0 auto;
     @include pie-clearfix;
+}
+
+
+.header-limiter,
+.topper-limiter,
+.footer-limiter {
+    @include pie-clearfix;
+	margin:0 auto;
+	padding-left:55px;
+	padding-right:49px;
+	width:1176px;
 }
 
 .header {
