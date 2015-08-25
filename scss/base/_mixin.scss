@@ -24,3 +24,15 @@
 	padding:5px;
 	border-style:solid;
 }
+
+//Head快速選單文字樣式
+@mixin quickMenuStyle {
+	color:#888;
+	text-align:center;
+	cursor:pointer;
+	&:hover, &.active {
+		>a {
+			color:#fff;
+		}
+	}
+}

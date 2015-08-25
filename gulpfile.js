@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     minifyCss = require('gulp-minify-css'),
     concatCss = require('gulp-concat-css'),
-    styleguide = require('gulp-styledocco');
+    styleguide = require('gulp-styledocco'),
+    replace = require('gulp-replace');
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
@@ -39,12 +40,20 @@ gulp.task('sass', function(){
 
 });
 
+//copyfiles
+gulp.task('copyfiles', function(){
+    gulp.src('img/{*,*/*}')
+        .pipe(copy('styleguide/'));
+});
+
 //cssmin task
 gulp.task('cssmin', function(){
   gulp.src(_address.cache+'*.css')
+      .pipe(replace('img/', '/Themes/img/')) //replace imgPath to stable server
       .pipe(minifyCss({compatibility: 'ie8'}))
       .pipe(rename({ suffix: "-" + vers }))
       .pipe(gulp.dest(_address.css));
+
 });
 
 //clean temp
@@ -58,7 +67,7 @@ gulp.task('sass:watch', function () {
 });
 
 //build task
-gulp.task('build',['sass','cssmin']);
+gulp.task('build',['sass', 'copyfiles', 'cssmin']);
 
 //watch task
-gulp.task('server', ['clean','sass:watch']);
+gulp.task('server', ['clean', 'sass:watch']);

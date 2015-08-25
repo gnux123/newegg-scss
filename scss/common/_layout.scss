@@ -89,9 +89,14 @@ h3 {
 	padding-left:55px;
 	padding-right:49px;
 	width:1176px;
+
+	.ad a { border:0; }
 }
 
 .header {
+	@include pie-clearfix;
+	height:100px;
+
     .logo {
         @include float(left);
         display: block;
@@ -103,7 +108,7 @@ h3 {
 
     .group {
         @include float(left);
-    	width: 380px;
+    	width: 300px;
 
     }
 
@@ -120,18 +125,19 @@ h3 {
 
     .ad {
         @include float(left);
-    	width: 300px;
-    	height: 40px;
+    	@include pie-clearfix;
+		width: 300px;
+    	height: 50px;
         overflow:hidden;
     	margin-left: 11px;
+
+		& > a { border:0; }
     }
 
     .icon {
-        @include float(right);
     	position: relative;
     	z-index: 2;
-    	margin-top: 25px;
-    	margin-right: 0px;
+    	margin:0;
 
         .divider-none {
         	border-right: 0;
@@ -166,37 +172,77 @@ h3 {
     	margin-top: 50px;
     }
 
+	.quickMenu {
+		@include float(right);
+		@include pie-clearfix;
+
+		& ul { @include float(left); }
+		& ul li {
+			@include float(left);
+			position: relative;
+			display:block;
+			width:110px;
+			border:0;
+
+			a {
+				display: block;
+				padding:25px 0 5px;
+				border-bottom:0;
+				cursor: pointer;
+
+			}
+
+			i {
+				position:relative;
+				width:25px;
+				height:25px;
+			}
+		}
+
+		& ul li i .num {
+	        position:absolute;
+	        top:-2px;
+	        left:1px;
+	        width:25px;
+		}
+
+		& ul li+li {
+		     border-left-width:1px \9;
+		     &:after {
+		         content:" ";
+		         display:block;
+		         position:absolute;
+		         top:10px;
+		         left:0;
+		         height:60px;
+			}
+		}
+	}
 }
 
 //panel
 .header .panel {
-	@include float(left);
     position: relative;
 	z-index: -1;
 	width: 70px;
 	height: auto;
     margin-left: -7px;
 
-    .icon { @include float(left); }
+    .icon { margin: 0 auto; }
 
-    .icon ul {
-    	@include float(left);
-    	margin-top: -25px;
-    	margin-bottom: 10px;
-    }
+    .icon ul { margin:0; }
 
     .icon ul li {
-        @include float(left);
         width: 65px;
-        border-right: 0px solid #000;
-        margin-left: -5px;
+		margin:0;
+	    border-right: 0px solid #000;
 
-        i{
+        i {
         	display: inline-block;
         	position: relative;
         	width: 29px;
         	height: 29px;
-        	margin-top: 20px;
+        	margin: 0 auto;
         }
     }
 }
@@ -254,8 +300,12 @@ h3 {
     }
 
     .ad {
+		@include pie-clearfix;
         width: 206px;
         height: 50px;
+
+		a,
+		a img { @include float(left); }
     }
 
     .ad3,
