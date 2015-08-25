@@ -1,72 +1,71 @@
-/*###[header]Header版面樣式
+/*
+##[header]Header版面樣式
 
     <header class="header">
-    <div class="header-limiter">
-        <h1 class="logo"><a href="/"><img src="http://www.newegg.com.tw/Themes/img/Common/logo.jpg"></a></h1>
-        <div class="group">
-            <div class="IDheight">
-                <div class="welcome orangetxt">Hi, XXXX@OOO.com，您好！</div>
+        <div class="header-limiter">
+            <h1 class="logo"><a href="/"><img src="http://www.newegg.com.tw/Themes/img/Common/logo.jpg"></a></h1>
+            <div class="group">
+                <div class="IDheight">
+                    <div class="welcome orangetxt">Hi, XXXX@OOO.com，您好！</div>
+                </div>
+                <div class="ad" data-url="/AdvEvent/Partial_AdvHeaderBanner" style="text-align:center">
+                   <a href="/Activity/wonderfulworld_0801" target="_blank"><img src="https://ssl-images.newegg.com.tw/pic/AdvImage/6/29/35/993/StartImg.JPG"></a>
+                </div>
             </div>
-            <div class="ad" data-url="/AdvEvent/Partial_AdvHeaderBanner" style="text-align:center">
-               <a href="/Activity/wonderfulworld_0801" target="_blank"><img src="https://ssl-images.newegg.com.tw/pic/AdvImage/6/29/35/993/StartImg.JPG"></a>
+            <div class="icon quickMenu">
+                <ul>
+                        <li><a href="/MyAccount/Login"><i class="icon listi6"></i><div class="text">登入/註冊</div></a></li>
+                    <li><a href="/Activity/Activity"><i class="icon listi2"></i><div class="text">優惠活動</div></a></li>
+                    <li><a href="/Service/FAQ"><i class="icon listi3"></i><div class="text">服務說明</div></a></li>
+                    <li id="headerCartBtn"><a href="/Cart"><i class="icon listi4"><span id="neSCHead" class="num"></span></i><div class="text">購物車</div></a></li>
+
+                        <li id="dropAccount" class="divider-none"><a href="javascript:void(0)"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
+                            <div class="dropCon panel" style="display:none;">
+
+                                    <ul>
+                                        <li><a href="/Cart/WishCart"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
+                                        <li><a href="/MyAccount/Coupon"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
+                                        <li><a href="/MyAccount/Order"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
+                                        <li><a href="/MyAccount"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
+                                        <li><a href="/Logout"><i class="icon listi6"></i><div class="text">登出</div></a></li>
+                                    </ul>
+
+                            </div>
+                        </li>
+
+                </ul>
+                <a href="https://www.facebook.com/twnewegg" target="_blank"><div class="fb"></div></a>
+                <a href="#"><div class="music" id="siteMusic"></div></a>
             </div>
         </div>
-        <div class="icon quickMenu">
-            <ul>
-                    <li><a href="/MyAccount/Login"><i class="icon listi6"></i><div class="text">登入/註冊</div></a></li>
-                <li><a href="/Activity/Activity"><i class="icon listi2"></i><div class="text">優惠活動</div></a></li>
-                <li><a href="/Service/FAQ"><i class="icon listi3"></i><div class="text">服務說明</div></a></li>
-                <li id="headerCartBtn"><a href="/Cart"><i class="icon listi4"><span id="neSCHead" class="num"></span></i><div class="text">購物車</div></a></li>
+        </header>
 
-                    <li id="dropAccount" class="divider-none"><a href="javascript:void(0)"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
-                        <div class="dropCon panel" style="display:none;">
+        <div class="topper">
+        <div class="topper-limiter">
+            <div class="ad">
+                <a href="/VotingActivity/ShareGift_0807"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad3.jpg" alt="入會好禮" title="入會好禮"></a>
+                <a href="/StoreUS?StoreID=737"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad2.jpg" alt="美蛋直購館" title="美蛋直購館"></a>
+            </div>
+            <div class="searchbar">
+    		    <form method="get" action="/search">
+    		        <input type="text" class="input" id="searchword" name="searchword" size="21" maxlength="120" placeholder="請輸入商品關鍵字">
+                    <input type="submit" value=" " class="btn">
+    		    </form>
+            </div>
 
-                                <ul>
-                                    <li><a href="/Cart/WishCart"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
-                                    <li><a href="/MyAccount/Coupon"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
-                                    <li><a href="/MyAccount/Order"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
-                                    <li><a href="/MyAccount"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
-                                    <li><a href="/Logout"><i class="icon listi6"></i><div class="text">登出</div></a></li>
-                                </ul>
-
-                        </div>
-                    </li>
-
-            </ul>
-            <a href="https://www.facebook.com/twnewegg" target="_blank"><div class="fb"></div></a>
-            <a href="#"><div class="music" id="siteMusic"></div></a>
+            <div class="keyword">
+                <ul>
+                    <li class="word"><a href="/Category?CategoryID=1380">電影破風款</a></li>
+                    <li class="word"><a href="/search?searchword=%E7%8D%A8%E8%B3%A3">獨賣</a></li>
+                    <li class="word"><a href="/Category?CategoryID=1450">SALE</a></li>
+                    <li class="word"><a href="/search?searchword=%E9%98%B2%E8%9A%8A">防蚊</a></li>
+                    <li class="word"><a href="/Category?CategoryID=782">厚切沙朗</a></li>
+                    <li class="word"><a href="/Category?CategoryID=527">運動穿戴</a></li>
+                    <li class="word"><a href="/search?searchword=x205TA">asus</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    </header>
-
-    <div class="topper">
-    <div class="topper-limiter">
-        <div class="ad">
-            <a href="/VotingActivity/ShareGift_0807"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad3.jpg" alt="入會好禮" title="入會好禮"></a>
-            <a href="/StoreUS?StoreID=737"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad2.jpg" alt="美蛋直購館" title="美蛋直購館"></a>
-        </div>
-        <div class="searchbar">
-		    <form method="get" action="/search">
-		        <input type="text" class="input" id="searchword" name="searchword" size="21" maxlength="120" placeholder="請輸入商品關鍵字">
-                <input type="submit" value=" " class="btn">
-		    </form>
-        </div>
-
-        <div class="keyword">
-            <ul>
-                <li class="word"><a href="/Category?CategoryID=1380">電影破風款</a></li>
-                <li class="word"><a href="/search?searchword=%E7%8D%A8%E8%B3%A3">獨賣</a></li>
-                <li class="word"><a href="/Category?CategoryID=1450">SALE</a></li>
-                <li class="word"><a href="/search?searchword=%E9%98%B2%E8%9A%8A">防蚊</a></li>
-                <li class="word"><a href="/Category?CategoryID=782">厚切沙朗</a></li>
-                <li class="word"><a href="/Category?CategoryID=527">運動穿戴</a></li>
-                <li class="word"><a href="/search?searchword=x205TA">asus</a></li>
-            </ul>
-            <div style="clear:both;"></div>
-        </div>
-    </div>
-</div>
-
 
 */
 
@@ -224,6 +223,7 @@
     .input {
     	padding: 6px 15px;
     	border: thin solid #fff;
+        background:#e0e0e0;
     }
 
     .input2 {
@@ -237,27 +237,27 @@
         border: thin solid $link-color;
         background-image: url(#{$img-path}searchBtn.jpg);
    }
+}
 
-   .keyword {
-        @include fontSize($defFont - 3);
-        word-spacing: 10px;
-        letter-spacing: 2px;
-   }
+//keywords settings
+.topper .keyword {
+    @include fontSize($defFont - 3);
+    word-spacing: 10px;
+    letter-spacing: 2px;
 
-   .keyword .word {
-        text-align:center;
-        border-right:1.5px solid #5E5E63;
+    .word {
+         text-align:center;
+         border-right:1.5px solid #5E5E63;
 
-        &:last-child { border:none; }
+         &:last-child { border:none; }
 
-        a{
-            color:#5E5E63;
-            border-bottom:none;
+         a{
+             color:#5E5E63;
+             border-bottom:none;
 
-            &:hover { color:#f37225; }
-        }
-   }
-
+             &:hover { color:#f37225; }
+         }
+    }
 }
 
 .topper {
@@ -298,4 +298,157 @@
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
     }
+}
+
+
+/*
+##[pullDown]側邊欄選單模組
+
+    <div class="pullDown">
+        <ul class="pullDownList">
+                <li>
+                    <a href="/Store?StoreID=734"><i class="storeFashion"></i>國際名品</a>
+                    <span></span>
+                </li>
+                <li class="">
+                    <a href="/Store?StoreID=1279"><i class="storeDesign"></i>設計風尚</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=735"><i class="storeHealth"></i>運動健身</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=7"><i class="storeOutdoor"></i>戶外休旅</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=264"><i class="store3C"></i>數位3C</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=1"><i class="storeComputer"></i>電腦週邊</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=3"><i class="storeappliance"></i>生活家電</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=6"><i class="storeLiving"></i>居家親子</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=736"><i class="storeFoods"></i>好食市集</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="/Store?StoreID=737"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
+                    <span></span>
+                </li>
+        </ul>
+    </div>
+*/
+
+.pullDown {
+	z-index: 4;
+    @include float(left);
+	position: relative;
+	width: 206px;
+    height:486px;
+}
+
+.pullDown .pullDownList {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: #e6e4e7;
+
+        li {
+            display:block;
+        	height: 48.5px;
+        	position: relative;
+        	line-height: 50px;
+
+            i {
+                display: inline-block;
+                position:relative;
+                top:4px;
+                margin-left: 20px;
+                left:0;
+                width: 25px;
+                height: 19px;
+                margin-right: 10px;
+
+                -webkit-transition: margin-left .2s linear;
+                -moz-transition: margin-left .2s linear;
+                -o-transition: margin-left .2s linear;
+
+                background:url(#{$img-path}nav-icon.png) no-repeat;
+
+                //設計風尚
+                &.storeClothing { background-position: 0 0; }
+                //國際精品
+                &.storeFashion { background-position: 0 -50px; }
+                //家電用品
+                &.storeappliance { background-position: 0 -96px; }
+                //居家生活
+                &.storeLiving { background-position: 0 -144px; }
+                //運動健身
+                &.storeHealth { background-position: 0 -190px; }
+                //戶外休旅
+                &.storeOutdoor { background-position: 0 -240px; }
+                //電腦周邊
+                &.storeComputer { background-position: 0 -286px; }
+                //數位3C
+                &.store3C { background-position: 0 -334px; }
+                //好食市集
+                &.storeFoods { background-position: 0 -382px; }
+                //美蛋直購
+                &.storeNeweggUSA { background-position: 0 -428px; }
+            }
+
+            span {
+                position: absolute;
+                top: 10px;
+                right: -20px;
+                display: inline-block;
+            }
+
+            &:hover,
+            &.menulihover {
+                background: #eda16f;
+
+                a { color: #fff; }
+
+                i {
+                    margin-left:30px;
+                    background-image:url(#{$img-path}nav-icon-hover.png);
+                }
+
+                span {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 15px 0 15px 22px;
+                    border-color: transparent transparent transparent #eda16f;
+
+                }
+
+            }
+
+        }
+
+
+        li > a {
+            display:block;
+        	color: #5E5E63;
+
+            @include fontSize($defFont + 4);
+        	text-decoration: none;
+        	border-bottom:0;
+
+
+        }
 }

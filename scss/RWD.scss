@@ -4,6 +4,10 @@
 */
 
 @media screen and (max-width:1279px) {
+    //header-quickMenu
+    .header .quickMenu > ul > li { width:85px; }
+
+
     //[banner-adv]sixInOne settings
     .banner-adv {
         width: (1024 - 220)#{px};
@@ -12,4 +16,6 @@
     .boxArea .box {
         width: 33.25%;
     }
+
+
 }

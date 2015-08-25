@@ -1,12 +1,12 @@
 /*#[PageNums]頁碼
 
     <div class="pagination PageArea">
-        <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)" style="background-image:url(https://secure.newegg.com.tw/Themes/img/Icon/arrowPageArea-hover.png);">&lt;</span>
+        <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)">&lt;</span>
         <span class="GoToPage" data-pagevalue="1">1</span>
         <span class="SelectThePage" style="color:#EB8A51" data-pagevalue="2">2</span>
         <span class="GoToPage" data-pagevalue="3">3</span>
         <span class="GoToPage" data-pagevalue="4">4</span>
-        <span class="arrow arrRight next" style="background-image:url(https://secure.newegg.com.tw/Themes/img/Icon/arrowPageArea-hover.png);">&gt;</span>
+        <span class="arrow arrRight next">&gt;</span>
     </div>
 */
 

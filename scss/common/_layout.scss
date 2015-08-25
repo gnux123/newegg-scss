@@ -264,21 +264,21 @@ h3 {
             width: 89px;
             height: 30px;
         }
-
-        .keyword {
-             @include float(left);
-             margin-left: 11px;
-             width: 700px;
-        }
-
-        .keyword .word {
-              @include float(left);
-              margin-top:4px;
-              padding:0 15px;
-
-              &:first-child { padding-left:8px; }
-        }
     }
+
+	.keyword {
+		 @include float(left);
+		 margin-left: 11px;
+		 width: 700px;
+
+		 .word {
+	 		  @include float(left);
+	 		  margin-top:4px;
+	 		  padding:0 15px;
+
+	 		  &:first-child { padding-left:8px; }
+	 	}
+	}
 
     .group {
         @include float(left);
