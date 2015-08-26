@@ -7,3 +7,32 @@
 	word-wrap:break-word;
 	word-break:break-all;
 }
+
+//transition mixins
+@mixin transition($time) {
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(linear);
+}
+
+//select客製化樣式mixin
+@mixin selectorStyle {
+	@include box-sizing(border-box);
+	width:100%;
+	width:90% \9;
+	position:relative;
+	padding:5px;
+	border-style:solid;
+}
+
+//Head快速選單文字樣式
+@mixin quickMenuStyle {
+	color:#888;
+	text-align:center;
+	cursor:pointer;
+	&:hover, &.active {
+		>a {
+			color:#fff;
+		}
+	}
+}

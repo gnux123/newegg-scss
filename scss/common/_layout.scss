@@ -1,20 +1,522 @@
-/* # Structured
-An example of a CSS file using most of StyleDocco's features.
+/*#[wholeSite]全站基礎樣式設定
 
-## Second level heading
-Lorem ipsum
----
-A new section
-    <p>With a code preview</p>
+###[Font]全站字體設定
+
+    <p>12345678</p>
+    <p>一二三四五六七八</p>
+
+###[a-links]全站連結基礎樣式
+
+    <a href="#">連結樣式</a>
+
+###[H1~H3]全站標題樣式
+
+####[H1]
+
+    <h1><a href="#">LOGO USE</a></h1>
+
+####[H3]
+
+    <h3>產品名稱</h3>
 */
-
-.container {
-    width: $min-width#{px};
-    height: auto;
-    margin:0 auto;
-    padding-bottom: $gutter#{px};
-
-    @include fontSize(16);
+body,input {
+	font-family:arial, "微軟正黑體", "Microsoft JhengHei";
+	color: $font-color;
 }
 
-.header { width:200px; }
+img { vertical-align: middle; }
+
+
+a {
+	@include transition(100);
+    outline:none;
+    border-bottom:1px solid $link-color;
+
+    color:$link-color;
+    text-decoration:none;
+
+	&:hover,
+    &:visited {
+		color:$link-color;
+	}
+}
+
+//for logo
+h1{
+    a,
+    a:hover,
+    a:visited{ border-bottom:0; }
+}
+
+//For Footer CopyRight
+h2{}
+
+//For 產品名稱
+h3 {
+	@include fontSize($defFont + 2);
+	margin-top:5px;
+	overflow: hidden;
+	color:$font-color;
+}
+
+
+
+/*#[template]全站共用版面樣式
+*/
+.wrapper {
+	@include pie-clearfix;
+	margin:0 auto;
+    width:1024px;
+}
+
+//所有內頁共同Padding
+// .mainPadding {
+// 	@include mainPaddingArea;
+// }
+
+.header,
+.topper {
+    margin: 0 auto;
+    @include pie-clearfix;
+}
+
+
+.header-limiter,
+.topper-limiter,
+.footer-limiter {
+    @include pie-clearfix;
+	margin:0 auto;
+	padding-left:55px;
+	padding-right:49px;
+	width:1176px;
+
+	.ad a { border:0; }
+}
+
+.header {
+	@include pie-clearfix;
+	height:100px;
+
+    .logo {
+        @include float(left);
+        display: block;
+    	width: 206px;
+    	height: 100px;
+    }
+
+    .logo a { border-bottom:0; }
+
+    .group {
+        @include float(left);
+    	width: 300px;
+
+    }
+
+    .welcome {
+        @include float(left);
+    	width: 380px;
+    	height: 40px;
+
+    }
+
+    .IDheight {
+        height: 40px;
+    }
+
+    .ad {
+        @include float(left);
+    	@include pie-clearfix;
+		width: 300px;
+    	height: 50px;
+        overflow:hidden;
+    	margin-left: 11px;
+
+		& > a { border:0; }
+    }
+
+    .icon {
+    	position: relative;
+    	z-index: 2;
+    	margin:0;
+
+        .divider-none {
+        	border-right: 0;
+        }
+    }
+
+
+    .icon li {
+    	@include float(left);
+    	padding-right: 5px;
+    	padding-left: 5px;
+    }
+
+    .icon li i {
+    	display: inline-block;
+    	position: relative;
+    	width: 25px;
+    	height: 25px;
+    }
+
+    .fb {
+        @include float(right);
+    	width: 37px;
+    	height: 34px;
+    }
+
+    .music {
+        @include float(right);
+    	width: 37px;
+    	height: 34px;
+    	margin-right: -45px;
+    	margin-top: 50px;
+    }
+
+	.quickMenu {
+		@include float(right);
+		@include pie-clearfix;
+
+		& ul { @include float(left); }
+		& ul li {
+			@include float(left);
+			position: relative;
+			display:block;
+			width:110px;
+			height:70px;
+			border:0;
+
+			& > a {
+				display: block;
+				height:40px;
+				padding:25px 0 5px;
+				border-bottom:0;
+				cursor: pointer;
+
+			}
+
+			& > a > i {
+				position:relative;
+				width:25px;
+				height:25px;
+			}
+		}
+
+		& ul li i .num {
+	        position:absolute;
+	        top:-2px;
+	        left:1px;
+	        width:25px;
+		}
+
+		& ul > li + li {
+		     border-left-width:1px \9;
+		     &:after {
+		         content:" ";
+		         display:block;
+		         position:absolute;
+		         top:10px;
+		         left:0;
+		         height:60px;
+			}
+		}
+	}
+}
+
+//panel
+.header .panel {
+    position: relative;
+	z-index: -1;
+	width: 70px;
+	height: auto;
+    margin-left: -7px;
+
+    .icon { margin: 0 auto; }
+
+    .icon ul { margin:0; }
+
+    .icon ul li {
+        width: 65px;
+		margin:0;
+	    border-right: 0px solid #000;
+
+        i {
+        	display: inline-block;
+        	position: relative;
+        	width: 29px;
+        	height: 29px;
+        	margin: 0 auto;
+        }
+    }
+}
+
+//topper
+.topper {
+    .searchbar {
+    	@include float(left);
+    	margin-left: 11px;
+
+        .input,
+        .input2 {
+            margin: 0;
+            width: 610px;
+        }
+
+        .btn {
+            padding: 0;
+            width: 89px;
+            height: 30px;
+        }
+    }
+
+	.keyword {
+		 @include float(left);
+		 margin-left: 11px;
+		 width: 700px;
+
+		 .word {
+	 		  @include float(left);
+	 		  margin-top:4px;
+	 		  padding:0 15px;
+
+	 		  &:first-child { padding-left:8px; }
+	 	}
+	}
+
+    .group {
+        @include float(left);
+    	width: 206px;
+    }
+
+    .top,
+    .down {
+        @include float(right);
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .ad,
+    .ad3,
+    .ad4 {
+        @include float(left);
+    }
+
+    .ad {
+		@include pie-clearfix;
+        width: 206px;
+        height: 50px;
+
+		a,
+		a img { @include float(left); }
+    }
+
+    .ad3,
+    .ad4 {
+        width: 103px;
+        height: 30px;
+    }
+
+}
+
+
+//side Menus
+.pullDown {
+	z-index: 4;
+    @include float(left);
+	position: relative;
+	width: 206px;
+    height:486px;
+
+    .pullDownList {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pullDownList li {
+        position: relative;
+        display:block;
+        height: 48.5px;
+    }
+
+    .pullDownList li i {
+        position: relative;
+        display: inline-block;
+        top:4px;
+        left:0;
+        width: 25px;
+        height: 19px;
+        margin-right: 10px;
+    }
+
+    .pullDownList li span {
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: -20px;
+    }
+
+}
+
+//快速選單-我的帳戶下拉框架
+.quickMenu .dropCon {
+    display:none;
+    position:absolute;
+    top:70px;
+    left: 0;
+    margin:0;
+    width:100%;
+
+    & > ul > li {
+        padding:0;
+        width: 100%;
+        &:after {
+            display: none;
+            border-left: 0px;
+        }
+
+        & > a { padding:8px 0; }
+
+        & > a > i {
+            margin-top:5px;
+            width:30px;
+            height:30px;
+        }
+    }
+
+}
+
+
+.banner-ad2 {
+    @include float(left);
+    z-index: 1;
+    width: 206px;
+    height: 36px;
+    margin-top: 486px;
+    margin-left: -206px;
+    overflow: hidden;
+}
+
+
+//子選單框架樣式設計
+.yMenuListConin {
+    position: absolute;
+	display:none;
+    top: 0;
+    left: 206px;
+	width: 744px;
+    height: 486px;
+	padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    h2,
+    h2 a {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    .yMenuLCinList {
+        @include pie-clearfix;
+        width: 100%;
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .yMenuLCinList h3 {
+        @include float(left);
+        position: relative;
+        display: inline-block;
+        margin: 0 auto 2px;
+    }
+
+    .yMenuColLCinList p {
+        @include float(left);
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .yMenuColLCinList p a {
+        @include float(left);
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 4px;
+        padding: 0 8px 1px 5px;
+    }
+}
+
+
+//[footer]footer模組框架
+.footer {
+    height: 400px;
+	margin: 0 auto;
+	@include pie-clearfix;
+
+    & > .footer-limiter {
+    	width: 1176px;
+    	margin: 0 auto;
+    }
+
+    .icon {
+        @include float(left);
+        margin-top: 20px;
+
+        li i {
+            display: inline-block;
+            position: relative;
+            width: 45px;
+            height: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    li {
+        margin-right: 50px;
+        margin-bottom: 15px;
+    }
+
+    .selection ul {
+        margin-top: 63px;
+        margin-left: 50px;
+    }
+
+    .infoArea {
+        @include float(left);
+        margin: 50px 0 0 50px;
+        width: 260px;
+
+        .map {
+            position:relative;
+            width:253px;
+            height:147px;
+            margin-top: 20px;
+        }
+
+        .code {
+            margin: 20px;
+            margin-top: 50px;
+        }
+
+        .map .LinkTo {
+            display:block;
+            position:absolute;
+            width:100px;
+            height: 30px;
+            height:0;
+            padding-top: 40px;
+            overflow: hidden;
+        }
+    }
+
+    .address {
+        @include float(left);
+        display: block;
+        width:100%;
+    }
+}
