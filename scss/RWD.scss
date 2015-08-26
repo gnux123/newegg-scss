@@ -2,6 +2,7 @@
 ##RWD.css說明
 設定全站所有響應式設計頁面的CSS樣式
 */
+@import "compass/compass";
 
 @media screen and (max-width:1279px) {
     .header-limiter,
@@ -13,9 +14,21 @@
     }
 
 
-    //header-quickMenu
-    .header .quickMenu > ul > li { width:85px; }
+    //header-settings
 
+    .header .icon {
+        margin-right: 10px;
+
+        &.quickMenu {
+            @include float(right);
+            & > ul > li {
+                width:85px;
+                padding:0;
+            }
+        }
+    }
+
+    .topper .searchbar .input { width: 415px; }
 
     //[banner-adv]sixInOne settings
     .banner-adv {
