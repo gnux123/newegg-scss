@@ -3,39 +3,38 @@
 
     <header class="header">
         <div class="header-limiter">
-            <h1 class="logo"><a href="/"><img src="http://www.newegg.com.tw/Themes/img/Common/logo.jpg"></a></h1>
+            <h1 class="logo"><a href="javascript:void(0);"><img src="http://www.newegg.com.tw/Themes/img/Common/logo.jpg"></a></h1>
             <div class="group">
                 <div class="IDheight">
                     <div class="welcome orangetxt">Hi, XXXX@OOO.com，您好！</div>
                 </div>
                 <div class="ad" data-url="/AdvEvent/Partial_AdvHeaderBanner" style="text-align:center">
-                   <a href="/Activity/wonderfulworld_0801" target="_blank"><img src="https://ssl-images.newegg.com.tw/pic/AdvImage/6/29/35/993/StartImg.JPG"></a>
+                   <a href="javascript:void(0);" target="_blank"><img src="https://ssl-images.newegg.com.tw/pic/AdvImage/6/29/35/993/StartImg.JPG"></a>
                 </div>
             </div>
             <div class="icon quickMenu">
                 <ul>
-                        <li><a href="/MyAccount/Login"><i class="icon listi6"></i><div class="text">登入/註冊</div></a></li>
-                    <li><a href="/Activity/Activity"><i class="icon listi2"></i><div class="text">優惠活動</div></a></li>
-                    <li><a href="/Service/FAQ"><i class="icon listi3"></i><div class="text">服務說明</div></a></li>
-                    <li id="headerCartBtn"><a href="/Cart"><i class="icon listi4"><span id="neSCHead" class="num"></span></i><div class="text">購物車</div></a></li>
+                        <li><a href="javascript:void(0);"><i class="icon listi6"></i><div class="text">登入/註冊</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi2"></i><div class="text">優惠活動</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi3"></i><div class="text">服務說明</div></a></li>
+                    <li id="headerCartBtn"><a href="javascript:void(0);"><i class="icon listi4"><span id="neSCHead" class="num"></span></i><div class="text">購物車</div></a></li>
+                    <li id="dropAccount" class="divider-none active"><a href="javascript:void(0)"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
+                        <div class="dropCon panel" style="display:block;">
 
-                        <li id="dropAccount" class="divider-none"><a href="javascript:void(0)"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
-                            <div class="dropCon panel" style="display:none;">
+                                <ul>
+                                    <li><a href="javascript:void(0);"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
+                                    <li><a href="javascript:void(0);"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
+                                    <li><a href="javascript:void(0);"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
+                                    <li><a href="javascript:void(0);"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
+                                    <li><a href="javascript:void(0);"><i class="icon listi6"></i><div class="text">登出</div></a></li>
+                                </ul>
 
-                                    <ul>
-                                        <li><a href="/Cart/WishCart"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
-                                        <li><a href="/MyAccount/Coupon"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
-                                        <li><a href="/MyAccount/Order"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
-                                        <li><a href="/MyAccount"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
-                                        <li><a href="/Logout"><i class="icon listi6"></i><div class="text">登出</div></a></li>
-                                    </ul>
-
-                            </div>
-                        </li>
+                        </div>
+                    </li>
 
                 </ul>
-                <a href="https://www.facebook.com/twnewegg" target="_blank"><div class="fb"></div></a>
-                <a href="#"><div class="music" id="siteMusic"></div></a>
+                <a href="javascript:void(0);" target="_blank"><div class="fb"></div></a>
+                <a href="javascript:void(0);"><div class="music" id="siteMusic"></div></a>
             </div>
         </div>
         </header>
@@ -43,8 +42,8 @@
         <div class="topper">
         <div class="topper-limiter">
             <div class="ad">
-                <a href="/VotingActivity/ShareGift_0807"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad3.jpg" alt="入會好禮" title="入會好禮"></a>
-                <a href="/StoreUS?StoreID=737"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad2.jpg" alt="美蛋直購館" title="美蛋直購館"></a>
+                <a href="javascript:void(0);"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad3.jpg" alt="入會好禮" title="入會好禮"></a>
+                <a href="javascript:void(0);"><img src="http://www.newegg.com.tw/Themes/img/Common/topper-ad2.jpg" alt="美蛋直購館" title="美蛋直購館"></a>
             </div>
             <div class="searchbar">
     		    <form method="get" action="/search">
@@ -55,13 +54,13 @@
 
             <div class="keyword">
                 <ul>
-                    <li class="word"><a href="/Category?CategoryID=1380">電影破風款</a></li>
-                    <li class="word"><a href="/search?searchword=%E7%8D%A8%E8%B3%A3">獨賣</a></li>
-                    <li class="word"><a href="/Category?CategoryID=1450">SALE</a></li>
-                    <li class="word"><a href="/search?searchword=%E9%98%B2%E8%9A%8A">防蚊</a></li>
-                    <li class="word"><a href="/Category?CategoryID=782">厚切沙朗</a></li>
-                    <li class="word"><a href="/Category?CategoryID=527">運動穿戴</a></li>
-                    <li class="word"><a href="/search?searchword=x205TA">asus</a></li>
+                    <li class="word"><a href="javascript:void(0);">電影破風款</a></li>
+                    <li class="word"><a href="javascript:void(0);">獨賣</a></li>
+                    <li class="word"><a href="javascript:void(0);">SALE</a></li>
+                    <li class="word"><a href="javascript:void(0);">防蚊</a></li>
+                    <li class="word"><a href="javascript:void(0);">厚切沙朗</a></li>
+                    <li class="word"><a href="javascript:void(0);">運動穿戴</a></li>
+                    <li class="word"><a href="javascript:void(0);">asus</a></li>
                 </ul>
             </div>
         </div>
@@ -149,14 +148,19 @@
          @include quickMenuStyle;
          background-color:#ec8b54;
 
-         &+li:after {
+         & > a {
+             i.icon { background-image:url(#{$img-path}header-icon-hover.png); }
+             i .num { color:#fff; }
+         }
+
+         &+li:after > a {
              top:0;
              height:70px;
          }
 
-         i.icon { background-image:url(#{$img-path}header-icon-hover.png); }
 
-         i .num { color:#fff; }
+
+
     }
 
      li {
@@ -194,7 +198,7 @@
 
 
     .icon ul li i {
-        background: url(../img/panel-icon.png) no-repeat;
+        background: url(#{$img-path}panel-icon.png) no-repeat;
 
         &.listi1 { background-position: 0 0px; }
         &.listi2 { background-position: 0 -50px; }
@@ -210,6 +214,40 @@
     }
 
 }
+
+//myAccount dropDown menu
+.quickMenu .dropCon {
+    background-color: rgba(255, 255, 255, .85);
+
+    @include fontSize($defFont - 4);
+    text-align:center;
+
+    & > ul > li {
+        @include quickMenuStyle;
+
+        & > a {
+            @include quickMenuStyle;
+        }
+        & > a > i.icon {
+            background-image:url(#{$img-path}panel-icon.png);
+
+            &.listi1 { background-position:0 -0px; }
+            &.listi2 { background-position:0 -50px; }
+            &.listi3 { background-position:0 -100px; }
+            &.listi4 { background-position:0 -150px; }
+            &.listi5 { background-position:0 -200px; }
+            &.listi6 { background-position:0 -250px; }
+        }
+
+
+        &:hover {
+            background:#aaa;
+            background-color:rgba(160, 160, 160, .7);
+            i.icon { background-image:url(#{$img-path}panel-icon-hover.png); }
+        }
+    }
+}
+
 
 
 //topper
@@ -306,149 +344,338 @@
 
     <div class="pullDown">
         <ul class="pullDownList">
-                <li>
-                    <a href="/Store?StoreID=734"><i class="storeFashion"></i>國際名品</a>
+                <li class="menulihover">
+                    <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
                     <span></span>
                 </li>
                 <li class="">
-                    <a href="/Store?StoreID=1279"><i class="storeDesign"></i>設計風尚</a>
+                    <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=735"><i class="storeHealth"></i>運動健身</a>
+                    <a href="javascript:void(0);"><i class="storeHealth"></i>運動健身</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=7"><i class="storeOutdoor"></i>戶外休旅</a>
+                    <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=264"><i class="store3C"></i>數位3C</a>
+                    <a href="javascript:void(0);"><i class="store3C"></i>數位3C</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=1"><i class="storeComputer"></i>電腦週邊</a>
+                    <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=3"><i class="storeappliance"></i>生活家電</a>
+                    <a href="javascript:void(0);"><i class="storeappliance"></i>生活家電</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=6"><i class="storeLiving"></i>居家親子</a>
+                    <a href="javascript:void(0);"><i class="storeLiving"></i>居家親子</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=736"><i class="storeFoods"></i>好食市集</a>
+                    <a href="javascript:void(0);"><i class="storeFoods"></i>好食市集</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="/Store?StoreID=737"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
+                    <a href="javascript:void(0);"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
                     <span></span>
                 </li>
         </ul>
     </div>
+
+    <!-- [子選單模組] -->
+    <div class="yMenuListCon">
+        <div class="yMenuListConin storeFashion" style="display:block;">
+                <h2><a href="javascript:void(0);">國際名品</a></h2>
+                <div class="yMenuColLCinList">
+
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 【開幕特企】</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">【新品優惠】三宅一生BAO BAO限時↘5折起</a>
+                                <a href="javascript:void(0);">【獨家優惠➳】Michael Kors限時優惠↘4折起</a>
+                                <a href="javascript:void(0);">【下殺折扣】歐系品牌包款↘4.5折起</a>
+                                <a href="javascript:void(0);">【開幕慶☞】皮夾特選↘$999起</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 精品包款</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">3.1 Phillip Lim</a>
+                                <a href="javascript:void(0);">Balenciaga</a>
+                                <a href="javascript:void(0);">BALLY</a>
+                                <a href="javascript:void(0);">Bottega Veneta</a>
+                                <a href="javascript:void(0);">Burberry</a>
+                                <a href="javascript:void(0);">Calvin Klein</a>
+                                <a href="javascript:void(0);">Cambridge Satchel</a>
+                                <a href="javascript:void(0);">CÉLINE</a>
+                                <a href="javascript:void(0);">CHANEL</a>
+                                <a href="javascript:void(0);">Chloe</a>
+                                <a href="javascript:void(0);">COACH</a>
+                                <a href="javascript:void(0);">FENDI</a>
+                                <a href="javascript:void(0);">GUCCI</a>
+                                <a href="javascript:void(0);">GIVENCHY</a>
+                                <a href="javascript:void(0);">HERMÈS</a>
+                                <a href="javascript:void(0);">Leghila</a>
+                                <a href="javascript:void(0);">Louis Vuitton</a>
+                                <a href="javascript:void(0);">LONGCHAMP</a>
+                                <a href="javascript:void(0);">Michael Kors</a>
+                                <a href="javascript:void(0);">MIU MIU</a>
+                                <a href="javascript:void(0);">Moschino</a>
+                                <a href="javascript:void(0);">MULBERRY</a>
+                                <a href="javascript:void(0);">Proenza Schouler</a>
+                                <a href="javascript:void(0);">Prada</a>
+                                <a href="javascript:void(0);">REBECCA MINKOFF</a>
+                                <a href="javascript:void(0);">Salvatore Ferragamo</a>
+                                <a href="javascript:void(0);">TOD'S</a>
+                                <a href="javascript:void(0);">Tory Burch</a>
+                                <a href="javascript:void(0);">Vivienne Westwood</a>
+                                <a href="javascript:void(0);">YSL</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 時尚腕錶</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">Agnes.b</a>
+                                <a href="javascript:void(0);">Armani</a>
+                                <a href="javascript:void(0);">CITIZEN</a>
+                                <a href="javascript:void(0);">CASIO</a>
+                                <a href="javascript:void(0);">DKNY</a>
+                                <a href="javascript:void(0);">Daniel Wellington</a>
+                                <a href="javascript:void(0);">DIESEL</a>
+                                <a href="javascript:void(0);">EMPORIO ARMANI</a>
+                                <a href="javascript:void(0);">FOSSIL </a>
+                                <a href="javascript:void(0);">KOMONO</a>
+                                <a href="javascript:void(0);">Kenneth Cole</a>
+                                <a href="javascript:void(0);">MICHAEL KORS</a>
+                                <a href="javascript:void(0);">MBMJ</a>
+                                <a href="javascript:void(0);">Nixon</a>
+                                <a href="javascript:void(0);">SWATCH</a>
+                                <a href="javascript:void(0);">SKAGEN</a>
+                                <a href="javascript:void(0);">SEIKO</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 香水香氛</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">Anna Sui</a>
+                                <a href="javascript:void(0);">Abercrombie &amp; Fitch</a>
+                                <a href="javascript:void(0);">Adidas</a>
+                                <a href="javascript:void(0);">BVLGARI </a>
+                                <a href="javascript:void(0);">Chanel</a>
+                                <a href="javascript:void(0);">Clive Christian</a>
+                                <a href="javascript:void(0);">Chloe</a>
+                                <a href="javascript:void(0);">Calvin Klein</a>
+                                <a href="javascript:void(0);">Diptyque</a>
+                                <a href="javascript:void(0);">Dior </a>
+                                <a href="javascript:void(0);">DKNY </a>
+                                <a href="javascript:void(0);">Dermalogica 德卡</a>
+                                <a href="javascript:void(0);">EVE LOM</a>
+                                <a href="javascript:void(0);">Elizabeth Arden</a>
+                                <a href="javascript:void(0);">Fresh</a>
+                                <a href="javascript:void(0);">GUCCI </a>
+                                <a href="javascript:void(0);">Giorgio Armani</a>
+                                <a href="javascript:void(0);">Hermes</a>
+                                <a href="javascript:void(0);">HERVE GAMBS法國頂級香氛</a>
+                                <a href="javascript:void(0);">Jo Malone</a>
+                                <a href="javascript:void(0);">Jurlique</a>
+                                <a href="javascript:void(0);">KENZO</a>
+                                <a href="javascript:void(0);">Kiehl's</a>
+                                <a href="javascript:void(0);">LaMer 海洋拉娜</a>
+                                <a href="javascript:void(0);"> L'OCCITANE</a>
+                                <a href="javascript:void(0);">MONTBLANC</a>
+                                <a href="javascript:void(0);">MARC JACOBS</a>
+                                <a href="javascript:void(0);">Ralph Lauren</a>
+                                <a href="javascript:void(0);">Salvatore Ferragamo</a>
+                                <a href="javascript:void(0);">Tom Ford</a>
+                                <a href="javascript:void(0);">VERSACE</a>
+                                <a href="javascript:void(0);">Vivienne Westwood</a>
+                                <a href="javascript:void(0);">YSL </a>
+                                <a href="javascript:void(0);">其他</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 風尚鞋款</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">Chiara Ferragni 眨眼鞋</a>
+                                <a href="javascript:void(0);">TOMS</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 飾品配件</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">Burberry</a>
+                                <a href="javascript:void(0);">Coach</a>
+                                <a href="javascript:void(0);">Dogeared</a>
+                                <a href="javascript:void(0);">DAKS</a>
+                                <a href="javascript:void(0);">Forever21</a>
+                                <a href="javascript:void(0);">GUCCI</a>
+                                <a href="javascript:void(0);">Gorjana</a>
+                                <a href="javascript:void(0);">Les Nereides</a>
+                                <a href="javascript:void(0);">La Mer Collections</a>
+                                <a href="javascript:void(0);">Michael Kors</a>
+                                <a href="javascript:void(0);">Pandora</a>
+                                <a href="javascript:void(0);">Tiffany&amp;Co</a>
+                                <a href="javascript:void(0);">VITA FEDE</a>
+                                <a href="javascript:void(0);">Vivienne Westwood</a>
+                            </p>
+                        </div>
+                        <div class="yMenuLCinList" style="display:block;">
+                        <h3>| 新銳眼鏡</h3>
+
+                            <p>
+                                <a href="javascript:void(0);">COACH</a>
+                                <a href="javascript:void(0);">FENDI </a>
+                                <a href="javascript:void(0);">GUCCI </a>
+                                <a href="javascript:void(0);">MARC BY MARC JACOBS</a>
+                                <a href="javascript:void(0);">Ray Ban</a>
+                                <a href="javascript:void(0);">YSL(Saint Laurent Paris) </a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+    </div>
+    <!-- [子選單模組結束] -->
+
+    <div class="banner-ad2" name="advBannerTopLeft" data-url="/AdvEvent/Partial_AdvLeftTopBanner">
+        <a href="javascript:void(0);" target="_blank"><img src="http://placehold.it/206x36"></a>
+    </div>
 */
 
-.pullDown {
-	z-index: 4;
-    @include float(left);
-	position: relative;
-	width: 206px;
-    height:486px;
-}
-
 .pullDown .pullDownList {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-        background-color: #e6e4e7;
+    background-color: #e6e4e7;
 
-        li {
+    li {
+        line-height: 50px;
+
+        & > a {
             display:block;
-        	height: 48.5px;
-        	position: relative;
-        	line-height: 50px;
+        	border-bottom:0;
+
+        	color: #5E5E63;
+            @include fontSize($defFont + 4);
+        	text-decoration: none;
+        }
+
+        i {
+            margin-left: 20px;
+            -webkit-transition: margin-left .2s linear;
+            -moz-transition: margin-left .2s linear;
+            -o-transition: margin-left .2s linear;
+
+            background:url(#{$img-path}nav-icon.png) no-repeat;
+
+            //設計風尚
+            &.storeClothing { background-position: 0 0; }
+            //國際精品
+            &.storeFashion { background-position: 0 -50px; }
+            //家電用品
+            &.storeappliance { background-position: 0 -96px; }
+            //居家生活
+            &.storeLiving { background-position: 0 -144px; }
+            //運動健身
+            &.storeHealth { background-position: 0 -190px; }
+            //戶外休旅
+            &.storeOutdoor { background-position: 0 -240px; }
+            //電腦周邊
+            &.storeComputer { background-position: 0 -286px; }
+            //數位3C
+            &.store3C { background-position: 0 -334px; }
+            //好食市集
+            &.storeFoods { background-position: 0 -382px; }
+            //美蛋直購
+            &.storeNeweggUSA { background-position: 0 -428px; }
+        }
+
+
+        //hover & menulihover class settings
+        &:hover,
+        &.menulihover {
+            background: #eda16f;
+
+            a { color: #fff; }
 
             i {
-                display: inline-block;
-                position:relative;
-                top:4px;
-                margin-left: 20px;
-                left:0;
-                width: 25px;
-                height: 19px;
-                margin-right: 10px;
-
-                -webkit-transition: margin-left .2s linear;
-                -moz-transition: margin-left .2s linear;
-                -o-transition: margin-left .2s linear;
-
-                background:url(#{$img-path}nav-icon.png) no-repeat;
-
-                //設計風尚
-                &.storeClothing { background-position: 0 0; }
-                //國際精品
-                &.storeFashion { background-position: 0 -50px; }
-                //家電用品
-                &.storeappliance { background-position: 0 -96px; }
-                //居家生活
-                &.storeLiving { background-position: 0 -144px; }
-                //運動健身
-                &.storeHealth { background-position: 0 -190px; }
-                //戶外休旅
-                &.storeOutdoor { background-position: 0 -240px; }
-                //電腦周邊
-                &.storeComputer { background-position: 0 -286px; }
-                //數位3C
-                &.store3C { background-position: 0 -334px; }
-                //好食市集
-                &.storeFoods { background-position: 0 -382px; }
-                //美蛋直購
-                &.storeNeweggUSA { background-position: 0 -428px; }
+                margin-left:30px;
+                background-image:url(#{$img-path}nav-icon-hover.png);
             }
 
             span {
-                position: absolute;
-                top: 10px;
-                right: -20px;
-                display: inline-block;
-            }
-
-            &:hover,
-            &.menulihover {
-                background: #eda16f;
-
-                a { color: #fff; }
-
-                i {
-                    margin-left:30px;
-                    background-image:url(#{$img-path}nav-icon-hover.png);
-                }
-
-                span {
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 15px 0 15px 22px;
-                    border-color: transparent transparent transparent #eda16f;
-
-                }
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 0 15px 22px;
+                border-color: transparent transparent transparent #eda16f;
 
             }
 
         }
 
+    }
+}
 
-        li > a {
-            display:block;
-        	color: #5E5E63;
+//子選單模組樣式設計
+.yMenuListConin {
+    background:#fff;
+	background: rgba(255,255,255,.95);
 
-            @include fontSize($defFont + 4);
-        	text-decoration: none;
-        	border-bottom:0;
+    h2,
+    h2 a {
+        @include fontSize($defFont + 8);
+        text-decoration:underline;
+        border-bottom:0;
+    }
 
 
+
+    .yMenuLCinList h3 {
+        color: #233223;
+        @include fontSize($defFont + 1);
+    	font-weight: bold;
+    }
+
+    .yMenuColLCinList p {
+        color: #656565;
+        @include fontSize($defFont - 2);
+
+        a {
+            border-right: thin solid #656565;
+            border-bottom:0;
+
+
+            color: #7f7e7e;
+            text-decoration: none;
+
+            &:hover {
+                color: #eda16f;
+                text-decoration: underline;
+            }
         }
+
+    }
+
+}
+
+//子選單color styles
+.yMenuListCon .yMenuListConin {
+    &.storeClothing h2 a { color:#C4C2C2; }
+    &.storeFashion h2 a { color:#D6AE7A; }
+    &.storeappliance h2 a { color:#82C5ED; }
+    &.storeLiving h2 a { color:#87CDCF; }
+    &.storeHealth h2 a { color:#8DC88C; }
+    &.storeOutdoor h2 a { color:#90DDB4; }
+    &.storeComputer h2 a { color:#669BD3; }
+    &.store3C h2 a { color:#70B0E1; }
+    &.storeFoods h2 a { color:#F29F7F; }
+    &.storeNeweggUSA h2 a { color:#EC7375; }
 }

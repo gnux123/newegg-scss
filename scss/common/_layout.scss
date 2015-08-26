@@ -182,17 +182,19 @@ h3 {
 			position: relative;
 			display:block;
 			width:110px;
+			height:70px;
 			border:0;
 
-			a {
+			& > a {
 				display: block;
+				height:40px;
 				padding:25px 0 5px;
 				border-bottom:0;
 				cursor: pointer;
 
 			}
 
-			i {
+			& > a > i {
 				position:relative;
 				width:25px;
 				height:25px;
@@ -206,7 +208,7 @@ h3 {
 	        width:25px;
 		}
 
-		& ul li+li {
+		& ul > li + li {
 		     border-left-width:1px \9;
 		     &:after {
 		         content:" ";
@@ -314,4 +316,137 @@ h3 {
         height: 30px;
     }
 
+}
+
+
+//side Menus
+.pullDown {
+	z-index: 4;
+    @include float(left);
+	position: relative;
+	width: 206px;
+    height:486px;
+
+    .pullDownList {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pullDownList li {
+        position: relative;
+        display:block;
+        height: 48.5px;
+    }
+
+    .pullDownList li i {
+        position: relative;
+        display: inline-block;
+        top:4px;
+        left:0;
+        width: 25px;
+        height: 19px;
+        margin-right: 10px;
+    }
+
+    .pullDownList li span {
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: -20px;
+    }
+
+}
+
+//快速選單-我的帳戶下拉框架
+.quickMenu .dropCon {
+    display:none;
+    position:absolute;
+    top:70px;
+    left: 0;
+    margin:0;
+    width:100%;
+
+    & > ul > li {
+        padding:0;
+        width: 100%;
+        &:after {
+            display: none;
+            border-left: 0px;
+        }
+
+        & > a { padding:8px 0; }
+
+        & > a > i {
+            margin-top:5px;
+            width:30px;
+            height:30px;
+        }
+    }
+
+}
+
+
+.banner-ad2 {
+    @include float(left);
+    z-index: 1;
+    width: 206px;
+    height: 36px;
+    margin-top: 486px;
+    margin-left: -206px;
+    overflow: hidden;
+}
+
+
+//子選單框架樣式設計
+.yMenuListConin {
+    position: absolute;
+	display:none;
+    top: 0;
+    left: 206px;
+	width: 744px;
+    height: 486px;
+	padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    h2,
+    h2 a {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    .yMenuLCinList {
+        @include pie-clearfix;
+        width: 100%;
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .yMenuLCinList h3 {
+        @include float(left);
+        position: relative;
+        display: inline-block;
+        margin: 0 auto 2px;
+    }
+
+    .yMenuColLCinList p {
+        @include float(left);
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .yMenuColLCinList p a {
+        @include float(left);
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 4px;
+        padding: 0 8px 1px 5px;
+    }
 }
