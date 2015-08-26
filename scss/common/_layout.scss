@@ -459,7 +459,8 @@ h3 {
 	@include pie-clearfix;
 
     & > .footer-limiter {
-    	width: 1176px;
+    	position: relative;
+		width: 1176px;
     	margin: 0 auto;
     }
 
