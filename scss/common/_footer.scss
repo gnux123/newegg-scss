@@ -120,11 +120,19 @@
         text-align: center;
     }
 
+
+	//backTop
 	.pageTop {
-		background: $link-color url(#{$img-path}cd-top-arrow.svg) center no-repeat;
+		position:absolute;
+		top:-21px;
+		right:0px;
+		width:40px;
+		height:20px;
+		background: url(#{$img-path}cd-top-arrow.svg) #698EB8 center no-repeat;
+		@include border-top-left-radius(20px);
+		@include border-top-right-radius(20px);
 		text-indent:100%;
+		font-size:0;
+		color:#fff;
 		cursor:pointer;
 	}
-
-
-}
