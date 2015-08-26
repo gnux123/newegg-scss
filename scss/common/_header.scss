@@ -227,6 +227,7 @@
 
         & > a {
             @include quickMenuStyle;
+            padding: 15px 0 25px 0;
         }
         & > a > i.icon {
             background-image:url(#{$img-path}panel-icon.png);

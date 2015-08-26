@@ -424,3 +424,113 @@
     .price { @include float(right); }
 
 }
+
+/*#[section]首頁館模組
+
+    <section class="section" windowid="33">
+        <div class="section-head colorline11">
+            <div class="icon"><i class="listi11 colorbg11"></i></div>
+            <div class="section-title colortxt11">國際風尚館</div>
+        </div>
+        <div class="banner2">
+                <a href="/Category?CategoryID=1419"><img src="https://ssl-images.newegg.com.tw/image/sorting pages/design/shokay.jpg" style="width:100%;"></a>
+        </div>
+
+        <div class="combobox" blockid="33_1">
+            <div class="box1 none">
+                <div class="cellSingleImage"><img src="https://ssl-images.newegg.com.tw/image/sorting pages/Header/Fashion.jpg" style="" cellimageid="221"></div>
+            </div>
+            <div class="box2">
+                <div class="cellSingleImage">
+                    <a href="/Category?CategoryID=1153"><img src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/JM01.jpg" style="" cellimageid="222"></a>
+                </div>
+            </div>
+            <div class="box2 colorwinbg11">
+                <div class="box-category" data-cell-type="Group-List" style="width:inherit;">
+                    <ul>
+                        <li cellgroupid="143"><a href="/Category?CategoryID=1304">秋冬新品</a></li>
+                        <li cellgroupid="144"><a href="/Category?CategoryID=1056">品牌特惠</a></li>
+                        <li cellgroupid="145"><a href="/Category?CategoryID=1492">新品優惠</a></li>
+                        <li cellgroupid="146"><a href="/Category?CategoryID=1387">獨家特賣</a></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <ul>
+                        <li cellgroupid="147"><a href="/Category?CategoryID=1192">夢幻逸品</a></li>
+                        <li cellgroupid="148"><a href="/Category?CategoryID=1431">折扣精選</a></li>
+                        <li cellgroupid="149"><a href="/Category?CategoryID=1378">期間限定</a></li>
+                        <li cellgroupid="150"><a href="/Category?CategoryID=1191">日系設計</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="combobox2" blockid="33_2">
+            <div class="box2">
+                <div class="border">
+                    <a href="/item?itemid=435264">
+                        <div cellitemid="224" class="pic img" style="text-align: center; overflow: hidden;"><img src="https://ssl-images.newegg.com.tw/pic/item/0043/5264_1_300.jpg?1440581207383" class="itemImgCen" style="margin-top: 0px;"></div>
+                        <div class="caption">MICHAEL KORS新款防刮皮革斜背包(桃紫色)611066-1</div>
+                    </a>
+                    <div class="price">$5,999</div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="border">
+                    <a href="/item?itemid=468207">
+                        <div cellitemid="225" class="pic img" style="text-align: center; overflow: hidden;"><img src="https://ssl-images.newegg.com.tw/pic/item/0046/8207_1_300.jpg?1440581207383" class="itemImgCen" style="margin-top: 0px;"></div>
+                        <div class="caption">Vivienne Westwood經典水鑽LOGO披肩圍巾(粉灰色)910510-8</div>
+                    </a>
+                    <div class="price">$3,580</div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="border">
+                    <a href="/item?itemid=121334">
+                        <div cellitemid="226" class="pic img" style="text-align: center; overflow: hidden;"><img src="https://ssl-images.newegg.com.tw/pic/item/0012/1334_1_300.jpg?1440581207383" class="itemImgCen" style="margin-top: 0px;"></div>
+                        <div class="caption">agnes b. 《法國時尚》39mm錶徑/經典超薄款 BJ5004X1</div>
+                    </a>
+                    <div class="price">$6,200</div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="border">
+                    <a href="/item?itemid=470317">
+                        <div cellitemid="227" class="pic img" style="text-align: center; overflow: hidden;"><img src="https://ssl-images.newegg.com.tw/pic/item/0047/0317_1_300.jpg?1440581207383" class="itemImgCen" style="margin-top: 0px;"></div>
+                        <div class="caption">CHANEL經典金字雙C Logo黑色菱格紋小牛皮長夾</div>
+                    </a>
+                    <div class="price">$36,500</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="combobox2" blockid="33_3">
+            <div class="box4">
+                <div class="img13">
+                    <a href="/activity/20150813_de02"><img src="https://ssl-images.newegg.com.tw/image/sorting pages/design/landing page.jpg" style="" cellimageid="228"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+*/
+
+.section {
+	@include float(left);
+    @include pie-clearfix;
+	width: 1176px;
+	margin-bottom: 50px;
+
+    a{ border-bottom:0; }
+
+    .combobox,
+    .combobox2 {
+        @include float(left);
+        width:392px;
+
+        & > div { overflow: hidden; }
+    }
+
+}
