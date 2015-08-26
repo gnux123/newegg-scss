@@ -4,6 +4,15 @@
 */
 
 @media screen and (max-width:1279px) {
+    .header-limiter,
+    .topper-limiter,
+    .footer-limiter {
+        margin-left:15px;
+        padding: 0;
+        width: 994px;
+    }
+
+
     //header-quickMenu
     .header .quickMenu > ul > li { width:85px; }
 
@@ -17,5 +26,14 @@
         width: 33.25%;
     }
 
+
+    //footer-use
+    .footer > .footer-limiter {
+        width: 994px;
+        margin:0 auto;
+    }
+    .footer > .footer-limiter li {
+        margin-right:15px
+    }
 
 }

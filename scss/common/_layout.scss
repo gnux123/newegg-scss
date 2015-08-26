@@ -450,3 +450,73 @@ h3 {
         padding: 0 8px 1px 5px;
     }
 }
+
+
+//[footer]footer模組框架
+.footer {
+    height: 400px;
+	margin: 0 auto;
+	@include pie-clearfix;
+
+    & > .footer-limiter {
+    	width: 1176px;
+    	margin: 0 auto;
+    }
+
+    .icon {
+        @include float(left);
+        margin-top: 20px;
+
+        li i {
+            display: inline-block;
+            position: relative;
+            width: 45px;
+            height: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    li {
+        margin-right: 50px;
+        margin-bottom: 15px;
+    }
+
+    .selection ul {
+        margin-top: 63px;
+        margin-left: 50px;
+    }
+
+    .infoArea {
+        @include float(left);
+        margin: 50px 0 0 50px;
+        width: 260px;
+
+        .map {
+            position:relative;
+            width:253px;
+            height:147px;
+            margin-top: 20px;
+        }
+
+        .code {
+            margin: 20px;
+            margin-top: 50px;
+        }
+
+        .map .LinkTo {
+            display:block;
+            position:absolute;
+            width:100px;
+            height: 30px;
+            height:0;
+            padding-top: 40px;
+            overflow: hidden;
+        }
+    }
+
+    .address {
+        @include float(left);
+        display: block;
+        width:100%;
+    }
+}
