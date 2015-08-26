@@ -49,7 +49,7 @@ gulp.task('copyfiles', function(){
 //cssmin task
 gulp.task('cssmin', function(){
   gulp.src(_address.cache+'*.css')
-      .pipe(replace('img/', '/Themes/img/')) //replace imgPath to stable server
+      .pipe(replace('styleguide/img/', '/Themes/img/')) //replace imgPath to stable server
       .pipe(minifyCss({compatibility: 'ie8'}))
       .pipe(rename({ suffix: "-" + vers }))
       .pipe(gulp.dest(_address.css));
