@@ -63,7 +63,7 @@ gulp.task('clean', function(cb){
 
 //sass watch livetype
 gulp.task('sass:watch', function () {
-  gulp.watch(_address.sass, ['sass','copyfiles', 'cssmin']);
+  gulp.watch(_address.sass, ['build']);
 });
 
 //build task
