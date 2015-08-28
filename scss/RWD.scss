@@ -12,10 +12,20 @@
         width: 994px;
     }
 
+    //#header & tooper
+    .header,
+    .topper { width: 1024px; }
 
     //header-quickMenu
-    .header .quickMenu > ul > li { width:85px; }
+    .header .quickMenu > ul > li {
+        padding:0;
+        width:85px;
+    }
 
+    //topper searchbar    
+    .topper .searchbar .input {
+        width: 415px;
+    }
 
     //[banner-adv]sixInOne settings
     .banner-adv {
