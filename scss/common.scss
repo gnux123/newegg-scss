@@ -20,13 +20,14 @@ common.css為全站共用的css。不管在哪裡均要load進這支CSS。
 @import "compass/reset";
 
 @import "_base";
-@import "common/_layout";
-@import "common/_header";
-@import "common/_footer";
 
 @import "common/_components";
 @import "common/_btns";
 @import "common/_pageNums";
 @import "common/_popup";
+
+@import "common/_layout";
+@import "common/_header";
+@import "common/_footer";
 
 @import "common/_product";

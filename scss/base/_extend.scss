@@ -1,0 +1,10 @@
+%btn_frame {
+    @include float(left);
+    padding: 0;
+    width: 230px;
+    height: 81px;
+
+    @include fontSize($defFont + 5);
+    line-height: 81px;
+
+}

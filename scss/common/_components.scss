@@ -218,9 +218,20 @@ input[type=radio],
     <div class="pathLink"><a href="#">首頁</a><span>&gt;</span><a href="#" id="$pgId_5">手作工藝</a><span>&gt;</span>
 */
 .bread {
-	@include fontSize($defFont - 2);
-	color: $font-color;
-    line-height:55px;
+	@include pie-clearfix;
+	width: 500px;
+	margin-left: 10px;
+	position: relative;
+	z-index:1;
+	color: #808080;
+	font-size: 14px;
+    height:45px;
+    line-height:54px;
+    padding-left:8px;
+	margin-left: -58.5px;
+	a {
+		margin:0 3px;
+	}
 }
 
 .pathLink {
@@ -243,5 +254,101 @@ hr {
 		vertical-align:middle;
 		width:0;
 		height:100%;
+	}
+}
+
+
+/*#[box-model-combobox]combobox樣式設定
+
+##[comobox]
+
+	<div class="combobox" style="height:392px; background:#ccc;"></div>
+
+##[combobox2]
+
+	<div class="combobox2" style="height:392px; background:#ccc;"></div>
+
+##[combobox3]
+
+	<div class="combobox3" style="height:196px; background:#ccc;"></div>
+
+*/
+
+.combobox,
+.combobox2,
+.combobox3 {
+	@include float(left);
+	overflow: hidden;
+}
+
+.combobox,
+.combobox2 {
+	width: ($box-base-width * 2)#{px};
+}
+
+.combobox3 { width: $box-base-width#{px}; }
+
+/*#[box-model-box]box樣式設定
+
+##[box1]
+
+##[box2]
+
+##[box3]
+
+##[box4]
+
+##[box5]
+
+##[box6]
+
+##[box7]
+
+##[box8]
+
+##[box9]
+
+##[box10]
+
+##[box11]
+
+##[box12]
+
+##[box13]
+
+##[box14]
+
+##[box15]
+
+##[box16]
+
+##[box17]
+
+
+
+*/
+
+@for $i from 1 through 17 {
+	.box#{$i} {
+		@include float(left);
+		overflow: hidden;
+	}
+}
+
+.box1 {
+	width: ($box-base-width - 2)#{px};
+	height: ($box-base-width * 2)#{px};
+
+	.title {
+		display: inline-block;
+		height: 12px;
+		padding: 5px;
+		overflow: hidden;
+
+		@include fontSize($defFont);
+		color: $font-color;
+		font-weight: bold;
+		text-align: left;
+		white-space: pre-line;
 	}
 }
