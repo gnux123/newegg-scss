@@ -607,7 +607,7 @@
             a { color: #fff; }
 
             i {
-                margin-left:30px;
+                margin-left:30px; //側邊選單效果位移度
                 background-image:url(#{$img-path}nav-icon-hover.png);
             }
 
@@ -669,14 +669,9 @@
 
 //子選單color styles
 .yMenuListCon .yMenuListConin {
-    &.storeClothing h2 a { color:#C4C2C2; }
-    &.storeFashion h2 a { color:#D6AE7A; }
-    &.storeappliance h2 a { color:#82C5ED; }
-    &.storeLiving h2 a { color:#87CDCF; }
-    &.storeHealth h2 a { color:#8DC88C; }
-    &.storeOutdoor h2 a { color:#90DDB4; }
-    &.storeComputer h2 a { color:#669BD3; }
-    &.store3C h2 a { color:#70B0E1; }
-    &.storeFoods h2 a { color:#F29F7F; }
-    &.storeNeweggUSA h2 a { color:#EC7375; }
+    @each $cate in $cates-name {
+        $i: index($cates-name, $cate);
+        $color: nth($color-light-list, $i);
+        &.store#{$cate} h2 a { color:$color; }
+    }
 }

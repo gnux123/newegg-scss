@@ -60,6 +60,20 @@ h3 {
 }
 
 
+//breads 麵包屑
+.bread {
+	@include pie-clearfix;
+	position: relative;
+	z-index:1;
+	width: 500px;
+	height:45px;
+    padding-left:8px;
+
+	a {
+		margin:0 3px;
+	}
+}
+
 
 /*#[template]全站共用版面樣式
 */
@@ -459,8 +473,9 @@ h3 {
 	@include pie-clearfix;
 
     & > .footer-limiter {
-    	position: relative;
-		width: 1176px;
+
+		position: relative;
+    	width: 1176px;
     	margin: 0 auto;
     }
 
@@ -520,4 +535,14 @@ h3 {
         display: block;
         width:100%;
     }
+
+	.pageTop {
+		position: absolute;
+		top: -20px;
+		right: 0px;
+		width: 40px;
+		height: 20px;
+		@include border-top-left-radius(20px);
+		@include border-top-right-radius(20px);
+	}
 }

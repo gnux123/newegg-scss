@@ -15,7 +15,7 @@ var _address = {
   Address: '.', //'D:/projects/NETWWebsite2.0/01_Branch/Branch_Task20150820-CSS/TWNewEgg.ECWeb/TWNewEgg.ECWeb/Themes'
   sass: 'scss/{*/,**/}*.scss',
   css: 'css',
-  cache: 'css/_csstmp/',
+  cache: '.tmp/',
   styleguide: 'styleguide/styles/',
   include: 'scss/includes/'
 }
@@ -30,13 +30,10 @@ gulp.task('sass', function(){
       )
       //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
       .pipe(gulp.dest(_address.cache))
-      .pipe(gulp.dest(_address.styleguide))
-      .pipe(styleguide({
-        out: 'styleguide',
-        name: 'Newegg-CSS documents v'+ vers,
-        include: [_address.styleguide+'/common.css',_address.styleguide+'/RWD.css'],
-        'no-minify': false
-      }));
+      .pipe(replace('styleguide/img/', '/Themes/img/')) //replace imgPath to stable server
+      .pipe(minifyCss({compatibility: 'ie8'}))
+      .pipe(rename({ suffix: "-" + vers }))
+      .pipe(gulp.dest(_address.css));
 
 });
 
@@ -46,19 +43,27 @@ gulp.task('copyfiles', function(){
         .pipe(copy('styleguide/'));
 });
 
-//cssmin task
-gulp.task('cssmin', function(){
-  gulp.src(_address.cache+'*.css')
-      .pipe(replace('styleguide/img/', '/Themes/img/')) //replace imgPath to stable server
-      .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(rename({ suffix: "-" + vers }))
-      .pipe(gulp.dest(_address.css));
-
+gulp.task('styleguide', function(){
+    gulp.src(_address.sass)
+        .pipe(sass({
+              includePaths: [_address.include],
+              outputStyle: 'expanded',
+              precision: 10
+          }).on('error', sass.logError)
+        )
+        .pipe(gulp.dest(_address.styleguide))
+        .pipe(styleguide({
+          out: 'styleguide',
+          name: 'Newegg-CSS documents v'+ vers,
+          include: [_address.styleguide+'/common.css', _address.styleguide+'/RWD.css'],
+          'no-minify': false
+        }));
 });
+
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['css','styleguide'],cb);
+    del(['.tmp', 'css', 'styleguide'],cb);
 });
 
 //sass watch livetype
@@ -67,7 +72,7 @@ gulp.task('sass:watch', function () {
 });
 
 //build task
-gulp.task('build',['sass', 'copyfiles', 'cssmin']);
+gulp.task('build',['sass', 'styleguide', 'copyfiles']);
 
 //watch task
 gulp.task('server', ['clean', 'sass:watch']);
