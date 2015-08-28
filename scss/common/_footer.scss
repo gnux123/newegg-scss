@@ -1,7 +1,7 @@
 /*
 ##[footer]footer版面樣式
 
-    <footer class="footer">
+    <footer class="footer" style="margin-top:20px;">
         <div class="footer-limiter">
             <div class="icon">
                 <ul>
@@ -119,4 +119,12 @@
         color: #162D4B;
         text-align: center;
     }
+
+	.pageTop {
+		background: $link-color url(#{$img-path}cd-top-arrow.svg) center no-repeat;
+		text-indent:100%;
+		cursor:pointer;
+	}
+
+
 }
