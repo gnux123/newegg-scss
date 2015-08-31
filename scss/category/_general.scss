@@ -242,6 +242,112 @@ section.section3 {
     }
 }
 
+//carousel
+.carousel-logo3 {
+    @include float(right);
+    width: 444px;
+    height: 100px;
+    margin:-10px 0px 10px -40px;
+
+    ul {
+    	display: block;
+    	margin-top: 30px;
+    	margin-left: 40px;
+    }
+
+    ul li {
+        @include float(left);
+        display: block;
+        width: 110px;
+    	height: 90px;
+        margin:0 5px;
+    }
+
+    ul li img {
+        @include float(left);
+    	max-width: 110px;
+    	max-height: 90px;
+    }
+
+}
+
+.carousel-logo3-bg {
+	width: 280px;
+	height: 40px;
+	float: right;
+	background-repeat: no-repeat;
+}
+
+.section-bg {
+    display:block;
+	width: 264px;
+	height: 125px;
+	background-repeat: no-repeat;
+}
+
+@for $i from 1 through 9 {
+    .carousel-logo3-bg-img#{$i} {
+    	background-image: url(#{$img-path}carousel-bg-#{$i}.jpg);
+    }
+
+    .section-bg-img#{$i} {
+        background-image: url(#{$img-path}section-bg-#{$i}.png);
+    }
+}
+
+.carousel4 {
+    @include float(left);
+    width: 221px;
+    height: 708px;
+    border-left: 1px solid;
+
+    .divider {
+        @include float(left);
+        width: 201px;
+        height: 1px;
+        border-bottom: 1px solid;
+    }
+
+    .pagination {
+    	@include float(right);
+    	margin-top: 300px;
+    	width: 20px;
+    }
+
+    .pagination ul {
+        @include float(right);
+        margin-bottom: 16px;
+    }
+
+    .pagination ul li { margin-bottom: 16px; }
+    .pagination ul li a {
+        @include float(left);
+    	margin-top: 10px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: #999;
+
+        color: #fff;
+    	text-align: center;
+    	line-height: 20px;
+    	text-decoration: none;
+
+        &.selected { background-color: nth($color-list, 5); }
+    }
+
+    .pagination .more a {
+        @include float(right);
+    	width: 20px;
+        border:0;
+
+        text-align: center;
+
+        &:hover { color:inherit; }
+    }
+
+}
+
 
 //box
 .box1 {
