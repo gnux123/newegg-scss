@@ -12,7 +12,7 @@ textarea {
 	border-color:#808080;
 	border-style: solid;
 	font-family: "Microsoft JhengHei", sans-serif;
-	background-color: white;
+	background-color: #fff;
 	outline: none;
 }
 
@@ -257,6 +257,108 @@ hr {
 	}
 }
 
+/*#[IMG] IMG樣式表
+
+*/
+.img {
+	width: 150px;
+	height: 150px;
+	margin: 2px auto 0 auto;
+
+	img {
+		width:100%;
+		height: 100%;
+	}
+}
+
+
+.img2 {
+	width: 196px;
+	height: 300px;
+
+	img {
+		width:100%;
+		height: 100%;
+	}
+}
+
+.img3 {
+	width: 183px;
+	height: 183px;
+	margin: 2px auto 0px auto;
+	img {
+		width:100%;
+		height:100%;
+		margin: 0 auto;
+	}
+}
+
+
+.img4 img {
+	max-width: 392px;
+	max-height: 300px;
+	margin: 0 auto;
+}
+
+.img5 img {
+	max-width: 200px;
+	max-height: 200px;
+	margin: 0 auto;
+}
+
+.img6 img {
+	max-width: 210px;
+	max-height: 210px;
+	margin: 0 auto;
+}
+
+.img7 img {
+	max-width: 266px;
+	max-height: 266px;
+	margin: 0 auto;
+}
+
+.img8 img {
+	max-width: 180px;
+	max-height: 180px;
+	margin: 0 auto;
+}
+
+.img9 img {
+	max-width: 392px;
+	max-height: 258px;
+	margin: 0 auto;
+}
+
+.img10 img {
+	max-width: 222px;
+	max-height: 222px;
+	margin: 0 auto;
+}
+
+.img11 {
+	width: 160px;
+	height: 160px;
+	margin: 2px auto 0px auto;
+
+	img {
+		width:100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+}
+
+.img12 img {
+	max-width: 392px;
+	max-height: 192px;
+	margin: 0 auto;
+}
+
+.img13 img {
+	width: 392px;
+	height: 384px;
+	margin: 0 auto;
+}
 
 /*#[box-model-combobox]combobox樣式設定
 
@@ -292,46 +394,77 @@ hr {
 
 ##[box1]
 
+	<div class="box1" style="background:#ccc;"></div>
+
 ##[box2]
+
+	<div class="box2" style="background:#ccc;"></div>
 
 ##[box3]
 
+	<div class="box3" style="background:#ccc;"></div>
+
 ##[box4]
+
+	<div class="box4" style="background:#ccc;"></div>
 
 ##[box5]
 
+	<div class="box5" style="background:#ccc;"></div>
+
 ##[box6]
+
+	<div class="box6" style="background:#ccc;"></div>
 
 ##[box7]
 
+	<div class="box7" style="background:#ccc;"></div>
+
 ##[box8]
+
+	<div class="box8" style="background:#ccc;"></div>
 
 ##[box9]
 
+	<div class="box9" style="background:#ccc;"></div>
+
 ##[box10]
+
+	<div class="box10" style="background:#ccc;"></div>
 
 ##[box11]
 
+	<div class="box11" style="background:#ccc;"></div>
+
 ##[box12]
+
+	<div class="box12" style="background:#ccc;"></div>
 
 ##[box13]
 
+	<div class="box13" style="background:#ccc;"></div>
+
 ##[box14]
+
+	<div class="box14" style="background:#ccc;"></div>
 
 ##[box15]
 
+	<div class="box15" style="background:#ccc;"></div>
+
 ##[box16]
+
+	<div class="box16" style="background:#ccc;"></div>
 
 ##[box17]
 
-
+	<div class="box17" style="background:#ccc;"></div>
 
 */
 
 @for $i from 1 through 17 {
 	.box#{$i} {
-		@include float(left);
-		overflow: hidden;
+		@extend %box-handle;
 	}
 }
 
@@ -351,4 +484,356 @@ hr {
 		text-align: left;
 		white-space: pre-line;
 	}
+}
+
+
+.box2 {
+	width: ($box-base-width - 2)#{px};
+	height: ($box-base-width - 4)#{px};
+	white-space: normal;
+
+	#{&}-text {
+		@include float(left);
+		display: block;
+		width: $box-base-width#{px};
+		height: 100%;
+	}
+}
+
+
+.box3 {
+	width: (($box-base-width * 2) - 2)#{px};
+	height: ($box-base-width - 4)#{px};
+}
+
+
+.box4 {
+	width: (($box-base-width * 2) - 2)#{px};
+	height: ($box-base-width * 2)#{px};
+
+	.title {
+		height: 12px;
+		padding: 5px;
+		overflow: hidden;
+
+		@include fontSize($defFont);
+		font-weight: bold;
+		color:$font-color;
+		white-space: pre-line;
+		overflow: hidden;
+		text-align: left;
+	}
+}
+
+.box5 {
+	width: ($box-base-width - 2)#{px};
+	height: 258px;
+}
+
+.box6 {
+	width: (($box-base-width * 2) - 2)#{px};
+	height: 126px;
+}
+
+.box7 {
+	width: 226px;
+	height: 308px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.box8 {
+	width: 410px;
+	height: 54px;
+
+	.title {
+		@include fontSize($defFont + 20);
+		font-weight: bold;
+		text-align: right;
+		color: $font-red-color;
+	}
+}
+
+.box9 {
+	width: 414px;
+	height: 276px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.box10 {
+	width: ($box-base-width - 1)#{px};
+	height: 252px;
+	border-bottom: thin solid #FBE3E3;
+	border-left: thin solid #FBE3E3;
+}
+
+.box11 {
+	width: 274px;
+	height: 80px;
+	border-right: thin solid;
+}
+
+
+.box12 {
+	width: 222px;
+	height: 222px;
+	margin-top: 88px;
+}
+
+
+.box13 {
+	width: 280px;
+	height: 310px;
+	border-bottom: thick solid;
+}
+
+.box14 {
+	width: 201px;
+	height: 236px;
+}
+
+.box15 {
+	width: 201px;
+	height: auto;
+	margin-left: 50px;
+
+	.title {
+		@include float(left);
+		display: block;
+		width: 100px;
+		height: auto;
+		margin-left: 50px;
+		margin-bottom: 10px;
+
+		@include fontSize($defFont + 32);
+		text-align: center;
+	}
+}
+
+.box16 {
+	@include float(right);
+	width: 225px;
+
+	&, .box12 { margin-top: 0; }
+
+	.divider {
+		@include float(right);
+		width: 1px;
+		height: 260px;
+		border-left: thin solid;
+	}
+}
+
+.box17 {
+	width: 390px;
+	height: 258px;
+}
+
+
+/*#[box-model-category]box-category樣式設定
+
+##[box-category]
+
+	<div class="box-category" style="background:#ccc;"></div>
+
+##[box-category2]
+
+	<div class="box-category2" style="background:#ccc;"></div>
+
+##[box-category3]
+
+	<div class="box-category3" style="background:#ccc;">
+		<ul>
+			<li groupid="343"><a href="/Category?CategoryID=527">智慧穿戴</a></li>
+			<li groupid="344"><a href="/Category?CategoryID=678">運動相機</a></li>
+			<li groupid="345"><a href="/Category?CategoryID=1132">運動手錶</a></li>
+		</ul>
+	</div>
+
+##[box-category4]
+
+	<div class="box-category4" style="background:#ccc;"></div>
+*/
+
+
+//category box model settings
+.box-category,
+.box-category2,
+.box-category3,
+.box-category4 {
+	@include fontSize($defFont);
+
+	&,
+	& ul,
+	& .divider {
+		@include float(left);
+	}
+
+	&, & a {
+		color: #fff;
+	}
+
+	& a:hover { color:#fff; }
+
+
+	.divider {
+		width: 1px;
+		border-left: 1px dashed #fff;
+	}
+}
+
+
+.box-category {
+	width: 170px;
+	height: 152px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 15px;
+
+	ul {
+		margin-left: 10px;
+		li { margin-top: 20px; }
+	}
+
+	.divider {
+		height: 150px;
+		margin-left: 10px;
+		margin-right: 5px;
+	}
+}
+
+.box-category2 {
+	width: 388px;
+	height: 135px;
+	padding:20px 13px;
+	@include border-radius(10px);
+	background-color: #EC7375;
+
+
+	a { border-bottom: 0; }
+
+	ul {
+		margin-left: 25px;
+		li { margin-bottom: 20px; }
+
+	}
+
+	.divider {
+		height: 135px;
+		margin-left: 35px;
+		margin-right: 10px;
+	}
+
+}
+
+
+.box-category3 {
+	width: 175px;
+	height: auto;
+	padding:20px 13px;
+	@include border-radius(10px);
+
+	a { border-bottom:0; }
+	ul { margin-left: 35px; }
+	ul li { margin-bottom: 20px; }
+}
+
+.box-category4 {
+	width: 366px;
+	height: 86px;
+	padding:20px 13px;
+
+	a { border-bottom: 0; }
+	ul { margin-left: 30px; }
+	ul li {	margin-bottom: 20px; }
+
+	.divider {
+		height: 90px;
+		margin-left: 40px;
+		margin-right: 15px;
+	}
+}
+
+//品名價格欄位設計
+.caption,
+.caption2,
+.caption3,
+.caption4,
+.caption5,
+.caption6 {
+	display: block;
+	width: 98%;
+	padding: 5px 1%;
+	overflow : hidden;
+	@include box-sizing(border-box);
+
+	@include fontSize($defFont);
+	color: $font-color;
+	line-height: 18px;
+	text-align: left;
+	white-space: pre-line;
+	text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+}
+
+
+.caption { height: 18px; }
+
+.caption2 { height: 36px; }
+
+.caption3 {
+	height: 54px;
+	padding: 0 5px;
+
+	@include fontSize($defFont - 2);
+}
+
+.caption4 {
+	height:36px;
+
+	@include fontSize($defFont - 2);
+	text-align: right;
+}
+
+.caption5 {
+	height: 192px;
+	text-align: right;
+}
+
+.caption6 {
+	width: inherit;
+    height: inherit;
+}
+
+.price,
+.price2 {
+	margin-top: 0px;
+	padding: 5px;
+	height: 10px;
+	overflow: hidden;
+
+	@include fontSize($defFont);
+	color: $font-red-color;
+	text-align: right;
+	white-space: pre-line;
+}
+
+.price2 {
+	@include float(right);
+	display: inline-block;
+
+	@include fontSize($defFont - 2);
+	color:$font-gray;
+	font-weight: bold;
+	text-decoration: line-through;
+}
+
+.border {
+	border: 1px solid #D5D5D5;
 }

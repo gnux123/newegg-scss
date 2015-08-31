@@ -1,14 +1,15 @@
 /*##commom.css說明
 common.css為全站共用的css。不管在哪裡均要load進這支CSS。
 <p>1. compass reset style<br/>
-   2. 全站版面配置<br/>
-   3. Header樣式<br/>
-   4. Footer樣式<br/>
-   5. 全站共用元件樣式</br>
-   6. 全站按鈕樣式<br/>
-   7. 全站頁碼樣式<br/>
-   8. 全站商品樣式<br/>
-   9. 全站彈跳視窗樣式
+   2. 各館顏色對應Class Name表<br/>
+   3. 全站版面配置<br/>
+   4. Header樣式<br/>
+   5. Footer樣式<br/>
+   6. 全站共用元件樣式</br>
+   7. 全站按鈕樣式<br/>
+   8. 全站頁碼樣式<br/>
+   9. 全站商品樣式<br/>
+   10. 全站彈跳視窗樣式
 </p>
 */
 
@@ -21,6 +22,7 @@ common.css為全站共用的css。不管在哪裡均要load進這支CSS。
 
 @import "_base";
 
+@import "common/_colors-set";
 @import "common/_components";
 @import "common/_btns";
 @import "common/_pageNums";

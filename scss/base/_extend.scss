@@ -1,3 +1,8 @@
+%box-handle {
+    @include float(left);
+    overflow: hidden;
+}
+
 %btn_frame {
     @include float(left);
     padding: 0;

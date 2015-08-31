@@ -52,8 +52,8 @@
 
 	.txt {
 		@include pie-clearfix;
-        margin:0 auto;
-        margin-top:5px;
+        margin:5px auto;
+        // margin-top:5px;
 
 		@include fontSize($defFont);
 		color:#666;
@@ -80,17 +80,18 @@
         @include float(left);
 		margin:0 5px;
 
-		font-size:13px;
+		@include fontSize($defFont - 3);
 		text-decoration:line-through;
-		color:#b3b3b3;
+		color:$font-gray;
 	}
 
 	.price {
         @include float(right);
 		margin:0 5px;
+        height:20px;
 
 		font-weight:bold;
-		color:#c94141;
+		color:$font-red-color;
 	}
 
 	.specSelect {
