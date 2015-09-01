@@ -1,3 +1,6 @@
+/*#[colors-setting] 各分類顏色樣式
+*/
+
 @for $i from 1 through 10 {
     .catcolorbg#{$i} {
         background-color: nth($color-list, $i);
@@ -20,11 +23,11 @@
 //for other cates
 $sec-cates: 2 6 8 4 9 10;
 
-$sec-colors-list: nth($color-list, 2) nth($color-list, 6) nth($color-list, 8) nth($color-list, 4) nth($color-list, 9) nth($color-list, 10);
-$sec-colors-list-light: nth($color-light-list, 2) nth($color-light-list, 6) nth($color-light-list, 8) nth($color-light-list, 4) nth($color-light-list, 9) nth($color-light-list, 10);
+$sub-color-list: colorsCal($color-list,$sec-cates);
+$sub-color-list-light: colorsCal($color-light-list,$sec-cates);
 
-@for $i from 1 through 6 {
-    .colorbg1#{$i} { background-color: nth($sec-colors-list-light, $i); }
-    .colortxt1#{$i} { color: nth($sec-colors-list, $i); }
-    .colorline1#{$i} { border-bottom: nth($sec-colors-list-light, $i); }
+@for $num from 1 through length($sec-cates) {
+    .colorbg1#{$num} { background-color: nth($sub-color-list-light, $num); }
+     .colortxt1#{$num} { color: nth($sub-color-list, $num); }
+    .colorline1#{$num} { border-bottom: nth($sub-color-list-light, $num); }
 }

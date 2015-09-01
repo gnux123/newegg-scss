@@ -2,3 +2,15 @@
   $remSize: $size / 16;
   @return #{$remSize}rem;
 }
+
+
+@function colorsCal($lists,$cate-lists) {
+    $result: ();
+
+    @for $x from 1 through length($cate-lists) {
+        $color: nth($lists, nth($cate-lists, $x));
+        $result: append($result, $color);
+    }
+
+    @return $result;
+}
