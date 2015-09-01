@@ -9,9 +9,15 @@
     .catcolortxt#{$i},
     .catcolortop#{$i},
     .catcolorright#{$i},
-    .catcolorbottom#{$i},
     .catcolorleft#{$i} {
         color: nth($color-list, $i);
+    }
+
+    .catcolorbottom#{$i} {
+        border-bottom: 7px solid nth($color-list, $i);
+
+        & + .carousel-logo3-bg { background-image: url(#{$img-path}carousel-bg-#{$i}.jpg); }
+
     }
 
     .colorbg#{$i} { background-color: nth($color-light-list, $i); }

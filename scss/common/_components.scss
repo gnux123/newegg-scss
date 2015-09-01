@@ -588,7 +588,7 @@ hr {
 .box13 {
 	width: 280px;
 	height: 310px;
-	border-bottom: thick solid;
+	@include box-sizing(border-box);
 }
 
 .box14 {
@@ -766,8 +766,8 @@ hr {
 .caption5,
 .caption6 {
 	display: block;
-	width: 98%;
-	padding: 5px 1%;
+	width: 94%;
+	padding: 5px 3%;
 	overflow : hidden;
 	@include box-sizing(border-box);
 
@@ -775,10 +775,6 @@ hr {
 	color: $font-color;
 	line-height: 18px;
 	text-align: left;
-	white-space: pre-line;
-	text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
 
 }
 
