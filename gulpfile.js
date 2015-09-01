@@ -2,6 +2,9 @@ var gulp = require('gulp'),
     del = require('del'),
     copy = require('gulp-copy'),
     sass = require('gulp-sass'),
+    connect = require('gulp-connect'),
+    wait = require('gulp-wait'),
+    watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     minifyCss = require('gulp-minify-css'),
@@ -19,6 +22,20 @@ var _address = {
   styleguide: 'styleguide/styles/',
   include: 'scss/includes/'
 }
+
+gulp.task('webserver', function () {
+  connect.server({
+      root: '',
+      livereload: true
+  });
+});
+
+gulp.task('html:reload', function(){
+    gulp.src('./styleguide/*.html')
+        .pipe(wait(800))
+        .pipe(watch('./styleguide/*.html'))
+        .pipe(connect.reload());
+});
 
 gulp.task('sass', function(){
   gulp.src(_address.sass)
@@ -68,11 +85,11 @@ gulp.task('clean', function(cb){
 
 //sass watch livetype
 gulp.task('sass:watch', function () {
-  gulp.watch(_address.sass, ['build']);
+  gulp.watch(_address.sass, ['build', 'html:reload']);
 });
 
 //build task
 gulp.task('build',['sass', 'styleguide', 'copyfiles']);
 
 //watch task
-gulp.task('server', ['clean', 'sass:watch']);
+gulp.task('server', ['clean', 'webserver', 'html:reload', 'sass:watch']);
