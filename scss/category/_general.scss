@@ -207,34 +207,8 @@ section.section3 {
 
 }
 
-//carousel
-.carousel-logo3 {
-    @include float(right);
-    width: 444px;
-    height: 100px;
-    margin:-10px 0px 10px -40px;
+//carousel3 has not show
 
-    ul {
-    	display: block;
-    	margin-top: 30px;
-    	margin-left: 40px;
-    }
-
-    ul li {
-        @include float(left);
-        display: block;
-        width: 110px;
-    	height: 90px;
-        margin:0 5px;
-    }
-
-    ul li img {
-        @include float(left);
-    	max-width: 110px;
-    	max-height: 90px;
-    }
-
-}
 
 .carousel-logo3-bg {
     @include float(left);
@@ -376,7 +350,8 @@ section.section3 {
     }
 }
 
-/*##[section3]館首頁-商品櫥窗模組-有LOGO版本
+/*##[section3]館首頁-商品櫥窗模組-有LOGO輪播版本
+櫥窗logo輪播模組樣式設定
 
     <section class="section3" id="item0" shopwindowid="66">
         <a name="shop0"></a>
@@ -413,19 +388,28 @@ section.section3 {
                         </a>
                 </div>
                 <div class="carousel-logo3">
-                    <div class="caroufredsel_wrapper"height: 100px; margin: 30px 0px 0px 40px; overflow: hidden;">
-                        <ul id="carousel-logo">
-                            <li class="pic">
-                                    <img src="https://ssl-images.newegg.com.tw/pic/manufacture/0001/2152_1_60.jpg">
-                            </li>
-                            <li class="pic">
-                                    <img src="https://ssl-images.newegg.com.tw/pic/manufacture/0001/2173_1_60.jpg">
-                            </li>
-                            <li class="pic" style="margin-right: 47px;">
-                                    <img src="https://ssl-images.newegg.com.tw/pic/manufacture/0000/0348_1_60.jpg">
-                            </li>
-                        </ul>
-                    </div>
+                    <ul id="carousel-logo">
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                        <li class="pic">
+                                <img src="http://placehold.it/99x81">
+                        </li>
+                    </ul>
+                    <a id="prev1" class="prev catcolorbg1" href="#">< </a>
+                    <a id="next1" class="next catcolorbg1" href="#">> </a>
                 </div>
                 <div class="box16 catcolortop1" shopitemid="463">
                     <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
@@ -493,3 +477,62 @@ section.section3 {
     </section>
 
 */
+
+//logo輪播模組樣式設定
+.carousel-logo3 {
+    @include float(right);
+    position: relative;
+    width: 445px;
+    height: 115px;
+    // margin:-10px 0px 10px -40px;
+
+    ul {
+        @include pie-clearfix;
+        width: 445px;
+        height: 100%;
+
+    }
+
+    ul li {
+        @include float(left);
+        position: relative;
+        display: block;
+        width: 148.3px;
+    	height: 90px;
+        margin:12.5px 0;
+
+        &:first-child {margin-left:0; }
+    }
+
+    ul li img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100px;
+        max-height: 81px;
+
+        margin-top: -40.5px;
+        margin-left: -50px;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        display: block;
+        top:50%;
+        margin-top: -15px;
+        width: 30px;
+        height: 30px;
+        border-bottom:0;
+
+        color:#fff;
+        text-align: center;
+        line-height: 30px;
+
+    }
+
+    .prev { left:0; }
+
+    .next { right: 0; }
+
+}
