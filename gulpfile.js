@@ -56,7 +56,7 @@ gulp.task('sass', function(){
 
 //copyfiles
 gulp.task('copyfiles', function(){
-    gulp.src('img/{*,*/*}')
+    gulp.src(['img/{*,*/*}', 'js/{*,*/*}'])
         .pipe(copy('styleguide/'));
 });
 
@@ -72,7 +72,11 @@ gulp.task('styleguide', function(){
         .pipe(styleguide({
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
-          include: [_address.styleguide+'/common.css', _address.styleguide+'/RWD.css'],
+          include: [
+              _address.styleguide+'/common.css',
+              _address.styleguide+'/RWD.css',
+              'styleguide/js/main.js'
+          ],
           'no-minify': false
         }));
 });
@@ -80,16 +84,16 @@ gulp.task('styleguide', function(){
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['.tmp', 'css', 'styleguide'],cb);
+    del(['.tmp', 'css', 'styleguide'], {force: true, read: false}, cb);
 });
 
 //sass watch livetype
-gulp.task('sass:watch', function () {
-  gulp.watch(_address.sass, ['build', 'html:reload']);
+gulp.task('sass:watch', [], function () {
+  gulp.watch([_address.sass, 'js/main.js'], ['build', 'html:reload']);
 });
 
 //build task
-gulp.task('build',['sass', 'styleguide', 'copyfiles']);
+gulp.task('build',['sass', 'copyfiles', 'styleguide']);
 
 //watch task
-gulp.task('server', ['clean', 'webserver', 'html:reload', 'sass:watch']);
+gulp.task('server', ['clean', 'webserver', 'sass:watch']);
