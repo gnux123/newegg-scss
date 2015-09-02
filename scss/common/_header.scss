@@ -262,7 +262,7 @@
     .input {
     	padding: 6px 15px;
     	border: thin solid #fff;
-        background:#e0e0e0;
+        background:#fff;
     }
 
     .input2 {
@@ -674,4 +674,91 @@
         $color: nth($color-light-list, $i);
         &.store#{$cate} h2 a { color:$color; }
     }
+}
+
+/*##[pullDown]側邊欄選單模組-下拉樣式
+    <div class="mainMenuBox" style="margin-left: 0;">
+            <div class="menudropDown">全館分類</div>
+            <div id="mainMenu" class="mainMenu pullDown" style="display: block;">
+                <ul class="pullDownList">
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
+                            <span></span>
+                        </li>
+                        <li class="">
+                            <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeHealth"></i>運動健身</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="store3C"></i>數位3C</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeappliance"></i>生活家電</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeLiving"></i>居家親子</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeFoods"></i>好食市集</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
+                            <span></span>
+                        </li>
+                </ul>
+            </div>
+    </div>
+*/
+
+.mainMenuBox {
+    position: relative;
+    margin-left: -58.5px;
+    width: 206px;
+    height: 25px;
+}
+
+.menudropDown {
+    position: relative;
+    z-index: 9;
+    padding: 5px 0;
+    width: 206px;
+    height: 25px;
+    overflow: hidden;
+
+    border-bottom: 1px solid #fff;
+    background: url(#{$img-path}Icon/arrowUpDown.png) #d2d2d2 150px 11px no-repeat;
+
+    letter-spacing: 2px;
+    line-height: 26px;
+    text-align: center;
+    color: $font-color;
+    cursor: pointer;
+
+    &:hover {
+        color:#fff;
+    }
+}
+
+#mainMenu {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    z-index: 100;
 }

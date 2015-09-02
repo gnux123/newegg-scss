@@ -1,0 +1,40 @@
+/*#[colors-setting] 各分類顏色樣式
+*/
+
+@for $i from 1 through 10 {
+    .catcolorbg#{$i} {
+        background-color: nth($color-list, $i);
+    }
+
+    .catcolortxt#{$i} { color: nth($color-list, $i); }
+
+    .catcolortop#{$i},
+    .catcolorright#{$i},
+    .catcolorleft#{$i} {
+        border-color: nth($color-list, $i);
+    }
+
+    .catcolorbottom#{$i} {
+        border-color: nth($color-list, $i);
+
+        & + .carousel-logo3-bg { background-image: url(#{$img-path}carousel-bg-#{$i}.jpg); }
+
+    }
+
+    .colorbg#{$i} { background-color: nth($color-light-list, $i); }
+    .colortxt#{$i} { color: nth($color-light-list, $i);  }
+    .colorline#{$i} { border-bottom: 1px solid nth($color-light-list, $i); }
+}
+
+
+//for other cates
+$sec-cates: 2 6 8 4 9 10;
+
+$sub-color-list: colorsCal($color-list,$sec-cates);
+$sub-color-list-light: colorsCal($color-light-list,$sec-cates);
+
+@for $num from 1 through length($sec-cates) {
+    .colorbg1#{$num} { background-color: nth($sub-color-list-light, $num); }
+     .colortxt1#{$num} { color: nth($sub-color-list, $num); }
+    .colorline1#{$num} { border-bottom: nth($sub-color-list-light, $num); }
+}
