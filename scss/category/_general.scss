@@ -1,4 +1,41 @@
-/*##[section3]館首頁-商品櫥窗模組-無LOGO版本
+/*#[banner-title]館首頁-館分類名稱
+
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi1"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi2"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi3"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi4"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi5"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi6"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi7"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi8"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi9"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi10"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi11"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi12"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi13"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi14"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi15"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi16"></i>國際名品</div>
+
+*/
+
+.banner-title {
+    @include float(left);
+    position: relative;
+    display: block;
+    width: 850px;
+    height: 42px;
+    padding-left: 50px;
+
+
+    @include fontSize($defFont + 8);
+    color: #fff;
+    line-height: 50px;
+}
+
+
+
+/*#[section3]館首頁-商品櫥窗模組-無LOGO版本
 
     <section class="section3" id="item0" shopwindowid="66">
         <a name="shop0"></a>
@@ -6,26 +43,27 @@
         <div class="clear"></div>
 
         <div class="group2">
-                <div class="box11 catcolorright1">
-                    <div class="caption4">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
+            <div class="box11 catcolorright1">
+                <div class="caption4">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
+                <div class="price">$99,999</div>
+            </div>
+            <div class="box15">
+                <div class="title catcolortxt1">櫥窗標題</div>
+                <div class="box-category3 catcolorbg1">
+                    <ul>
+                        <li groupid="323"><a href="javascript:void(0);">開化堂</a></li>
+                        <li groupid="324"><a href="javascript:void(0);">金網</a></li>
+                        <li groupid="325"><a href="javascript:void(0);">公長齋</a></li>
+                        <li groupid="326"><a href="javascript:void(0);">朝日燒</a></li>
+                        <li groupid="327"><a href="javascript:void(0);">陸寶</a></li>
+                        <li groupid="453"><a href="javascript:void(0);">Wantz 享瓷</a></li>
+                    </ul>
                 </div>
-                <div class="box15">
-                    <div class="title catcolortxt1">櫥窗標題</div>
-                        <div class="box-category3 catcolorbg1">
-                            <ul>
-                                <li groupid="323"><a href="javascript:void(0);">開化堂</a></li>
-                                <li groupid="324"><a href="javascript:void(0);">金網</a></li>
-                                <li groupid="325"><a href="javascript:void(0);">公長齋</a></li>
-                                <li groupid="326"><a href="javascript:void(0);">朝日燒</a></li>
-                                <li groupid="327"><a href="javascript:void(0);">陸寶</a></li>
-                                <li groupid="453"><a href="javascript:void(0);">Wantz 享瓷</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+
         <div class="group3">
-            <div class="box12 img10 pic" shopitemid="461" style="text-align: center; overflow: hidden;">
+            <div class="box12 img10 pic" shopitemid="461">
                 <a href="javascript:void(0);">
                     <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
             </div>
@@ -54,6 +92,7 @@
                 </div>
 
         </div>
+
         <div class="carousel4 catcolorleft1">
             <div class="pagination">
                 <div class="more"><a class="catcolortxt1" href="#nogo">更多商品</a></div>
@@ -142,7 +181,8 @@ section.section3 {
         width: 274px;
         height: 80px;
         overflow: hidden;
-        border-right: thin solid;
+        border-width: 0 1px 0 0;
+        border-style: solid;
 
         .caption4,
         .price {
@@ -245,7 +285,8 @@ section.section3 {
         @include float(left);
         width: 201px;
         height: 1px;
-        border-bottom: 1px solid;
+        border-width: 0 0 1px 0;
+        border-style: solid;
     }
 
     .pagination {
@@ -350,7 +391,7 @@ section.section3 {
     }
 }
 
-/*##[section3]館首頁-商品櫥窗模組-有LOGO輪播版本
+/*#[section3]館首頁-商品櫥窗模組-有LOGO輪播版本
 櫥窗logo輪播模組樣式設定
 
     <section class="section3" id="item0" shopwindowid="66">
