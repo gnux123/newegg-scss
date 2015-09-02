@@ -1,0 +1,29 @@
+%box-handle {
+    @include float(left);
+    overflow: hidden;
+}
+
+%section-icons {
+    @include float(left);
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+
+    background: url(#{$img-path}section-icon.png) no-repeat;
+}
+
+%btn_frame {
+    @include float(left);
+    padding: 0;
+    width: 230px;
+    height: 81px;
+
+    @include fontSize($defFont + 5);
+    line-height: 81px;
+
+}

@@ -2,6 +2,9 @@ var gulp = require('gulp'),
     del = require('del'),
     copy = require('gulp-copy'),
     sass = require('gulp-sass'),
+    connect = require('gulp-connect'),
+    wait = require('gulp-wait'),
+    watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     minifyCss = require('gulp-minify-css'),
@@ -19,6 +22,20 @@ var _address = {
   styleguide: 'styleguide/styles/',
   include: 'scss/includes/'
 }
+
+gulp.task('webserver', function () {
+  connect.server({
+      root: '',
+      livereload: true
+  });
+});
+
+gulp.task('html:reload', function(){
+    gulp.src('./styleguide/*.html')
+        .pipe(wait(800))
+        .pipe(watch('./styleguide/*.html'))
+        .pipe(connect.reload());
+});
 
 gulp.task('sass', function(){
   gulp.src(_address.sass)
@@ -39,7 +56,7 @@ gulp.task('sass', function(){
 
 //copyfiles
 gulp.task('copyfiles', function(){
-    gulp.src('img/{*,*/*}')
+    gulp.src(['img/{*,*/*}', 'js/{*,*/*}'])
         .pipe(copy('styleguide/'));
 });
 
@@ -55,7 +72,11 @@ gulp.task('styleguide', function(){
         .pipe(styleguide({
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
-          include: [_address.styleguide+'/common.css', _address.styleguide+'/RWD.css'],
+          include: [
+              _address.styleguide+'/common.css',
+              _address.styleguide+'/RWD.css',
+              'styleguide/js/main.js'
+          ],
           'no-minify': false
         }));
 });
@@ -63,16 +84,16 @@ gulp.task('styleguide', function(){
 
 //clean temp
 gulp.task('clean', function(cb){
-    del(['.tmp', 'css', 'styleguide'],cb);
+    del(['.tmp', 'css', 'styleguide'], {force: true, read: false}, cb);
 });
 
 //sass watch livetype
-gulp.task('sass:watch', function () {
-  gulp.watch(_address.sass, ['build']);
+gulp.task('sass:watch', [], function () {
+  gulp.watch([_address.sass, 'js/main.js'], ['build', 'html:reload']);
 });
 
 //build task
-gulp.task('build',['sass', 'styleguide', 'copyfiles']);
+gulp.task('build',['sass', 'copyfiles', 'styleguide']);
 
 //watch task
-gulp.task('server', ['clean', 'sass:watch']);
+gulp.task('server', ['clean', 'webserver', 'sass:watch']);
