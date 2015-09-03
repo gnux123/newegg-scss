@@ -1,6 +1,126 @@
 /*#[Sub-cates]次分類頁(商品列表頁)
 
+##[categoryTopBar]商品排序模組
+
+    <div class="categoryTopBar">
+        <div class="navOrder categoryOrder">
+            <div class="orderList active" onclick="NextPage(null, 0, 1, 'CreatDate')" type="CreatDate">
+                <i class="icon new"></i>
+                <span>最新上架</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'PopularityIndex')" type="PopularityIndex">
+                <i class="icon hot"></i>
+                <span>人氣排行榜</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'Recommended')" type="Recommended">
+                <i class="icon recom"></i>
+                <span>推薦排行</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'HighPrice')" type="HighPrice">
+                <i class="icon priceH"></i>
+                <span>金額高</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'LowPrice')" type="LowPrice">
+                <i class="icon priceL"></i>
+                <span>金額低</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+*/
+
+.categoryTopBar {
+    position: relative;
+    display: block;
+    width:955px;
+    height: 30px;
+
+    .navOrder {
+        position: absolute;
+        right:0;
+    }
+}
+
+.navOrder {
+    @include pie-clearfix;
+    margin-top:2px;
+
+    .orderList {
+        position: relative;
+        @include float(left);
+        display:inline-block;
+        height:20px;
+        margin-left: $gutter#{px};
+        padding-left: 43px;
+        border-left: 1px solid $font-color;
+        cursor:pointer;
+
+        @include fontSize($defFont);
+        color: $font-color;
+        line-height: 20px;
+
+        &:first-child { border-left: 0; }
+
+        &:hover, &.active {
+            color: $font-organe-color;
+
+            i.icon {
+                &.new {
+                    background-position: -26px 0;
+                }
+                &.hot {
+                    background-position: -26px -26px;
+                }
+                &.recom {
+                    background-position: -26px -52px;
+                }
+                &.priceH {
+                    background-position: -26px -78px;
+                }
+                &.priceL {
+                    background-position: -26px -104px;
+                }
+            }
+        }
+    }
+
+    i.icon {
+        position: absolute;
+        top:-3px;
+        left:10px;
+		width:26px;
+		height:26px;
+        margin-right:5px;
+        background:url(#{$img-path}filter-icon.png) no-repeat;
+
+        &.new {
+            background-position:0 0;
+        }
+        &.hot {
+            background-position:0 -26px;
+        }
+        &.recom {
+            background-position:0 -52px;
+        }
+        &.priceH {
+            background-position:0 -78px;
+        }
+        &.priceL {
+            background-position:0 -104px;
+        }
+    }
+
+}
+
+
+
+
+
+
+/*#[filter]過濾模組樣式
 ##[sub-cates-filter]過濾模組-次分類頁面
+
     <div class="filterList property">
         <div class="head">
             <span>屬性搜尋</span>
