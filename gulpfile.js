@@ -73,7 +73,6 @@ gulp.task('styleguide', function(){
           out: 'styleguide',
           name: 'Newegg-CSS documents v'+ vers,
           include: [
-              _address.styleguide+'/common.css',
               _address.styleguide+'/RWD.css',
               'styleguide/js/main.js'
           ],

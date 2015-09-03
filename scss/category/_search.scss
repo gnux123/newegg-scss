@@ -1,0 +1,89 @@
+/*#[search-filter]過濾模組-搜尋頁面
+
+    <div class="filterList property">
+            <div class="head">
+                <span>全部分類</span>
+                <div class="headAll open" id="categoryHead">-</div>
+            </div>
+
+            <div class="groupList srCategoryList open">
+                <div class="groupTit">
+                    <i class="showArrow down"></i>
+                    <span class="tit">國際名品</span>
+                    <span class="num">(39)</span>
+                </div>
+
+                <ul class="list" style="display: block;">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="filterCats" data-cat="766">
+                            <span>
+                                <span class="subTit">精品包款</span>
+                                <span class="subNum">(33)</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="filterCats" data-cat="767">
+                            <span>
+                                <span class="subTit">時尚腕錶</span>
+                                <span class="subNum">(2)</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="filterCats" data-cat="769">
+                            <span>
+                                <span class="subTit">風尚鞋款</span>
+                                <span class="subNum">(1)</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="filterCats" data-cat="773">
+                            <span>
+                                <span class="subTit">飾品配件</span>
+                                <span class="subNum">(3)</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="groupList srCategoryList open">
+                <!-- open/close -->
+                <div class="groupTit">
+                    <i class="showArrow top"></i>
+                    <span class="tit">數位3C</span>
+                    <span class="num">(578)</span>
+                    <!-- top/down -->
+                </div>
+            </div>
+
+            <div class="groupList srCategoryList open">
+                <div class="groupTit">
+                    <i class="showArrow top"></i>
+                    <span class="tit">美國新蛋直購</span>
+                    <span class="num">(34)</span>
+                </div>
+            </div>
+        </div>
+
+*/
+
+.filterList .groupTit > .num {
+    position: absolute;
+    right: 5px;
+    color: $font-color;
+
+    span{
+        width:64px;
+        @include ellipsis;
+    }
+}
+
+/*#[search-result-input]
+*/
