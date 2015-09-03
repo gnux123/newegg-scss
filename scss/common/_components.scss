@@ -852,3 +852,35 @@ hr {
         &.listi#{($i + 1)} { background-position: 0 ($i * -46)#{px}; }
     }
 }
+
+/*#[banner-slide]輪播廣告共用樣式
+*/
+.banner,
+.banner-title + .banner {
+    @extend  %banner;
+
+	.tab {
+		&, & ul li { background-color:rgba(217, 217, 217, .8); }
+
+		ul li {
+			.arrow {
+				border-color: transparent transparent rgba(217, 217, 217, 0.8) transparent;
+				_border-color: #000 #000 rgba(217, 217, 217, 0.8) #000;
+				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+			}
+
+			&:hover, &.selected {
+				background:#606060;
+				border-color:#606060;
+
+				.arrow {
+					border-color: transparent transparent #606060 transparent;
+					_border-color: #000 #000 #606060 #000;
+					_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+				}
+			}
+
+		}
+
+	}
+}

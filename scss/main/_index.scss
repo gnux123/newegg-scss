@@ -25,77 +25,23 @@
     </div>
 */
 .banner {
-    @include float(left);
-    margin-left:0;
     width:744px;
     height:522px;
+    margin-left:0;
 
     .banner-img {
-		position:relative;
         &,
         & img {
             width:744px;
     		height:486px;
         }
-
-		a{ border-bottom:0; }
 	}
-}
 
-.banner .tab {
-    margin:0 6px;
-    height:36px;
-    background-color:rgba(217, 217, 217, .8);
-    ul { @include pie-clearfix; }
-    ul li {
-        @include float(left);
-        position:relative;
+    .tab { margin:0 6px; }
+    .tab ul li {
         width:16.6%;
-        height:26px;
-        color: #fff;
-        background:rgba(217, 217, 217, .8);
         border-left:2px solid rgba(217, 217, 217, .8);
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 25px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        cursor:pointer;
-
-        & + li { border:0; }
-
-        .arrow {
-            position:absolute;
-            top:-4px;
-            left:50%;
-            margin-left:-2.5px;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 4px 5px 4px;
-            border-color: transparent transparent rgba(217, 217, 217, 0.8) transparent;
-            line-height: 0px;
-            _border-color: #000 #000 rgba(217, 217, 217, 0.8) #000;
-            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
-        }
-
-
-        &:hover, &.selected {
-            background:#606060;
-            border-color:#606060;
-
-            .arrow {
-				border-color: transparent transparent #606060 transparent;
-				_border-color: #000 #000 #606060 #000;
-				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
-            }
-        }
-
-
     }
-
 }
 
 /*

@@ -40,22 +40,16 @@
     <div class="banner">
       <div class="banner-bg2 banner-bg2-img2"></div>
       <a href="/Category?CategoryID=1153">
-          <div class="banner-img" style="background:url('https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/JM0909.jpg')">
+          <div class="banner-img" style="background:url('http://placehold.it/900x400')">
           </div>
       </a>
       <div class="tab">
           <ul>
-                  <li><a href="javascript:void(0)" banner-src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/JM0909.jpg" banner-url="/Category?CategoryID=1153">Jo Malone<div class="arrow"></div>
-                  </a></li>
-                  <li><a href="javascript:void(0)" banner-src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/MK01.jpg" banner-url="/Category?CategoryID=1450">Michael Kors特惠<div class="arrow"></div>
-                  </a></li>
-                  <li><a href="javascript:void(0)" banner-src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/RM.jpg" banner-url="/Category?CategoryID=1098">Rebecca Minkoff<div class="arrow"></div>
-                  </a></li>
-                  <li><a href="javascript:void(0)" banner-src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/KOMONO.jpg" banner-url="/Category?CategoryID=1114">KOMONO<div class="arrow"></div>
-                  </a></li>
-                  <li><a href="javascript:void(0)" banner-src="https://ssl-images.newegg.com.tw/image/sorting pages/Boutique/DIESEL.jpg" banner-url="/Category?CategoryID=1118">DIESEL<div class="arrow"></div>
-                  </a></li>
-
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">Jo Malone<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">Michael Kors特惠<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">Rebecca Minkoff<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">KOMONO<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">DIESEL<div class="arrow"></div></a></li>
           </ul>
       </div>
       <div class="storeUSBG red"></div><div class="storeUSBG blue"></div>
@@ -64,23 +58,37 @@
 */
 
 .banner-title + .banner {
-  position: relative;
-  @include float(left);
-  display: block;
   width: 900px;
   height: 400px;
   background:#ccc;
 
   & > a {
-    display:block;
     width: 100%;
     height: 100%;
   }
 
   & > a > .banner-img {
-    width: 900px;
-    height: 400px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  & > .tab {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width:100%;
+      margin: 0;
+  }
+
+  & > .tab li {
+      border-left: 0;
+      width: 20%;
+  }
+
+  & > .tab li a {
+      .arrow { display: none; }
+      &:hover .arrow { display: block; }
   }
 }
 
