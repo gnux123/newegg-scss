@@ -1,4 +1,5 @@
-/*#[search-filter]過濾模組-搜尋頁面
+/*#搜尋結果頁面
+##[search-filter]過濾模組-搜尋頁面
 
     <div class="filterList property">
             <div class="head">
@@ -85,5 +86,119 @@
     }
 }
 
-/*#[search-result-input]
+/*#[search-result-toolbar]搜尋結果-工具列
+
+    <div class="searchListArea">
+        <div class="searchTopBar">
+            <div class="searckKeyBar">
+                <span>搜尋結果：</span>
+                <span>行李箱</span>
+                <span>(共<span>150</span>筆)</span>
+            </div>
+            <div class="searchAgainArea">
+                <span>篩選</span>
+                <input type="text" placeholder="在結果中再搜尋" class="searchAgainBar" id="searchIn">
+                <input type="button" class="searchAgain" id="searchInButton">
+            </div>
+        </div>
+
+        <div class="navOrder searchOrder">
+            <div class="orderList active" onclick="NextPage(null, 0, 1, 'CreatDate')" type="CreatDate">
+                <i class="icon new"></i>
+                <span>最新上架</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'PopularityIndex')" type="PopularityIndex">
+                <i class="icon hot"></i>
+                <span>人氣排行榜</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'HighPrice')" type="HighPrice">
+                <i class="icon priceH"></i>
+                <span>金額高</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'LowPrice')" type="LowPrice">
+                <i class="icon priceL"></i>
+                <span>金額低</span>
+            </div>
+        </div>
+    </div>
+
 */
+
+.searchListArea {
+    position: relative;
+    display: block;
+    width: ($frame-max-width - 221)#{px};
+}
+
+.searchTopBar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-bottom: $gutter#{px};
+    @include pie-clearfix;
+
+    & > div {
+        max-width: 50%;
+        height: 100%;
+    }
+}
+
+.searckKeyBar {
+    @include float(left);
+    display: inline-block;
+
+    @include fontSize($defFont);
+    color: $font-organe-color;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.searchAgainArea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+
+    & > span {
+        display:inline-block;
+        height: 100%;
+
+        @include fontSize($defFont);
+        line-height: 30px;
+        letter-spacing: 0.5px;
+    }
+
+    input[type="text"] {
+        width:350px;
+        height: 100%;
+        margin:0 38px 0 0;
+        padding:0 5px;
+        @include box-sizing(border-box);
+
+        @include fontSize($defFont - 2);
+        letter-spacing: 0.5px;
+        line-height: 28px;
+    }
+
+    input[type="button"] {
+        position: absolute;
+        z-index: 1;
+        top:1px;
+        right:1px;
+
+        width:38px;
+        height: 30px;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        border: 0;
+        background: url(#{$img-path}Icon/searchAgain.jpg) center no-repeat;
+        cursor: pointer;
+    }
+}
+
+.searchOrder {
+    @include float(right);
+    display: inline-block;
+}

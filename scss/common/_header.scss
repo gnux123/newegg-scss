@@ -97,12 +97,10 @@
 .header .icon li i {
     background: url(#{$img-path}header-icon.png) no-repeat;
 
-    &.listi1 { background-position: 0 1px; }
-    &.listi2 { background-position: 0 -29px; }
-    &.listi3 { background-position: 0 -59px; }
-    &.listi4 { background-position: 0 -89px; }
-    &.listi5 { background-position: 0 -119px; }
-    &.listi6 { background-position: 0 -150px; }
+    &.listi1 { background-position: 0 0; }
+    @for $i from 1 through 5 {
+        &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+    }
 }
 
 .header {
@@ -124,11 +122,10 @@
     i.icon {
     	background-image:url(#{$img-path}header-icon.png);
 
-        &.listi1 {background-position:0 -0px}
-        &.listi2 {background-position:0 -29px}
-        &.listi3 {background-position:0 -59px}
-        &.listi4 {background-position:0 -89px;}
-        &.listi5 {background-position:0 -119px}
+        &.listi1 { background-position: 0 0; }
+        @for $i from 1 through 4 {
+            &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+        }
     }
 
     i .num { color:#ec8b54; }
@@ -149,7 +146,13 @@
          background-color:#ec8b54;
 
          & > a {
-             i.icon { background-image:url(#{$img-path}header-icon-hover.png); }
+             i.icon {
+                 &.listi1 { background-position: -25px 0; }
+                 @for $i from 1 through 5 {
+                     &.listi#{$i+1} { background-position: -25px (-25 * $i)#{px}; }
+                 }
+             }
+
              i .num { color:#fff; }
          }
 
@@ -200,12 +203,10 @@
     .icon ul li i {
         background: url(#{$img-path}panel-icon.png) no-repeat;
 
-        &.listi1 { background-position: 0 0px; }
-        &.listi2 { background-position: 0 -50px; }
-        &.listi3 { background-position: 0 -100px; }
-        &.listi4 { background-position: 0 -150px; }
-        &.listi5 { background-position: 0 -200px; }
-        &.listi6 { background-position: 0 -250px; }
+        &.listi1 { background-position: 0 0; }
+        @for $i from 1 through 5 {
+            &.listi#{$i+1} { background-position: 0 (-30 * $i)#{px}; }
+        }
     }
 
     .icon ul li .text {
@@ -221,29 +222,35 @@
 
     @include fontSize($defFont - 4);
     text-align:center;
+}
 
-    & > ul > li {
+.quickMenu .dropCon > ul > li {
+    @include quickMenuStyle;
+
+    & > a {
         @include quickMenuStyle;
 
-        & > a {
-            @include quickMenuStyle;
-        }
-        & > a > i.icon {
+        & > i.icon {
             background-image:url(#{$img-path}panel-icon.png);
 
-            &.listi1 { background-position:0 -0px; }
-            &.listi2 { background-position:0 -50px; }
-            &.listi3 { background-position:0 -100px; }
-            &.listi4 { background-position:0 -150px; }
-            &.listi5 { background-position:0 -200px; }
-            &.listi6 { background-position:0 -250px; }
+            &.listi1 { background-position: 0 0; }
+
+            @for $i from 1 through 5 {
+                &.listi#{$i+1} { background-position: 0 (-30 * $i)#{px}; }
+            }
         }
+    }
 
 
-        &:hover {
-            background:#aaa;
-            background-color:rgba(160, 160, 160, .7);
-            i.icon { background-image:url(#{$img-path}panel-icon-hover.png); }
+    &:hover {
+        background:#aaa;
+        background-color:rgba(160, 160, 160, .7);
+    }
+
+    &:hover i.icon {
+        &.listi1 { background-position: 0 0; }
+        @for $i from 1 through 5 {
+            &.listi#{$i+1} { background-position: -30px (-30 * $i)#{px}; }
         }
     }
 }
@@ -578,23 +585,23 @@
             //設計風尚
             &.storeClothing { background-position: 0 0; }
             //國際精品
-            &.storeFashion { background-position: 0 -50px; }
+            &.storeFashion { background-position: 0 -25px; }
             //家電用品
-            &.storeappliance { background-position: 0 -96px; }
+            &.storeappliance { background-position: 0 -50px; }
             //居家生活
-            &.storeLiving { background-position: 0 -144px; }
+            &.storeLiving { background-position: 0 -75px; }
             //運動健身
-            &.storeHealth { background-position: 0 -190px; }
+            &.storeHealth { background-position: 0 -100px; }
             //戶外休旅
-            &.storeOutdoor { background-position: 0 -240px; }
+            &.storeOutdoor { background-position: 0 -125px; }
             //電腦周邊
-            &.storeComputer { background-position: 0 -286px; }
+            &.storeComputer { background-position: 0 -150px; }
             //數位3C
-            &.store3C { background-position: 0 -334px; }
+            &.store3C { background-position: 0 -175px; }
             //好食市集
-            &.storeFoods { background-position: 0 -382px; }
+            &.storeFoods { background-position: 0 -200px; }
             //美蛋直購
-            &.storeNeweggUSA { background-position: 0 -428px; }
+            &.storeNeweggUSA { background-position: 0 -225px; }
         }
 
 
@@ -607,7 +614,17 @@
 
             i {
                 margin-left:30px; //側邊選單效果位移度
-                background-image:url(#{$img-path}nav-icon-hover.png);
+
+                &.storeClothing { background-position: -25px 0; }
+                &.storeFashion { background-position: -25px -25px; }
+                &.storeappliance { background-position: -25px -50px; }
+                &.storeLiving { background-position: -25px -75px; }
+                &.storeHealth { background-position: -25px -100px; }
+                &.storeOutdoor { background-position: -25px -125px; }
+                &.storeComputer { background-position: -25px -150px; }
+                &.store3C { background-position: -25px -175px; }
+                &.storeFoods { background-position: -25px -200px; }
+                &.storeNeweggUSA { background-position: -25px -225px; }
             }
 
             span {

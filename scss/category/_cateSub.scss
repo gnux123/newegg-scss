@@ -33,7 +33,7 @@
 .categoryTopBar {
     position: relative;
     display: block;
-    width:955px;
+    width:100%;
     height: 30px;
 
     .navOrder {
@@ -171,9 +171,11 @@
 */
 
 .filterList {
-    width: 206px;
+    width: $side-width#{px};
     height:auto;
-    margin-bottom:$gutter#{px};
+    margin-bottom: $gutter#{px};
+    padding-top: 30px;
+
 
     word-wrap:break-word;
 	word-break:break-all;

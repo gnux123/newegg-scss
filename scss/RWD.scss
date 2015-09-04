@@ -2,19 +2,21 @@
 ##RWD.css說明
 設定全站所有響應式設計頁面的CSS樣式
 */
+@import "compass/compass";
+@import "_base";
 
 @media screen and (max-width:1279px) {
     .header-limiter,
     .topper-limiter,
     .footer-limiter {
-        margin-left:15px;
+        width: $frame-min-width#{px};
+        margin: 0 $outer-min-left#{px};
         padding: 0;
-        width: 994px;
     }
 
     //#header & tooper
     .header,
-    .topper { width: 1024px; }
+    .topper { width: $min-width#{px}; }
 
     //header-quickMenu
     .header .quickMenu > ul > li {
@@ -22,14 +24,14 @@
         width:85px;
     }
 
-    //topper searchbar    
+    //topper searchbar
     .topper .searchbar .input {
         width: 415px;
     }
 
     //[banner-adv]sixInOne settings
     .banner-adv {
-        width: (1024 - 220)#{px};
+        width: ($min-width - 220)#{px};
     }
 
     .boxArea .box {
@@ -39,11 +41,25 @@
 
     //footer-use
     .footer > .footer-limiter {
-        width: 994px;
-        margin:0 auto;
+        width: $frame-min-width#{px};
+        margin: 0 $outer-min-left#{px};
     }
     .footer > .footer-limiter li {
-        margin-right:15px
+        margin-right:15px;
+    }
+
+
+    //category banner
+    .banner-title + .banner { width: 748px; }
+
+
+    //search result rwd
+    .searchListArea {
+        width: ($frame-min-width - 221)#{px};
+    }
+    .searchAgainArea input[type="text"] {
+        min-width:300px;
+        width:300px;
     }
 
 }

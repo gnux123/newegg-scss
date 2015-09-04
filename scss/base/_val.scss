@@ -1,5 +1,15 @@
+$max-width: 1280;
 $min-width: 1024;
+$side-width: 206;
 $gutter: 10;
+
+$outer-max-left: 55;
+$outer-max-right: 49;
+$outer-min-left: 15;
+$outer-min-right: 15;
+
+$frame-max-width: $max-width - ($outer-max-left + $outer-max-right);
+$frame-min-width: $min-width - ($outer-min-left + $outer-min-right);
 
 //link-color
 $link-color: #698eb8;

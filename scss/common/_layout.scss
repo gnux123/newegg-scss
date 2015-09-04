@@ -100,9 +100,9 @@ h3 {
 .footer-limiter {
     @include pie-clearfix;
 	margin:0 auto;
-	padding-left:55px;
-	padding-right:49px;
-	width:1176px;
+	padding-left:$outer-max-left#{px};
+	padding-right:$outer-max-right#{px};
+	width:$frame-max-width#{px};
 
 	.ad a { border:0; }
 }
@@ -114,7 +114,7 @@ h3 {
     .logo {
         @include float(left);
         display: block;
-    	width: 206px;
+    	width: $side-width#{px};
     	height: 100px;
     }
 
@@ -256,8 +256,8 @@ h3 {
         i {
         	display: inline-block;
         	position: relative;
-        	width: 29px;
-        	height: 29px;
+        	width: 30px;
+        	height: 30px;
         	margin: 0 auto;
         }
     }
@@ -338,7 +338,7 @@ h3 {
 	z-index: 4;
     @include float(left);
 	position: relative;
-	width: 206px;
+	width: $side-width#{px};
     height:486px;
 
     .pullDownList {
@@ -357,10 +357,10 @@ h3 {
     .pullDownList li i {
         position: relative;
         display: inline-block;
-        top:4px;
+        top:6.75px;
         left:0;
         width: 25px;
-        height: 19px;
+        height: 25px;
         margin-right: 10px;
     }
 
@@ -405,7 +405,7 @@ h3 {
 .banner-ad2 {
     @include float(left);
     z-index: 1;
-    width: 206px;
+    width: $side-width#{px};
     height: 36px;
     margin-top: 486px;
     margin-left: -206px;
@@ -418,7 +418,7 @@ h3 {
     position: absolute;
 	display:none;
     top: 0;
-    left: 206px;
+    left: $side-width#{px};
 	width: 744px;
     height: 486px;
 	padding: 0 20px;
@@ -474,7 +474,7 @@ h3 {
 
     & > .footer-limiter {
 		position: relative;
-    	width: 1176px;
+    	width: $frame-max-width#{px};
     	margin: 0 auto;
     }
 
