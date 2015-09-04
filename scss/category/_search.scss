@@ -1,5 +1,13 @@
-/*#搜尋結果頁面
-##[search-filter]過濾模組-搜尋頁面
+/*#搜尋結果頁面*/
+
+/*##[search-layout]搜尋頁面版面設定*/
+.searchListArea {
+    position: relative;
+    display: block;
+    width: ($frame-max-width - 221)#{px};
+}
+
+/*#[search-filter]過濾模組-搜尋頁面
 
     <div class="filterList property">
             <div class="head">
@@ -88,47 +96,41 @@
 
 /*#[search-result-toolbar]搜尋結果-工具列
 
-    <div class="searchListArea">
-        <div class="searchTopBar">
-            <div class="searckKeyBar">
-                <span>搜尋結果：</span>
-                <span>行李箱</span>
-                <span>(共<span>150</span>筆)</span>
-            </div>
-            <div class="searchAgainArea">
-                <span>篩選</span>
-                <input type="text" placeholder="在結果中再搜尋" class="searchAgainBar" id="searchIn">
-                <input type="button" class="searchAgain" id="searchInButton">
-            </div>
+    <div class="searchTopBar">
+        <div class="searckKeyBar">
+            <span>搜尋結果：</span>
+            <span>行李箱</span>
+            <span>(共<span>150</span>筆)</span>
         </div>
+        <div class="searchAgainArea">
+            <span>篩選</span>
+            <input type="text" placeholder="在結果中再搜尋" class="searchAgainBar" id="searchIn">
+            <input type="button" class="searchAgain" id="searchInButton">
+        </div>
+    </div>
 
-        <div class="navOrder searchOrder">
-            <div class="orderList active" onclick="NextPage(null, 0, 1, 'CreatDate')" type="CreatDate">
-                <i class="icon new"></i>
-                <span>最新上架</span>
-            </div>
-            <div class="orderList " onclick="NextPage(null, 0, 1, 'PopularityIndex')" type="PopularityIndex">
-                <i class="icon hot"></i>
-                <span>人氣排行榜</span>
-            </div>
-            <div class="orderList " onclick="NextPage(null, 0, 1, 'HighPrice')" type="HighPrice">
-                <i class="icon priceH"></i>
-                <span>金額高</span>
-            </div>
-            <div class="orderList " onclick="NextPage(null, 0, 1, 'LowPrice')" type="LowPrice">
-                <i class="icon priceL"></i>
-                <span>金額低</span>
-            </div>
+    <div class="navOrder searchOrder">
+        <div class="orderList active" onclick="NextPage(null, 0, 1, 'CreatDate')" type="CreatDate">
+            <i class="icon new"></i>
+            <span>最新上架</span>
+        </div>
+        <div class="orderList " onclick="NextPage(null, 0, 1, 'PopularityIndex')" type="PopularityIndex">
+            <i class="icon hot"></i>
+            <span>人氣排行榜</span>
+        </div>
+        <div class="orderList " onclick="NextPage(null, 0, 1, 'HighPrice')" type="HighPrice">
+            <i class="icon priceH"></i>
+            <span>金額高</span>
+        </div>
+        <div class="orderList " onclick="NextPage(null, 0, 1, 'LowPrice')" type="LowPrice">
+            <i class="icon priceL"></i>
+            <span>金額低</span>
         </div>
     </div>
 
 */
 
-.searchListArea {
-    position: relative;
-    display: block;
-    width: ($frame-max-width - 221)#{px};
-}
+
 
 .searchTopBar {
     position: relative;
