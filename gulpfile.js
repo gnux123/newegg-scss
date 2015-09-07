@@ -47,7 +47,7 @@ gulp.task('sass', function(){
       )
       //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
       .pipe(gulp.dest(_address.cache))
-      .pipe(replace('styleguide/img/', '/Themes/img/')) //replace imgPath to stable server
+      .pipe(replace('img/', '/Themes/img/')) //replace imgPath to stable server
       .pipe(minifyCss({compatibility: 'ie8'}))
       .pipe(rename({ suffix: "-" + vers }))
       .pipe(gulp.dest(_address.css));

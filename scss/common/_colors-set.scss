@@ -2,10 +2,11 @@
 */
 
 @for $i from 1 through 10 {
+    .carousel4 .pagination ul li a.catcolorbg#{$i},
     .catcolorbg#{$i} {
         background-color: nth($color-list, $i);
     }
-
+    .carousel4 .pagination .more a.catcolortxt#{$i},
     .catcolortxt#{$i} { color: nth($color-list, $i); }
 
     .catcolortop#{$i},

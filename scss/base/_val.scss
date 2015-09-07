@@ -6,7 +6,7 @@ $gutter: 10;
 $outer-max-left: 55;
 $outer-max-right: 49;
 $outer-min-left: 15;
-$outer-min-right: 15;
+$outer-min-right: $outer-min-left;
 
 $frame-max-width: $max-width - ($outer-max-left + $outer-max-right);
 $frame-min-width: $min-width - ($outer-min-left + $outer-min-right);
@@ -14,15 +14,14 @@ $frame-min-width: $min-width - ($outer-min-left + $outer-min-right);
 //link-color
 $link-color: #698eb8;
 
-//font-settings
-$defFont: 16;
-$font-color: #666;
-$font-gray: #b3b3b3;
-$font-red-color: #C04040;
-$font-organe-color: #f37225;
+//border-color
+$gray-shade-d: #666;
+$gray-shade-m: #b3b3b3;
+$gray-shade-l: #d5d5d5;
+$gray-shade-lw: #e6e6e6;
 
 //images path
-$img-path: "styleguide/img/"; //"/Themes/img/"
+$img-path: "img/"; //"/Themes/img/"
 
 //box-base-width
 $box-base-width: 196;
@@ -64,3 +63,11 @@ $color-light-list:  #C4C2C2 #D6AE7B #82C5ED #87CDCE #89C087 #8ECBA9 #669BD3 #70B
 
 //10.美蛋直購(16.美蛋直購館)
 //#EC7375
+
+
+//font-settings
+$defFont: 16;
+$font-color: $gray-shade-d;
+$font-gray: $gray-shade-m;
+$font-red-color: #C04040;
+$font-organe-color: #f37225;

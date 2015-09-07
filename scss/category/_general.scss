@@ -400,6 +400,7 @@ section.section3 {
     	text-align: center;
     	line-height: 20px;
     	text-decoration: none;
+        border-bottom:0;
 
         &.selected { background-color: nth($color-list, 5); }
     }
@@ -410,9 +411,8 @@ section.section3 {
         border:0;
 
         text-align: center;
-        color: $font-color;
+        // color: $font-color;
 
-        &, &:hover { color:inherit; }
     }
 
 }

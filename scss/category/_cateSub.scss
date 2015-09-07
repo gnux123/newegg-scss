@@ -190,8 +190,8 @@
     .head {
         position: relative;
         height: 46px;
-        border: 1px solid #d5d5d5;
-		background-color:#e6e6e6;
+        border: 1px solid $gray-shade-l;
+		background-color:$gray-shade-lw;
 
         color:$font-color;
         @include fontSize($defFont + 6);
@@ -212,7 +212,7 @@
             text-indent:0;
             text-align:center;
 
-            &.open { background-color:#ccc; }
+            &.open { background-color:$font-gray; }
             &.close { background-color:#fff; }
 
         }
@@ -227,7 +227,7 @@
 
         border-width: 0 1px 1px 1px;
         border-style: solid;
-        border-color: #d5d5d5;
+        border-color: $gray-shade-l;
 
         .tit, .num {
             position: absolute;
@@ -265,7 +265,7 @@
 
         border-width: 0 1px 1px 1px;
         border-style: solid;
-        border-color: #d5d5d5;
+        border-color: $gray-shade-l;
 
         & > li {
             position: relative;
