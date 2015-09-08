@@ -112,6 +112,7 @@
     &.add {
         width: 23px;
         border: 1px solid $gray-shade-d;
+        cursor: pointer;
     }
 
     &.less { background: url(#{$img-path}Icon/less.jpg) no-repeat center; }
@@ -131,63 +132,212 @@
 }
 
 
-/*#[product-paymentWay] 付款方式
-    <div class="payType">
-        付款方式：信用卡一次付清 / 分期
-        <!-- 分期說明方框 -->
-        <div class="InsExp">
-            <span class="blue" style="margin-left:3px;">(說明)</span>
-            <div class="Installment">
-                <table class="Instable">
-                    <tbody>
-                        <tr class="Instr">
-                            <th class="Insth">信用卡<br>分期　</th>
-                            <th class="Insth" style="width:67px;">利率</th>
-                            <th class="Insth" style="width:97px;">
-                                <img style="float:right;margin-top:3px;margin-left:-9px;" src="img/Icon/ItemBank.jpg">僅限台灣<br>地區發行
-                            </th>
-                        </tr>
+/*##[product-paymentWay] 付款方式
 
-                        <tr class="Instr">
-                            <td class="Instd">3期</td>
-                            <td class="Instd">0利率</td>
-                            <td class="Instd">
-                                <div class="banks"><span class="blue">21家</span>
-                                    <!--↓↓↓↓↓↓銀行顯示方框↓↓↓↓↓-->
-                                    <div class="BankName" style="display:none;">
-                                        <span>分期限以下銀行：</span>
-                                        <p>富邦、國泰世華、台新、合庫、一銀、彰銀、永豐、遠東、兆豐、新光、花旗、台灣企銀、大眾銀行、匯豐銀行、玉山、凱基、台中商銀、渣打、日盛、澳盛、華南</p>
-                                    </div><!--↑↑↑↑↑↑↑銀行顯示方框↑↑↑↑↑↑↑-->
-                                </div>
-                            </td>
-                        </tr>
+    <div class="productRight">
+        <div class="productContent">
+            <div class="payType">
+                付款方式：信用卡一次付清 / 分期
+                <!-- 分期說明方框 -->
+                <div class="InsExp">
+                    <span class="blue" style="margin-left:3px;">(說明)</span>
+                    <div class="Installment">
+                        <table class="Instable">
+                            <tbody>
+                                <tr class="Instr">
+                                    <th class="Insth">信用卡<br>分期　</th>
+                                    <th class="Insth" style="width:67px;">利率</th>
+                                    <th class="Insth" style="width:97px;">
+                                        <img style="float:right;margin-top:7px;margin-left:-9px;" src="img/Icon/ItemBank.jpg">僅限台灣<br>地區發行
+                                    </th>
+                                </tr>
 
-                        <tr class="Instr">
-                            <td class="Instd">6期</td>
-                            <td class="Instd">0利率</td>
-                            <td class="Instd">
-                                <div class="banks">
-                                    <span class="blue">21家</span>
-                                    <!--↓↓↓↓↓↓銀行顯示方框↓↓↓↓↓-->
-                                    <div class="BankName" style="display:none;">
-                                        <span>分期限以下銀行：</span>
-                                        <p>富邦、國泰世華、台新、合庫、一銀、彰銀、永豐、遠東、兆豐、新光、花旗、台灣企銀、大眾銀行、匯豐銀行、玉山、凱基、台中商銀、渣打、日盛、澳盛、華南</p>
-                                    </div>
-                                    <!--↑↑↑↑↑↑↑銀行顯示方框↑↑↑↑↑↑↑-->
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <span>1. 請選擇適用的銀行卡別來做信用卡分期。<br>2. 除不盡餘數於第一期收取。<br>3. 可接受VISA Master JCB 信用卡。<br>4. 實際分期金額將依各發卡銀行規定略有調整。</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <tr class="Instr">
+                                    <td class="Instd">3期</td>
+                                    <td class="Instd">0利率</td>
+                                    <td class="Instd">
+                                        <div class="banks"><span class="blue">21家</span>
+                                            <!--↓↓↓↓↓↓銀行顯示方框↓↓↓↓↓-->
+                                            <div class="BankName" style="display:none;">
+                                                <span>分期限以下銀行：</span>
+                                                <p>富邦、國泰世華、台新、合庫、一銀、彰銀、永豐、遠東、兆豐、新光、花旗、台灣企銀、大眾銀行、匯豐銀行、玉山、凱基、台中商銀、渣打、日盛、澳盛、華南</p>
+                                            </div><!--↑↑↑↑↑↑↑銀行顯示方框↑↑↑↑↑↑↑-->
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="Instr">
+                                    <td class="Instd">6期</td>
+                                    <td class="Instd">0利率</td>
+                                    <td class="Instd">
+                                        <div class="banks">
+                                            <span class="blue">21家</span>
+                                            <!--↓↓↓↓↓↓銀行顯示方框↓↓↓↓↓-->
+                                            <div class="BankName" style="display:none;">
+                                                <span>分期限以下銀行：</span>
+                                                <p>富邦、國泰世華、台新、合庫、一銀、彰銀、永豐、遠東、兆豐、新光、花旗、台灣企銀、大眾銀行、匯豐銀行、玉山、凱基、台中商銀、渣打、日盛、澳盛、華南</p>
+                                            </div>
+                                            <!--↑↑↑↑↑↑↑銀行顯示方框↑↑↑↑↑↑↑-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <span>1. 請選擇適用的銀行卡別來做信用卡分期。<br>2. 除不盡餘數於第一期收取。<br>3. 可接受VISA Master JCB 信用卡。<br>4. 實際分期金額將依各發卡銀行規定略有調整。</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- end of 分期說明方框 -->
+            / 網路ATM / 實體ATM / 歐付寶付款
             </div>
+
+            <p class="getType">配送方式：宅配</p>
+            <p class="productSource">發貨區域：台灣</p>
+            <p class="arrivalTime">預計到貨時間：1-7</p>
+            <div class="questions"><img src="img/qustion.png"><p>我要發問</p></div>
         </div>
-    <!-- end of 分期說明方框 -->
-    / 網路ATM / 實體ATM / 歐付寶付款
     </div>
 
 */
+
+.productContent .payType {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include fontSize($defFont);
+    color: $gray-shade-d;
+
+    .InsExp {
+        position: relative;
+        display: inline-block;
+        margin-left:3px;
+        cursor: pointer;
+
+        & > span { color:$link-color; }
+    }
+
+    & ~ p { margin-bottom: $gutter#{px}; }
+}
+
+//分期付款表格
+.Installment {
+    position: absolute;
+    display:none;
+    z-index: 1;
+    top: 23px;
+    right: -80px;
+    width: 248px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid $gray-shade-d;
+    background: #fff;
+
+    @include fontSize($defFont - 4);
+
+    .Instable {
+        width: 100%;
+        height: 100%;
+
+        td {
+            line-height: 20px;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .Insth,
+    .Instd {
+        padding: 4px 0;
+        text-align: center;
+    }
+
+    .Insth { border-bottom: 1px solid $gray-shade-d; }
+    .Instd { border-bottom: 1px dashed $gray-shade-l; }
+
+
+    .banks > span { color:$link-color; }
+}
+
+.productContent .questions {
+    @include float(right);
+    width: 75px;
+    height: 70px;
+    cursor: pointer;
+
+    text-align: center;
+
+    & > p {
+        @include fontSize($defFont + 2);
+        border-bottom: 1px solid $gray-shade-d;
+    }
+}
+
+
+
+/*##[product-btns-state]按鈕狀態
+
+    <div class="productRight">
+        <div class="btnArea">
+            <a id="neAddToCart" class="BluBgBtn putInCart"><img src="img/ShoppingProcess/PutInCart.png">放入購物車</a>
+            <a id="neAddToSC" class="OrgBgBtn HavenIt">立即結帳</a>
+        </div>
+        <div class="btnArea" style="margin-top:15px;">
+            <a id="neAddToSC" class="GryBtn HavenIt">尚未開賣</a>
+        </div>
+    </div>
+
+*/
+
+.btnArea {
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include pie-clearfix;
+
+    & > a {
+        @include float(left);
+        padding: 0;
+        width: 230px;
+        height: 80px;
+        border-bottom: 0;
+        cursor:pointer;
+
+        @include fontSize($defFont + 5);
+        color: #fff;
+        text-align: center;
+        line-height: 80px;
+        letter-spacing: 1px;
+
+        img {
+            margin-right: 8px;
+            vertical-align: text-bottom;
+        }
+    }
+
+    .HavenIt {
+        @include float(right);
+        display: inline-block;
+    }
+
+    .BluBgBtn {
+        background: url(#{$img-path}ShoppingProcess/BlueBigBtnBG.jpg);
+    }
+
+    .OrgBgBtn {
+        background: url(#{$img-path}ShoppingProcess/OrangeBigBtnBG.jpg);
+    }
+
+
+    .GryBtn {
+        background: $gray-shade-m;
+    	@include transition-property($gray-shade-m);
+    	@include transition-duration(.2s);
+
+    	&:hover{ background:darken($gray-shade-m,15%); }
+    }
+
+}

@@ -1,1 +1,261 @@
+/*#[product-itemdetail] 商品內頁-商品明細
 
+    <div class="outwidth">
+        <div class="itemdetail">
+            <div class="tabs">
+                    <div class="tab" id="item_brand_story" style="display:none;">品牌故事</div>
+                    <div class="tab" id="item_description">商品說明</div>
+                    <div class="tab" id="item_sourcedescription" style="display:none;">商品原文說明</div>
+                    <div class="tab" id="item_spec">規格說明</div>
+                    <div class="tab" id="item_warranty">運送 / 保固 / 退換貨</div>
+                    <div class="tab" id="item_userreviews">網友留言</div>
+            </div>
+
+            <!-- 品牌故事 -->
+                <!-- 品牌故事 -->
+                <div class="detail ckeditorstyle" style="display:none;">
+
+                </div>
+            <!--商品說明 -->
+                <div class="detail ckeditorstyle">
+                    <table id="yui_3_16_0_1_1436411277170_696" style="color:#333333;font-family:FreeSans, Arimo, 'Droid Sans', Arial, Helvetica, sans-serif, 'Microsoft JhengHei';font-size:13px;line-height:16.0030002593994px;" width="100%"><tbody id="yui_3_16_0_1_1436411277170_695"><tr><td><p style="color:#ff0000;font-size:14pt;">義大利原裝進口 輕量堅固設計 卓越的研發技術和環保理念並存</p></td></tr><tr><td><div align="left"><div>&nbsp;</div></div></td></tr><tr><td><p style="color:#0000cc;font-size:12pt;">歷史在40年代，一個年輕的男孩Giovanni Roncato跟隨他的父親Antonio，經營箱包業，他努力學習的成果，在旅遊業內已成為用家的需求。<br><br>在70年代，Giovanni創辦了Valigeria Roncato SpA公司，他是現任公司主席。當年他設定了生產線後便進入歐洲市場，對於Valigeria Roncato公司這是一個非常重要的轉折點並確定了公司在全球生產公文包的領先地位。<br><br>在80年代，生產穩步增長與它完善的經驗，不斷研究創新產品並滿足旅客的需求，公司研發了新的項目，如尼龍和聚酯箱包、旅行包，獲取新的細分市場。在二十幾年裡發展一種合成纖維拉桿箱和公文包，產量增加鼓舞了公司發展，從而達到其目前在該領域的領先地位。<br><br>在90年代，Giovanni Roncato的創新概念使該公司邁出跨越性的一步，生產號稱注射模的PP“硬殼手提箱”。這有助於使Valigeria Roncato在意大利和國外製造商業都是領先地位。<br>Sphera，唯一手提箱使用一隻手指可推動，是九十年代初的偉大構想，增產超過一百萬件。後續產品Venice其優雅精緻的風格和一個新的豐富多彩的青少年款式Teenager<br><br>在2000年重大變革，直立式Shuttle第一個產品在意大利製造與專利的拉桿和關閉系統。<br>在2004年，一個輕便式Flexi，360度轉向的功能，滿足最挑剔的旅客需求。此後，RV RONCATO品牌不斷發展，保持為消費者提供具體的新款的PP硬殼旅行箱，大眾化的軟箱包，辦公實用文件包和精緻小皮具。<br><br>去年推出了Roncato UNOSL，是“意大利製造”目前頂級的產品。非常實用和優雅線條，PC的物料提供了輕量，堅固性，安全性，實用性和設計的完美結合。該產品是高度創新，PC和PP物料結合的行李箱目前原產地在意大利Roncato的工廠，並且受到專利生產權的保護。<br><br>RONCATO品牌繼續投資於研發新產品以滿足市場需求。現在，Roncato家族注重高品質“意大利製造”的產品並獲得ISO9001認證，採用新一代技術和嚴格內部檢測。 Roncato家族和RV Roncato品牌與眾不同的熱情和專門研發技術，世世代代不斷追求真正的產品和重視自然環境和人類的關係。<br>RV RONCATO目前在全球52個國家與各種生產和物流場所， 總面積佔地超過25000平方米。<br><br>今天，Giovanni Roncato和他4個孩子， Enrico， Cristiano， Alessandra和Andrea，他們深信研發產品質量和風格，生態環保意識和高度專業化的工作人員會認識到市場的需求。<br><br>新的工廠正在施工將於2012年完成。將所有部門聚集優化效率所有的物流，生產和管理可反映了目前公司的形象。</p><p style="color:#0000cc;font-size:12pt;"><img alt="" height="444" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709110914075_75G793EKUE7YO11.jpg" width="650"><img alt="" height="891" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709110941625_1O7Y3W959ECCS55.jpg" width="650"><img alt="" height="905" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709111014275_3C315Y3U335CU7A.jpg" width="650"><img alt="" height="258" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709111046396_1Y3573Y79GY9I3Q.jpg" width="650"></p></td></tr></tbody></table><div class="itemtitle" style="color:#3e3e3e;font-size:18.0049991607666px;height:18px;line-height:18px;padding:15px 15px 5px 25px;font-weight:bold;font-family:FreeSans, Arimo, 'Droid Sans', Arial, Helvetica, sans-serif, 'Microsoft JhengHei';"><br><br></div><p></p>
+                    <div id="div_outer-buying-info">
+                    </div>
+                </div>
+
+
+            <!--商品原文說明 -->
+                <div class="detail ckeditorstyle" style="display:none;">
+                    <div id="google_translate_element" style="float: right;"><div class="skiptranslate goog-te-gadget" dir="ltr"><div id=":0.targetLanguage"><select class="goog-te-combo"><option value="">請選取語言</option><option value="zh-TW">中文(繁體)</option><option value="tr">土耳其文</option><option value="zh-CN">中文(簡體)</option><option value="da">丹麥文</option><option value="eu">巴斯克文</option><option value="ja">日文</option><option value="mi">毛利語</option><option value="jw">爪哇語</option><option value="gl">加里西亞文</option><option value="ca">加泰羅尼亞文</option><option value="kn">卡納達文</option><option value="ne">尼泊爾文</option><option value="af">布爾文</option><option value="be">白俄羅斯語</option><option value="lt">立陶宛文</option><option value="ig">伊博文</option><option value="is">冰島文</option><option value="hu">匈牙利文</option><option value="id">印尼文</option><option value="su">印尼巽他語</option><option value="hi">印度文</option><option value="gu">印度古哈拉地語</option><option value="es">西班牙文</option><option value="hr">克羅埃西亞文</option><option value="iw">希伯來文</option><option value="el">希臘文</option><option value="hy">亞美尼亞文</option><option value="az">亞塞拜然文</option><option value="ny">奇切瓦文</option><option value="bn">孟加拉文</option><option value="la">拉丁文</option><option value="lv">拉脫維亞文</option><option value="fr">法文</option><option value="bs">波西尼亞</option><option value="fa">波斯語</option><option value="pl">波蘭文</option><option value="fi">芬蘭文</option><option value="ar">阿拉伯文</option><option value="sq">阿爾巴尼亞文</option><option value="ru">俄文</option><option value="bg">保加利亞文</option><option value="zu">南非祖魯文</option><option value="kk">哈薩克文</option><option value="cy">威爾斯文</option><option value="hmn">苗文</option><option value="en">英文</option><option value="no">挪威文</option><option value="pa">旁遮普文</option><option value="th">泰文</option><option value="ta">泰米爾文</option><option value="te">泰盧固文</option><option value="ht">海地克里奧文</option><option value="uk">烏克蘭文</option><option value="uz">烏茲別克語</option><option value="ur">烏爾都語</option><option value="so">索馬里語</option><option value="mt">馬耳他文</option><option value="ms">馬來文</option><option value="mk">馬其頓文</option><option value="mg">馬拉加斯語</option><option value="mr">馬拉地文</option><option value="ml">馬拉雅拉姆文</option><option value="km">高棉文</option><option value="eo">國際語文</option><option value="ceb">宿霧文</option><option value="cs">捷克文</option><option value="nl">荷蘭文</option><option value="ka">喬治亞文</option><option value="sw">斯瓦希里文</option><option value="sk">斯洛伐克文</option><option value="sl">斯洛維尼亞文</option><option value="tl">菲律賓文</option><option value="vi">越南文</option><option value="tg">塔吉克語</option><option value="sr">塞爾維亞文</option><option value="yi">意第緒語</option><option value="et">愛沙尼亞文</option><option value="ga">愛爾蘭文</option><option value="sv">瑞典文</option><option value="st">瑟索托語</option><option value="it">義大利文</option><option value="pt">葡萄牙文</option><option value="mn">蒙古語</option><option value="ha">豪沙語</option><option value="lo">寮文</option><option value="de">德文</option><option value="my">緬甸文</option><option value="si">錫蘭文</option><option value="yo">優魯巴語</option><option value="ko">韓文</option><option value="ro">羅馬尼亞文</option></select></div>由「<span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px">翻譯</a></span>」技術提供</div></div>
+                    <table id="yui_3_16_0_1_1436411277170_696" style="color:#333333;font-family:FreeSans, Arimo, 'Droid Sans', Arial, Helvetica, sans-serif, 'Microsoft JhengHei';font-size:13px;line-height:16.0030002593994px;" width="100%"><tbody id="yui_3_16_0_1_1436411277170_695"><tr><td><p style="color:#ff0000;font-size:14pt;">義大利原裝進口 輕量堅固設計 卓越的研發技術和環保理念並存</p></td></tr><tr><td><div align="left"><div>&nbsp;</div></div></td></tr><tr><td><p style="color:#0000cc;font-size:12pt;">歷史在40年代，一個年輕的男孩Giovanni Roncato跟隨他的父親Antonio，經營箱包業，他努力學習的成果，在旅遊業內已成為用家的需求。<br><br>在70年代，Giovanni創辦了Valigeria Roncato SpA公司，他是現任公司主席。當年他設定了生產線後便進入歐洲市場，對於Valigeria Roncato公司這是一個非常重要的轉折點並確定了公司在全球生產公文包的領先地位。<br><br>在80年代，生產穩步增長與它完善的經驗，不斷研究創新產品並滿足旅客的需求，公司研發了新的項目，如尼龍和聚酯箱包、旅行包，獲取新的細分市場。在二十幾年裡發展一種合成纖維拉桿箱和公文包，產量增加鼓舞了公司發展，從而達到其目前在該領域的領先地位。<br><br>在90年代，Giovanni Roncato的創新概念使該公司邁出跨越性的一步，生產號稱注射模的PP“硬殼手提箱”。這有助於使Valigeria Roncato在意大利和國外製造商業都是領先地位。<br>Sphera，唯一手提箱使用一隻手指可推動，是九十年代初的偉大構想，增產超過一百萬件。後續產品Venice其優雅精緻的風格和一個新的豐富多彩的青少年款式Teenager<br><br>在2000年重大變革，直立式Shuttle第一個產品在意大利製造與專利的拉桿和關閉系統。<br>在2004年，一個輕便式Flexi，360度轉向的功能，滿足最挑剔的旅客需求。此後，RV RONCATO品牌不斷發展，保持為消費者提供具體的新款的PP硬殼旅行箱，大眾化的軟箱包，辦公實用文件包和精緻小皮具。<br><br>去年推出了Roncato UNOSL，是“意大利製造”目前頂級的產品。非常實用和優雅線條，PC的物料提供了輕量，堅固性，安全性，實用性和設計的完美結合。該產品是高度創新，PC和PP物料結合的行李箱目前原產地在意大利Roncato的工廠，並且受到專利生產權的保護。<br><br>RONCATO品牌繼續投資於研發新產品以滿足市場需求。現在，Roncato家族注重高品質“意大利製造”的產品並獲得ISO9001認證，採用新一代技術和嚴格內部檢測。 Roncato家族和RV Roncato品牌與眾不同的熱情和專門研發技術，世世代代不斷追求真正的產品和重視自然環境和人類的關係。<br>RV RONCATO目前在全球52個國家與各種生產和物流場所， 總面積佔地超過25000平方米。<br><br>今天，Giovanni Roncato和他4個孩子， Enrico， Cristiano， Alessandra和Andrea，他們深信研發產品質量和風格，生態環保意識和高度專業化的工作人員會認識到市場的需求。<br><br>新的工廠正在施工將於2012年完成。將所有部門聚集優化效率所有的物流，生產和管理可反映了目前公司的形象。</p><p style="color:#0000cc;font-size:12pt;"><img alt="" height="444" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709110914075_75G793EKUE7YO11.jpg" width="650"><img alt="" height="891" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709110941625_1O7Y3W959ECCS55.jpg" width="650"><img alt="" height="905" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709111014275_3C315Y3U335CU7A.jpg" width="650"><img alt="" height="258" src="http://sellerportal.newegg.com.tw/Upload/ProductContent/VendorPortal_317_20150709111046396_1Y3573Y79GY9I3Q.jpg" width="650"></p></td></tr></tbody></table><div class="itemtitle" style="color:#3e3e3e;font-size:18.0049991607666px;height:18px;line-height:18px;padding:15px 15px 5px 25px;font-weight:bold;font-family:FreeSans, Arimo, 'Droid Sans', Arial, Helvetica, sans-serif, 'Microsoft JhengHei';"><br></div>
+                </div>
+
+            <!--規格說明 -->
+                <div class="detail">
+                    <!--?xml version="1.0"?-->
+                    <longdescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Detailed Specifications">
+                    <group groupname="General   ">
+                    <property key="Brand" value="e">
+                    </property></group>
+                    </longdescription>
+                </div>
+
+            <!-- 保固/退換貨 -->
+                <div class="detail returnSer">
+                    <!--直購商品的Warranty !-->
+                    <div class="outer-buying" style="display:none;">
+                        <ul>
+                            <li>送貨範圍：我們提供的商品配送區域僅限於台灣本島。</li>
+                            <li>到貨天數：於美國新蛋直購專區下單且訂單成立(即確認交易條件無誤、付款完成且仍有庫存)後，正常約9~14個工作天可以收到商品，少數訂單因天候或通關因素可能會延遲1~2個工作天。</li>
+                            <li>正品保證：美國新蛋直購專區所有商品都是精選自全球品牌商及美蛋優質賣家，百分之百正品保證。</li>
+                            <li>換貨說明：若您收到的新品有瑕疵、破損、規格不符或是零件短缺的狀況，請您於收到貨後7天內， 至「我的帳戶&gt;我的訂單」頁面點選「我要換貨」，填寫需換貨的原因/事由，我們將會回覆您辦理換貨事宜。<br><br>若需更換新品，換貨廠商將於收到您退回的商品後更換給您。(換貨商品必須為全新狀態且完整包裝，包括且不限於主機、附件、內外包裝、原廠紙箱、隨機文件或資料之完整性等)</li>
+                            <li>退貨說明：根據《消費者保護法》，於新蛋全球生活網購物的會員，可享有商品貨到次日起7天猶豫期的權益。 提醒您猶豫期並非試用期，您所退回的商品必須是全新狀態(不得有刮傷、破損、受潮)，並且保持完整包裝， 意即必須恢復至您收到商品時的原始狀態(包括且不限於商本體、配件、原廠包裝、保護袋、保麗龍、保證書、隨附文件、贈品等)。 否則將影響您的退貨權益，也可能依照損毀程度扣除回復原狀之必要費用。<span class="blue UnderLine"><a href="/Policies/Return" target="_blank">(各類商品退貨規定說明)</a></span></li>
+                            <li>待商品收回並驗收無誤後，我們將進行退款，並於退款日當天發送E-mail通知您。</li>
+                            <li>保固與維修：於新蛋全球生活網訂購之美國新蛋直購商品（限筆電、平板、智能穿載、儲存設備、電競專區、腕錶、耳機）在正常使用狀況下，自購買日起一年內，皆享有新蛋一年保固維修服務。<br>若已經超過保固期或屬於意外或人為因素造成的損壞等則不在保固維修服務範圍內，將會由客服人員與您聯繫檢修費用後，再依照您的意願進行維修或是終止維修服務。</li>
+                        </ul>
+                        <p>其它更多有關美國新蛋直購說明請至<span class="blue">首頁&gt;服務說明 &gt;購物相關說明&gt;<a href="/Service/AboutShopping#q4" target="_blank">美國新蛋直購商品規範</a></span></p>
+                    </div>
+
+                    <!-- 非直購商品的Warranty -->
+                    <div class="inner-buying">
+                        <ul>
+                            <li>送貨範圍：我們提供的商品配送區域僅限於台灣本島。</li>
+                            <li>到貨天數：商品預計訂單成立(即確認交易條件無誤、付款完成且仍有庫存)後 7 個工作天內送達(不含週六日及國定假日)。如廠商有約定日將於約定日期內送達，約定日期需於訂單成立後 14天內。</li>
+                            <li>換貨說明：若您收到的新品有瑕疵、破損、規格不符或是零件短缺的狀況，請您於收到貨後7天內， 至「我的帳戶&gt;我的訂單」頁面點選「我要換貨」，填寫需換貨的原因/事由，我們將會回覆您辦理換貨事宜。<br>若需更換新品，換貨廠商將於收到您退回的商品後更換給您。(換貨商品必須為全新狀態且完整包裝，包括且不限於主機、附件、內外包裝、原廠紙箱、隨機文件或資料之完整性等)</li>
+                            <li>退貨說明：根據《消費者保護法》，於新蛋全球生活網購物的會員，可享有商品貨到次日起7天猶豫期的權益。 提醒您猶豫期並非試用期，您所退回的商品必須是全新狀態(不得有刮傷、破損、受潮)，並且保持完整包裝， 意即必須恢復至您收到商品時的原始狀態(包括且不限於商品本體、配件、原廠包裝、保護袋、保麗龍、保證書、隨附文件、贈品等)。 否則將影響您的退貨權益，也可能依照損毀程度扣除回復原狀之必要費用。<span class="blue UnderLine"><a href="/Policies/Return" target="_blank">(各類商品退貨規定說明)</a></span></li>
+                            <li>待商品收回並驗收無誤後，我們將進行退款，並於退款日當天發送E-mail通知您。</li>
+                            <li>商品保固：依原廠/出貨廠商標示為主。</li>
+                            <li>本網站全館免運費。</li>
+                        </ul>
+                        <p>其它更多有關台灣新蛋生活網說明請至<span class="blue">首頁&gt;服務說明&gt;<a href="/Service/AboutService" target="_blank">售後服務</a></span></p>
+                    </div>
+                </div>
+
+            <!-- 網友留言-->
+                <div class="detail">
+                    <div id="disqus_thread"><iframe id="dsq-1" data-disqus-uid="1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="http://disqus.com/embed/comments/?base=default&amp;version=331825dc11fba942012da598a39c0100&amp;f=neweggtaiwan&amp;t_i=ItemID139213&amp;t_u=http%3A%2F%2Fwww.newegg.com.tw%2Fitem%3Fitemid%3D139213&amp;t_d=%E7%BE%A9%E5%A4%A7%E5%88%A9RONCATO%20UNO%20ZIP%E7%B3%BB%E5%88%97%E8%BC%95%E9%87%8F25%E5%90%8B%E8%A1%8C%E6%9D%8E%E7%AE%B1-%E7%81%B0%E6%A1%86%E9%99%BD%E5%85%89%E6%BE%84-%E6%96%B0%E8%9B%8B%E5%85%A8%E7%90%83%E7%94%9F%E6%B4%BB%E7%B6%B2&amp;t_t=%E7%BE%A9%E5%A4%A7%E5%88%A9RONCATO%20UNO%20ZIP%E7%B3%BB%E5%88%97%E8%BC%95%E9%87%8F25%E5%90%8B%E8%A1%8C%E6%9D%8E%E7%AE%B1-%E7%81%B0%E6%A1%86%E9%99%BD%E5%85%89%E6%BE%84-%E6%96%B0%E8%9B%8B%E5%85%A8%E7%90%83%E7%94%9F%E6%B4%BB%E7%B6%B2&amp;s_o=default#1" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 2055px !important;"></iframe><iframe id="dsq-indicator-north" data-disqus-uid="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="dsq-indicator-south" data-disqus-uid="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
+                </div>
+        </div>
+    </div>
+
+*/
+
+.itemdetail {
+    width: 100%;
+    height: auto;
+    margin-top: 22px;
+    border: 1px solid $gray-shade-l;
+
+    @include box-sizing(border-box);
+
+    .tabs {
+        width: 100%;
+        height: 56px;
+        border-bottom: 1px solid $gray-shade-l;
+
+        @include box-sizing(border-box);
+        @include pie-clearfix;
+    }
+
+    .tab {
+        @include float(left);
+        width: 16.667%;
+        height: 55px;
+
+        @include fontSize($defFont + 3);
+        text-align: center;
+        line-height: 55px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &.hover {
+            background: $font-organe-color;
+            color: #fff;
+        }
+    }
+
+    .detail {
+        display: none;
+        padding: 60px;
+        * { max-width: 878px; }
+
+        &.ckeditorstyle,
+        &.returnSer {
+            letter-spacing: 0.5px;
+            line-height: 1.5em;
+        }
+
+
+
+        .outer-buying,
+        .inner-buying {
+            letter-spacing: 0.5px;
+            li { line-height: 36px; }
+            & > p { margin-top: 40px; }
+        }
+    }
+}
+
+
+/*#[product-review-producs] 商品內頁-我看過的商品
+    <div class="outwidth">
+        <div class="SkimItemBox" id="lately_reviews">
+            <div class="title">我看過的商品：</div>
+            <div class="arrow prev left" style="display:none;"></div>
+            <div class="arrow next right" style="display:none;"></div>
+           <div class="items">
+                   <ul>
+                       <li class="box">
+                           <div class="pic">
+                               <a href="#"><img src="http://placehold.it/200x200"></a>
+                           </div>
+                           <a href="#">
+                               <div class="txt">
+                                  <h3>【限時再折】Longchamp長把小型摺疊水餃包1</h3>
+                                  <span class="price">$3,188</span>
+                                  <span class="marketPrice">$4,680</span>
+                               </div>
+                           </a>
+                       </li>
+                       <li class="box">
+                           <div class="pic">
+                               <a href="#"><img src="http://placehold.it/200x200"></a>
+                           </div>
+                           <a href="#">
+                               <div class="txt">
+                                  <h3>【限時再折】Longchamp長把小型摺疊水餃包2</h3>
+                                  <span class="price">$3,188</span>
+                                  <span class="marketPrice">$4,680</span>
+                               </div>
+                           </a>
+                       </li>
+                       <li class="box">
+                       <div class="pic">
+                           <a href="#"><img src="http://placehold.it/200x200"></a>
+                           </div>
+                           <a href="#">
+                               <div class="txt">
+                                  <h3>【限時再折】Longchamp長把小型摺疊水餃包3</h3>
+                                  <span class="price">$3,188</span>
+                                  <span class="marketPrice">$4,680</span>
+                               </div>
+                           </a>
+                       </li>
+                       <li class="box">
+                           <div class="pic">
+                               <a href="#"><img src="http://placehold.it/200x200"></a>
+                           </div>
+                           <a href="#">
+                               <div class="txt">
+                                  <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+                                  <span class="price">$3,188</span>
+                                  <span class="marketPrice">$4,680</span>
+                               </div>
+                           </a>
+                       </li>
+                   </ul>
+            </div>
+        </div>
+    </div>
+*/
+
+.SkimItemBox {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 33px;
+
+    .title {
+        height: 42px;
+
+        @include fontSize($defFont + 5);
+        line-height: 42px;
+    }
+
+    .items {
+        @include pie-clearfix;
+        width:100%;
+        height: auto;
+        padding:20px 0;
+        border:1px solid $gray-shade-l;
+        overflow: hidden;
+        @include box-sizing(border-box);
+    }
+
+    .items ul {
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        @include pie-clearfix;
+    }
+
+    .items ul li:first-child {
+        border-left:0;
+    }
+
+    .items .box {
+        @include float(left);
+        position: relative;
+        display: block;
+        width: 24.91%;
+        height: 100%;
+        border-left: 1px solid $gray-shade-l;
+
+        .pic, a {
+            margin:0 auto;
+            width: 200px;
+        }
+
+
+        .pic { height: 200px; }
+        .pic img {
+            width:100%;
+            height:100%;
+        }
+
+        .txt { height:70px; }
+        .txt h3 { @include fontSize($defFont); }
+        .price { @include float(right); }
+
+    }
+}
