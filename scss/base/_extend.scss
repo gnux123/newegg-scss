@@ -1,3 +1,41 @@
+%accountControlMenus {
+    background-color: rgba(255, 255, 255, .85);
+
+    @include fontSize($defFont - 4);
+    text-align:center;
+
+    & > ul > li {
+        @include quickMenuStyle;
+
+        & > a {
+            @include quickMenuStyle;
+
+            & > i.icon {
+                background-image:url(#{$img-path}panel-icon.png);
+
+                &.listi1 { background-position: 0 0; }
+
+                @for $i from 1 through 5 {
+                    &.listi#{$i+1} { background-position: 0 (-30 * $i)#{px}; }
+                }
+            }
+        }
+
+
+        &:hover {
+            background:#aaa;
+            background-color:rgba(160, 160, 160, .7);
+        }
+
+        &:hover i.icon {
+            &.listi1 { background-position: 0 0; }
+            @for $i from 1 through 5 {
+                &.listi#{$i+1} { background-position: -30px (-30 * $i)#{px}; }
+            }
+        }
+    }
+}
+
 %banner {
     position: relative;
     @include float(left);
