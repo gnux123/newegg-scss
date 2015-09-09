@@ -76,6 +76,7 @@ h3 {
 
 
 /*#[template]全站共用版面樣式
+
 */
 .wrapper {
 	@include pie-clearfix;
@@ -83,10 +84,35 @@ h3 {
     width:1024px;
 }
 
-//所有內頁共同Padding
-// .mainPadding {
-// 	@include mainPaddingArea;
-// }
+/*##[mainPadding]所有內頁共同Padding
+
+###[has MainPadding] 有mainPadding樣式
+	<div class="mainPadding" style="height:200px; background:#666;">
+		<div class="container" style="width:100%; height: 100%; background: #ccc;">
+		</div>
+	</div>
+
+###[has not MainPadding] 無mainPadding樣式
+	<div class="mainPadding nonPadding" style="height:200px; background:#666;">
+		<div class="container" style="width:100%; height: 100%; background: #ccc;">
+		</div>
+	</div>
+
+*/
+.mainPadding {
+	margin:0 auto;
+	padding-left: $outer-max-left#{px};
+	padding-right: $outer-max-right#{px};
+	width: $frame-max-width#{px};
+
+	//沒有padding狀態
+	&.nonPadding {
+		padding:0;
+		width: 100%;
+	}
+
+}
+
 
 .header,
 .topper {

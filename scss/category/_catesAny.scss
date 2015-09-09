@@ -1,0 +1,290 @@
+/*#[ChoiceAny]任選館版面樣式
+
+##[choiceArea-none] 任選館-集品區域(未滿額，未選取)
+
+    <div class="mainPadding">
+        <div class="chooseArea">
+            <div class="activityNameTit">任選館賣場-標題</div>
+            <div class="titBar">
+                <div class="ttIcon">
+                    任意選<i class="solid"></i>
+                </div>
+
+                <div class="tit">
+                    結帳前需消費滿<span class="red lowestPrice">1,200</span>元，
+                    目前已選購<span class="red num">0</span>件，
+                    共計<span class="red totalPrice">0</span>元
+                    <span class="shortText" style="display:">，還差<span class="red shortPrice">1,200</span>元</span>
+                    <span data-short="1200.00" style="display:none" class="rightText">，已符合活動條件</span>。
+                </div>
+
+                <div class="buyBtn">
+                    <input type="button" value="立即結帳" class="btn gray">
+                </div>
+            </div>
+
+            <div class="chooseBox" style="display:none; overflow: hidden;">
+                <a id="prev" class="arrow blueBg prev" style="z-index:655555;">上一頁</a>
+                    <ul id="subPageContainer">
+                    </ul>
+                <a id="next" class="arrow blueBg next" style="z-index:655555;">下一頁</a>
+            </div>
+
+            <div class="chooseBox" style="">
+                <p class="tipsTxt">選購清單中暫無商品</p>
+            </div>
+        </div>
+    </div>
+
+##[choiceArea] 任選館-集品區域(已滿額選取)
+
+    <div class="mainPadding">
+        <div class="chooseArea">
+            <div class="activityNameTit">任選館賣場-標題</div>
+            <div class="titBar">
+                <div class="ttIcon">
+                    任意選<i class="solid"></i>
+                </div>
+
+                <div class="tit">
+                    結帳前需消費滿<span class="red lowestPrice">1,200</span>元，
+                    目前已選購<span class="red num">10</span>件，
+                    共計<span class="red totalPrice">999,999</span>元
+                    <span class="shortText" style="display: none;">，還差<span class="red shortPrice">1,200</span>元</span>
+                    <span data-short="1200.00" class="rightText">，已符合活動條件</span>。
+                </div>
+
+                <div class="buyBtn">
+                    <input type="button" value="立即結帳" class="btn">
+                </div>
+            </div>
+
+            <div class="chooseBox">
+                <a id="prev" class="arrow blueBg prev" style="z-index:655555;">上一頁</a>
+                    <ul id="subPageContainer">
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包1</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包2</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包3</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包5</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                        <li class="box del">
+                            <div class="pic">
+                                <a href="#"><img src="http://placehold.it/200x200"></a>
+                            </div>
+                            <div class="txt">
+                                <h3>【限時再折】Longchamp長把小型摺疊水餃包6</h3>
+                                <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+                                <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+                            </div>
+                        </li>
+                    </ul>
+                <a id="next" class="arrow blueBg next" style="z-index:655555;">下一頁</a>
+            </div>
+
+            <div class="chooseBox" style="display:none;">
+                <p class="tipsTxt">選購清單中暫無商品</p>
+            </div>
+        </div>
+    </div>
+
+*/
+
+
+.chooseArea {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+
+    .chooseBox {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 325px;
+        padding: 20px 0;
+        border-width: 1px 1px 3px 1px;
+        border-style: solid;
+        border-color: $link-color;
+        background: #fff;
+        @include box-sizing(border-box);
+
+        .prev,
+        .next {
+            position: absolute;
+            display: block;
+            top: 50%;
+            margin-top: -15px;
+            width: 30px;
+            height: 0;
+            padding-top: 30px;
+            overflow: hidden;
+            border: 0;
+            background: url(#{$img-path}icon/chooseArrow.jpg) no-repeat;
+
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+            background-position: 0 0;
+         }
+
+         .next {
+             right: 0;
+            background-position: -30px 0;
+         }
+    }
+
+    .chooseBox > p {
+        line-height: 281px;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+}
+
+.chooseArea .activityNameTit {
+    display: block;
+    width:100%;
+    height:auto;
+    margin: 10px 0;
+
+    @include fontSize($defFont + 4);
+    line-height: 1.2em;
+    color: $font-red-color;
+}
+
+.chooseArea .titBar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 65px;
+    border: 1px solid $link-color;
+    @include box-sizing(border-box);
+    background-color: $gray-shade-lw;
+
+
+    @include fontSize($defFont + 4);
+    line-height: 63px;
+    color: $font-color;
+
+    .ttIcon {
+        position: relative;
+        display: block;
+        width: 99px;
+        height: 100%;
+        background-color: $link-color;
+
+        color:#fff;
+        @include fontSize($defFont + 4);
+        letter-spacing: 0.5px;
+        text-align: center;
+        line-height: 63px;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            right: -14px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0px 0 63px 14px;
+            border-color: transparent transparent transparent $link-color;
+        }
+    }
+
+    .tit {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 113px;
+        height: 100%;
+    }
+
+    .tit span { margin: 0 3px; }
+
+    .tit span.red { color: $font-red-color; }
+
+    .btn {
+        position: absolute;
+        display: block;
+        top: 9px;
+        right: 15px;
+        width:80px;
+        height:45px;
+        border:0;
+        cursor: pointer;
+
+        @include fontSize($defFont);
+        color: #fff;
+        letter-spacing: 0.5px;
+        line-height: 45px;
+        background: $font-organe-color;
+
+        &.gray { background: $gray-shade-m; }
+    }
+}
+
+#subPageContainer {
+    @include pie-clearfix;
+    display: block;
+    height: 100%;
+
+    li {
+        @include float(left);
+        display: block;
+        width: 233.8px;
+        height: 100%;
+
+        border-left: 1px solid $gray-shade-l;
+
+        &:first-child { border-left: 0; }
+    }
+}

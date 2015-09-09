@@ -15,8 +15,27 @@ $(function() {
 
     });
 
+    var floatCartCount = 0;
+    $("#FloatingSwitch").click(function(){
+        floatCartCount++;
+        if( floatCartCount == 1 ){
+            $("#FloatingAccount").addClass("active");
+        }else if( floatCartCount == 2 ) {
+            $("#FloatingAccount").removeClass("active");
+            floatCartCount = 0;
+        }
 
 
+
+    });
+
+
+    //box-effects
+    $(".box .btn").click(function(){
+        $(this).parents(".box").addClass("choose");
+    });
+
+    //cates page
     $('#carousel-logo').carouFredSel({
         items: 3,
         auto: false,
@@ -26,7 +45,18 @@ $(function() {
     $(".carousel-logo3 > .prev").click(function(){ $('#carousel-logo').trigger("prev", 1); });
     $(".carousel-logo3 > .next").click(function(){ $('#carousel-logo').trigger("next", 1); });
 
-
+    //cate-chooseAny
+    $("#subPageContainer").carouFredSel({
+        items   : 5,
+        auto    : false,
+        prev    : "#prev",
+        next    : "#next",
+        width   : "100%",  
+        scroll  : {
+            items       : 5,
+            duration    : 800
+        }
+    });
 
 
     $(".InsExp > span").click(function(){

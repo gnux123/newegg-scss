@@ -752,18 +752,17 @@
     <div id="FloatingAccount" class="aside-icon FloatingBubble FloatingAccount" style="display: block;">
         <div class="panel">
             <div class="FloatingTit service">
-            <div class="shoppingCart"><a href="/Cart"><div class="count" id="neSCBody">20</div></a></div>
+            <div class="shoppingCart"><a href="javascript:void(0);"><div class="count" id="neSCBody">20</div></a></div>
                 <div id="FloatingSwitch" class="text">我的帳戶</div>
                 <div class="pageTop"><i class="icon"><img src="img/Icon/GoToTop.png"></i><br><span>頁頂</span></div>
             </div>
             <div class="icon FloatingCon">
                 <ul>
-                    <li><a href="/Cart/Wishcart"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
-
-                    <li><a href="/MyAccount/Coupon"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
-                    <li><a href="/MyAccount/Order"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
-                    <li><a href="/MyAccount"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
-                    <li><a href="/Logout"><i class="icon listi6"></i><div class="text">登出</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi6"></i><div class="text">登出</div></a></li>
                 </ul>
             </div>
         </div>
@@ -773,6 +772,13 @@
 
 #FloatingAccount {
     @include pie-clearfix;
+
+    @include translate3d(90px,0,0);
+    @include transition-duration(0.5s);
+
+    &.active {
+        @include translate3d(0,0,0);
+    }
 
     .service {
         @include float(left);

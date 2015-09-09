@@ -6,30 +6,28 @@
         <div class="pic">
             <a href="#"><img src="http://placehold.it/200x200"></a>
         </div>
-        <a href="#">
-            <div class="txt">
-               <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
-               <span class="price">$3,188</span>
-               <span class="marketPrice">$4,680</span>
-            </div>
-        </a>
+        <div class="txt">
+            <a href="#">
+                <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+                <span class="price">$3,188</span>
+                <span class="marketPrice">$4,680</span>
+            </a>
+        </div>
     </div>
 
 ##商品單一模組(任選館使用)樣式設計
-
 
     <div class="box box-extend">
         <div class="pic">
             <a href="#"><img src="http://placehold.it/200x200"></a>
         </div>
-        <a href="#">
-            <div class="txt">
-               <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
-               <span class="price">$3,188</span>
-               <span class="marketPrice">$4,680</span>
-            </div>
-
-        </a>
+        <div class="txt">
+            <a href="#">
+                <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+                <span class="price">$3,188</span>
+                <span class="marketPrice">$4,680</span>
+            </a>
+        </div>
 
         <div class="specSelect">
             <select class="select_md">
@@ -51,8 +49,21 @@
                 <input type="button" value="選購" class="btn" data-choose-unit-price="190.00" data-choose-item-id="466460">
             </div>
         </div>
-
     </div>
+
+
+##商品單一模組(任選館使用-可刪除)樣式設計
+    <div class="box box-extend del">
+        <div class="pic">
+            <a href="#"><img src="http://placehold.it/200x200"></a>
+        </div>
+        <div class="txt">
+            <h3>【限時再折】Longchamp長把小型摺疊水餃包4</h3>
+            <span class="price">$ 535 </span><span class="buyNum">x<span class="num"> 1 </span>件</span>
+            <input type="button" class="icon icon-delete" onclick="twNewegg.ChooseAny.DeleteItem(this);">
+        </div>
+    </div>
+
 */
 
 
@@ -60,7 +71,7 @@
     //float:left;
     margin-left:10px;
     margin-bottom:10px;
-    border:1px solid #dfdfdf;
+    border:1px solid $gray-shade-l;
 
     .pic {
 		margin:10px auto 5px;
@@ -96,8 +107,9 @@
         // margin-top:5px;
 
 		@include fontSize($defFont);
-		color:#666;
+		color:$font-color;
 
+        h3 { @include fontSize($defFont); }
         a { @include pie-clearfix; }
 	}
 
@@ -133,6 +145,12 @@
 		font-weight:bold;
 		color:$font-red-color;
 	}
+}
+
+
+
+//任選館商品模組使用樣式
+.box {
 
 	.specSelect {
 		margin:15px auto;
@@ -143,46 +161,78 @@
 	}
 
     .chooseBar {
-		$chooseBarHeight:40px;
-		@include pie-clearfix;
-		@extend .clear;
-		height:$chooseBarHeight;
-		border-top:1px solid #d8d8d8;
-		line-height:$chooseBarHeight;
-		.numTit {
-			float:left;
-			margin-left:13px;
-		}
-		.numTxt {
-			float:left;
-		}
-		select {
-			margin-top:-2px;
-			width:60px;
-			background-color:#fff;
-		}
-		.status {
-			float:right;
-			margin-right:13px;
-			.btn {
-				padding:2px 10px;
-				@include fontSize($defFont - 3);
+        $chooseBarHeight:40px;
+        @include pie-clearfix;
+        @extend .clear;
+        height:$chooseBarHeight;
+        border-top:1px solid $gray-shade-l;
+        line-height:$chooseBarHeight;
+        .numTit {
+            float:left;
+            margin-left:13px;
+        }
+        .numTxt {
+            float:left;
+        }
+        select {
+            margin-top:-2px;
+            width:60px;
+            background-color:#fff;
+        }
+        .status {
+            float:right;
+            margin-right:13px;
+            .btn {
+                padding:2px 10px;
+                @include fontSize($defFont - 3);
                 background:$font-organe-color;
                 border:0;
                 color:#fff;
                 cursor: pointer;
-			}
-			.btn-selected {
-				background:#f60;
-			}
-		}
-	}
+            }
+            .btn-selected {
+                background: $font-organe-color;
+            }
+        }
+    }
 
-	&.choose {
-		border-color:#fbb486;
-		.chooseBar {
-			background:#fbb486;
-			border-color:#fbb486;
-		}
-	}
+    &.choose {
+        border-color:$orange-l;
+        .chooseBar {
+            background:$orange-l;
+            border-color:$orange-l;
+        }
+    }
+}
+
+
+//任選館商品可刪除模組
+.box.del {
+
+
+    .pic { margin: 0 auto; }
+    .price,
+    .buyNum {
+        @include float(left);
+		margin:0;
+        height:20px;
+        padding: 5px;
+
+		font-weight:bold;
+		color:$font-red-color;
+    }
+
+
+    .icon-delete {
+        @include float(right);
+        width: 20px;
+        height: 23px;
+        overflow: hidden;
+        border: 0;
+        margin: 0 5px 0 0;
+        cursor: pointer;
+
+
+        background: url(#{$img-path}icon/DeleteImg2.jpg) center no-repeat;
+    }
 }

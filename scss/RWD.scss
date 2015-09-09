@@ -6,6 +6,12 @@
 @import "_base";
 
 @media screen and (max-width:1279px) {
+    .mainPadding {
+    	padding-left: $outer-min-left#{px};
+    	padding-right: $outer-min-right#{px};
+    	width: $frame-min-width#{px};
+    }
+
     .header-limiter,
     .topper-limiter,
     .footer-limiter {
@@ -60,6 +66,20 @@
     .searchAgainArea input[type="text"] {
         min-width:300px;
         width:300px;
+    }
+
+
+    #subPageContainer .box {
+        width: 199.8px;
+        .pic {
+            margin: 0 auto;
+            width: 189.4px;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
 }
