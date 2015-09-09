@@ -210,7 +210,7 @@
 .box.del {
 
 
-    .pic { margin: 0 auto; }
+    .pic { margin:10px auto 5px; }
     .price,
     .buyNum {
         @include float(left);
