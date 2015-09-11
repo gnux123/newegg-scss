@@ -720,19 +720,20 @@
 .menudropDown {
     position: relative;
     z-index: 9;
-    padding: 5px 0;
     width: 206px;
     height: 25px;
     overflow: hidden;
 
     border-bottom: 1px solid #fff;
-    background: url(#{$img-path}Icon/arrowUpDown.png) #d2d2d2 150px 11px no-repeat;
+    background: url(#{$img-path}Icon/arrowUpDown.png) #d2d2d2 150px 7px no-repeat;
 
     letter-spacing: 2px;
     line-height: 26px;
     text-align: center;
     color: $font-color;
     cursor: pointer;
+
+    @include box-sizing(border-box);
 
     &:hover {
         color:#fff;
@@ -742,7 +743,7 @@
 #mainMenu {
     display: none;
     position: absolute;
-    top: 36px;
+    top: 25px;
     left: 0;
     z-index: 100;
 }

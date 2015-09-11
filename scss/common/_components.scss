@@ -236,6 +236,7 @@ input[type=radio],
 
 .pathLink {
 	@include fontSize($defFont - 1);
+	margin: $gutter#{px} 0;
 	span {
 		margin:0 3px;
 	}

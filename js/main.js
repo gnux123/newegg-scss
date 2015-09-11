@@ -1,7 +1,7 @@
 $(function() {
     var states = null;
+
     $(".menudropDown").click(function(){
-        console.log(states);
         if(states == null || states == true){
             $("#mainMenu").slideDown();
             states = false;

@@ -1,4 +1,14 @@
 // out: ../css/account.css, compress: true,﻿  includePath: includes/﻿
+/*##account.css說明
+account.css為我的帳戶專用CSS，包含了如下部分：
+<p>1. 我的帳戶共通樣式<br/>
+   2. 訂單資訊樣式<br/>
+   3. 帳戶管理樣式<br/>
+   4. 我的折價券樣式<br/>
+   5. 我的最愛樣式
+</p>
+*/
+
 @import "compass/compass";
 
 @import "_base";
