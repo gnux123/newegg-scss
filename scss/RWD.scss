@@ -6,23 +6,25 @@
 @import "_base";
 
 @media screen and (max-width:1279px) {
-    .mainPadding {
-    	padding-left: $outer-min-left#{px};
-    	padding-right: $outer-min-right#{px};
-    	width: $frame-min-width#{px};
-    }
-
-    .header-limiter,
-    .topper-limiter,
-    .footer-limiter {
-        width: $frame-min-width#{px};
-        margin: 0 $outer-min-left#{px};
-        padding: 0;
-    }
-
-    //#header & tooper
     .header,
-    .topper { width: $min-width#{px}; }
+    .topper,
+    .footer {
+        &-limiter {
+          width: $frame-min-width#{px};
+          padding: 0 $outer-min-left#{px};
+        }
+    }
+
+    .mainPadding {
+      width: $frame-min-width#{px};
+      padding:0 $outer-min-left#{px};
+
+      &.clearPadding { width: $min-width#{px}; }
+    }
+
+    .subCategory {
+      width: $frame-min-width - ($side-width + 15)#{px};
+    }
 
     //header-quickMenu
     .header .quickMenu > ul > li {
@@ -46,13 +48,7 @@
 
 
     //footer-use
-    .footer > .footer-limiter {
-        width: $frame-min-width#{px};
-        margin: 0 auto;
-    }
-    .footer > .footer-limiter li {
-        margin-right:15px;
-    }
+    .footer > .footer-limiter li { margin-right:15px; }
 
 
     //category banner

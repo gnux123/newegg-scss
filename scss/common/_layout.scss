@@ -79,10 +79,49 @@ h3 {
 
 */
 .wrapper {
-	@include pie-clearfix;
 	margin:0 auto;
-    width:1024px;
 }
+
+.header,
+.topper,
+.footer {
+	width: 100%;
+	margin: 0 auto;
+
+	&-limiter {
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+		@include pie-clearfix;
+    }
+}
+
+.header { height: 100px; }
+.topper { height: 51px; }
+.footer { height: 400px; }
+
+.mainPadding {
+	position:relative;
+	margin:0 auto 50px auto;
+	height: auto;
+}
+
+//寬度設定部分
+.header,
+.topper,
+.footer {
+    &-limiter {
+      width: $frame-max-width#{px};
+      padding: 0 $outer-max-right#{px} 0 $outer-max-left#{px};
+    }
+}
+
+//分類寬度設定
+.aside2 { width: $side-width#{px}; }
+.subCategory {
+  width: $frame-max-width - ($side-width + 15)#{px};
+}
+
 
 /*##[mainPadding]所有內頁共同Padding
 
@@ -93,46 +132,33 @@ h3 {
 	</div>
 
 ###[has not MainPadding] 無mainPadding樣式
-	<div class="mainPadding nonPadding" style="height:200px; background:#666;">
+	<div class="mainPadding clearPadding" style="height:200px; background:#666;">
 		<div class="container" style="width:100%; height: 100%; background: #ccc;">
 		</div>
 	</div>
 
 */
 .mainPadding {
-	margin:0 auto;
-	padding-left: $outer-max-left#{px};
-	padding-right: $outer-max-right#{px};
-	width: $frame-max-width#{px};
+   width: $frame-max-width#{px};
+   padding: 0 $outer-max-right#{px} 0 $outer-max-left#{px};
 
-	//沒有padding狀態
-	&.nonPadding {
-		padding:0;
-		width: 100%;
-	}
-
+   //沒有padding狀態
+   &.clearPadding {
+	 width: $max-width#{px};
+	  padding: 0;
+	  margin:0 auto;
+   }
 }
 
-
-.header,
-.topper {
-    margin: 0 auto;
-    @include pie-clearfix;
-}
 
 
 .header-limiter,
 .topper-limiter,
 .footer-limiter {
-    @include pie-clearfix;
-	margin:0 auto;
-	padding-left:$outer-max-left#{px};
-	padding-right:$outer-max-right#{px};
-	width:$frame-max-width#{px};
-
 	.ad a { border:0; }
 }
 
+//header設定部分
 .header {
 	@include pie-clearfix;
 	height:100px;
@@ -494,16 +520,6 @@ h3 {
 
 //[footer]footer模組框架
 .footer {
-    height: 400px;
-	margin: 0 auto;
-	@include pie-clearfix;
-
-    & > .footer-limiter {
-		position: relative;
-    	width: $frame-max-width#{px};
-    	margin: 0 auto;
-    }
-
     .icon {
         @include float(left);
         margin-top: 20px;
