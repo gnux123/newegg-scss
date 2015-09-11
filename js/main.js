@@ -1,28 +1,39 @@
 $(function() {
-    var dropcount = 0;
-    $(".dropCon").hide();
-    $("#dropAccount > a").click(function(){
-        $(this).parent().addClass("active");
-
-        dropcount++;
-        if( dropcount == 1 ){
-            $(".dropCon").slideDown();
-        }else if( dropcount == 2 ) {
-            $(".dropCon").slideUp();
-            $(this).parent().removeClass("active");
-            dropcount = 0;
+    var states = null;
+    $(".menudropDown").click(function(){
+        console.log(states);
+        if(states == null || states == true){
+            $("#mainMenu").slideDown();
+            states = false;
+        }else if(states == false) {
+            $("#mainMenu").slideUp();
+            states = true;
         }
 
     });
 
-    var floatCartCount = 0;
+    $(".dropCon").hide();
+    $("#dropAccount > a").click(function(){
+        $(this).parent().addClass("active");
+
+        if(states == null || states == true){
+            $(".dropCon").slideDown();
+            states = false;
+        }else if(states == false) {
+            $(".dropCon").slideUp();
+            $(this).parent().removeClass("active");
+            states = true;
+        }
+
+    });
+
     $("#FloatingSwitch").click(function(){
-        floatCartCount++;
-        if( floatCartCount == 1 ){
+        if(states == null || states == true){
             $("#FloatingAccount").addClass("active");
-        }else if( floatCartCount == 2 ) {
+            states = false;
+        }else if(states == false) {
             $("#FloatingAccount").removeClass("active");
-            floatCartCount = 0;
+            states = true;
         }
 
 
@@ -51,7 +62,7 @@ $(function() {
         auto    : false,
         prev    : "#prev",
         next    : "#next",
-        width   : "100%",  
+        width   : "100%",
         scroll  : {
             items       : 5,
             duration    : 800
