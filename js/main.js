@@ -35,8 +35,27 @@ $(function() {
             $("#FloatingAccount").removeClass("active");
             states = true;
         }
+    });
+
+    $(".TabArea ul li").click(function(){
+        var _id = $(this).attr("id");
+
+        window.location.href = $(this).find('a').attr('href');
+        $(this).addClass("TabSelected").siblings("li.TabSelected").removeClass("TabSelected");
 
 
+        if(_id == "Account"){
+            if(states == null || states == true){
+                $("#Account .SubMenu").slideDown();
+                states = false;
+            }else if(states == false) {
+                $("#Account .SubMenu").slideUp();
+                states = true;
+            }
+        }else{
+            $("#Account .SubMenu").slideUp();
+            states = true;
+        }
 
     });
 
