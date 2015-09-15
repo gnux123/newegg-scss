@@ -106,4 +106,20 @@ $(function() {
         $('.detail').eq(_index).show().siblings('div.detail').hide();
     });
 
+    //account center coupon table selects
+    $(".selector-coupon").on('change', function(){
+        var _value = $(this).find(":selected").val();
+        $("#"+_value).show().siblings("table").hide();
+    });
+
+    $(".couponTipsTit").click(function(){
+        if(states == null || states == true){
+            $(".couponTxt").slideDown();
+            states = false;
+        }else if(states == false) {
+            $(".couponTxt").slideUp();
+            states = true;
+        }
+    });
+
 });

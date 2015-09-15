@@ -124,3 +124,51 @@
     line-height: 81px;
 
 }
+
+
+//account-center tables
+%tables {
+    width: 100%;
+    height: auto;
+
+    tr td {
+        height: 80px;
+        border: 1px solid $gray-shade-l;
+
+        text-align: center;
+
+        &:first-child,
+        & > .price {
+            height: auto;
+
+            @include fontSize($defFont + 2);
+            text-align: center;
+            font-weight: bold;
+            color: $gray-shade-d;
+        }
+
+        &:first-child+td+td > p {
+            @include fontSize($defFont - 3);
+        }
+    }
+
+    tr td,
+    tr th { position: relative; }
+    tr:first-child {
+        background: $gray-shade-lw;
+        border-width: 0 1px;
+        border-style: solid;
+        border-color: $gray-shade-l;
+
+        th {
+            height: 50px;
+
+            @include fontSize($defFont - 1);
+            color:$gray-shade-d;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+}
