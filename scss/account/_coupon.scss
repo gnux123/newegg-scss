@@ -1,0 +1,301 @@
+/*#[Coupon] 我的折價券模組
+
+    <div class="serviceContentBox">
+        <div class="Tit ClassTit"><i class="icon ServiceIcon Coupons-2"></i>我的折價券</div>
+        <div class="couponPswArea">如需兌換折價券，請輸入折價券領用代碼
+            <input type="text" id="ExchangeCouponCode" placeholder="請輸入折價券代碼">
+            <input type="button" value="輸入" class="btn btn-submit" id="ExchangeCouponBtn">
+        </div>
+
+        <select class="select_sm selector-coupon">
+            <option selected="" value="listActiveCoupon">已生效</option>
+            <option value="listUsedCoupon">已使用</option>
+            <option value="listExpiredCoupon">已過期</option>
+            <option value="listWaitingForActivecoupon">待生效</option>
+        </select>
+
+        <div class="service_contentTable">
+            <!--已生效 -->
+            <table id="listActiveCoupon">
+                <tbody>
+                    <tr>
+                        <th style="width:50px;">狀態</th>
+                        <th>名稱</th>
+                        <th style="width:90px;">生效日期</th>
+                        <th style="width:90px;">失效日期</th>
+                        <th style="width:60px;">金額</th>
+                        <th style="width:300px;">適用範圍</th>
+                    </tr>
+                    <tr>
+                        <td colspan="6">目前尚無可用折價券</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--已使用 -->
+                <table id="listUsedCoupon">
+                    <tbody>
+                        <tr>
+                            <th style="width:50px;">狀態</th>
+                            <th>名稱</th>
+                            <th>品項</th>
+                            <th style="width:90px;">使用日期</th>
+                            <th style="width:60px;">金額</th>
+                            <th style="width:300px;">適用範圍</th>
+                        </tr>
+                        <tr>
+                            <td colspan="6">3個月內無使用折價券記錄</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--已過期 -->
+                <table id="listExpiredCoupon">
+                    <tbody>
+                        <tr>
+                            <th style="width:50px;">狀態</th>
+                            <th>名稱</th>
+                            <th style="width:90px;">生效日期</th>
+                            <th style="width:90px;">失效日期</th>
+                            <th style="width:60px;">金額</th>
+                            <th style="width:300px;">適用範圍</th>
+                        </tr>
+                        <tr>
+                            <td><span>已過期</span></td>
+                            <td>會員限時體驗券(滿1,000折300元)</td>
+                            <td>2015/07/24 00:00:00</td>
+                            <td>2015/07/31 00:00:00</td>
+                            <td>300元</td>
+                            <td>適用於購買商品之單價須為1,000元(含)以上</td>
+                        </tr>
+                        <tr>
+                            <td><span>已過期</span></td>
+                            <td>新蛋紅包金(500元)</td>
+                            <td>2015/01/19 13:00:00</td>
+                            <td>2015/02/11 00:00:00</td>
+                            <td>500元</td>
+                            <td>適用於商品售價3,000元以上之商品</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--待生效 -->
+                <table id="listWaitingForActivecoupon">
+                    <tbody>
+                        <tr>
+                            <th style="width:50px;">狀態</th>
+                            <th>名稱</th>
+                            <th style="width:90px;">生效日期</th>
+                            <th style="width:90px;">失效日期</th>
+                            <th style="width:60px;">金額</th>
+                            <th style="width:300px;">適用範圍</th>
+                        </tr>
+                        <tr>
+                            <td colspan="6">目前尚無待生效的折價券</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="couponTipsArea">
+                <div class="btn couponTipsTit">折價券使用說明</div>
+                <div class="couponTxt">
+                    <article>
+                        <span class="tit red">一、什麼是折價券</span>
+                        <ul>
+                            <li>新蛋全球生活網將不定期舉辦贈送折價券活動，折價券僅供會員本人依「折價券使用辦法」於有效期限內，在新蛋全球生活網購物消費商品或相關活動或時折抵使用，不得轉讓予他人。</li>
+                            <li>每筆折價券生效日不同，已生效才可使用，說明如下：<br>
+                                折價券採系統自動設定，實際生效日期以出貨日（即發票開立日）+8日為準，確認無退貨或取消訂單才會贈送。
+                                <ol>
+                                    <li>已生效（可使用）：目前可用的折價券。</li>
+                                    <li>待生效：尚不可使用的折價券，待訂單生效且無取消退貨即可使用。</li>
+                                    <li>已過期（已失效）：每一筆折價券會有其設定的到期日，超過到期日後，該筆折價券即失效，無法使 用。（例：2015/12/31  23:59到期之回饋金，於2016/1/1失效）</li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <span class="tit red">二、如何獲得折價券</span>
+                        <ul>
+                            <li>透過新蛋全球生活網所舉辦的各種行銷活動與會員專屬活動，可獲得不同面額的折價券。</li>
+                            <li>贈送面額將依照各項活動門檻規定，詳細活動辦法請詳閱各活動網頁說明。</li>
+                            <li>折價券為贈品，係屬無償取得，不適用商品（服務）禮券記載之規範。</li>
+                        </ul>
+                        <span class="bold">會員迎新禮（不定期）</span>
+                        <ol>
+                            <li>限定新會員，入會成功後方能獲得，每個會員帳號限領取一次。</li>
+                            <li>成功加入會員後，系統將自動發送，您將會收到會員通知信函，可登入「我的帳戶&gt;<a href="/MyAccount/Coupon" target="_blank">我的折價券</a>」查詢，並請留意您的E-mail信箱。</li>
+                        </ol>
+                        <span class="bold">折價券序號兌換（不定期）</span>
+                        <ol>
+                            <li>會員可於活動期間於「我的帳戶&gt;<a href="/MyAccount/Coupon" target="_blank">我的折價券</a>」輸入「折價券領用代碼」兌換，每個會員帳號限領取一次。（請注意填寫時必須為英文字母大寫或是半型阿拉伯數字，輸入錯誤恕不補發）</li>
+                        </ol>
+                        <span class="bold">活動頁購物滿額贈送（不定期）</span>
+                        <ol>
+                            <li>新蛋全球生活網將不定期舉辦購物回饋活動，只要購買特定賣場商品或是參與購物滿額活動並符合活動條件，即可獲得回饋金。（成立的條件將依據每個購物活動條件而有所不同，詳情請參見各活動網頁說明）</li>
+                            <li>採系統自動設定判讀該筆訂單符合門檻且確認無退貨或取消訂單才會贈送歸戶，實際生效日期以出貨日（即發票開立日）+8日為準。</li>
+                        </ol>
+                        <span class="tit red">三、如何使用折價券</span>
+                        <ul>
+                            <li>折價券以單次單品結帳時使用，每次使用每張折價券時，系統會自動以該券的面額做全額折抵，恕不累計使用，且購買商品之單價須符合該券設限門檻，且須單次全數使用完畢。</li>
+                            <li>每次消費單筆訂單限使用一張折價券折抵，若您同時有2張以上折價券，可以同時使用於同一筆訂單，但仍須符合一張券限用一項商品的原則。且限在期限內使用於指定商品。（使用限制請參照各活動說明）</li>
+                            <li>在您購物結帳時，如果您的帳戶存有折價券，且購買適用折價券折抵的商品，在商品結帳頁會出現「使用折價券」的圖示，點選「使用折價券」的圖示，會跳出您的折價券帳戶視窗，請勾選您欲使用之折價券，系統將會為您自動換算當次可抵用金額及計算本次消費需實際支付金額。</li>
+                            <li>折價券皆有其折抵限制、開始日期、使用效期、適用館別，您可從「我的帳戶&gt;<a href="/MyAccount/Coupon" target="_blank">我的折價券</a>」查詢詳細說明。凡適用折價券優惠，將在該商品賣場頁標示。</li>
+                            <li>折價券僅限原註冊會員使用，恕不可轉讓且不可要求將不同會員帳號或不同活動的折價券合併，部分活動或商品無法折抵使用，恕無法轉換成現金、找零或交換其他商品及折換其他贈品；且無法抵扣物流費、安裝費、運費、服務費、稅賦等費用。</li>
+                            <li>折價券需於使用期限內使用，逾期失效，恕不補發。</li>
+                            <li>專案活動及優惠方案（如其他折扣、滿額折、折價券、回饋金）不可合併同時使用。故會員若同時擁有二種優惠時，只能擇其一種方式進行折抵。 （如該活動已有滿額折，則折價券／回饋金皆無法使用）</li>
+                            <li>折價券折抵部分不再另開立發票，開立發票金額，以該訂單「實際支付金額」來計算。</li>
+                        </ul>
+                        <span class="tit red">四、取消訂單與退貨的處理</span>
+                        <ul>
+                            <li>以折價券購買商品依然享有退貨及商品7天猶豫期等所有服務。</li>
+                            <li>使用折價券之訂單，若事後取消訂單或辦理退貨，須將所有訂單之商品一併退貨，僅會退還顧客實際所支付的金額，折價券一經使用立即失效，恕不補發，即該筆訂單所使用的折價券不予退回。</li>
+                        </ul>
+                        <span class="tit red">五、如何查詢折價券</span>
+                        <ul>
+                            <li>您可經由「我的帳戶&gt;<a href="/MyAccount/Coupon" target="_blank">我的折價券</a>」查詢您持有的折價券張數、面額、適用範圍、適用商品及使用明細。</li>
+                        </ul>
+                        <span class="tit red">六、其他事項</span>
+                        <ul>
+                            <li>會員應妥善保管您的帳號及密碼，避免他人未經您的同意而使用，任何經由輸入正確帳號與密碼所使用之折價券，本公司均不退還。若由於不可抗力或不可歸責於本站的因素致回饋金帳戶資料流失時，本公司將不負賠償或補償之責。會員於參與獲得回饋金活動時，即視為同意活動流程及本公司之回饋金規範，本公司將保有所有發送回饋金之收回／使用權。</li>
+                            <li>新蛋全球生活網將不定期舉辦的各種行銷活動與會員專屬活動，亦可獲得不同的折價券。詳細活動辦法請詳閱各活動網頁說明。</li>
+                            <li>新蛋全球生活網將保留隨時變更、修改與解釋或終止本「折價券使用辦法」之權利，若有異動及修改內容將在本網站上公佈，恕不另外個別通知。</li>
+                            <li>若您有任何疑問，歡迎來信（<a href="mailto:service@newegg.com.tw">service@newegg.com.tw</a>），我們將於1～2日內（不含例假日）以E-mail回覆您，或請致電客服人員。(02)-8175-5996   08:30am ~ 17:30pm</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+*/
+
+.serviceContentBox {
+    position: relative;
+    width:$frame-min-width#{px};
+    height: auto;
+    margin: 0 auto;
+    @incclude pie-clearfix;
+
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: $gray-shade-l;
+}
+
+.serviceContentBox {
+    .ClassTit {
+        position: relative;
+        display:inline-block;
+        height:85px;
+        margin-left: 45px;
+        padding-left: 45px;
+
+        @include fontSize($defFont);
+        font-weight: bold;
+        line-height: 85px;
+        letter-spacing: 0.5px;
+    }
+
+    .couponPswArea {
+        height: 50px;
+        margin: 0 45px;
+
+        font-weight: bold;
+        line-height: 50px;
+        letter-spacing: 0.5px;
+
+        & > input[type="text"] {
+            vertical-align: baseline;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 70px;
+            height: 29px;
+            border: 0;
+            background-color: $orange;
+            cursor: pointer;
+
+            @include fontSize($defFont);
+            color: #fff;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .selector-coupon {
+        @include float(right);
+        margin: 22.5px 10px 22.5px 0;
+    }
+
+    .selector-coupon + div {
+        margin-top: 70px;
+    }
+}
+
+
+.service_contentTable table {
+    @extend %tables;
+
+    display:none;
+
+    &:first-child { display: table; }
+
+    //table custom settings
+    tr:first-child {
+        border-width: 1px 0 1px 0;
+    }
+
+    tr td {
+        border-left: 1px solid $gray-shade-l;
+
+        @include fontSize($defFont);
+        font-weight:lighter;
+
+        &:first-child {
+            border-left: 0;
+            font-weight:lighter;
+            @include fontSize($defFont);
+        }
+
+        &[colspan="6"] {
+            line-height: 80px;
+            font-weight:lighter;
+        }
+    }
+}
+
+.couponTipsArea {
+    width:94%;
+    margin:0 3% 10px 3%;
+
+    .couponTipsTit {
+        display: inline-block;
+        margin-top:20px;
+        padding:10px;
+        background: $link-color;
+        @include border-radius(5px);
+        cursor: pointer;
+
+        color:#fff;
+        @include fontSize($defFont + 2);
+        letter-spacing: 1px;
+    }
+}
+
+.couponTxt {
+    display: none;
+    margin-top: 20px;
+
+    .tit { color: $font-red-color; }
+    .bold { font-weight: bold; }
+
+    ul, ol {
+        margin: 10px 0 10px 25px;
+        list-style-position: outside;
+        list-style-type: decimal;
+
+        @include fontSize($defFont - 1);
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+
+    ol { list-style-type: disc; }
+}

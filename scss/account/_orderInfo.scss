@@ -1,0 +1,105 @@
+/*#[orderInfo] 我的訂單模組
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon Order-2"></i>我的訂單狀態</div>
+            <div class="service_contentTable">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width: 110px;">訂購日期</th>
+                            <th style="width: 180px;">訂單編號</th>
+                            <th style="width: 80px;">訂單狀態</th>
+                            <th>商品名稱</th>
+                            <th style="width: 70px;">總價</th>
+                            <th style="width: 90px;">訂單明細</th>
+                            <th style="width: 50px;">發票</th>
+                            <th style="width: 50px;">問答</th>
+                            <th style="width: 90px">訂單處理</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">2014/12/12</td>
+                            <td>LBO141212000167</td>
+                            <td>已配達</td>
+                            <td>SanDisk 64GB 64G Cruzer Ultra Fit 130MB【CZ43】CZ 43 SDCZ43 USB 3.0 隨身碟 USB3.0 Pendrive</td>
+                            <td>499</td>
+                            <td><p class="UnderLine blue" onclick="GetDetail(this);" cartid="LBO141212000167">訂單明細</p></td>
+                            <td><p class="UnderLine blue" onclick="GetOrderInvoice('LBO141212000167')">發票內容</p></td>
+                            <td>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetAskDetail(this);">詢問</p>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetRecord(this);">紀錄</p>
+                            </td>
+                            <td>
+                                <p class="UnderLine blue" onclick="GetReturnDetail(this);" returncartid="LBO141212000167" style="display:none">我要退貨</p>
+                                <p class="UnderLine blue" onclick="GetChageDetail(this);" chagecartid="LBO141212000167" style="display:none">我要換貨</p>
+                                <p class="UnderLine blue" onclick="GetFixDetail(this);" fixcartid="LBO141212000167" style="">我要維修</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <div class="DeliveryInformation">
+                                    <div class="deliverState">
+                                        <div class="DeliveryText">配送狀態</div>
+                                        <ul>
+                                            <li class=""><img src="img/img_trans.gif" class="step01">訂單成立</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step02">付款完成</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step03">待出貨</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step04">海外轉運中</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step05">空運中</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step06">清關中</li>
+                                            <li class=""><img src="img/img_trans.gif" class="step07">配送中</li>
+                                            <li class="active"><img src="img/img_trans.gif" class="step08">已送達</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="ShippingInformation" style="width:260px;font-size:90%;">
+                                        <span>訂單編號：</span>
+                                        <span>LBO141212000167</span><br>
+                                        <span>出貨日期：</span>
+                                        <span>12/12/2014 2:41:36 PM</span><br>
+                                        <span>出貨方式：</span><a href="http://www.post.gov.tw/post/internet/box/index_2_2.jsp?id=3" target="_blank">EMS 郵局</a><br>
+                                        <span>配送單號：</span>
+                                        <span>279392 10005418</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><td colspan="9" id="myOrderArea3_LBO141212000167" style="display:none;"></td></tr>
+                        <tr><td colspan="9" id="myOrderArea2_LBO141212000167" style="display:none;"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination PageArea">
+        <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)">&lt;</span>
+        <span class="GoToPage" data-pagevalue="1">1</span>
+        <span class="SelectThePage" style="color:#EB8A51" data-pagevalue="2">2</span>
+        <span class="GoToPage" data-pagevalue="3">3</span>
+        <span class="GoToPage" data-pagevalue="4">4</span>
+        <span class="arrow arrRight next">&gt;</span>
+    </div>
+
+    <div class="orderTipsArea">
+        <ul>
+            <li>在確認付款且有庫存，一般商品將於您付款成功後7個工作天左右送達；美國新蛋直購商品於您付款成功後9~14個工作天左右送達。若有不可抗力之因素延長送貨時間，我們將儘速與您通知。</li>
+            <li>查詢訂單詳情 (如商品明細 /付款資料等) ，請點選該筆商品的訂單明細進行查詢。</li>
+            <li>建議您可先參考維修/換貨/退貨/取消相關辦法後，再點選維修/退貨/換貨/取消等服務。</li>
+            <li>發票將在付款完成、出貨後開立，將會email通知您，更多詳情可參考「<a href="/Service/AboutShopping">電子發票流程說明</a>」。</li>
+            <li>若有任何訂單問題請至<a href="/MyAccount/AskQuestion" target="_blank">問答中心</a>詢問，我們將盡速回覆您的問題。</li>
+        </ul>
+    </div>
+
+*/
+
+.serviceContentArea ~ div {
+    width: $frame-min-width#{px};
+    margin:30px auto 0 auto;
+}
+
+.DeliveryInformation {
+    width: 96%;
+    height: 80px;
+    margin: 10px 2%;
+}
