@@ -68,10 +68,10 @@
                         <li class="Tab BorderTab" id="Order"><a href="javascript:void(0);"><i class="icon Order"></i>我的訂單</a></li>
                         <li class="Tab BorderTab" id="Account"><a href="javascript:void(0);"><i class="icon Account"></i>帳戶管理<i class="icon Up"></i></a>
                             <ul class="SubMenu">
-                                <li><a href="/MyAccount/EditPersonInfo">個人資料修改</a></li>
-                                <li><a href="/MyAccount/EditPassword">密碼修改</a></li>
-                                <li><a href="#" onclick="GetAskDetails(this);">問答中心</a></li>
-                                <li><a href="/MyAccount/EditAccount">帳號修改</a></li>
+                                <li><a href="javascript:void(0);">個人資料修改</a></li>
+                                <li><a href="javascript:void(0);">密碼修改</a></li>
+                                <li><a href="javascript:void(0);" onclick="GetAskDetails(this);">問答中心</a></li>
+                                <li><a href="javascript:void(0);">帳號修改</a></li>
                             </ul>
                         </li>
                     </ul>

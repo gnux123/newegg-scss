@@ -1,0 +1,48 @@
+/*#[defaulPage] 帳戶管理-預設頁面
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="defaultPage">
+                <div class="egg"></div>
+                <div class="pop"><p>您好！<br>請選擇右側服務項目！</p></div>
+            </div>
+        </div>
+    </div>
+
+*/
+
+.serviceContentBox .defaultPage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.serviceContentBox .egg {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 185px;
+    left: 265px;
+    width: 204px;
+    height: 210px;
+    background-image: url(#{$img-path}MyAccount/defaultEgg.jpg);
+}
+
+
+.serviceContentBox .pop {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 70px;
+    left: 430px;
+    width: 300px;
+    height: 176px;
+    background-image: url(#{$img-path}MyAccount/defaultPop.jpg);
+
+    p {
+        margin: 40px 0 0 40px;
+
+        @include fontSize($defFont + 6);
+        line-height:30px;
+        color: $gray-shade-m;
+        font-weight: bolder;
+    }
+}
