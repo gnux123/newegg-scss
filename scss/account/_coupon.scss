@@ -231,7 +231,7 @@
 }
 
 
-.service_contentTable table {
+.couponPswArea ~ .service_contentTable table {
     @extend %tables;
 
     display:none;

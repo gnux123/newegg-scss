@@ -12,7 +12,11 @@
 
         <table class="table grayBorder darkGray">
             <tbody><tr class="tr grayBorder GrayBgColorth">
-                <th class="th Boldtext" style="width:100px;"><input type="checkbox" name="" value="" class="checkbox SelectAll"><span class="Select TextAlign-left">全選<br>取消全選</span></th>
+                <th class="th Boldtext" style="width:100px;">
+                    <input type="checkbox" name="" value="" class="checkbox SelectAll">
+                    <span class="Select TextAlign-left">全選</span>
+                    <span class="Select TextAlign-left">取消全選</span>
+                </th>
                 <th class="th Boldtext" style="width:500px;">商品名稱/折扣與贈品</th>
                 <th class="th Boldtext">加入日期</th>
                 <th class="th Boldtext">商品價格</th>
@@ -41,8 +45,13 @@
             <li style="width:70%"><p class="TextAlign-right">您總共收藏<span>1</span>項商品</p></li>
         </ul>
 
-        <div class="PageArea" id="PageArea" data-pagevalue="1" data-totalpagevalue="1">
-            <a class="StopGoToPage" style="color:#EB8A51" selected="" data-pagevalue="1">1</a>
+        <div class="pagination PageArea">
+            <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)">&lt;</span>
+            <span class="GoToPage" data-pagevalue="1">1</span>
+            <span class="SelectThePage" style="color:#EB8A51" data-pagevalue="2">2</span>
+            <span class="GoToPage" data-pagevalue="3">3</span>
+            <span class="GoToPage" data-pagevalue="4">4</span>
+            <span class="arrow arrRight next">&gt;</span>
         </div>
     </div>
 
@@ -127,20 +136,26 @@
         th:first-child input {
             position: absolute;
             top: 15px;
-            left: 10px;
+            left: 5px;
+
+            & ~ span { display: none; }
+            & + span { display: block; }
+
+            &:checked ~ span { display: block; }
+            &:checked + span { display: none; }
         }
 
         th:first-child span {
             position: absolute;
             display:inline-block;
             top: 12px;
-            right: 5px;
+            left: 35px;
             height:26px;
 
-            @include fontSize($defFont - 4);
-            line-height:13px;
+            @include fontSize($defFont - 1);
+            line-height:26px;
             text-align: left;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
     }
 
