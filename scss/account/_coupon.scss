@@ -36,12 +36,12 @@
                 <table id="listUsedCoupon">
                     <tbody>
                         <tr>
-                            <th style="width:50px;">狀態</th>
+                            <th>狀態</th>
                             <th>名稱</th>
                             <th>品項</th>
-                            <th style="width:90px;">使用日期</th>
-                            <th style="width:60px;">金額</th>
-                            <th style="width:300px;">適用範圍</th>
+                            <th>使用日期</th>
+                            <th>金額</th>
+                            <th>適用範圍</th>
                         </tr>
                         <tr>
                             <td colspan="6">3個月內無使用折價券記錄</td>
@@ -53,12 +53,12 @@
                 <table id="listExpiredCoupon">
                     <tbody>
                         <tr>
-                            <th style="width:50px;">狀態</th>
+                            <th>狀態</th>
                             <th>名稱</th>
-                            <th style="width:90px;">生效日期</th>
-                            <th style="width:90px;">失效日期</th>
-                            <th style="width:60px;">金額</th>
-                            <th style="width:300px;">適用範圍</th>
+                            <th>生效日期</th>
+                            <th>失效日期</th>
+                            <th>金額</th>
+                            <th>適用範圍</th>
                         </tr>
                         <tr>
                             <td><span>已過期</span></td>
@@ -83,12 +83,12 @@
                 <table id="listWaitingForActivecoupon">
                     <tbody>
                         <tr>
-                            <th style="width:50px;">狀態</th>
+                            <th>狀態</th>
                             <th>名稱</th>
-                            <th style="width:90px;">生效日期</th>
-                            <th style="width:90px;">失效日期</th>
-                            <th style="width:60px;">金額</th>
-                            <th style="width:300px;">適用範圍</th>
+                            <th>生效日期</th>
+                            <th>失效日期</th>
+                            <th>金額</th>
+                            <th>適用範圍</th>
                         </tr>
                         <tr>
                             <td colspan="6">目前尚無待生效的折價券</td>
@@ -205,19 +205,7 @@
             vertical-align: baseline;
         }
 
-        .btn {
-            display: inline-block;
-            width: 70px;
-            height: 29px;
-            border: 0;
-            background-color: $orange;
-            cursor: pointer;
-
-            @include fontSize($defFont);
-            color: #fff;
-            text-align: center;
-            letter-spacing: 0.5px;
-        }
+        .btn { @extend %accountBtn; }
     }
 
     .selector-coupon {
@@ -231,7 +219,7 @@
 }
 
 
-.couponPswArea ~ .service_contentTable table {
+.serviceContentBox .couponPswArea ~ .service_contentTable table {
     @extend %tables;
 
     display:none;

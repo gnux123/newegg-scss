@@ -29,7 +29,15 @@ $box-base-width: 196;
 //prodWidth-single
 $prod-s-width: 200;
 
-//ornage
+//red
+$red-shade-d: #900;
+$red-shade-m: #c21920;
+$red-shade-l: #f00;
+$red-shade-lw: #C04040;
+
+
+
+//orange
 $orange: #f37225;
 $orange-l: #fbb486;
 
@@ -73,5 +81,5 @@ $color-light-list:  #C4C2C2 #D6AE7A #82C5ED #87CDCF #8DC88C #8DCEA8 #669BD3 #70B
 $defFont: 16;
 $font-color: $gray-shade-d;
 $font-gray: $gray-shade-m;
-$font-red-color: #C04040;
+$font-red-color: $red-shade-lw;
 $font-organe-color: $orange;

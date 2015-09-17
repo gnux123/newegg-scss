@@ -3,7 +3,7 @@
     <div class="serviceContentArea">
         <div class="serviceContentBox">
             <div class="Tit ClassTit"><i class="icon ServiceIcon Order-2"></i>我的訂單狀態</div>
-            <div class="service_contentTable">
+            <div class="service_contentTable orderInfoTable">
                 <table>
                     <tbody>
                         <tr>
@@ -22,7 +22,7 @@
                             <td>LBO141212000167</td>
                             <td>海外轉運中</td>
                             <td>SanDisk 64GB 64G Cruzer Ultra Fit 130MB【CZ43】CZ 43 SDCZ43 USB 3.0 隨身碟 USB3.0 Pendrive</td>
-                            <td>499</td>
+                            <td>999,999</td>
                             <td><p class="UnderLine blue" onclick="GetDetail(this);" cartid="LBO141212000167">訂單明細</p></td>
                             <td><p class="UnderLine blue" onclick="GetOrderInvoice('LBO141212000167')">發票內容</p></td>
                             <td>
@@ -145,7 +145,7 @@
     margin:30px auto 0 auto;
 }
 
-.service_contentTable table {
+.service_contentTable.orderInfoTable table {
     @extend %tables;
     display: table;
 

@@ -865,3 +865,60 @@ hr {
 
 	}
 }
+
+
+/*#[Password-Rule-Box]密碼規則方塊模組樣式
+
+	<div class="pswRuleBox" id="ShowPasswordRule" style="opacity:1; display: block;">
+		<ol>
+			<li class="ruleTerm">為保證您的個資安全，請確認您的密碼必須符合以下條件：</li>
+			<li><input id="pwdcheck_email" class="pwdcheck" type="checkbox" disabled="">帳密不得相同</li>
+			<li><input id="pwdcheck_length" class="pwdcheck" type="checkbox" disabled="">密碼長度為6~16字元</li>
+			<li><input id="pwdcheck_repeat" class="pwdcheck" type="checkbox" disabled="">新舊密碼不相同</li>
+		</ol>
+	</div>
+
+*/
+
+.pswRuleBox {
+	opacity:0;
+	display:none;
+
+	margin-left:5px;
+	padding-bottom: 5px;
+	width:180px;
+	background:#fff;
+	border:1px solid $gray-shade-m;
+
+	@include fontSize($defFont - 3);
+	line-height:30px;
+
+	li {
+		margin-left:3px;
+		height:30px;
+
+		&.ruleTerm {
+			margin-left:0;
+			margin-bottom:5px;
+			padding:3px 5px;
+			height:initial;
+			background: $link-color;
+			line-height:20px;
+			color:#fff;
+		}
+	}
+
+	img,
+	input[type="checkbox"] {
+		margin-right:3px;
+		width:16px;
+		height:16px;
+		border-color:$gray-shade-d;
+	}
+}
+
+/*#[error-Msg]錯誤訊息提示
+
+	<span class="errMsg" id="PassWordRuleSay" style="display: none">error texts.</span>
+
+*/

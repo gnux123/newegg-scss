@@ -46,3 +46,225 @@
         font-weight: bolder;
     }
 }
+
+
+/*#[editPersonInfo]個人資料修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>個人資料修改</div>
+
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;會員帳號</div>
+                    <div class="txt">gnux123@gmail.com</div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>姓名</div>
+                    <div class="txt">
+                        <select class="select_sm selector-name" id="titleSandM">
+                            <option value="2">稱謂</option>
+                            <option value="1">先生</option>
+                            <option value="0">女士</option>
+                        </select>
+                        <input type="text" class="fillSurname" id="RegisterLastName" tabindex="4" maxlength="10" placeholder="姓氏" value="王">
+                        <input type="text" class="fillName" id="Nickname" name="Nickname" tabindex="4" maxlength="10" placeholder="名字" value="大明">
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;生日</div>
+                    <div class="txt">
+                        <div class="selector-birth">
+                            <input type="text" id="Birthday" name="Birthday" tabindex="4" maxlength="10" placeholder="年/月/日" value="1982/04/06" class="hasDatepicker">
+                       </div>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>手機</div>
+                    <div class="txt">
+                        <input type="tel" id="Mobile" tabindex="4" maxlength="10" placeholder="請輸入手機號碼" value="0987797768">
+                        <span class="errMsg"></span>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;市話</div>
+                    <div class="txt">
+                        <input type="text" maxlength="3" placeholder="" id="TelZip" value="" numberrule="true">
+                        <span>—</span>
+                        <input type="text" maxlength="8" placeholder="" id="TelDay" value="" numberrule="true">
+                        <input type="text" maxlength="3" placeholder="分機#" id="TelExtension" value="" numberrule="true">
+                        <span class="errMsg"></span>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>中文聯絡地址</div>
+                    <div class="txt">
+                        <select class="select_sm selector-name" id="member_loc">
+                            <option value="">請選擇縣市</option>
+                        </select>
+                        <select class="select_md selector-name" name="CityChoose" id="member_City" tabindex="14">
+                            <optgroup id="台北市" label="台北市"></optgroup>
+                            <option value="100 中正區">100 中正區</option>
+                        </select>
+                        <input type="text" placeholder="請輸入街道地址" name="member_addr" id="member_addr" value="昆陽街95-1號6樓" size="35" maxlength="120">
+                        <input type="hidden" name="member_zip" id="member_zip" value="100" style="width:50px;">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;訂閱/取消</div>
+                    <div class="txt">
+                        <span class="bold">新蛋全球生活網EDM</span>
+                        <label><input type="radio" name="decEDM" id="recEdm" class="radio" value="1">訂閱</label>
+                        <label><input type="radio" name="decEDM" id="canEdm" class="radio" value="0" checked="&quot;checked&quot;">取消</label>
+                        <p>訂閱/取消電子報的功能，將在您申請三~五天正式生效，謝謝您！</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="btmBtnArea">
+                <input type="button" id="submitdata" value="確認" class="btn btn-submit">
+                <input type="button" value="取消" class="btn btn-cancel">
+            </div>
+
+        </div>
+    </div>
+
+*/
+
+.service_contentForm {
+    position: relative;
+    margin: 40px 5% 40px 9%;
+
+    .service_contentList {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        @include pie-clearfix;
+
+        & > div {
+            @include float(left);
+
+            color: $gray-shade-d;
+            @include fontSize($defFont - 1);
+            line-height: 35px;
+            letter-spacing: 0.5px;
+        }
+
+
+        .tit {
+            display: block;
+            width: 140px;
+            height: 35px;
+
+            font-weight: bold;
+
+            .red {
+                @include fontSize($defFont + 2);
+                color: $red-shade-l;
+            }
+        }
+
+        .txt {
+            display: inline-block;
+            margin-left: 30px;
+            height: auto;
+
+            span.bold, label { font-weight: bold; }
+        }
+
+
+    }
+
+    hr {
+         border-top: 1px solid $gray-shade-l;
+         margin: 20px 0;
+    }
+}
+
+.btmBtnArea {
+    margin: 0px 5% 40px 9%;
+    text-align: center;
+
+    & > .btn { @extend %accountBtn; }
+    & > .btn-cancel { margin-left: 20px; }
+}
+
+
+/*#[editPassword] 密碼修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>密碼修改</div>
+
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">您的Email帳號</div>
+                    <div class="txt" id="AccountEmail">gnux123@gmail.com</div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>請輸入原始密碼</div>
+                    <div class="txt">
+                        <input type="password" id="OldPassword" placeholder="6-16碼數字或英文字母混合">
+                        <span class="tipsForgot"><a href="/MyAccount/ForgetPassword">忘記密碼？</a></span>
+                    </div>
+                </div>
+
+
+                <div class="service_contentList pswBar">
+                    <div class="tit"><span class="red">*</span>設定新密碼</div>
+                    <div class="txt">
+                    <input type="password" name="PWD" id="NewPassword" class="account_pwd" onkeyup="VerifyPwdRule(this.value,$('#account_email').html());" maxlength="16" tabindex="2" onfocus="VerifyPwdRule(this.value,$('#account_email').val());" placeholder="6-16碼數字或英文字母混合">
+
+                    <input type="button" value="隱藏密碼" id="hide_pwd" class="btn btn-pswHide" style="display:none">
+                    <input type="button" value="顯示密碼" id="show_pwd" class="btn btn-pswShow" style="display:none">
+                    <div class="pswRuleBox" id="ShowPasswordRule">
+                        <ol>
+                            <li class="ruleTerm">為保證您的個資安全，請確認您的密碼必須符合以下條件：</li>
+                            <li><input id="pwdcheck_email" class="pwdcheck" type="checkbox" disabled="">帳密不得相同</li>
+                            <li><input id="pwdcheck_length" class="pwdcheck" type="checkbox" disabled="">密碼長度為6~16字元</li>
+                            <li><input id="pwdcheck_repeat" class="pwdcheck" type="checkbox" disabled="">新舊密碼不相同</li>
+                        </ol>
+                    </div>
+                    <div id="showResult" class="pswSecure" style="display:none"><p>密碼強度</p></div>
+                    <div class="errMsg"><span id="password_rules" style="display:none"></span></div>
+                    </div>
+                </div>
+
+                <div id="rePwdTip" class="service_contentList fillForm_contentList rePswBar">
+                    <div class="tit"><span class="red">*</span>確認密碼</div>
+                    <div class="txt">
+                        <input type="password" name="PWDtxt" id="ConfirmNewPassword" maxlength="16" tabindex="3" placeholder="請再次輸入密碼">
+                        <span class="errMsg" id="PassWordRuleSay" style="display: none">確認密碼與密碼不一致，請重新輸入</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btmBtnArea">
+                <input type="button" value="確認" class="btn btn-submit SendConfirmation">
+                <input type="button" value="取消" class="btn btn-cancel CancelConfirmation">
+            </div>
+
+        </div>
+    </div>
+
+*/
+
+.service_contentForm .service_contentList {
+    &.pswBar .pswSecure {
+        position: absolute;
+        top: 30px;
+        left: 190px;
+        width: 33%;
+    }
+}

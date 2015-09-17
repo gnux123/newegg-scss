@@ -1,4 +1,3 @@
-// out: ../css/account.css, compress: true,﻿  includePath: includes/﻿
 /*##account.css說明
 account.css為我的帳戶專用CSS，包含了如下部分：
 <p>1. 我的帳戶共通樣式<br/>
@@ -13,7 +12,7 @@ account.css為我的帳戶專用CSS，包含了如下部分：
 
 @import "_base";
 @import "account/_myAccount";
+@import "account/_wishList";
+@import "account/_coupon";
 @import "account/_orderInfo";
 @import "account/_accountManger";
-@import "account/_coupon";
-@import "account/_wishList";

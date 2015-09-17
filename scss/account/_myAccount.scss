@@ -241,7 +241,8 @@
 
     background: url(#{$img-path}Icon/SeriveIcon.png) no-repeat;
 
-    &.Coupons-2 { background-position:  -80px -40px; }
-    &.Order-2 { background-position:  -80px -80px; }
+    &.Coupons-2 { background-position:  -80px -40px; } //我的折價券
+    &.Order-2 { background-position:  -80px -80px; } //我的訂單
+    &.UpdateInformation-2 { background-position: -80px -360px;  } //我的帳戶
 
 }

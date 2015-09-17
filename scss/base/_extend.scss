@@ -172,3 +172,18 @@
         }
     }
 }
+
+//account cneter buttons
+%accountBtn {
+    display: inline-block;
+    width: 70px;
+    height: 29px;
+    border: 0;
+    background-color: $orange;
+    cursor: pointer;
+
+    @include fontSize($defFont);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
