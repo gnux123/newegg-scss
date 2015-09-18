@@ -28,17 +28,10 @@
 
     //header-settings
 
-    .header .icon {
-        margin-right: 10px;
-
-        &.quickMenu {
-            @include float(right);
-            & > ul > li {
-                width:85px;
-                padding:0;
-            }
-        }
-
+    //header-quickMenu
+    .header .quickMenu > ul > li {
+        padding:0;
+        width:85px;
     }
 
     .topper .searchbar .input { width: 415px; }
