@@ -218,33 +218,8 @@
 
 //myAccount dropDown menu
 .quickMenu .dropCon {
-<<<<<<< HEAD
-    background-color: rgba(255, 255, 255, .85);
-
-    @include fontSize($defFont - 4);
-    text-align:center;
-
-    & > ul > li {
-        @include quickMenuStyle;
-
-        & > a {
-            @include quickMenuStyle;
-            padding: 15px 0 25px 0;
-        }
-        & > a > i.icon {
-            background-image:url(#{$img-path}panel-icon.png);
-
-            &.listi1 { background-position:0 -0px; }
-            &.listi2 { background-position:0 -50px; }
-            &.listi3 { background-position:0 -100px; }
-            &.listi4 { background-position:0 -150px; }
-            &.listi5 { background-position:0 -200px; }
-            &.listi6 { background-position:0 -250px; }
-        }
-=======
     @extend %accountControlMenus;
 }
->>>>>>> 13d9d7c
 
 
 

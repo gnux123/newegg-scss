@@ -520,25 +520,15 @@ h3 {
 
 //[footer]footer模組框架
 .footer {
-<<<<<<< HEAD
-=======
     height: 400px;
 	margin: 0 auto;
 	@include pie-clearfix;
 
     & > .footer-limiter {
-<<<<<<< HEAD
-
 		position: relative;
     	width: 1176px;
-=======
-    	position: relative;
-		width: 1176px;
->>>>>>> 13d9d7c
     	margin: 0 auto;
     }
-
->>>>>>> add backtop button into _footer.scss.
     .icon {
         @include float(left);
         margin-top: 20px;

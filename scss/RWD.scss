@@ -3,11 +3,7 @@
 設定全站所有響應式設計頁面的CSS樣式
 */
 @import "compass/compass";
-<<<<<<< HEAD
-=======
 @import "_base";
-
->>>>>>> 13d9d7c
 
 @media screen and (max-width:1279px) {
     .header,
@@ -35,7 +31,6 @@
     .header .icon {
         margin-right: 10px;
 
-<<<<<<< HEAD
         &.quickMenu {
             @include float(right);
             & > ul > li {
@@ -43,11 +38,7 @@
                 padding:0;
             }
         }
-=======
-    //topper searchbar
-    .topper .searchbar .input {
-        width: 415px;
->>>>>>> 13d9d7c
+
     }
 
     .topper .searchbar .input { width: 415px; }
