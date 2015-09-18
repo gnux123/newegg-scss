@@ -1,0 +1,327 @@
+/*#[Sub-cates]次分類頁(商品列表頁)
+
+##[categoryTopBar]商品排序模組
+
+    <div class="categoryTopBar">
+        <div class="navOrder categoryOrder">
+            <div class="orderList active" onclick="NextPage(null, 0, 1, 'CreatDate')" type="CreatDate">
+                <i class="icon new"></i>
+                <span>最新上架</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'PopularityIndex')" type="PopularityIndex">
+                <i class="icon hot"></i>
+                <span>人氣排行榜</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'Recommended')" type="Recommended">
+                <i class="icon recom"></i>
+                <span>推薦排行</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'HighPrice')" type="HighPrice">
+                <i class="icon priceH"></i>
+                <span>金額高</span>
+            </div>
+            <div class="orderList " onclick="NextPage(null, 0, 1, 'LowPrice')" type="LowPrice">
+                <i class="icon priceL"></i>
+                <span>金額低</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+*/
+
+.categoryTopBar {
+    position: relative;
+    display: block;
+    width:100%;
+    height: 30px;
+
+    .navOrder {
+        position: absolute;
+        right:0;
+    }
+}
+
+.navOrder {
+    @include pie-clearfix;
+    margin-top:2px;
+
+    .orderList {
+        position: relative;
+        @include float(left);
+        display:inline-block;
+        height:20px;
+        margin-left: $gutter#{px};
+        padding-left: 43px;
+        border-left: 1px solid $font-color;
+        cursor:pointer;
+
+        @include fontSize($defFont);
+        color: $font-color;
+        line-height: 20px;
+
+        &:first-child { border-left: 0; }
+
+        &:hover, &.active {
+            color: $font-organe-color;
+
+            i.icon {
+                &.new {
+                    background-position: -26px 0;
+                }
+                &.hot {
+                    background-position: -26px -26px;
+                }
+                &.recom {
+                    background-position: -26px -52px;
+                }
+                &.priceH {
+                    background-position: -26px -78px;
+                }
+                &.priceL {
+                    background-position: -26px -104px;
+                }
+            }
+        }
+    }
+
+    i.icon {
+        position: absolute;
+        top:-3px;
+        left:10px;
+		width:26px;
+		height:26px;
+        margin-right:5px;
+        background:url(#{$img-path}filter-icon.png) no-repeat;
+
+        &.new {
+            background-position:0 0;
+        }
+        &.hot {
+            background-position:0 -26px;
+        }
+        &.recom {
+            background-position:0 -52px;
+        }
+        &.priceH {
+            background-position:0 -78px;
+        }
+        &.priceL {
+            background-position:0 -104px;
+        }
+    }
+
+}
+
+
+
+
+
+
+/*#[filter]過濾模組樣式
+##[sub-cates-filter]過濾模組-次分類頁面
+
+    <div class="filterList property">
+        <div class="head">
+            <span>屬性搜尋</span>
+            <div id="property_head_All" class="headAll open" onclick="DisplayNoneOrNot('property_head_All')">-</div>
+        </div>
+
+        <div class="groupList">
+            <div class="groupTit PropertyGroupName" onclick="DisplayNoneOrNot(&quot;PriceWithQty_ViewList&quot;)">
+                <i class="showArrow down" id="PriceWithQty_ViewList_top"></i>
+                <span class="tit">價格</span>
+            </div>
+        </div>
+
+        <ul class="list PropertyGroupList" id="PriceWithQty_ViewList_li" style="display: block;">
+            <li class="8000">
+                <label for="PriceWithQty_ViewList8000_Input">
+                    <input type="checkbox" class="PriceWithQty_input PriceWithQty_ViewListitem" id="PriceWithQty_ViewList8000_Input" data-minprice="4000" data-maxprice="8000">
+                    <span>
+
+                        <span class="subTitLong">4,000 - 8,000</span>
+
+                    </span>
+                </label>
+            </li>
+            <li class="16000">
+                <label for="PriceWithQty_ViewList16000_Input">
+                    <input type="checkbox" class="PriceWithQty_input PriceWithQty_ViewListitem" id="PriceWithQty_ViewList16000_Input" data-minprice="8000" data-maxprice="16000">
+                    <span>
+
+                        <span class="subTitLong">8,000 - 16,000</span>
+
+                    </span>
+                </label>
+            </li>
+            <li class="32000">
+                <label for="PriceWithQty_ViewList32000_Input">
+                    <input type="checkbox" class="PriceWithQty_input PriceWithQty_ViewListitem" id="PriceWithQty_ViewList32000_Input" data-minprice="16000" data-maxprice="32000">
+                    <span>
+
+                        <span class="subTitLong">16,000 - 32,000</span>
+
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+*/
+
+.filterList {
+    width: $side-width#{px};
+    height:auto;
+    margin-bottom: $gutter#{px};
+    padding-top: 30px;
+
+
+    word-wrap:break-word;
+	word-break:break-all;
+
+    div {
+        width: 100%;
+        height: auto;
+        @include box-sizing(border-box);
+    }
+
+
+    .head {
+        position: relative;
+        height: 46px;
+        border: 1px solid $gray-shade-l;
+		background-color:$gray-shade-lw;
+
+        color:$font-color;
+        @include fontSize($defFont + 6);
+        line-height:46px;
+        text-indent:10px;
+
+        .headAll {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            width:20px;
+            height:20px;
+            border:1px solid #000;
+            cursor:pointer;
+            @include box-sizing(border-box);
+
+            line-height:18px;
+            text-indent:0;
+            text-align:center;
+
+            &.open { background-color:$font-gray; }
+            &.close { background-color:#fff; }
+
+        }
+
+        & ~ .head { margin-top: 30px; }
+    }
+
+	.groupTit {
+        position: relative;
+        height: 35px;
+        cursor:pointer;
+
+        border-width: 0 1px 1px 1px;
+        border-style: solid;
+        border-color: $gray-shade-l;
+
+        .tit, .num {
+            position: absolute;
+            height:34px;
+
+            @include fontSize($defFont + 2);
+            line-height:34px;
+        }
+
+        .tit {
+            left: 32px;
+        }
+
+        .showArrow {
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            width: 20px;
+            height: 11px;
+            overflow:hidden;
+
+            background: url(#{$img-path}Icon/GrayaArowUpDown.png) no-repeat;
+
+            &.top, &.open { background-position: 0 0; }
+            &.down, &.close { background-position: 0 -11px; }
+
+        }
+    }
+
+    .list {
+        display: none;
+        width:204px;
+        height: auto;
+        @include pie-clearfix;
+
+        border-width: 0 1px 1px 1px;
+        border-style: solid;
+        border-color: $gray-shade-l;
+
+        & > li {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 40px;
+            @include pie-clearfix;
+
+            @include fontSize($defFont + 2);
+            line-height: 40px;
+            font-weight: 100;
+
+
+            input[type="checkbox"] {
+                @include float(left);
+                margin-left: 5px;
+                margin-top: 10px;
+                width:20px;
+                height:20px;
+                vertical-align: middle;
+            }
+
+            .subTit,
+            .subTitNoCut,
+            .subTitLong {
+                @include float(left);
+                margin-left: 5px;
+                height: 40px;
+
+                line-height: 40px;
+            }
+
+            .subTit, .subTitNoCut {
+                width:110px;
+            }
+            .subTit, .subTitLong { @include ellipsis; }
+
+            .subTitLong { width: 160px; }
+
+            .subTitNoCut{
+                word-wrap: break-word;
+                word-break: normal;
+            }
+
+            .subNum {
+                @include float(right);
+                margin-right: 5px;
+            }
+            .subNum > span {
+                @include ellipsis;
+                float:left;
+                display:block;
+            }
+
+        }
+
+    }
+
+}

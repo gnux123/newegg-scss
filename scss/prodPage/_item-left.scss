@@ -1,0 +1,183 @@
+/*#[Product-left]商品內頁-左側模組
+##[product-pic]產品圖展示模組
+
+    <div class="productLeft">
+        <div class="productPic">
+            <div class="pic" id="BigPic">
+                <img class="itemImgCen" src="http://placehold.it/475x475" alt="Marshall Kilburn 攜帶型主動式喇叭-奶油白 [預購]" jqimg="https://ssl-images.newegg.com.tw/pic/item/0047/1971_1_640.jpg" style="margin-top: 0px;">
+            </div>
+        </div>
+
+        <div class="productPics">
+            <button class="btnleft"></button>
+            <button class="btnright"></button>
+            <div class="showArea">
+                <ul>
+                    <li class="pic"><img src="http://placehold.it/95x95" class="itemImgCen"></li>
+                    <li class="pic"><img src="http://placehold.it/95x95" class="itemImgCen"></li>
+                    <li class="pic"><img src="http://placehold.it/95x95" class="itemImgCen"></li>
+                    <li class="pic"><img src="http://placehold.it/95x95" class="itemImgCen"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+*/
+
+.productPic {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $gray-shade-l;
+
+    @include box-sizing(border-box);
+
+    img {
+        width:100%;
+        height: 100%;
+    }
+}
+.productPics {
+    position: relative;
+    margin: 15px auto;
+    width: 100%;
+    height: auto;
+
+    .showArea {
+        position: relative;
+        width: 392px;
+        height: auto;
+        margin: 0 auto;
+
+        ul {
+            display: block;
+            width: 100%;
+            @include pie-clearfix;
+        }
+
+        li {
+            @include float(left);
+            width: 95px;
+            height: 95px;
+            margin-left: 4px;
+            border: 1px solid $gray-shade-l;
+            overflow: hidden;
+
+            @include box-sizing(border-box);
+
+            &:first-child { margin-left:0; }
+        }
+    }
+
+    img {
+        max-width: 93px;
+        max-height: 93px;
+    }
+
+
+    //button
+    button {
+        position: absolute;
+        top: 50%;
+        margin-top: -12.5px;
+        border: 0;
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: url(#{$img-path}LeftRightBtn.jpg) no-repeat;
+
+        cursor: pointer;
+
+        &.btnleft {
+            left:0;
+            background-position:  0 0;
+        }
+
+        &.btnright {
+            right:0;
+            background-position: -25px 0;
+        }
+
+    }
+
+
+}
+
+
+/*##[product-share-btns] 商品分享按鈕
+
+    <div class="productLeft">
+        <div class="btmShare">
+            <div class="shareToFB"><img src="img/FBbtn.png"><a href="javascript:void(0);">分享到FB</a></div>
+            <div class="addToFavorite" id="neAddToFavorite"><img src="img/Love.png"><a href="javascript:void(0);">加入最愛</a></div>
+        </div>
+    </div>
+
+*/
+
+.btmShare {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @include pie-clearfix;
+
+    & > div {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    img {
+        vertical-align: text-bottom;
+        margin-right: 10px;
+    }
+}
+
+.shareToFB {
+    @include float(left);
+
+}
+
+.addToFavorite {
+    @include float(right);
+}
+
+/*##[product-shopping-process]海外購物提醒及文件下載
+
+    <div class="productLeft">
+        <div class="shoppingProcess">
+            <p>美國新蛋直購專區的商品在報關時需提供<a href="/Service/AboutShopping#q4" target="_blank">規定文件</a>，以利商品順利完成清關作業。</p>
+            <a href="/Content/Files/報關文件.zip" target="_blank"><img src="img/Icon/Overseas_06.png"></a>
+        </div>
+    </div>
+*/
+
+.productLeft .shoppingProcess {
+    position: relative;
+    width: 465px;
+    height: 84px;
+    margin-top: 20px;
+    background: url(#{$img-path}Icon/Overseas_00.jpg) no-repeat center;
+
+    & > p {
+        position: absolute;
+        top:11px;
+        left: 120px;
+        display: block;
+        width: 255px;
+        line-height: 20px;
+    }
+
+    & > a {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        width: 44px;
+        height: 44px;
+        overflow: hidden;
+
+        border-bottom:0;
+    }
+}

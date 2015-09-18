@@ -1,0 +1,601 @@
+/*#[defaulPage] 帳戶管理-預設頁面
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="defaultPage">
+                <div class="egg"></div>
+                <div class="pop"><p>您好！<br>請選擇右側服務項目！</p></div>
+            </div>
+        </div>
+    </div>
+
+*/
+
+.serviceContentBox .defaultPage {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.serviceContentBox .egg {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 185px;
+    left: 265px;
+    width: 204px;
+    height: 210px;
+    background-image: url(#{$img-path}MyAccount/defaultEgg.jpg);
+}
+
+
+.serviceContentBox .pop {
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 70px;
+    left: 430px;
+    width: 300px;
+    height: 176px;
+    background-image: url(#{$img-path}MyAccount/defaultPop.jpg);
+
+    p {
+        margin: 40px 0 0 40px;
+
+        @include fontSize($defFont + 6);
+        line-height:30px;
+        color: $gray-shade-m;
+        font-weight: bolder;
+    }
+}
+
+
+/*#[EditPersonInfo]個人資料修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>個人資料修改</div>
+
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;會員帳號</div>
+                    <div class="txt">gnux123@gmail.com</div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>姓名</div>
+                    <div class="txt">
+                        <select class="select_sm selector-name" id="titleSandM">
+                            <option value="2">稱謂</option>
+                            <option value="1">先生</option>
+                            <option value="0">女士</option>
+                        </select>
+                        <input type="text" class="fillSurname" id="RegisterLastName" tabindex="4" maxlength="10" placeholder="姓氏" value="王">
+                        <input type="text" class="fillName" id="Nickname" name="Nickname" tabindex="4" maxlength="10" placeholder="名字" value="大明">
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;生日</div>
+                    <div class="txt">
+                        <div class="selector-birth">
+                            <input type="text" id="Birthday" name="Birthday" tabindex="4" maxlength="10" placeholder="年/月/日" value="1982/04/06" class="hasDatepicker">
+                       </div>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>手機</div>
+                    <div class="txt">
+                        <input type="tel" id="Mobile" tabindex="4" maxlength="10" placeholder="請輸入手機號碼" value="0987797768">
+                        <span class="errMsg"></span>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;市話</div>
+                    <div class="txt">
+                        <input type="text" maxlength="3" placeholder="" id="TelZip" value="" numberrule="true">
+                        <span>—</span>
+                        <input type="text" maxlength="8" placeholder="" id="TelDay" value="" numberrule="true">
+                        <input type="text" maxlength="3" placeholder="分機#" id="TelExtension" value="" numberrule="true">
+                        <span class="errMsg"></span>
+                    </div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>中文聯絡地址</div>
+                    <div class="txt">
+                        <select class="select_sm selector-name" id="member_loc">
+                            <option value="">請選擇縣市</option>
+                        </select>
+                        <select class="select_md selector-name" name="CityChoose" id="member_City" tabindex="14">
+                            <optgroup id="台北市" label="台北市"></optgroup>
+                            <option value="100 中正區">100 中正區</option>
+                        </select>
+                        <input type="text" placeholder="請輸入街道地址" name="member_addr" id="member_addr" value="昆陽街95-1號6樓" size="35" maxlength="120">
+                        <input type="hidden" name="member_zip" id="member_zip" value="100" style="width:50px;">
+                    </div>
+                </div>
+                <hr>
+
+                <div class="service_contentList">
+                    <div class="tit">&nbsp;訂閱/取消</div>
+                    <div class="txt">
+                        <span class="bold">新蛋全球生活網EDM</span>
+                        <label><input type="radio" name="decEDM" id="recEdm" class="radio" value="1">訂閱</label>
+                        <label><input type="radio" name="decEDM" id="canEdm" class="radio" value="0" checked="&quot;checked&quot;">取消</label>
+                        <p>訂閱/取消電子報的功能，將在您申請三~五天正式生效，謝謝您！</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="btmBtnArea">
+                <input type="button" id="submitdata" value="確認" class="btn btn-submit">
+                <input type="button" value="取消" class="btn btn-cancel">
+            </div>
+
+        </div>
+    </div>
+
+*/
+
+.service_contentForm {
+    position: relative;
+    margin: 40px 5% 40px 9%;
+
+    .service_contentList {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 15px 0;
+        @include pie-clearfix;
+
+        & > div {
+            @include float(left);
+
+            color: $gray-shade-d;
+            @include fontSize($defFont - 1);
+            line-height: 35px;
+            letter-spacing: 0.5px;
+        }
+
+
+        .tit {
+            display: block;
+            width: 140px;
+            height: 35px;
+
+            font-weight: bold;
+
+            .red {
+                @include fontSize($defFont + 2);
+                color: $red-shade-l;
+            }
+        }
+
+        .txt {
+            display: inline-block;
+            margin-left: 30px;
+            height: auto;
+
+            span.bold, label { font-weight: bold; }
+        }
+
+
+    }
+
+    hr {
+         border-top: 1px solid $gray-shade-l;
+         margin: 20px 0;
+    }
+}
+
+.btmBtnArea {
+    margin: 0px 5% 40px 9%;
+    text-align: center;
+
+    & > .btn { @extend %accountBtn; }
+    & > .btn-cancel { margin-left: 20px; }
+}
+
+
+/*#[EditPassword] 密碼修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>密碼修改</div>
+
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">您的Email帳號</div>
+                    <div class="txt" id="AccountEmail">gnux123@gmail.com</div>
+                </div>
+
+                <div class="service_contentList">
+                    <div class="tit"><span class="red">*</span>請輸入原始密碼</div>
+                    <div class="txt">
+                        <input type="password" id="OldPassword" placeholder="6-16碼數字或英文字母混合">
+                        <span class="tipsForgot"><a href="/MyAccount/ForgetPassword">忘記密碼？</a></span>
+                    </div>
+                </div>
+
+
+                <div class="service_contentList pswBar">
+                    <div class="tit"><span class="red">*</span>設定新密碼</div>
+                    <div class="txt">
+                    <input type="password" name="PWD" id="NewPassword" class="account_pwd" onkeyup="VerifyPwdRule(this.value,$('#account_email').html());" maxlength="16" tabindex="2" onfocus="VerifyPwdRule(this.value,$('#account_email').val());" placeholder="6-16碼數字或英文字母混合">
+
+                    <input type="button" value="隱藏密碼" id="hide_pwd" class="btn btn-pswHide" style="display:none">
+                    <input type="button" value="顯示密碼" id="show_pwd" class="btn btn-pswShow" style="display:none">
+                    <div class="pswRuleBox" id="ShowPasswordRule">
+                        <ol>
+                            <li class="ruleTerm">為保證您的個資安全，請確認您的密碼必須符合以下條件：</li>
+                            <li><input id="pwdcheck_email" class="pwdcheck" type="checkbox" disabled="">帳密不得相同</li>
+                            <li><input id="pwdcheck_length" class="pwdcheck" type="checkbox" disabled="">密碼長度為6~16字元</li>
+                            <li><input id="pwdcheck_repeat" class="pwdcheck" type="checkbox" disabled="">新舊密碼不相同</li>
+                        </ol>
+                    </div>
+                    <div id="showResult" class="pswSecure" style="display:none"><p>密碼強度</p></div>
+                    <div class="errMsg"><span id="password_rules" style="display:none"></span></div>
+                    </div>
+                </div>
+
+                <div id="rePwdTip" class="service_contentList fillForm_contentList rePswBar">
+                    <div class="tit"><span class="red">*</span>確認密碼</div>
+                    <div class="txt">
+                        <input type="password" name="PWDtxt" id="ConfirmNewPassword" maxlength="16" tabindex="3" placeholder="請再次輸入密碼">
+                        <span class="errMsg" id="PassWordRuleSay" style="display: none">確認密碼與密碼不一致，請重新輸入</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btmBtnArea">
+                <input type="button" value="確認" class="btn btn-submit SendConfirmation">
+                <input type="button" value="取消" class="btn btn-cancel CancelConfirmation">
+            </div>
+
+        </div>
+    </div>
+
+*/
+
+.service_contentForm .service_contentList {
+    &.pswBar .pswSecure {
+        position: absolute;
+        top: 30px;
+        left: 190px;
+        width: 33%;
+    }
+
+    input[type="password"] {
+        width: 300px;
+        height: 20px;
+    }
+}
+
+
+/*#[AskQuestion]問答中心
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon QuestionCenter-2"></i>問答中心</div>
+
+            <div class="qaContent">
+
+                <div>
+                    <ul>
+                        <li class="TabNoHover RadiusTab TabSelected"><a href="javascript:void(0);">我要發問</a></li>
+                        <li class="TabNoHover RadiusTab"><a href="javascript:void(0);">問答紀錄</a></li>
+                    </ul>
+                </div>
+
+                <div class="TabArea grayBorder service_contentTable">
+
+                    <div class="service_contentForm">
+                        <div class="service_contentList">
+                            <div class="tit"><span class="red">*</span>問題類型</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" checked="checked" id="Salceorder" name="Orderlist" value="Salceorder" onclick=" showlabel();">訂單進度</label>
+                                <label><input type="radio" class="radio" id="Retgood" name="Orderlist" value="Retgood" onclick=" showlabel();">退換維修</label>
+                                <label><input type="radio" class="radio" id="Invoice" name="Orderlist" value="Invoice" onclick=" showlabel();">帳款與發票</label>
+                                <label><input type="radio" class="radio" id="Item" name="Orderlist" value="Item" onclick=" showlabel();">賣場相關</label>
+                                <label><input type="radio" class="radio" id="Other" name="Orderlist" value="Other" onclick=" showlabel();">其他問題</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit"><span class="red">*</span>姓名</div>
+                            <div class="txt">
+                                <input type="text" placeholder="" class="input_md" id="name" value="蘇靖文">
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit"> 連絡電話</div>
+                            <div class="txt">
+                                <input type="tel" placeholder="" class="input_md" id="mobile" value="">
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit"><span class="red">*</span>聯絡E-mail</div>
+                            <div class="txt">
+                                <input type="text" placeholder="" class="input_md" id="email" value="gnux123@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="service_contentList" id="contentListSalceorder" name="contentList">
+                            <div class="tit"><span class="red">*</span>問題主旨</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" checked="" name="faqType" value="101">訂購是否成功</label>
+                                <label><input type="radio" class="radio" name="faqType" value="108">更改訂單資料</label>
+                                <label><input type="radio" class="radio" name="faqType" value="112">查詢出貨進度</label>
+                                <label><input type="radio" class="radio" name="faqType" value="103">取消訂單</label>
+                                <label><input type="radio" class="radio" name="faqType" value="124">報關文件－相關問題</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList" id="contentListRetgood" name="contentList" style="display:none">
+                            <div class="tit"><span class="red">*</span>問題主旨</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" name="faqType" value="115">7天鑑賞期退貨</label>
+                                <label><input type="radio" class="radio" name="faqType" value="116">新品瑕疵換貨</label>
+                                <label><input type="radio" class="radio" name="faqType" value="114">商品缺件或不符</label>
+                                <label><input type="radio" class="radio" name="faqType" value="117">商品維修及保固</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList" id="contentListInvoice" name="contentList" style="display:none">
+                            <div class="tit"><span class="red">*</span>問題主旨</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" name="faqType" value="102">付款是否成功</label>
+                                <label><input type="radio" class="radio" name="faqType" value="118">退款問題</label>
+                                <label><input type="radio" class="radio" name="faqType" value="119">發票問題</label>
+                                <label><input type="radio" class="radio" name="faqType" value="120">折價券問題</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList" id="contentListItem" name="contentList" style="display:none">
+                            <div class="tit"><span class="red">*</span>問題主旨</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" name="faqType" value="113">商品規格</label>
+                                <label><input type="radio" class="radio" name="faqType" value="121">訂購及付款方式</label>
+                                <label><input type="radio" class="radio" name="faqType" value="105">行銷活動諮詢</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList" id="contentListOther" name="contentList" style="display:none">
+                            <div class="tit"><span class="red">*</span>問題主旨</div>
+                            <div class="txt">
+                                <label><input type="radio" class="radio" name="faqType" value="123">詐騙相關問題</label>
+                                <label><input type="radio" class="radio" name="faqType" value="122">其他問題</label>
+                                <label><input type="radio" class="radio" name="faqType" value="106">系統網頁問題</label>
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit">　訂單編號</div>
+                            <div class="txt">
+                                <input type="text" placeholder="" class="input_md" id="SalesOrder_code" value="">
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit">　賣場編號</div>
+                            <div class="txt">
+                                <input type="text" placeholder="" class="input_md" id="itemid" value=" ">
+                            </div>
+                        </div>
+
+                        <div class="service_contentList">
+                            <div class="tit"><span class="red">*</span>請說明</div>
+                            <div class="txt" style="width:80%">
+                                <textarea id="message" onkeyup="checkMaxInput(this,600)" rows="4" style="width:90%;"></textarea>
+                                <p class="gray">尚可輸入<span id="remLen">300</span>字</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="btmBtnArea">
+                        <input type="button" value="送出" class="btn btn-submit" id="sure">
+                        <input type="button" value="取消" class="btn btn-cancel">
+                    </div>
+
+                </div>
+
+                <div class="TabArea grayBorder service_contentTable">
+                    <div>
+                        依照時間篩選
+                        <select class="select_sm selector-question" id="moths" onchange="Record()">
+                            <option value="3">近三個月</option>
+                            <option value="6">近六個月</option>
+                            <option value="12">近一年</option>
+                            <option value="24">近兩年</option>
+                        </select>
+                    </div>
+                    <div class="service_contentTable">
+                        <table>
+                            <tbody><tr>
+                                <th style="width:140px;">問題編號</th>
+                                <th style="width:100px;">日期</th>
+                                <th style="width:120px;">訂單編號/<br>賣場編號&nbsp;</th>
+                                <th>商品名稱</th>
+                                <th>問題主旨</th>
+                                <th style="width:40px;">查詢</th>
+                            </tr>
+                            <tr>
+                                <td colspan="6">您最近三個月無任何問答紀錄！</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+                    <div class="btmBtnArea">
+                        <input type="button" value="回上一頁" class="btn btn-prev">
+                        <input type="button" value="再次發問" class="btn btn-submit">
+                    </div>
+
+                </div>
+
+                <div class="questionTipsArea">
+                    客服問答中心的問題紀錄將保存三個月，三個月以上的訂單問題，請至<a href="/MyAccount/QuestionRecord">問答中心</a>裡查看客服問答紀錄，您的寶貴意見，我們將盡速於1~2日內(不含例假日)E-mail回覆您，並多利用問答中心查詢最新回覆內容，如欲詢問新問題，請點選<a href="/MyAccount/AskQuestion">我要發問</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+*/
+
+.qaContent {
+    margin: 40px 90px;
+
+    & > div {
+        width: 100%;
+        height: auto;
+    }
+
+    & > div ul {
+        @include pie-clearfix;
+        display: block;
+        width: 100%;
+        height: 45px;
+    }
+
+    & > div:first-child + div,
+    & > div:first-child + div + div {
+        display: none;
+    }
+
+    //我要發問框
+    & > div:first-child + div { display: block; }
+
+    //問答紀錄框
+    & > div:first-child + div + div { padding-top: 50px; }
+
+    & > div:first-child + div + div > div:first-child {
+        position: absolute;
+        display: inline-block;
+        top:10px;
+        right:10px;
+    }
+
+}
+
+//tabStyles
+.qaContent > div ul li.RadiusTab {
+    @include float(left);
+    display:inline-block;
+    width: 25%;
+    height: 45px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: $orange-l;
+
+    & > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+
+
+        @include fontSize($defFont);
+        line-height: 45px;
+        text-align: center;
+        letter-spacing: 1px;
+        color:#fff;
+        font-weight: bold;
+    }
+
+    &:hover, &.TabSelected {
+        background-color: $orange;
+        & > a { color:#fff; }
+    }
+}
+
+.TabArea.service_contentTable {
+    position: relative;
+    @include pie-clearfix;
+    &,
+    & ~ div { width: auto; }
+
+    .service_contentForm {
+        margin: 40px 5%;
+    }
+
+    .service_contentList {
+        .tit,
+        .txt { @include  fontSize($defFont); }
+
+        .txt { text-align: left; }
+        label {
+            font-weight: lighter;
+            letter-spacing: -0.5px;
+        }
+
+        &:last-child .txt {
+            margin-left:0;
+            width: 100%;
+        }
+    }
+
+    .btmBtnArea > input[type="button"] + input[type="button"] { margin-left: 20px; }
+
+    & + .questionTipsArea {
+        margin: 20px 0;
+
+        @include fontSize($defFont);
+        line-height: 25px;
+    }
+
+    table {
+        @extend %tables;
+
+        margin: 20px 0;
+
+        tr:first-child {
+            border-width: 1px 0px;
+        }
+
+        tr:first-child > th:first-child + th + th {
+            line-height: 25px;
+        }
+
+        tr td {
+            border-left: 0px;
+        }
+
+        tr td[colspan="6"] {
+            line-height: 80px;
+            font-weight:lighter;
+        }
+    }
+
+}
+
+
+/*#[EditAccount]帳號修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>帳號修改</div>
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">帳號修改</div>
+                    <div class="txt">
+                        <input type="text" id="account_email" placeholder="請輸入正確E-mail">
+                        <p class="gray">
+                            ※新蛋全球生活網將以此帳號與您聯繫，請務必填寫正確的E-mail信箱。
+                    </p></div>
+                </div>
+            </div>
+            <div class="btmBtnArea">
+                <input type="button" id="submitdata" value="確認" class="btn btn-submit">
+                <input type="button" value="取消" class="btn btn-cancel">
+            </div>
+        </div>
+    </div>
+
+*/

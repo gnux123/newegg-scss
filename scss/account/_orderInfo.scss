@@ -1,0 +1,288 @@
+/*#[orderInfo] 我的訂單模組
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon Order-2"></i>我的訂單狀態</div>
+            <div class="service_contentTable orderInfoTable">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width: 110px;">訂購日期</th>
+                            <th style="width: 180px;">訂單編號</th>
+                            <th style="width: 80px;">訂單狀態</th>
+                            <th>商品名稱</th>
+                            <th style="width: 70px;">總價</th>
+                            <th style="width: 90px;">訂單明細</th>
+                            <th style="width: 50px;">發票</th>
+                            <th style="width: 50px;">問答</th>
+                            <th style="width: 90px">訂單處理</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">2014/12/12</td>
+                            <td>LBO141212000167</td>
+                            <td>海外轉運中</td>
+                            <td>SanDisk 64GB 64G Cruzer Ultra Fit 130MB【CZ43】CZ 43 SDCZ43 USB 3.0 隨身碟 USB3.0 Pendrive</td>
+                            <td>999,999</td>
+                            <td><p class="UnderLine blue" onclick="GetDetail(this);" cartid="LBO141212000167">訂單明細</p></td>
+                            <td><p class="UnderLine blue" onclick="GetOrderInvoice('LBO141212000167')">發票內容</p></td>
+                            <td>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetAskDetail(this);">詢問</p>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetRecord(this);">紀錄</p>
+                            </td>
+                            <td>
+                                <p class="UnderLine blue" onclick="GetReturnDetail(this);" returncartid="LBO141212000167" style="display:none">我要退貨</p>
+                                <p class="UnderLine blue" onclick="GetChageDetail(this);" chagecartid="LBO141212000167" style="display:none">我要換貨</p>
+                                <p class="UnderLine blue" onclick="GetFixDetail(this);" fixcartid="LBO141212000167" style="">我要維修</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <div class="DeliveryInformation">
+                                    <div class="deliverState">
+                                        <div class="DeliveryText">配送狀態</div>
+                                        <ul>
+                                            <li><img src="img/img_trans.gif" class="step01">訂單成立</li>
+                                            <li><img src="img/img_trans.gif" class="step02">付款完成</li>
+                                            <li><img src="img/img_trans.gif" class="step03">待出貨</li>
+                                            <li><img src="img/img_trans.gif" class="step04">海外轉運中</li>
+                                            <li><img src="img/img_trans.gif" class="step05">空運中</li>
+                                            <li><img src="img/img_trans.gif" class="step06">清關中</li>
+                                            <li><img src="img/img_trans.gif" class="step07">配送中</li>
+                                            <li class="active"><img src="img/img_trans.gif" class="step08">已送達</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="ShippingInformation" style="width:260px;font-size:90%;">
+                                        <span>訂單編號：</span>
+                                        <span>LBO141212000167</span><br>
+                                        <span>出貨日期：</span>
+                                        <span>12/12/2014 2:41:36 PM</span><br>
+                                        <span>出貨方式：</span><a href="javascript:void(0);" target="_blank">EMS 郵局</a><br>
+                                        <span>配送單號：</span>
+                                        <span>279392 10005418</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">2014/12/12</td>
+                            <td>LBO141212000167</td>
+                            <td>海外轉運中</td>
+                            <td>SanDisk 64GB 64G Cruzer Ultra Fit 130MB【CZ43】CZ 43 SDCZ43 USB 3.0 隨身碟 USB3.0 Pendrive</td>
+                            <td>499</td>
+                            <td><p class="UnderLine blue" onclick="GetDetail(this);" cartid="LBO141212000167">訂單明細</p></td>
+                            <td><p class="UnderLine blue" onclick="GetOrderInvoice('LBO141212000167')">發票內容</p></td>
+                            <td>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetAskDetail(this);">詢問</p>
+                                <p class="UnderLine blue" askcartid="LBO141212000167" onclick="GetRecord(this);">紀錄</p>
+                            </td>
+                            <td>
+                                <p class="UnderLine blue" onclick="GetReturnDetail(this);" returncartid="LBO141212000167" style="display:none">我要退貨</p>
+                                <p class="UnderLine blue" onclick="GetChageDetail(this);" chagecartid="LBO141212000167" style="display:none">我要換貨</p>
+                                <p class="UnderLine blue" onclick="GetFixDetail(this);" fixcartid="LBO141212000167" style="">我要維修</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <div class="DeliveryInformation">
+                                    <div class="deliverState">
+                                        <div class="DeliveryText">配送狀態</div>
+                                        <ul>
+                                            <li><img src="img/img_trans.gif" class="step01">訂單成立</li>
+                                            <li><img src="img/img_trans.gif" class="step02">付款完成</li>
+                                            <li><img src="img/img_trans.gif" class="step03">待出貨</li>
+                                            <li><img src="img/img_trans.gif" class="step04">海外轉運中</li>
+                                            <li><img src="img/img_trans.gif" class="step05">空運中</li>
+                                            <li><img src="img/img_trans.gif" class="step06">清關中</li>
+                                            <li><img src="img/img_trans.gif" class="step07">配送中</li>
+                                            <li class="active"><img src="img/img_trans.gif" class="step08">已送達</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="ShippingInformation" style="width:260px;font-size:90%;">
+                                        <span>訂單編號：</span>
+                                        <span>LBO141212000167</span><br>
+                                        <span>出貨日期：</span>
+                                        <span>12/12/2014 2:41:36 PM</span><br>
+                                        <span>出貨方式：</span><a href="javascript:void(0);" target="_blank">EMS 郵局</a><br>
+                                        <span>配送單號：</span>
+                                        <span>279392 10005418</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><td colspan="9" id="myOrderArea3_LBO141212000167" style="display:none;"></td></tr>
+                        <tr><td colspan="9" id="myOrderArea2_LBO141212000167" style="display:none;"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination PageArea">
+        <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)">&lt;</span>
+        <span class="GoToPage" data-pagevalue="1">1</span>
+        <span class="SelectThePage" style="color:#EB8A51" data-pagevalue="2">2</span>
+        <span class="GoToPage" data-pagevalue="3">3</span>
+        <span class="GoToPage" data-pagevalue="4">4</span>
+        <span class="arrow arrRight next">&gt;</span>
+    </div>
+
+    <div class="orderTipsArea">
+        <ul>
+            <li>在確認付款且有庫存，一般商品將於您付款成功後7個工作天左右送達；美國新蛋直購商品於您付款成功後9~14個工作天左右送達。若有不可抗力之因素延長送貨時間，我們將儘速與您通知。</li>
+            <li>查詢訂單詳情 (如商品明細 /付款資料等) ，請點選該筆商品的訂單明細進行查詢。</li>
+            <li>建議您可先參考維修/換貨/退貨/取消相關辦法後，再點選維修/退貨/換貨/取消等服務。</li>
+            <li>發票將在付款完成、出貨後開立，將會email通知您，更多詳情可參考「<a href="javascript:void(0);">電子發票流程說明</a>」。</li>
+            <li>若有任何訂單問題請至<a href="javascript:void(0);" target="_blank">問答中心</a>詢問，我們將盡速回覆您的問題。</li>
+        </ul>
+    </div>
+
+*/
+
+.serviceContentArea ~ div {
+    width: $frame-min-width#{px};
+    margin:30px auto 0 auto;
+}
+
+.service_contentTable.orderInfoTable table {
+    @extend %tables;
+    display: table;
+
+    tr:first-child {
+        border-width: 1px 0 1px 0;
+    }
+
+    tr td {
+        &:first-child,
+        &[colspan="9"] {
+            border-left:0;
+            font-weight: lighter;
+        }
+
+        p {
+            color:$link-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &:first-child + td { width: 15%; }
+        &:first-child + td + td { width: 10%; }
+        &:first-child + td + td + td { width: 35%; }
+    }
+
+}
+
+
+.DeliveryInformation {
+    width: 98%;
+    height: 80px;
+    margin: 10px 1%;
+    @include pie-clearfix;
+}
+
+.deliverState {
+    @include float(left);
+    display: inline-block;
+    height: 100%;
+
+    .DeliveryText {
+        @include float(left);
+        display: inline-block;
+        height: 100%;
+
+        line-height:80px;
+    }
+
+    ul {
+        @include float(left);
+        display: inline-block;
+        height: 100%;
+        @include pie-clearfix;
+    }
+
+    ul > li {
+        @include float(left);
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 100%;
+        margin-left: 20px;
+
+        @include fontSize($defFont - 4);
+        color:$gray-shade-m;
+        text-align: center;
+        font-weight:bolder;
+        line-height: 20px;
+
+        &:before {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: -20px;
+            content: "";
+            width: 20px;
+            height: 100%;
+            margin-right: 60px;
+            background:url(#{$img-path}MyAccount/orderArr.jpg) center no-repeat;
+        }
+
+        &:first-child:before { display: none;}
+
+        &.active {
+            color:$font-organe-color;
+
+            .step01 { background-position: -60px 0px;}
+
+            @for $i from 1 through 7 {
+                .step0#{($i + 1)} { background-position: -60px (-60*$i)#{px}; }
+            }
+        }
+
+        img {
+            position: relative;
+            top: 0;
+            left: -2px;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            background: url(#{$img-path}MyAccount/orderIcon.jpg) no-repeat;
+
+            &.step01 { background-position: 0 0;}
+
+            @for $i from 1 through 7 {
+                &.step0#{($i + 1)} { background-position: 0px (-60*$i)#{px}; }
+            }
+        }
+    }
+}
+
+
+.ShippingInformation {
+    @include float(left);
+    display: inline-block;
+    height: 100%;
+    margin-left: 10px;
+
+    text-align: left;
+    span, a { @include fontSize($defFont - 2); }
+
+    span {
+        line-height: 20px;
+        letter-spacing: 0.3px;
+    }
+
+    a { margin-left: 5px; }
+}
+
+.orderTipsArea ul {
+    list-style-type: square;
+    margin-left: 20px;
+
+    li {
+        margin: 3px 0;
+
+        line-height: 18px;
+        letter-spacing: 0.5px;
+    }
+}

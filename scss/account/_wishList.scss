@@ -1,0 +1,262 @@
+/*#[WishList]我的最愛清單模組
+
+    <div id="WishCartList">
+        <div class="TabArea OrderBy grayBorder" name="grayBorderName" data-typenamevalue="追蹤清單購物車" data-typeidvalue="0">
+            <ul>
+                <li class="Tab SmallBorderTab " id="PriceLow" name="TabAreaOrderByName" data-orderbyvalue="LowPrice"><i class="icon OrderbyIcaon PriceLow"></i>價格低到高</li>
+                <li class="Tab SmallBorderTab " id="PriceHigh" name="TabAreaOrderByName" data-orderbyvalue="HighPrice"><i class="icon OrderbyIcaon PriceHigh"></i>價格高到低</li>
+                <li class="Tab SmallBorderTab " id="DateFar" name="TabAreaOrderByName" data-orderbyvalue="CreatDate"><i class="icon OrderbyIcaon DateFar"></i>放入日期遠到近</li>
+                <li class="Tab SmallBorderTab SmallBorderTabSelected" id="DateNear" name="TabAreaOrderByName" data-orderbyvalue="DescCreatDate"><i class="icon OrderbyIcaon DateNear"></i>放入日期近到遠</li>
+            </ul>
+        </div>
+
+        <table class="table grayBorder darkGray">
+            <tbody><tr class="tr grayBorder GrayBgColorth">
+                <th class="th Boldtext" style="width:100px;">
+                    <input type="checkbox" name="" value="" class="checkbox SelectAll">
+                    <span class="Select TextAlign-left">全選</span>
+                    <span class="Select TextAlign-left">取消全選</span>
+                </th>
+                <th class="th Boldtext" style="width:500px;">商品名稱/折扣與贈品</th>
+                <th class="th Boldtext">加入日期</th>
+                <th class="th Boldtext">商品價格</th>
+                <th class="th Boldtext" style="width:140px;">加入購物車</th>
+            </tr>
+
+            <tr class="tr">
+                <td class="td"><input type="checkbox" name="" value="" class="checkbox SelectItem" data-itemvalue="445416"></td>
+                <td class="td">
+                	<div class="PicArtBox">
+                    	<a href="javascript:void(0);"><div class="pic ItemListPic"><img src="http://placehold.it/70x70"></div></a>
+                        <a href="javascript:void(0);"><h3 class="Boldtext">這是商品名稱這是商品名稱這是商品名稱這是商品名稱這是商品名稱這是商品名稱</h3></a>                                                                                                                                                          </h3></a>
+                        <div class="SpecialDeal gray">
+        	    			        <p class="SpecialDeal"><span class="SpecialDeal cartDiscount bOcW borderRound ">這是促銷文案這是促銷文案這是促銷文案這是促銷文案這是促銷文案</span></p>
+                        </div>
+                    </div>
+                </td>
+                <td class="td grayBorder"><p class="Boldtext">2020/12/31 23:59</p></td>
+                <td class="td grayBorder"><p class="price Boldtext">99,999</p></td>
+                <td class="td grayBorder"><i class="icon PutInCart AddtoCart disabled NoStock" data-itemvalue="445416" data-disabled="0"></i></td>
+            </tr>
+        </tbody></table>
+
+        <ul class="OneLine gray">
+            <li style="width:30%;text-align:left;"><p class="Delete CallDelete"><img src="img/Icon/DeleteImg.png">刪除</p></li>
+            <li style="width:70%"><p class="TextAlign-right">您總共收藏<span>1</span>項商品</p></li>
+        </ul>
+
+        <div class="pagination PageArea">
+            <span class="arrow arrLeft prev" onclick="NextPage(null, 0, 1, null)">&lt;</span>
+            <span class="GoToPage" data-pagevalue="1">1</span>
+            <span class="SelectThePage" style="color:#EB8A51" data-pagevalue="2">2</span>
+            <span class="GoToPage" data-pagevalue="3">3</span>
+            <span class="GoToPage" data-pagevalue="4">4</span>
+            <span class="arrow arrRight next">&gt;</span>
+        </div>
+    </div>
+
+*/
+
+#WishCartList {
+    width:$frame-min-width#{px};
+    height: auto;
+    margin: 0 auto;
+}
+
+#WishCartList > .TabArea {
+    position: relative;
+    border-width: 0 1px 1px 1px;
+    height: 40px;
+
+    ul {
+        position: absolute;
+        top: 7.5px;
+        right: 5px;
+        display: inline-block;
+        width: auto;
+        height:25px;
+        @include pie-clearfix;
+    }
+
+    ul li {
+        @include float(right);
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        padding:0 20px 0 50px;
+        border-width: 0 1px 0 0;
+        border-style: solid;
+        border-color: $gray-shade-d;
+        background: #fff;
+
+        &:first-child { border-right: 0; }
+
+        @include fontSize($defFont + 3);
+        line-height: 25px;
+        color: $gray-shade-d;
+
+        & > i.icon {
+            position: absolute;
+            top:0;
+            left:20px;
+            display: block;
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+
+            background: url(#{$img-path}Icon/OrderbyIcon.png) no-repeat;
+            &.DateNear { background-position: 0 0; }
+            &.DateFar { background-position: 0 -25px; }
+            &.PriceLow { background-position: 0 -75px; }
+            &.PriceHigh { background-position: 0 -50px; }
+        }
+    }
+
+    //hover effects
+    ul li:hover,
+    ul li.SmallBorderTabSelected {
+        background: #fff;
+        color: $font-organe-color;
+
+        & > i.icon {
+            &.DateNear { background-position: -25px 0; }
+            &.DateFar { background-position: -25px -25px; }
+            &.PriceLow { background-position: -25px -75px; }
+            &.PriceHigh { background-position: -25px -50px; }
+        }
+    }
+}
+
+#WishCartList table {
+
+    @extend %tables;
+
+    tr:first-child {
+        th:first-child input {
+            position: absolute;
+            top: 15px;
+            left: 5px;
+
+            & ~ span { display: none; }
+            & + span { display: block; }
+
+            &:checked ~ span { display: block; }
+            &:checked + span { display: none; }
+        }
+
+        th:first-child span {
+            position: absolute;
+            display:inline-block;
+            top: 12px;
+            left: 35px;
+            height:26px;
+
+            @include fontSize($defFont - 1);
+            line-height:26px;
+            text-align: left;
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .PutInCart {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -17px 0 0 -17px;
+        display: block;
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        cursor: pointer;
+        background: url(#{$img-path}Icon/PutInCart.png) no-repeat;
+
+        &.NoStock {
+            background-position: 0 -34px;
+            cursor: auto;
+        }
+    }
+}
+
+
+
+#WishCartList {
+    .PicArtBox {
+        width: 98%;
+        height: 70px;
+        overflow: hidden;
+        margin: 5px 1%;
+        @include pie-clearfix;
+
+        & > a {
+            @include float(left);
+            display: block;
+        }
+    }
+
+    .PicArtBox > a:first-child {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+
+    .PicArtBox > a:first-child + a {
+        width: 82%;
+        border-bottom: 0;
+
+        text-align: left;
+    }
+
+    .PicArtBox > a:first-child + a h3 {
+        height:40px;
+        overflow: hidden;
+
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .PicArtBox > a ~ div {
+        @include float(left);
+        width: 82%;
+        height: 20px;
+        overflow: hidden;
+        margin-top:5px;
+
+        @include fontSize($defFont);
+        line-height: 20px;
+        text-align: left;
+    }
+
+    .OneLine {
+        display: block;
+        width: 100%;
+        height: 27px;
+        margin: 45px 0;
+        @include pie-clearfix;
+
+        & > li {
+            display: block;
+            height: 100%;
+            line-height: 27px;
+            letter-spacing: 0.5px;
+        }
+
+        & > li:first-child {
+            @include float(left);
+            p.Delete { cursor: pointer; }
+            p.Delete > img { margin-right: 5px; }
+        }
+
+        & > li:first-child + li {
+                @include float(right);
+                position: relative;
+        }
+
+        & > li:first-child + li p {
+            position: absolute;
+            top:0;
+            right:0;
+        }
+    }
+
+}

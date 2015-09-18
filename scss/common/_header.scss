@@ -9,7 +9,7 @@
                     <div class="welcome orangetxt">Hi, XXXX@OOO.com，您好！</div>
                 </div>
                 <div class="ad" data-url="/AdvEvent/Partial_AdvHeaderBanner" style="text-align:center">
-                   <a href="javascript:void(0);" target="_blank"><img src="https://ssl-images.newegg.com.tw/pic/AdvImage/6/29/35/993/StartImg.JPG"></a>
+                   <a href="javascript:void(0);" target="_blank"><img src="http://placehold.it/300x50"></a>
                 </div>
             </div>
             <div class="icon quickMenu">
@@ -17,8 +17,8 @@
                         <li><a href="javascript:void(0);"><i class="icon listi6"></i><div class="text">登入/註冊</div></a></li>
                     <li><a href="javascript:void(0);"><i class="icon listi2"></i><div class="text">優惠活動</div></a></li>
                     <li><a href="javascript:void(0);"><i class="icon listi3"></i><div class="text">服務說明</div></a></li>
-                    <li id="headerCartBtn"><a href="javascript:void(0);"><i class="icon listi4"><span id="neSCHead" class="num"></span></i><div class="text">購物車</div></a></li>
-                    <li id="dropAccount" class="divider-none active"><a href="javascript:void(0)"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
+                    <li id="headerCartBtn"><a href="javascript:void(0);"><i class="icon listi4"><span id="neSCHead" class="num">10</span></i><div class="text">購物車</div></a></li>
+                    <li id="dropAccount" class="divider-none"><a href="javascript:void(0);"><i class="icon listi5"></i><div class="text">我的帳戶</div></a>
                         <div class="dropCon panel" style="display:block;">
 
                                 <ul>
@@ -97,12 +97,10 @@
 .header .icon li i {
     background: url(#{$img-path}header-icon.png) no-repeat;
 
-    &.listi1 { background-position: 0 1px; }
-    &.listi2 { background-position: 0 -29px; }
-    &.listi3 { background-position: 0 -59px; }
-    &.listi4 { background-position: 0 -89px; }
-    &.listi5 { background-position: 0 -119px; }
-    &.listi6 { background-position: 0 -150px; }
+    &.listi1 { background-position: 0 0; }
+    @for $i from 1 through 5 {
+        &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+    }
 }
 
 .header {
@@ -124,11 +122,10 @@
     i.icon {
     	background-image:url(#{$img-path}header-icon.png);
 
-        &.listi1 {background-position:0 -0px}
-        &.listi2 {background-position:0 -29px}
-        &.listi3 {background-position:0 -59px}
-        &.listi4 {background-position:0 -89px;}
-        &.listi5 {background-position:0 -119px}
+        &.listi1 { background-position: 0 0; }
+        @for $i from 1 through 4 {
+            &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+        }
     }
 
     i .num { color:#ec8b54; }
@@ -149,7 +146,13 @@
          background-color:#ec8b54;
 
          & > a {
-             i.icon { background-image:url(#{$img-path}header-icon-hover.png); }
+             i.icon {
+                 &.listi1 { background-position: -25px 0; }
+                 @for $i from 1 through 5 {
+                     &.listi#{$i+1} { background-position: -25px (-25 * $i)#{px}; }
+                 }
+             }
+
              i .num { color:#fff; }
          }
 
@@ -200,12 +203,10 @@
     .icon ul li i {
         background: url(#{$img-path}panel-icon.png) no-repeat;
 
-        &.listi1 { background-position: 0 0px; }
-        &.listi2 { background-position: 0 -50px; }
-        &.listi3 { background-position: 0 -100px; }
-        &.listi4 { background-position: 0 -150px; }
-        &.listi5 { background-position: 0 -200px; }
-        &.listi6 { background-position: 0 -250px; }
+        &.listi1 { background-position: 0 0; }
+        @for $i from 1 through 5 {
+            &.listi#{$i+1} { background-position: 0 (-30 * $i)#{px}; }
+        }
     }
 
     .icon ul li .text {
@@ -217,6 +218,7 @@
 
 //myAccount dropDown menu
 .quickMenu .dropCon {
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, .85);
 
     @include fontSize($defFont - 4);
@@ -239,15 +241,12 @@
             &.listi5 { background-position:0 -200px; }
             &.listi6 { background-position:0 -250px; }
         }
-
-
-        &:hover {
-            background:#aaa;
-            background-color:rgba(160, 160, 160, .7);
-            i.icon { background-image:url(#{$img-path}panel-icon-hover.png); }
-        }
-    }
+=======
+    @extend %accountControlMenus;
 }
+>>>>>>> 13d9d7c
+
+
 
 
 
@@ -579,23 +578,23 @@
             //設計風尚
             &.storeClothing { background-position: 0 0; }
             //國際精品
-            &.storeFashion { background-position: 0 -50px; }
+            &.storeFashion { background-position: 0 -25px; }
             //家電用品
-            &.storeappliance { background-position: 0 -96px; }
+            &.storeappliance { background-position: 0 -50px; }
             //居家生活
-            &.storeLiving { background-position: 0 -144px; }
+            &.storeLiving { background-position: 0 -75px; }
             //運動健身
-            &.storeHealth { background-position: 0 -190px; }
+            &.storeHealth { background-position: 0 -100px; }
             //戶外休旅
-            &.storeOutdoor { background-position: 0 -240px; }
+            &.storeOutdoor { background-position: 0 -125px; }
             //電腦周邊
-            &.storeComputer { background-position: 0 -286px; }
+            &.storeComputer { background-position: 0 -150px; }
             //數位3C
-            &.store3C { background-position: 0 -334px; }
+            &.store3C { background-position: 0 -175px; }
             //好食市集
-            &.storeFoods { background-position: 0 -382px; }
+            &.storeFoods { background-position: 0 -200px; }
             //美蛋直購
-            &.storeNeweggUSA { background-position: 0 -428px; }
+            &.storeNeweggUSA { background-position: 0 -225px; }
         }
 
 
@@ -608,7 +607,17 @@
 
             i {
                 margin-left:30px; //側邊選單效果位移度
-                background-image:url(#{$img-path}nav-icon-hover.png);
+
+                &.storeClothing { background-position: -25px 0; }
+                &.storeFashion { background-position: -25px -25px; }
+                &.storeappliance { background-position: -25px -50px; }
+                &.storeLiving { background-position: -25px -75px; }
+                &.storeHealth { background-position: -25px -100px; }
+                &.storeOutdoor { background-position: -25px -125px; }
+                &.storeComputer { background-position: -25px -150px; }
+                &.store3C { background-position: -25px -175px; }
+                &.storeFoods { background-position: -25px -200px; }
+                &.storeNeweggUSA { background-position: -25px -225px; }
             }
 
             span {
@@ -679,7 +688,7 @@
 /*##[pullDown]側邊欄選單模組-下拉樣式
     <div class="mainMenuBox" style="margin-left: 0;">
             <div class="menudropDown">全館分類</div>
-            <div id="mainMenu" class="mainMenu pullDown" style="display: block;">
+            <div id="mainMenu" class="mainMenu pullDown">
                 <ul class="pullDownList">
                         <li>
                             <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
@@ -736,19 +745,20 @@
 .menudropDown {
     position: relative;
     z-index: 9;
-    padding: 5px 0;
     width: 206px;
     height: 25px;
     overflow: hidden;
 
     border-bottom: 1px solid #fff;
-    background: url(#{$img-path}Icon/arrowUpDown.png) #d2d2d2 150px 11px no-repeat;
+    background: url(#{$img-path}Icon/arrowUpDown.png) #d2d2d2 150px 7px no-repeat;
 
     letter-spacing: 2px;
     line-height: 26px;
     text-align: center;
     color: $font-color;
     cursor: pointer;
+
+    @include box-sizing(border-box);
 
     &:hover {
         color:#fff;
@@ -758,7 +768,153 @@
 #mainMenu {
     display: none;
     position: absolute;
-    top: 36px;
+    top: 25px;
     left: 0;
     z-index: 100;
+}
+
+/*##[Floating-Account]我的帳戶(浮動)
+
+    <div id="FloatingAccount" class="aside-icon FloatingBubble FloatingAccount" style="display: block;">
+        <div class="panel">
+            <div class="FloatingTit service">
+            <div class="shoppingCart"><a href="javascript:void(0);"><div class="count" id="neSCBody">20</div></a></div>
+                <div id="FloatingSwitch" class="text">我的帳戶</div>
+                <div class="pageTop"><i class="icon"><img src="img/Icon/GoToTop.png"></i><br><span>頁頂</span></div>
+            </div>
+            <div class="icon FloatingCon">
+                <ul>
+                    <li><a href="javascript:void(0);"><i class="icon listi5"></i><div class="text">我的最愛</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi3"></i><div class="text">折價券</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi4"></i><div class="text">我的訂單</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi1"></i><div class="text">帳戶管理</div></a></li>
+                    <li><a href="javascript:void(0);"><i class="icon listi6"></i><div class="text">登出</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+*/
+
+#FloatingAccount {
+    @include pie-clearfix;
+
+    @include translate3d(90px,0,0);
+    @include transition-duration(0.5s);
+
+    &.active {
+        @include translate3d(0,0,0);
+    }
+
+    .service {
+        @include float(left);
+        position: relative;
+        display: block;
+        width: 50px;
+        height: auto;
+        padding:5px 0;
+        height:auto;
+        background-color: $font-organe-color;
+        @include border-top-left-radius(5px);
+        @include border-bottom-left-radius(5px);
+        @include box-shadow(-2px 1px 5px $gray-shade-d);
+    }
+
+    .FloatingCon {
+        @include float(left);
+        @include quickMenuStyle;
+        position: relative;
+        display: block;
+        width: 90px;
+        height: auto;
+
+        & > ul > li {
+            & > a {
+                position: relative;
+                display:block;
+                padding:8px 0;
+                border-bottom:0;
+            }
+
+            & > a > i {
+                position: relative;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        @extend %accountControlMenus;
+    }
+
+    .service .text {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+
+        @include fontSize($defFont + 4);
+        color:#fff;
+        line-height:22px;
+    }
+
+    &.aside-icon {
+        position:fixed;
+        display:none;
+	    z-index:9;
+        top:30%;
+        right:0;
+        cursor:pointer;
+    }
+
+    .shoppingCart {
+        position: relative;
+        width: 50px;
+        height: 40px;
+        background: url(#{$img-path}/shoppingCart.png) no-repeat;
+        background-position: 4px 4px;
+    }
+
+    .count {
+        width: 100%;
+        height: 100%;
+
+        @include fontSize($defFont + 2);
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .pageTop {
+        position: relative;
+        width: 50px;
+        height:40px;
+
+        border-top: 1px solid #fff;
+
+        .icon {
+            position: absolute;
+            display: block;
+            top: 5px;
+            left: 50%;
+            margin-left: -8px;
+            width: 16px;
+            height: 16px;
+
+            text-align: center;
+        }
+
+        span {
+            position: absolute;
+            bottom: 0px;
+            display: block;
+            width: 100%;
+            height: 20px;
+
+            line-height: 20px;
+            text-align: center;
+            color:#fff;
+        }
+
+    }
+
+
 }

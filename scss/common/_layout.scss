@@ -76,37 +76,89 @@ h3 {
 
 
 /*#[template]全站共用版面樣式
+
 */
 .wrapper {
-	@include pie-clearfix;
 	margin:0 auto;
-    width:1024px;
 }
-
-//所有內頁共同Padding
-// .mainPadding {
-// 	@include mainPaddingArea;
-// }
 
 .header,
-.topper {
-    margin: 0 auto;
-    @include pie-clearfix;
+.topper,
+.footer {
+	width: 100%;
+	margin: 0 auto;
+
+	&-limiter {
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+		@include pie-clearfix;
+    }
 }
+
+.header { height: 100px; }
+.topper { height: 51px; }
+.footer { height: 400px; }
+
+.mainPadding {
+	position:relative;
+	margin:0 auto 50px auto;
+	height: auto;
+}
+
+//寬度設定部分
+.header,
+.topper,
+.footer {
+    &-limiter {
+      width: $frame-max-width#{px};
+      padding: 0 $outer-max-right#{px} 0 $outer-max-left#{px};
+    }
+}
+
+//分類寬度設定
+.aside2 { width: $side-width#{px}; }
+.subCategory {
+  width: $frame-max-width - ($side-width + 15)#{px};
+}
+
+
+/*##[mainPadding]所有內頁共同Padding
+
+###[has MainPadding] 有mainPadding樣式
+	<div class="mainPadding" style="height:200px; background:#666;">
+		<div class="container" style="width:100%; height: 100%; background: #ccc;">
+		</div>
+	</div>
+
+###[has not MainPadding] 無mainPadding樣式
+	<div class="mainPadding clearPadding" style="height:200px; background:#666;">
+		<div class="container" style="width:100%; height: 100%; background: #ccc;">
+		</div>
+	</div>
+
+*/
+.mainPadding {
+   width: $frame-max-width#{px};
+   padding: 0 $outer-max-right#{px} 0 $outer-max-left#{px};
+
+   //沒有padding狀態
+   &.clearPadding {
+	 width: $max-width#{px};
+	  padding: 0;
+	  margin:0 auto;
+   }
+}
+
 
 
 .header-limiter,
 .topper-limiter,
 .footer-limiter {
-    @include pie-clearfix;
-	margin:0 auto;
-	padding-left:55px;
-	padding-right:49px;
-	width:1176px;
-
 	.ad a { border:0; }
 }
 
+//header設定部分
 .header {
 	@include pie-clearfix;
 	height:100px;
@@ -114,7 +166,7 @@ h3 {
     .logo {
         @include float(left);
         display: block;
-    	width: 206px;
+    	width: $side-width#{px};
     	height: 100px;
     }
 
@@ -256,8 +308,8 @@ h3 {
         i {
         	display: inline-block;
         	position: relative;
-        	width: 29px;
-        	height: 29px;
+        	width: 30px;
+        	height: 30px;
         	margin: 0 auto;
         }
     }
@@ -338,7 +390,7 @@ h3 {
 	z-index: 4;
     @include float(left);
 	position: relative;
-	width: 206px;
+	width: $side-width#{px};
     height:486px;
 
     .pullDownList {
@@ -357,10 +409,10 @@ h3 {
     .pullDownList li i {
         position: relative;
         display: inline-block;
-        top:4px;
+        top:6.75px;
         left:0;
         width: 25px;
-        height: 19px;
+        height: 25px;
         margin-right: 10px;
     }
 
@@ -374,6 +426,24 @@ h3 {
 }
 
 //快速選單-我的帳戶下拉框架
+.quickMenu .dropCon > ul > li,
+#FloatingAccount .FloatingCon > ul > li {
+	padding:0;
+	width: 100%;
+	&:after {
+		display: none;
+		border-left: 0px;
+	}
+
+	& > a { padding:8px 0; }
+
+	& > a > i {
+		margin-top:5px;
+		width:30px;
+		height:30px;
+	}
+}
+
 .quickMenu .dropCon {
     display:none;
     position:absolute;
@@ -381,31 +451,13 @@ h3 {
     left: 0;
     margin:0;
     width:100%;
-
-    & > ul > li {
-        padding:0;
-        width: 100%;
-        &:after {
-            display: none;
-            border-left: 0px;
-        }
-
-        & > a { padding:8px 0; }
-
-        & > a > i {
-            margin-top:5px;
-            width:30px;
-            height:30px;
-        }
-    }
-
 }
 
 
 .banner-ad2 {
     @include float(left);
     z-index: 1;
-    width: 206px;
+    width: $side-width#{px};
     height: 36px;
     margin-top: 486px;
     margin-left: -206px;
@@ -418,7 +470,7 @@ h3 {
     position: absolute;
 	display:none;
     top: 0;
-    left: 206px;
+    left: $side-width#{px};
 	width: 744px;
     height: 486px;
 	padding: 0 20px;
@@ -468,17 +520,25 @@ h3 {
 
 //[footer]footer模組框架
 .footer {
+<<<<<<< HEAD
+=======
     height: 400px;
 	margin: 0 auto;
 	@include pie-clearfix;
 
     & > .footer-limiter {
+<<<<<<< HEAD
 
 		position: relative;
     	width: 1176px;
+=======
+    	position: relative;
+		width: 1176px;
+>>>>>>> 13d9d7c
     	margin: 0 auto;
     }
 
+>>>>>>> add backtop button into _footer.scss.
     .icon {
         @include float(left);
         margin-top: 20px;

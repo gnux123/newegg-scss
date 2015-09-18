@@ -1,21 +1,21 @@
 /*#[banner-title]館首頁-館分類名稱
 
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi1"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi2"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi3"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi4"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi5"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi6"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi7"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi8"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi9"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi10"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi11"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi12"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi13"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi14"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi15"></i>國際名品</div>
-    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi16"></i>國際名品</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi1"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi2"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi3"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi4"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi5"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi6"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi7"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi8"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi9"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi10"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi11"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi12"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi13"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi14"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi15"></i>館別名稱</div>
+    <div class="banner-title" style="background:#ccc; margin-top:5px;"><i class="listi16"></i>館別名稱</div>
 
 */
 
@@ -32,6 +32,85 @@
     color: #fff;
     line-height: 50px;
 }
+
+
+/*#[category-banner]館首頁-輪播廣告
+
+    <div class="banner-title"><i class="listi1"></i>國際名品</div>
+    <div class="banner">
+      <div class="banner-bg2 banner-bg2-img1"></div>
+      <a href="javascript:void(0);">
+          <div class="banner-img" style="background:url('http://placehold.it/900x400')">
+          </div>
+      </a>
+      <div class="tab">
+          <ul>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">一二三四五六<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">一二三四五六<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">國國國國國國<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">國國國國國國<div class="arrow"></div></a></li>
+              <li><a href="javascript:void(0)" banner-src="" banner-url="">國國國國國國<div class="arrow"></div></a></li>
+          </ul>
+      </div>
+
+      <div class="storeUSBG red"></div><div class="storeUSBG blue"></div>
+    </div>
+
+*/
+
+.banner-title + .banner {
+  width: 900px;
+  height: 400px;
+  background:#ccc;
+
+  .banner-bg2 {
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    right: -120px;
+    width: 172px;
+    height: 399px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  & > a {
+    width: 100%;
+    height: 100%;
+  }
+
+  & > a > .banner-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  & > .tab {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+      width:100%;
+      margin: 0;
+  }
+
+  & > .tab li {
+      border-left: 0;
+      width: 20%;
+      .arrow { display: none; }
+  }
+
+  & > .tab li a {
+       background-color: rgba(0,0,0,0.5);
+      &:hover { background-color: #000; }
+      &:hover > .arrow {
+          display: block;
+          border-color: transparent transparent #000 transparent;
+      }
+  }
+}
+
 
 
 
@@ -321,6 +400,7 @@ section.section3 {
     	text-align: center;
     	line-height: 20px;
     	text-decoration: none;
+        border-bottom:0;
 
         &.selected { background-color: nth($color-list, 5); }
     }
@@ -331,9 +411,8 @@ section.section3 {
         border:0;
 
         text-align: center;
-        color: $font-color;
+        // color: $font-color;
 
-        &, &:hover { color:inherit; }
     }
 
 }
@@ -449,8 +528,8 @@ section.section3 {
                                 <img src="http://placehold.it/99x81">
                         </li>
                     </ul>
-                    <a id="prev1" class="prev catcolorbg1" href="#">< </a>
-                    <a id="next1" class="next catcolorbg1" href="#">> </a>
+                    <a id="prev1" class="prev catcolorbg1" href="javascript:void(0);">< </a>
+                    <a id="next1" class="next catcolorbg1" href="javascript:void(0);">> </a>
                 </div>
                 <div class="box16 catcolortop1" shopitemid="463">
                     <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
@@ -576,4 +655,56 @@ section.section3 {
 
     .next { right: 0; }
 
+}
+
+/*#[orther components]其他元件
+
+    <div class="banner-bg banner-bg-img1"></div>
+    <div class="banner-bgcolor colorbg1"></div>
+    <div class="toperHeaderBG"></div>
+
+*/
+
+.banner-bg {
+    position: absolute;
+    @include float(left);
+    z-index:0;
+    display: block;
+    width: 613px;
+    height: 172px;
+    margin-top: 14px;
+    margin-left: -372px;
+    background-position: 300px 5px;
+    background-repeat: no-repeat;
+}
+
+.banner-bgcolor {
+    position: absolute;
+    z-index: -2;
+    top: 195px;
+    left: 0px;
+    width: 100%;
+    height: 441px;
+}
+
+.toperHeaderBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    min-width: 1024px;
+    height: 195px;
+    margin-left: 0;
+    background-color: #f2f0f1;
+}
+
+@for $i from 1 through 9 {
+    .banner-bg-img#{$i} {
+    	background-image: url(#{$img-path}banner-bg-#{$i}.png);
+    }
+
+    .banner-bg2-img#{$i} {
+    	background-image: url(#{$img-path}banner-bg2-#{$i}.png);
+    }
 }

@@ -1,1 +1,250 @@
-.main { width:100%; }
+/*#[account-template] 我的帳戶共通樣式
+
+    <div class="mainPadding">
+        <div class="mainMenuBox" style="margin-left: 0;">
+                <div class="menudropDown">全館分類</div>
+                <div id="mainMenu" class="mainMenu pullDown">
+                    <ul class="pullDownList">
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
+                                <span></span>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeHealth"></i>運動健身</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="store3C"></i>數位3C</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeappliance"></i>生活家電</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeLiving"></i>居家親子</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeFoods"></i>好食市集</a>
+                                <span></span>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
+                                <span></span>
+                            </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="pathLink">
+            <a href="/">首頁</a> &gt;
+            <a href="/MyAccount">我的帳戶</a> &gt;
+            <span>最愛清單</span>
+        </div>
+        <div>
+            <div class="TopExplanationArea">
+                <p class="Boldtext">
+                    您好，<br>
+                    這是您的最愛清單，您可從下方管理功能選單中查看屬於您個人的商品存放紀錄，或是將商品加入至購物車。
+                </p>
+            </div>
+            <div class="AccountArea">
+                <div class="TabArea">
+                    <ul>
+                        <li class="Tab BorderTab" id="WishList"><a href="javascript:void(0);"><i class="icon WishList"></i>我的最愛清單</a></li>
+                        <li class="Tab BorderTab" id="Coupons"><a href="javascript:void(0);"><i class="icon Coupons"></i>我的折價券</a></li>
+                        <li class="Tab BorderTab" id="Order"><a href="javascript:void(0);"><i class="icon Order"></i>我的訂單</a></li>
+                        <li class="Tab BorderTab" id="Account"><a href="javascript:void(0);"><i class="icon Account"></i>帳戶管理<i class="icon Up"></i></a>
+                            <ul class="SubMenu">
+                                <li><a href="javascript:void(0);">個人資料修改</a></li>
+                                <li><a href="javascript:void(0);">密碼修改</a></li>
+                                <li><a href="javascript:void(0);" onclick="GetAskDetails(this);">問答中心</a></li>
+                                <li><a href="javascript:void(0);">帳號修改</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+*/
+
+.TopExplanationArea,
+.AccountArea,
+.TabArea,
+.TabArea ~ div {
+    position: relative;
+    width: $frame-min-width#{px};
+    margin:0 auto;
+    @include box-sizing(border-box);
+}
+
+.TopExplanationArea {
+    height: 130px;
+    background: url(#{$img-path}ElementLibrary/ExpEgg.png) bottom right no-repeat;
+    margin-top: 40px;
+
+    & > p {
+        position: absolute;
+        top:50%;
+        margin-top: -35px;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: $gutter#{px} 0;
+
+        @include fontSize($defFont + 1);
+        font-weight: bold;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+}
+
+//TabArea
+.TabArea {
+    height: auto;
+    border: 1px solid $gray-shade-l;
+
+    ul {
+        width: 100%;
+        height: 50px;
+        @include pie-clearfix;
+    }
+
+    ul > li {
+        @include float(left);
+        position: relative;
+        display: block;
+        width: 25%;
+        height: 100%;
+        border-left: 1px solid $gray-shade-l;
+        @include box-sizing(border-box);
+        cursor: pointer;
+
+        text-align: center;
+
+        &:first-child { border-left:0; }
+
+        //hover effects
+        &:hover, &.TabSelected {
+           &, & > a { @include transition(100); }
+           & > a { color: #fff; }
+
+           background: $orange;
+        }
+    }
+
+    ul > li a {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        border-bottom: 0;
+
+        @include fontSize($defFont + 3);
+        text-align: center;
+        line-height: 50px;
+        color: $gray-shade-m;
+    }
+
+    i.icon {
+        position: absolute;
+        left: -43px;
+        top: 5px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        background: url(#{$img-path}Icon/SeriveIcon.png) no-repeat;
+
+        &.ShoppingCash { background-position:0 0; }
+        &.Coupons { background-position:0px -40px; }
+        &.Order { background-position:0px -80px; }
+        &.WishList { background-position:0px -120px; }
+        &.Account { background-position:0px -160px; }
+        &.ActivityList { background-position:0px -200px; }
+        &.NameList { background-position:0px -240px; }
+
+        &.Up {
+            left:auto;
+            right: -43px;
+            background: url(#{$img-path}Icon/Open.png) center no-repeat;
+        }
+    }
+
+    //icon hover effects
+    ul > li:hover,
+    .TabSelected {
+        i.ShoppingCash { background-position: -40px 0; }
+        i.Coupons { background-position: -40px -40px; }
+        i.Order { background-position: -40px -80px; }
+        i.WishList { background-position: -40px -120px; }
+        i.Account { background-position: -40px -160px; }
+        i.ActivityList { background-position: -40px -200px; }
+        i.NameList { background-position: -40px -240px; }
+    }
+}
+
+.TabArea ul>li .SubMenu {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: auto;
+    border: 1px solid $orange;
+
+    @include box-sizing(border-box);
+
+
+    & > li {
+        display: block;
+        width: 100%;
+        border:0;
+    }
+
+    & > li a {
+        display: block;
+        width: 100%;
+        height: 35px;
+
+        @include fontSize($defFont);
+        color:#000;
+        line-height:35px;
+
+        &,
+        &:hover { background: #fff; }
+    }
+}
+
+/*#[title-icon-settings]標題ICON樣式設定
+
+*/
+
+.ClassTit .icon {
+    position: absolute;
+    display: block;
+    top: 22.5px;
+    left:0;
+    width: 40px;
+    height: 40px;
+    overflow:hidden;
+
+    background: url(#{$img-path}Icon/SeriveIcon.png) no-repeat;
+
+    &.Coupons-2 { background-position:  -80px -40px; } //我的折價券
+    &.Order-2 { background-position:  -80px -80px; } //我的訂單
+    &.UpdateInformation-2 { background-position: -80px -360px;  } //我的帳戶
+    &.QuestionCenter-2 { background-position: -80px -320px; } //我要發問
+
+}

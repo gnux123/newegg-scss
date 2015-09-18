@@ -1,1 +1,62 @@
+/*#[item-layout]商品內頁布局樣式
 
+    <div class="outwidth">
+        <div class="productTop">
+            <div class="productLeft" style="height: 200px; background-color:#ccc;"></div>
+            <div class="productRight" style="height: 200px; background-color:#ccc;"></div>
+        </div>
+        <div class="itemdetail"  style="height: 300px; background-color:#ccc;">
+        </div>
+    </div>
+
+*/
+
+.outwidth {
+    position: relative;
+    width: 1004px;
+    margin:0 auto;
+    @include pie-clearfix;
+}
+
+.productTop {
+    width:100%;
+    height: auto;
+    @include pie-clearfix;
+
+    & > div {
+        position: relative;
+        height: auto;
+    }
+}
+
+.productLeft {
+    @include float(left);
+    width:475px;
+}
+
+.productRight {
+    @include float(right);
+    width: 485px;
+
+    .productContent {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+
+        @include fontSize($defFont);
+        line-height: 20px;
+        margin-bottom: 15px;
+
+        & > div { margin-bottom: $gutter#{px}; }
+    }
+}
+
+.itemdetail {
+    width: 100%;
+    height:auto;
+    margin-top: 25px;
+    border: 1px solid $gray-shade-l;
+
+    @include box-sizing(border-box);
+}

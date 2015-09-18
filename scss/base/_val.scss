@@ -1,17 +1,27 @@
+$max-width: 1280;
 $min-width: 1024;
+$side-width: 206;
 $gutter: 10;
+
+$outer-max-left: 55;
+$outer-max-right: 49;
+$outer-min-left: 10;
+$outer-min-right: $outer-min-left;
+
+$frame-max-width: $max-width - ($outer-max-left + $outer-max-right);
+$frame-min-width: $min-width - ($outer-min-left + $outer-min-right);
 
 //link-color
 $link-color: #698eb8;
 
-//font-settings
-$defFont: 16;
-$font-color: #666;
-$font-gray: #b3b3b3;
-$font-red-color: #C04040;
+//border-color
+$gray-shade-d: #666;
+$gray-shade-m: #b3b3b3;
+$gray-shade-l: #d5d5d5;
+$gray-shade-lw: #e6e6e6;
 
 //images path
-$img-path: "styleguide/img/"; //"/Themes/img/"
+$img-path: "img/"; //"/Themes/img/"
 
 //box-base-width
 $box-base-width: 196;
@@ -19,10 +29,22 @@ $box-base-width: 196;
 //prodWidth-single
 $prod-s-width: 200;
 
+//red
+$red-shade-d: #900;
+$red-shade-m: #c21920;
+$red-shade-l: #f00;
+$red-shade-lw: #C04040;
+
+
+
+//orange
+$orange: #f37225;
+$orange-l: #fbb486;
+
 $cates-name:         Fashion Design appliance Living Health Outdoor Computer 3C Foods NeweggUSA;
 $siteMap-list:       fashion luxury appli life sports leisure computer digital foods overseas;
-$color-list:         #3E3A39 #C07D2E #339ECF #63B2AF #82B964 #258D6A #122B65 #0757A2 #EA5A32 #EA5A32;
-$color-light-list:  #C4C2C2 #D6AE7B #82C5ED #87CDCE #89C087 #8ECBA9 #669BD3 #70B0E0 #F29E7F #EC7375;
+$color-list:         #3E3A39 #C07D2E #339ECF #63B2AF #82B964 #258D6A #122B65 #0757A2 #EA5A32 #C03F40;
+$color-light-list:  #C4C2C2 #D6AE7A #82C5ED #87CDCF #8DC88C #8DCEA8 #669BD3 #70B0E1 #F29F7F #EC7375;
 
 //1.設計風尚
 //#C4C2C2
@@ -53,3 +75,11 @@ $color-light-list:  #C4C2C2 #D6AE7B #82C5ED #87CDCE #89C087 #8ECBA9 #669BD3 #70B
 
 //10.美蛋直購(16.美蛋直購館)
 //#EC7375
+
+
+//font-settings
+$defFont: 16;
+$font-color: $gray-shade-d;
+$font-gray: $gray-shade-m;
+$font-red-color: $red-shade-lw;
+$font-organe-color: $orange;

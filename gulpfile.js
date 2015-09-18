@@ -24,61 +24,62 @@ var _address = {
 }
 
 gulp.task('webserver', function () {
-  connect.server({
-      root: '',
-      livereload: true
-  });
+    connect.server({
+        root: '',
+        livereload: true
+    });
 });
 
-gulp.task('html:reload', function(){
-    gulp.src('./styleguide/*.html')
-        .pipe(wait(800))
-        .pipe(watch('./styleguide/*.html'))
-        .pipe(connect.reload());
+gulp.task('livereload', function(){
+    gulp.src(['.tmp/*.css', './styleguide/*.html'])
+            // .pipe(wait(800))
+            .pipe(watch(['.tmp/*.css', './styleguide/*.html']))
+            .pipe(connect.reload());
 });
 
 gulp.task('sass', function(){
-  gulp.src(_address.sass)
-      .pipe(sass({
-            includePaths: [_address.include],
-            outputStyle: 'expanded',
-            precision: 10
-        }).on('error', sass.logError)
-      )
-      //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-      .pipe(gulp.dest(_address.cache))
-      .pipe(replace('styleguide/img/', '/Themes/img/')) //replace imgPath to stable server
-      .pipe(minifyCss({compatibility: 'ie8'}))
-      .pipe(rename({ suffix: "-" + vers }))
-      .pipe(gulp.dest(_address.css));
+    return gulp.src(_address.sass)
+            .pipe(sass({
+                    includePaths: [_address.include],
+                    outputStyle: 'expanded',
+                    precision: 10,
+                    errLogToConsole: true
+                }).on('error', sass.logError)
+            )
+            //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+            .pipe(gulp.dest(_address.cache))
+            .pipe(replace('img/', '/Themes/img/')) //replace imgPath to stable server
+            .pipe(minifyCss({compatibility: 'ie8'}))
+            .pipe(rename({ suffix: "-" + vers }))
+            .pipe(gulp.dest(_address.css));
 
 });
 
 //copyfiles
 gulp.task('copyfiles', function(){
-    gulp.src(['img/{*,*/*}', 'js/{*,*/*}'])
-        .pipe(copy('styleguide/'));
+    return gulp.src(['img/{*,*/*}', 'js/{*,*/*}'])
+            .pipe(copy('styleguide/'));
 });
 
 gulp.task('styleguide', function(){
-    gulp.src(_address.sass)
-        .pipe(sass({
-              includePaths: [_address.include],
-              outputStyle: 'expanded',
-              precision: 10
-          }).on('error', sass.logError)
-        )
-        .pipe(gulp.dest(_address.styleguide))
-        .pipe(styleguide({
-          out: 'styleguide',
-          name: 'Newegg-CSS documents v'+ vers,
-          include: [
-              _address.styleguide+'/common.css',
-              _address.styleguide+'/RWD.css',
-              'styleguide/js/main.js'
-          ],
-          'no-minify': false
-        }));
+    return gulp.src(_address.sass)
+            .pipe(sass({
+                  includePaths: [_address.include],
+                  outputStyle: 'expanded',
+                  precision: 10,
+                  errLogToConsole: true
+              }).on('error', sass.logError)
+            )
+            .pipe(gulp.dest(_address.styleguide))
+            .pipe(styleguide({
+              out: 'styleguide',
+              name: 'Newegg-CSS documents v'+ vers,
+              include: [
+                  _address.styleguide+'/RWD.css',
+                  'styleguide/js/main.js'
+              ],
+              'no-minify': false
+            }));
 });
 
 
@@ -88,12 +89,12 @@ gulp.task('clean', function(cb){
 });
 
 //sass watch livetype
-gulp.task('sass:watch', [], function () {
-  gulp.watch([_address.sass, 'js/main.js'], ['build', 'html:reload']);
+gulp.task('watch', function () {
+  gulp.watch([_address.sass, 'js/main.js'], ['copyfiles', 'styleguide', 'livereload']);
 });
 
 //build task
 gulp.task('build',['sass', 'copyfiles', 'styleguide']);
 
 //watch task
-gulp.task('server', ['clean', 'webserver', 'sass:watch']);
+gulp.task('server', ['clean', 'webserver', 'watch']);

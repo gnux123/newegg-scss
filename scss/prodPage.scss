@@ -1,5 +1,14 @@
+/*
+##prodPage.css說明
+設定商品頁面CSS樣式。
+*/
+
 
 @import "compass/compass";
 
 @import "_base";
+
 @import "prodPage/_item";
+@import "prodPage/_item-left";
+@import "prodPage/_item-right";
+@import "prodPage/_item-main";
