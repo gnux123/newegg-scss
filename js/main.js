@@ -122,4 +122,12 @@ $(function() {
         }
     });
 
+
+    //qa-center tabs
+    $(".RadiusTab > a").click(function(){
+        var _index = $(this).parent().index();
+        $(this).parent().addClass("TabSelected").siblings("li.TabSelected").removeClass("TabSelected");
+        $(".qaContent > div").eq(_index + 1).show().siblings(".qaContent > div.TabArea").hide();
+    });
+
 });

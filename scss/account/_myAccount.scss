@@ -206,6 +206,7 @@
 
     @include box-sizing(border-box);
 
+
     & > li {
         display: block;
         width: 100%;
@@ -244,5 +245,6 @@
     &.Coupons-2 { background-position:  -80px -40px; } //我的折價券
     &.Order-2 { background-position:  -80px -80px; } //我的訂單
     &.UpdateInformation-2 { background-position: -80px -360px;  } //我的帳戶
+    &.QuestionCenter-2 { background-position: -80px -320px; } //我要發問
 
 }

@@ -176,8 +176,9 @@
 //account cneter buttons
 %accountBtn {
     display: inline-block;
-    width: 70px;
+    width: auto;
     height: 29px;
+    padding:0 10px;
     border: 0;
     background-color: $orange;
     cursor: pointer;
