@@ -26,16 +26,15 @@
       width: $frame-min-width - ($side-width + 15)#{px};
     }
 
+    //header-settings
+
     //header-quickMenu
     .header .quickMenu > ul > li {
         padding:0;
         width:85px;
     }
 
-    //topper searchbar
-    .topper .searchbar .input {
-        width: 415px;
-    }
+    .topper .searchbar .input { width: 415px; }
 
     //[banner-adv]sixInOne settings
     .banner-adv {

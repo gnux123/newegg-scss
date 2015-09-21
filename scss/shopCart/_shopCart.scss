@@ -1,0 +1,202 @@
+/* #[shopCartTemplate] 購物車版面樣式 */
+
+.ShoppingProcess {
+    position: relative;
+    width: $frame-min-width#{px};
+    height: auto;
+    margin: 0 auto;
+
+    @include pie-clearfix;
+}
+
+
+/*#[shoppingFlow] 購物車ICON
+
+    <div class="ShoppingProcess">
+        <div class="shoppingFlow step_1">
+            <ul>
+                <li><span>確認訂單與付款方式</span></li>
+                <li><span>填寫訂購資訊</span></li>
+                <li><span>訂單完成</span></li>
+            </ul>
+        </div>
+    </div>
+
+*/
+
+.shoppingFlow {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 85px;
+    text-align: center;
+}
+
+.shoppingFlow {
+    ul {
+        display:inline-block;
+        height: 110px;
+        @include pie-clearfix;
+    }
+
+    ul > li {
+        position: relative;
+        @include float(left);
+        width: 290px;
+        height: 100%;
+
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 50%;
+            left: -18px;
+            margin-top: -18px;
+            width: 36px;
+            height: 36px;
+            background: url(#{$img-path}ShoppingProcess/arrow-right.gif) no-repeat;
+        }
+
+        &:first-child:before { display: none; }
+    }
+
+    ul > li span {
+        position: relative;
+        display: inline-block;
+        height: auto;
+        padding-top: 85px;
+
+        @include fontSize($defFont + 4);
+        font-weight: bold;
+        color:$gray-shade-l;
+        letter-spacing: 1px;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top:0;
+            left: 50%;
+            margin-left: -40px;
+            width: 80px;
+            height: 80px;
+
+            background: url(#{$img-path}ShoppingProcess/ShoppingProcess.gif) no-repeat;
+        }
+    }
+
+    ul > li:first-child span:before { background-position: 0 0; }
+    ul > li:first-child + li span:before { background-position: 0px -80px; }
+    ul > li:first-child + li + li span:before { background-position: 0px -160px; }
+}
+
+.step_1 ul > li:first-child span,
+.step_2 ul > li:first-child + li span,
+.step_3 ul > li:first-child + li + li span { color: $link-color; }
+
+.step_1 ul > li:first-child span:before { background-position: -80px 0; }
+.step_2 ul > li:first-child + li span:before { background-position: -80px -80px; }
+.step_3 ul > li:first-child + li + li span:before { background-position: -80px -160px; }
+
+
+/*#[cartNavs] 購物車選擇(新蛋/海外/任選館)
+
+    <div class="ShoppingProcess">
+        <div class="carts">
+            <div class="TabArea grayBorder">
+                <ul>
+                    <li data-typeid="1" name="TabAreagGrayBorder" class="Tab BorderTab TabSelected">
+                        <i class="icon CartIcon CartIconPo">
+                            <span>99</span>
+                        </i>
+                        新蛋購物車
+                    </li>
+                    <li data-typeid="2" name="TabAreagGrayBorder" class="Tab BorderTab">
+                        <i class="icon CartIcon CartIconPo">
+                            <span>99</span>
+                        </i>
+                        海外購物車
+                    </li>
+                    <li data-typeid="3" name="TabAreagGrayBorder" class="Tab BorderTab">
+                        <i class="icon CartIcon CartIconPo">
+                            <span>0</span>
+                        </i>
+                        任選館購物車
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+*/
+
+.carts {
+    width: 100%;
+    height: auto;
+}
+
+.carts .TabArea {
+    ul > li {
+        padding-left: 40px;
+        overflow: hidden;
+
+        @include fontSize($defFont + 3);
+        text-align: center;
+        line-height: 50px;
+        color: $gray-shade-m;
+        letter-spacing: 0.5px;
+
+
+        i.icon {
+            left:55px;
+            background: url(#{$img-path}ShoppingProcess/ShoppingCartImg.png) no-repeat;
+            background-position: -1px 0px;
+
+            text-align: center;
+            span {
+                position: relative;
+                top: -10px;
+                @include fontSize($defFont - 1);
+            }
+
+        }
+
+        &:first-child + li + li {
+            border-right: 1px solid $gray-shade-l;
+
+            i.icon { left: 46px; }
+        }
+
+
+        &:hover,
+        &.TabSelected {
+            color: #fff;
+
+            i.icon { background-position: -1px -38px; }
+        }
+    }
+}
+
+
+/*#[cartTitle] 購物車標題
+
+    <div class="ShoppingProcess">
+        <div class="carts">
+            <div class="Tit Boldtext grayBorder" style="border-top: 1px solid #{$gray-shade-l};"><i class="icon ServiceIcon Order-2"></i>訂單明細</div>
+        </div>
+    </div>
+
+*/
+
+.carts .Tit {
+    width: 100%;
+    height: 50px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: $gray-shade-l;
+
+    line-height: 50px;
+    font-weight: bold;
+}

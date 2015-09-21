@@ -856,6 +856,7 @@ hr {
 
 /*#[banner-slide]輪播廣告共用樣式
 */
+
 .banner,
 .banner-title + .banner {
     @extend  %banner;
@@ -866,6 +867,12 @@ hr {
 	}
 }
 
+
+/*#[wholeTabs] 共用頁籤樣式 */
+
+.TabArea {
+    @extend %tabs;
+}
 
 /*#[Password-Rule-Box]密碼規則方塊模組樣式
 
