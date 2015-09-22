@@ -245,3 +245,38 @@
         overflow: hidden;
     }
 }
+
+%pieceChoice {
+    @include float(left);
+    display: block;
+    height: 23px;
+
+    text-align: center;
+    line-height: 23px;
+
+    &:first-child, &.red { line-height: 25px;}
+
+    &.red { color: $font-red-color; }
+
+    &.less,
+    &.add {
+        width: 23px;
+        border: 1px solid $gray-shade-d;
+        cursor: pointer;
+    }
+
+    &.less { background: url(#{$img-path}Icon/less.jpg) no-repeat center; }
+    &.notless { background: url(#{$img-path}Icon/NotLess.png) no-repeat center; }
+    &.add {
+        margin-right: 5px;
+        background: url(#{$img-path}Icon/add.jpg) no-repeat center;
+    }
+    &.notadd { background: url(#{$img-path}Icon/NotAdd.png) no-repeat center; }
+
+    &.quantity {
+        width: 40px;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: $gray-shade-d;
+    }
+}

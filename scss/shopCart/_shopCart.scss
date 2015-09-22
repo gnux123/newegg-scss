@@ -191,12 +191,322 @@
 */
 
 .carts .Tit {
-    width: 100%;
+    width: 942px;
     height: 50px;
     border-width: 0 1px 1px 1px;
     border-style: solid;
     border-color: $gray-shade-l;
+    padding-left: 60px;
 
+    @include fontSize($defFont + 2);
     line-height: 50px;
     font-weight: bold;
+    letter-spacing: 1px;
+
+    .icon {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left:20px;
+        width: 40px;
+        height: 40px;
+        overflow:hidden;
+
+        background: url(#{$img-path}Icon/SeriveIcon.png) no-repeat;
+
+        &.Order-2 { background-position:  -80px -80px; } //我的訂單
+    }
+}
+
+
+
+/*#[orderInfot-Table]訂單明細列表
+
+    <div class="ShoppingProcess">
+        <div class="carts">
+            <table class="ItemListTable darkGray">
+                <tbody>
+                    <tr class="ItemListTr">
+                        <th class="ItemListTh BorderRight Boldtext" style="width:110px;">發貨區域</th>
+                        <th class="ItemListTh Boldtext" style="width:500px;">商品名稱/配件選購</th>
+                        <th class="ItemListTh Boldtext">規格</th>
+                        <th class="ItemListTh Boldtext">單價</th>
+                        <th class="ItemListTh Boldtext" style="width:110px;">數量</th>
+                        <th class="ItemListTh Boldtext">小計</th>
+                        <th class="ItemListTh BorderLeft Boldtext" style="width:109px;">刪除</th>
+                    </tr>
+                    <tr class="ItemListTr CartItemListItem" data-itemvalue="471917" data-itemcategory="1321">
+                        <td class="ItemListTd BorderRight"><p class="Area">美國<br><span>9~14天到貨</span></p></td>
+                        <td class="ItemListTd">
+                            <div class="PicArtBox">
+                                <a href="javascript:void(0);"><div class="pic ItemListPic"><img src="https://ssl-images.newegg.com.tw/pic/item/0047/1917_1_60.jpg" alt=""></div></a>
+                                <a href="javascript:void(0);"><h3 class="Boldtext">Timberland 經典款男士皮夾Timberland 經典款男士皮夾Timberland 經典款男士皮夾Timberland 經典款男士皮夾</h3></a>
+                                <div class="SpecialDeal gray">
+                                        <!--<p class="SpecialDeal"><span class="SpecialDeal SpecialDealClass1-1">折扣</span>5/11~5/31品牌滿額最高折抵1000元</p>-->
+                                           <p class="SpecialDeal"><span class="SpecialDeal cartDiscount bOcW borderRound ">9/29前全站滿3,000折500</span></p>
+
+                                    <p class="SpecialDeal CouponSpecialDeal" name="CouponSpecialDeal_471917" style=""><span class="SpecialDeal SpecialDealClass2-1 couponClick" itemid="471917" itemcategory="1321" itemprice="1580">使用折價券</span>活動折抵:$<span id="CouponDiscount_471917">0</span></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="ItemListTd" style="min-width:30px"></td>
+                        <td class="ItemListTd">1,580</td>
+                        <td class="ItemListTd">
+                            <p id="471917_MaxQty" style="display:none">8</p>
+                            <p class="Modified">
+                                <span class="less onless notless" data-itemvalue="471917" name="onless_471917"></span>
+                                <span id="471917_Qty" class="quantity Boldtext" data-itemvalue="471917" data-itempricdsingle="1580">1</span>
+                                <span class="add onadd " data-itemvalue="471917" name="onadd_471917"></span>
+                            </p>
+                        </td>
+                        <td class="ItemListTd Boldtext red" id="471917_PriceXQty">1,580</td>
+                        <td class="ItemListTd BorderLeft">
+                            <!-- 因我的最愛頁,尚未完成,我的最愛先暫停使用 -->
+                            <div class="Love neAddToFavorite" data-itemvalue="471917"></div>
+                            <div class="Delte neDelteToCart" data-itemvalue="471917"></div>
+                        </td>
+                    </tr>
+                    <tr class="ItemListTr CartItemListItem" data-itemvalue="471917" data-itemcategory="1321">
+                        <td class="ItemListTd BorderRight"><p class="Area">美國<br><span>9~14天到貨</span></p></td>
+                        <td class="ItemListTd">
+                            <div class="PicArtBox">
+                                <a href="javascript:void(0);"><div class="pic ItemListPic"><img src="https://ssl-images.newegg.com.tw/pic/item/0047/1917_1_60.jpg" alt=""></div></a>
+                                <a href="javascript:void(0);"><h3 class="Boldtext">Timberland 經典款男士皮夾Timberland 經典款男士皮夾Timberland 經典款男士皮夾Timberland 經典款男士皮夾</h3></a>
+                                <div class="SpecialDeal gray">
+                                        <!--<p class="SpecialDeal"><span class="SpecialDeal SpecialDealClass1-1">折扣</span>5/11~5/31品牌滿額最高折抵1000元</p>-->
+                                           <p class="SpecialDeal"><span class="SpecialDeal cartDiscount bOcW borderRound ">9/29前全站滿3,000折500</span></p>
+
+                                    <p class="SpecialDeal CouponSpecialDeal" name="CouponSpecialDeal_471917" style=""><span class="SpecialDeal SpecialDealClass2-1 couponClick" itemid="471917" itemcategory="1321" itemprice="1580">使用折價券</span>活動折抵:$<span id="CouponDiscount_471917">0</span></p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="ItemListTd" style="min-width:30px"></td>
+                        <td class="ItemListTd">1,580</td>
+                        <td class="ItemListTd">
+                            <p id="471917_MaxQty" style="display:none">8</p>
+                            <p class="Modified">
+                                <span class="less onless notless" data-itemvalue="471917" name="onless_471917"></span>
+                                <span id="471917_Qty" class="quantity Boldtext" data-itemvalue="471917" data-itempricdsingle="1580">1</span>
+                                <span class="add onadd " data-itemvalue="471917" name="onadd_471917"></span>
+                            </p>
+                        </td>
+                        <td class="ItemListTd Boldtext red" id="471917_PriceXQty">1,580</td>
+                        <td class="ItemListTd BorderLeft">
+                            <!-- 因我的最愛頁,尚未完成,我的最愛先暫停使用 -->
+                            <div class="Love neAddToFavorite" data-itemvalue="471917"></div>
+                            <div class="Delte neDelteToCart" data-itemvalue="471917"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+*/
+
+.carts .ItemListTable {
+    display: table;
+    width: 100%;
+    height: auto;
+
+    th, td {
+        border: 1px solid $gray-shade-l;
+
+        text-align: center;
+    }
+
+    tr th {
+        height: 50px;
+
+        @include fontSize($defFont);
+        line-height: 50px;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        &:first-child + th,
+        &:first-child + th + th,
+        &:first-child + th + th + th,
+        &:first-child + th + th + th + th,
+        &:first-child + th + th + th + th + th { border-width: 1px 0px; }
+    }
+
+    tr td {
+        height: 80px;
+        @include fontSize($defFont - 1);
+    }
+
+    tr td:first-child {
+        & + td,
+        & + td + td,
+        & + td + td + td,
+        & + td + td + td + td,
+        & + td + td + td + td + td { border-width: 1px 0px; }
+
+        & + td + td + td + td + td {
+            @include fontSize($defFont + 2);
+            color: $font-red-color;
+            font-weight: bolder;
+        }
+    }
+
+
+    p.Area {
+        @include fontSize($defFont - 1);
+
+        & > span {
+            @include fontSize($defFont - 3);
+            color: $gray-shade-m;
+        }
+    }
+
+
+    p.Modified {
+        display: inline-block;
+        margin: 0 auto;
+
+        span {
+            @extend %pieceChoice;
+        }
+    }
+
+    .Love,
+    .Delte {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .Love { background: url(#{$img-path}Icon/Gray_AddFavoritesImg.png) center no-repeat; }
+    .Delte { background: url(#{$img-path}Icon/DeleteImg.png) center no-repeat; }
+
+}
+
+.PicArtBox {
+    position: relative;
+    display: block;
+    top:0;
+    left:0;
+    width: 98%;
+    height: auto;
+    padding: 5px 1%;
+    @include pie-clearfix;
+
+    .pic {
+        @include float(left);
+        display: block;
+        width: 80px;
+        height: 80px;
+        vertical-align: middle;
+
+        img { width: 100%; }
+    }
+
+    h3, .SpecialDeal.gray {
+        @include float(left);
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    h3 {
+        overflow:inherit;
+
+        @include fontSize($defFont + 2);
+        text-align: left;
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .SpecialDeal.gray { margin-top:5px;}
+
+    .SpecialDeal.gray > p {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        text-align: left;
+        line-height: 20px;
+    }
+}
+
+
+
+/*#[totalPrice] 金額總和模組樣式
+
+    <div class="ShoppingProcess">
+        <table class="TotalTable" id="CartTotal">
+            <tbody>
+                <tr class="TotalTr">
+                    <th class="TotalTh Boldtext">總計：</th>
+                    <td class="TotalTd Boldtext red" id="TotalPrice">3,580</td>
+                </tr>
+                <tr class="TotalTr">
+                    <th class="TotalTh Boldtext">滿額折優惠：</th>
+                    <td class="TotalTd Boldtext red" id="PromotionPriceSum">500</td>
+                </tr>
+                <tr class="TotalTr">
+                    <th class="TotalTh Boldtext">回饋金優惠：</th>
+                    <td class="TotalTd Boldtext red">0</td>
+                </tr>
+                <tr class="TotalTr">
+                    <th class="TotalTh Boldtext">折價券優惠：</th>
+                    <td id="TotalCouponValue" class="TotalTd Boldtext red">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <p class="needPay Boldtext TextAlign-right">應付金額　新台幣
+            <span class="red NeedPayMoneyPrice" id="MainNeedPayMoneyPrice">4,660</span>
+            <span>元</span>
+        </p>
+    </div>
+
+*/
+
+.TotalTable {
+    height: auto;
+    margin: 15px 0;
+
+    &, tbody, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr th,
+    tr td {
+        display: inline-block;
+
+        @include fontSize($defFont + 4);
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+        text-align: right;
+    }
+
+    tr th { width: 90%; }
+    tr td {
+        width: 9%;
+        color: $font-red-color;
+    }
+
+    + hr { border-color: $gray-shade-l; }
+}
+
+.needPay {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+
+    @include fontSize($defFont + 4);
+    text-align: right;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    .red { color:$font-red-color; }
 }

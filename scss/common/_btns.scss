@@ -1,1 +1,26 @@
+/*#[coupon-use-button] 使用折價券按鈕
 
+    <span class="SpecialDeal SpecialDealClass2-1 couponClick">使用折價券</span>
+
+    <span class="SpecialDeal SpecialDealClass2-2 couponClick">使用折價券</span>
+
+*/
+
+.SpecialDealClass2-1,
+.SpecialDealClass2-2 {
+    display: inline-block;
+    padding: 3px;
+    margin:0 3px;
+    cursor:pointer;
+    @include border-radius(5px);
+}
+
+span.SpecialDealClass2-1 {
+    background: $red-shade-lw;
+    color: #fff;
+}
+
+span.SpecialDealClass2-2 {
+    border: 1px solid $red-shade-lw;
+    color: $red-shade-lw;
+}
