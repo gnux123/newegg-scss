@@ -785,11 +785,11 @@
         @include float(left);
         position: relative;
         display: block;
-        width: 50px;
+        width: 40px;
         height: auto;
         padding:5px 0;
         height:auto;
-        background-color: $font-organe-color;
+        background-color: $orange-m;
         @include border-top-left-radius(5px);
         @include border-bottom-left-radius(5px);
         @include box-shadow(-2px 1px 5px $gray-shade-d);
@@ -823,11 +823,11 @@
 
     .service .text {
         position: relative;
-        padding: 5px 15px 5px 15px;
+        padding: 10px 12px;
 
-        @include fontSize($defFont + 4);
+        @include fontSize($defFont);
+        line-height: 17px;
         color:#fff;
-        line-height:22px;
     }
 
     &.aside-icon {
@@ -841,26 +841,26 @@
 
     .shoppingCart {
         position: relative;
-        width: 50px;
+        width: 40px;
         height: 40px;
-        background: url(#{$img-path}/shoppingCart.png) no-repeat;
-        background-position: 4px 4px;
+        background: url(#{$img-path}shoppingCart.png) no-repeat;
+        background-position: 1px 4px;
+        border-bottom: 1px solid #fff;
     }
 
     .count {
         width: 100%;
         height: 100%;
 
-        @include fontSize($defFont + 2);
+        @include fontSize($defFont);
         text-align: center;
         line-height: 30px;
-        font-size: 20px;
         color: #fff;
     }
 
     .pageTop {
         position: relative;
-        width: 50px;
+        width: 40px;
         height:40px;
 
         border-top: 1px solid #fff;
@@ -883,7 +883,9 @@
             display: block;
             width: 100%;
             height: 20px;
+            opacity: 0.6;
 
+            @include fontSize($defFont - 2);
             line-height: 20px;
             text-align: center;
             color:#fff;
