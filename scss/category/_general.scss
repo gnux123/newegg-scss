@@ -116,60 +116,72 @@
 
 /*#[section3]館首頁-商品櫥窗模組-無LOGO版本
 
-    <section class="section3" id="item0" shopwindowid="66">
-        <a name="shop0"></a>
+    <section class="section3">
+        <a id="shop0"></a>
         <div class="section-bg section-bg-img1"></div>
         <div class="clear"></div>
 
         <div class="group2">
-            <div class="box11 catcolorright1">
-                <div class="caption4">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                <div class="price">$99,999</div>
+            <div class="box11 catcolorright1  catcolortop1 catcolorleft1">
+                 <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
             </div>
-            <div class="box15">
-                <div class="title catcolortxt1">櫥窗標題</div>
+            <div class="box11 catcolorright1 catcolortop1">
+                 <div class="box12 img10 pic">
+                     <a href="javascript:void(0);">
+                         <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                     </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
+        </div>
+        <div class="group3">
+            <div class="box15 catcolorbg1">
+                <div class="title catcolortxt1">館別名稱</div>
                 <div class="box-category3 catcolorbg1">
                     <ul>
-                        <li groupid="323"><a href="javascript:void(0);">開化堂</a></li>
-                        <li groupid="324"><a href="javascript:void(0);">金網</a></li>
-                        <li groupid="325"><a href="javascript:void(0);">公長齋</a></li>
-                        <li groupid="326"><a href="javascript:void(0);">朝日燒</a></li>
-                        <li groupid="327"><a href="javascript:void(0);">陸寶</a></li>
-                        <li groupid="453"><a href="javascript:void(0);">Wantz 享瓷</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱1</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱2</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱3</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱4</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱5</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱6</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <div class="group3">
-            <div class="box12 img10 pic" shopitemid="461">
+            <div class="box13 pic catcolorbottom1 catcolortop1">
                 <a href="javascript:void(0);">
-                    <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
+                    <img src="http://placehold.it/346x320">
+                </a>
             </div>
-                <div class="box13 pic catcolorbottom1" shopitemid="462">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/280x310">
-                        </a>
-                </div>
-                        <div class="carousel-logo3-bg carousel-logo3-bg-img1"></div>
-                <div class="box16 catcolortop1" shopitemid="463">
-                    <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
-                    </div>
-                    <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
-                </div>
-                <div class="box16 catcolortop1" shopitemid="464">
-                    <div class="divider catcolorleft1"></div>
-                    <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
-                    </div>
-                    <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
-                </div>
 
+            <div class="box16 catcolortop1 catcolorbottom1" shopitemid="4549">
+                <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
+
+            <div class="box16 catcolortop1 catcolorbottom1" shopitemid="4550">
+                <div class="divider catcolorleft1"></div>
+                <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
         </div>
 
         <div class="carousel4 catcolorleft1">
@@ -181,46 +193,48 @@
                     <li><a href="#nogo">3</a></li>
                 </ul>
             </div>
-            <div class="listcontent">
+
+            <div class="listcontent catcolortop1 catcolorbottom1 catcolorright1">
                 <div>
-                <div class="box14" shopitemid="465">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
-                <div class="divider catcolorbottom1"></div>
-                <div class="box14" shopitemid="466">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
-                <div class="divider catcolorbottom1"></div>
-                <div class="box14" shopitemid="467">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
+                    <div class="divider catcolorbottom1"></div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
+                    <div class="divider catcolorbottom1"></div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section-divider"></div>
     </section>
 
+
 */
 
-section.section3 {
+.section3 {
     @include float(left);
     @include pie-clearfix;
     position: relative;
@@ -470,86 +484,301 @@ section.section3 {
     }
 }
 
+
+.section3 {
+	position: relative;
+	margin-top: 40px;
+	padding-bottom: 100px;
+
+    .section-bg { display: none; }
+	.group2 { margin-top:0; }
+
+
+    .group2,
+	.group2 + .group3 {
+		height: 640px;
+		overflow: hidden;
+	}
+
+    .group2 .box11,
+	.group3 .box16 {
+		.box12,
+        .caption,
+		.caption4,
+		.price {
+			position: relative;
+			float:none;
+            display: block;
+			width: 222px;
+            margin: 5px auto;
+		}
+
+        .caption,
+        .caption4 {
+            height: 54px;
+
+            @include fontSize($defFont - 1);
+			text-align: left;
+
+		}
+
+        .box12 a {
+            display: block;
+            width: 222px;
+            height: 222px;
+            overflow: hidden;
+            border-bottom: 0;
+        }
+	}
+
+    .group2 .box11 {
+        position: relative;
+		width: 273px;
+		height:319px;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+
+		& + .box11 {
+			border-width: 1px;
+			border-style: solid;
+			height: 317px;
+		}
+	}
+
+    .group2 + .group3 {
+		width: 491px;
+		@include pie-clearfix;
+
+		.box13 {
+			width: 346px;
+			height: 320px;
+			border-top: 1px solid;
+			border-bottom: 0;
+			a { display: block; }
+
+			img,
+			a,
+			a img {
+				width: 100%;
+				height: 100%;
+
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.box15 {
+			width: 145px;
+			height: 320px;
+            margin: 0;
+        }
+
+		.box15 .title {
+            left:0;
+			width: 100%;
+			height: 56px;
+			margin:0;
+
+			@include fontSize($defFont + 16);
+			line-height: 56px;
+			letter-spacing: 1px;
+			color:#fff;
+		}
+
+		.box15 .box-category3 {
+			width: 100%;
+			padding:0;
+			border:0;
+			@include border-radius(0px);
+
+			background: transparent;
+
+			@for $i from 1 through length($color-light-list) {
+				&.catcolorbg#{$i} li:nth-child(odd) { background: nth($color-light-list, $i); }
+			}
+
+
+		}
+
+
+		.box15 .box-category3 ul {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+
+		.box15 .box-category3 ul li {
+			display: block;
+			width: 100%;
+			height: 33px;
+
+            margin: 0;
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				text-align: center;
+				line-height: 33px;
+			}
+		}
+
+		.box16 {
+			width: 245.5px;
+			height: 317px;
+            border-width: 1px 0;
+            border-style: solid;
+
+            .box12 { top: 0; }
+
+			.caption,
+            .caption4 {
+                height: 54px;
+                padding: 0;
+            }
+		}
+
+	}
+
+
+    .img11 {
+        width: 135px;
+        height: 135px;
+        max-width: 135px;
+        max-height: 135px;
+    }
+
+    & > div.divider {  border-top: 0; }
+	.section-divider { display: none; }
+
+    .carousel4 {
+		position: relative;
+		height: 639px;
+        border-left: 1px solid;
+
+		.listcontent {
+			width: 199px;
+			height: 637px;
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+		}
+
+		.box14 {
+			width: 100%;
+			height: 211px;
+
+            .caption {
+                @include fontSize($defFont - 1);
+                display: block;
+                width: 135px;
+                margin: 5px auto;
+            }
+		}
+
+		.divider {
+			width: 100%;
+			height: 0;
+		}
+
+		.pagination {
+			position: absolute;
+            top: 0;
+			right: -10px;
+			margin-top: 245px;
+			z-index:3;
+		}
+
+		@for $i from 1 through length($color-light-list) {
+
+			&.catcolorleft#{$i} {
+				.more a {
+					&:hover,
+					&:visited {
+						color: nth($color-list, $i);
+					}
+				}
+
+				li { background: nth($color-light-list, $i); }
+			}
+		}
+	}
+
+}
+
+
 /*#[section3]館首頁-商品櫥窗模組-有LOGO輪播版本
 櫥窗logo輪播模組樣式設定
 
-    <section class="section3" id="item0" shopwindowid="66">
-        <a name="shop0"></a>
+    <section class="section3">
+        <a id="shop0"></a>
         <div class="section-bg section-bg-img1"></div>
         <div class="clear"></div>
 
         <div class="group2">
-                <div class="box11 catcolorright1">
-                    <div class="caption4">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
+            <div class="box11 catcolorright1  catcolortop1 catcolorleft1">
+                 <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
                 </div>
-                <div class="box15">
-                    <div class="title catcolortxt1">櫥窗標題</div>
-                        <div class="box-category3 catcolorbg1">
-                            <ul>
-                                <li groupid="323"><a href="javascript:void(0);">開化堂</a></li>
-                                <li groupid="324"><a href="javascript:void(0);">金網</a></li>
-                                <li groupid="325"><a href="javascript:void(0);">公長齋</a></li>
-                                <li groupid="326"><a href="javascript:void(0);">朝日燒</a></li>
-                                <li groupid="327"><a href="javascript:void(0);">陸寶</a></li>
-                                <li groupid="453"><a href="javascript:void(0);">Wantz 享瓷</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-        <div class="group3">
-            <div class="box12 img10 pic" shopitemid="461" style="text-align: center; overflow: hidden;">
-                <a href="javascript:void(0);">
-                    <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
             </div>
-                <div class="box13 pic catcolorbottom1" shopitemid="462">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/280x310">
-                        </a>
+            <div class="box11 catcolorright1 catcolortop1">
+                 <div class="box12 img10 pic">
+                     <a href="javascript:void(0);">
+                         <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                     </a>
                 </div>
-                <div class="carousel-logo3">
-                    <ul id="carousel-logo">
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                        <li class="pic">
-                                <img src="http://placehold.it/99x81">
-                        </li>
-                    </ul>
-                    <a id="prev1" class="prev catcolorbg1" href="javascript:void(0);">< </a>
-                    <a id="next1" class="next catcolorbg1" href="javascript:void(0);">> </a>
-                </div>
-                <div class="box16 catcolortop1" shopitemid="463">
-                    <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
-                    </div>
-                    <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
-                </div>
-                <div class="box16 catcolortop1" shopitemid="464">
-                    <div class="divider catcolorleft1"></div>
-                    <div class="box12 img10 pic" style="text-align: center; overflow: hidden;">
-                        <a href="javascript:void(0);">
-                            <img src="http://placehold.it/222x222" class="itemImgCen" style="margin-top: 0px;"></a>
-                    </div>
-                    <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                    <div class="price">$99,999</div>
-                </div>
-
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
         </div>
+        <div class="group3">
+            <div class="box15 catcolorbg1">
+                <div class="title catcolortxt1">館別名稱</div>
+                <div class="box-category3 catcolorbg1">
+                    <ul>
+                        <li><a href="javascript:void(0);">品牌名稱1</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱2</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱3</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱4</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱5</a></li>
+                        <li><a href="javascript:void(0);">品牌名稱6</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box13 pic catcolorbottom1 catcolortop1">
+                <a href="javascript:void(0);">
+                    <img src="http://placehold.it/346x320">
+                </a>
+            </div>
+
+            <div class="box16 catcolortop1 catcolorbottom1" shopitemid="4549">
+                <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
+
+            <div class="box16 catcolortop1 catcolorbottom1" shopitemid="4550">
+                <div class="divider catcolorleft1"></div>
+                <div class="box12 img10 pic">
+                    <a href="javascript:void(0);">
+                        <img src="http://placehold.it/222x222?text=商品圖" class="itemImgCen">
+                    </a>
+                </div>
+                <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                <div class="price">$999,999</div>
+            </div>
+        </div>
+
         <div class="carousel4 catcolorleft1">
             <div class="pagination">
                 <div class="more"><a class="catcolortxt1" href="#nogo">更多商品</a></div>
@@ -559,37 +788,38 @@ section.section3 {
                     <li><a href="#nogo">3</a></li>
                 </ul>
             </div>
-            <div class="listcontent">
+
+            <div class="listcontent catcolortop1 catcolorbottom1 catcolorright1">
                 <div>
-                <div class="box14" shopitemid="465">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
-                <div class="divider catcolorbottom1"></div>
-                <div class="box14" shopitemid="466">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
-                <div class="divider catcolorbottom1"></div>
-                <div class="box14" shopitemid="467">
-                    <a href="javascript:void(0);" style="text-decoration: none;">
-                        <div class="img11 pic" style="text-align: center; overflow: hidden;">
-                            <img src="http://placehold.it/160x160" class="itemImgCen" style="margin-top: 0px;">
-                        </div>
-                        <div class="caption">這是假字這是假字這是假字這是假字這是假字這是假字這是假字這是假字</div>
-                        <div class="price">$99,999</div>
-                    </a>
-                </div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
+                    <div class="divider catcolorbottom1"></div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
+                    <div class="divider catcolorbottom1"></div>
+                    <div class="box14">
+                        <a href="javascript:void(0);" style="text-decoration: none;">
+                            <div class="img11 pic">
+                                <img src="http://placehold.it/135x135?text=商品圖" class="itemImgCen">
+                            </div>
+                            <div class="caption">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
+                            <div class="price">$99,999</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

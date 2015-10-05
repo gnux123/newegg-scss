@@ -1,7 +1,7 @@
 /*#[colors-setting] 各分類顏色樣式
 */
 
-@for $i from 1 through 10 {
+@for $i from 1 through length($color-list) {
     .carousel4 .pagination ul li a.catcolorbg#{$i},
     .catcolorbg#{$i} {
         background-color: nth($color-list, $i);

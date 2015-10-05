@@ -97,9 +97,8 @@
 .header .icon li i {
     background: url(#{$img-path}header-icon.png) no-repeat;
 
-    &.listi1 { background-position: 0 0; }
     @for $i from 1 through 5 {
-        &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+        &.listi#{$i} { background-position: 0 (-25 * ($i - 1))#{px}; }
     }
 }
 
@@ -122,9 +121,8 @@
     i.icon {
     	background-image:url(#{$img-path}header-icon.png);
 
-        &.listi1 { background-position: 0 0; }
         @for $i from 1 through 4 {
-            &.listi#{$i+1} { background-position: 0 (-25 * $i)#{px}; }
+            &.listi#{$i} { background-position: 0 (-25 * ($i - 1))#{px}; }
         }
     }
 
@@ -147,9 +145,8 @@
 
          & > a {
              i.icon {
-                 &.listi1 { background-position: -25px 0; }
                  @for $i from 1 through 5 {
-                     &.listi#{$i+1} { background-position: -25px (-25 * $i)#{px}; }
+                     &.listi#{$i} { background-position: -25px (-25 * ($i - 1))#{px}; }
                  }
              }
 
@@ -203,9 +200,8 @@
     .icon ul li i {
         background: url(#{$img-path}panel-icon.png) no-repeat;
 
-        &.listi1 { background-position: 0 0; }
         @for $i from 1 through 5 {
-            &.listi#{$i+1} { background-position: 0 (-30 * $i)#{px}; }
+            &.listi#{$i} { background-position: 0 (-30 * ($i - 1))#{px}; }
         }
     }
 
