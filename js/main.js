@@ -130,4 +130,38 @@ $(function() {
         $(".qaContent > div").eq(_index + 1).show().siblings(".qaContent > div.TabArea").hide();
     });
 
+    $('.carousel-logo-cates').each(function () {
+        var prev = $(this).find('a.prev');
+        var next = $(this).find('a.next');
+        var elem = $($(this).find('ul'));
+        elem.carouFredSel({
+            circular: false,
+            infinite: false,
+            width: 884,
+            height: 85,
+            items: 6,
+            align: "left",
+            prev: {
+                button: prev,
+                onBefore: function() {
+                    next.show();
+                },
+                onEnd: function (direction) {
+                    prev.hide();
+                }
+            },
+            next: {
+                button: next,
+                onBefore: function() {
+                    prev.show();
+                },
+                onEnd: function () {
+                    next.hide();
+                }
+            },
+            auto: false
+        });
+        prev.hide();
+    });
+
 });

@@ -234,110 +234,68 @@
 
 */
 
-.section3 {
-    @include float(left);
-    @include pie-clearfix;
-    position: relative;
-    left:50%;
-    margin-left: -500px;
-    width:1000px;
-    height: auto;
-
-    .group,
-    .group2,
-    .group3 {
-        @include float(left);
-    }
-
-    .group {
-    	width: 414px;
-    	margin-left: 93px;
-    }
-
-    .group2 {
-        margin-top:65px;
-        width: 275px;
-    }
-
-    .group3 { width: 502px; }
-
-
-    .section-bg {
-        margin-bottom:-65px;
-    }
-}
-
 //group2
-.group2 {
-    .box11 {
-        @include float(left);
-        width: 274px;
-        height: 80px;
+.group2 .box11 {
+    @include float(left);
+    width: 274px;
+    height: 80px;
+    overflow: hidden;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+
+    .caption4,
+    .price {
+        @include float(right);
+        width: 160px;
         overflow: hidden;
-        border-width: 0 1px 0 0;
-        border-style: solid;
+        margin-right:5px;
+        padding:0;
 
-        .caption4,
-        .price {
-            @include float(right);
-            width: 160px;
-            overflow: hidden;
-            margin-right:5px;
-            padding:0;
+        @include fontSize($defFont);
+        line-height: 18px;
+        text-align: right;
+    }
 
-            @include fontSize($defFont);
-            line-height: 18px;
-            text-align: right;
-        }
+    .caption4 {
+        height: 54px;
+        color: $font-color;
 
-        .caption4 {
-            height: 54px;
+        white-space: pre-line;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
 
+    .price {
+        margin-top: 10px;
+        height: 22px;
 
-            color: #666;
-
-            white-space: pre-line;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-
-        .price {
-            margin-top: 10px;
-            height: 22px;
-
-            color: #C94141;
-        }
+        color: $font-red-color;
     }
 }
 
 //group3
-.group3 {
-    .box12 {
-        position: relative;
-        z-index:2;
+.group3 .box12 {
+    position: relative;
+    z-index:2;
+    top:0;
+}
+
+.group3 .box16 {
+    position: relative;
+    width: 222px;
+    overflow:hidden;
+    @include pie-clearfix;
+
+    & > .divider {
+        position: absolute;
+        z-index:1;
         top:0;
+        right:-1px;
+        height: 100%;
     }
 
-    .box16 {
-        position: relative;
-        width: 222px;
-        overflow:hidden;
-        @include pie-clearfix;
-
-        .box12 { top: -7px; }
-
-        & > .divider {
-            position: absolute;
-            z-index:1;
-            top:0;
-            right:-1px;
-            height: 100%;
-        }
-
-        & + .box16 { width: 223px; }
-    }
-
+    & + .box16 { width: 223px; }
 }
 
 //carousel3 has not show
@@ -359,11 +317,11 @@
 	width: 264px;
 	height: 125px;
 	background-repeat: no-repeat;
-}
 
-@for $i from 1 through 9 {
-    .section-bg-img#{$i} {
-        background-image: url(#{$img-path}section-bg-#{$i}.png);
+    @for $i from 1 through 9 {
+        .section-bg-img#{$i} {
+            background-image: url(#{$img-path}section-bg-#{$i}.png);
+        }
     }
 }
 
@@ -484,22 +442,50 @@
     }
 }
 
-
+//layout settings
 .section3 {
-	position: relative;
-	margin-top: 40px;
-	padding-bottom: 100px;
+    @include float(left);
+    @include pie-clearfix;
+    position: relative;
+    left:50%;
+    width:1000px;
+    height: auto;
+    margin:40px 0px 0px -500px;
+    padding-bottom: 100px;
 
-    .section-bg { display: none; }
-	.group2 { margin-top:0; }
+    .group,
+    .group2,
+    .group3 {
+        @include float(left);
+		overflow: hidden;
+    }
 
+    .group {
+    	width: 414px;
+    	margin-left: 93px;
+    }
 
     .group2,
-	.group2 + .group3 {
+	.group3 {
 		height: 640px;
-		overflow: hidden;
 	}
 
+    .group2 { width: 275px; }
+
+    .group3 {
+        width: 491px;
+    	@include pie-clearfix;
+    }
+
+    .section-bg {
+        display: none;
+        margin-bottom:-65px;
+    }
+}
+
+
+
+.section3 {
     .group2 .box11,
 	.group3 .box16 {
 		.box12,
@@ -546,9 +532,6 @@
 	}
 
     .group2 + .group3 {
-		width: 491px;
-		@include pie-clearfix;
-
 		.box13 {
 			width: 346px;
 			height: 320px;
@@ -736,6 +719,7 @@
                 <div class="price">$999,999</div>
             </div>
         </div>
+
         <div class="group3">
             <div class="box15 catcolorbg1">
                 <div class="title catcolortxt1">館別名稱</div>
@@ -777,6 +761,40 @@
                 <div class="caption4">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</div>
                 <div class="price">$999,999</div>
             </div>
+        </div>
+
+        <div class="carousel-logo-wall carousel-logo-cates catcolortop1 catcolorbottom1 catcolorleft1 catcolorright1">
+            <ul id="carousel-logo">
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+                <li class="pic">
+                   <a href="javascript:void(0);"><img src="http://placehold.it/130x65?text=LOGO圖"></a>
+                </li>
+            </ul>
+            <a id="prev1" class="prev catcolorbg1 catcolorleft1" href="javascript:void(0);">&lt; </a>
+            <a id="next1" class="next catcolorbg1 catcolorright1" href="javascript:void(0);">&gt; </a>
         </div>
 
         <div class="carousel4 catcolorleft1">
@@ -886,6 +904,88 @@
     .next { right: 0; }
 
 }
+
+
+//carousel-logo-wall
+.carousel-logo-wall {
+	padding: 0 40px;
+	background: #fff;
+	overflow: hidden;
+
+	border-width: 1px;
+	border-style: solid;
+
+	li {
+		@include float(left);
+		background: #fff;
+		overflow: hidden;
+		border-left: 1px dashed #d5d5d5;
+
+
+		text-align: center;
+
+		&:first-child { border-left: 0; }
+
+		& > img {
+			height: 100%;
+		}
+	}
+
+	.prev,
+	.next {
+		position: absolute;
+		top:0;
+		display: block;
+		width: 40px;
+		height: 0;
+		padding-top: 85px;
+		overflow: hidden;
+		margin: 0;
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			margin: -15px 0 0 -15px;
+			content: "";
+			display: block;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			background: url(#{$img-path}Icon/Close.png) center no-repeat;
+		}
+
+
+
+	}
+	.prev {
+		left:0px;
+		&:before { @include rotate(-90deg); }
+
+	}
+
+	.next {
+		right: 0px;
+		&:before { @include rotate(90deg); }
+	}
+}
+
+.carousel-logo-cates {
+	position: absolute;
+	right:33px;
+	bottom:16px;
+	width: 885px;
+	height: 84px;
+
+	li {
+		width: 146.5px;
+		height: 65px;
+		margin:10px 0;
+
+	}
+}
+
+
 
 /*#[orther components]其他元件
 
