@@ -200,7 +200,8 @@
 }
 
 
-/*#[EditPassword] 密碼修改
+/*#帳號及密碼修改
+##[EditPassword] 密碼修改
 
     <div class="serviceContentArea">
         <div class="serviceContentBox">
@@ -273,6 +274,30 @@
         height: 20px;
     }
 }
+
+/*##[EditAccount]帳號修改
+
+    <div class="serviceContentArea">
+        <div class="serviceContentBox">
+            <div class="Tit ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>帳號修改</div>
+            <div class="service_contentForm">
+                <div class="service_contentList">
+                    <div class="tit">帳號修改</div>
+                    <div class="txt">
+                        <input type="text" id="account_email" placeholder="請輸入正確E-mail">
+                        <p class="gray">
+                            ※新蛋全球生活網將以此帳號與您聯繫，請務必填寫正確的E-mail信箱。
+                    </p></div>
+                </div>
+            </div>
+            <div class="btmBtnArea">
+                <input type="button" id="submitdata" value="確認" class="btn btn-submit">
+                <input type="button" value="取消" class="btn btn-cancel">
+            </div>
+        </div>
+    </div>
+
+*/
 
 
 /*#[AskQuestion]問答中心
@@ -574,28 +599,3 @@
     }
 
 }
-
-
-/*#[EditAccount]帳號修改
-
-    <div class="serviceContentArea">
-        <div class="serviceContentBox">
-            <div class="Tit ClassTit"><i class="icon ServiceIcon UpdateInformation-2"></i>帳號修改</div>
-            <div class="service_contentForm">
-                <div class="service_contentList">
-                    <div class="tit">帳號修改</div>
-                    <div class="txt">
-                        <input type="text" id="account_email" placeholder="請輸入正確E-mail">
-                        <p class="gray">
-                            ※新蛋全球生活網將以此帳號與您聯繫，請務必填寫正確的E-mail信箱。
-                    </p></div>
-                </div>
-            </div>
-            <div class="btmBtnArea">
-                <input type="button" id="submitdata" value="確認" class="btn btn-submit">
-                <input type="button" value="取消" class="btn btn-cancel">
-            </div>
-        </div>
-    </div>
-
-*/

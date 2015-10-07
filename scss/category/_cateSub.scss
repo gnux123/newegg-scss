@@ -1,6 +1,80 @@
 /*#[Sub-cates]次分類頁(商品列表頁)
 
-##[categoryTopBar]商品排序模組
+##[categoryTopBanner]
+    <div class="mainPadding">
+        <div id="bannerhead">
+            <div class="banner2-head catcolorbottom11">館內分類標題</div>
+            <div class="categoryBanner banner2" id="categoryBanner" data-url="/Category/CategoryBanner?categoryID=50">
+                <div id="starItemTitle" class="catcolorbg11"></div>
+                <ul class="list">
+                    <li class="box">
+                        <div class="pic img7">
+                            <a href="javascript:void(0);"><img src="http://placehold.it/266x266?text=商品圖" alt="" title="" class="itemImgCen"></a>
+                        </div>
+                        <div class="txt">
+                            <a href="javascript:void(0);">
+                                <h3 class="banner2-caption" title=""></h3>
+                                <span class="banner2-price">$99,999</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic img7">
+                            <a href="javascript:void(0);"><img src="http://placehold.it/266x266?text=商品圖" alt="" title="" class="itemImgCen"></a>
+                        </div>
+                        <div class="txt">
+                            <a href="javascript:void(0);">
+                                <h3 class="banner2-caption" title=""></h3>
+                                <span class="banner2-price">$99,999</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic img7">
+                            <a href="javascript:void(0);"><img src="http://placehold.it/266x266?text=商品圖" alt="" title="" class="itemImgCen"></a>
+                        </div>
+                        <div class="txt">
+                            <a href="javascript:void(0);">
+                                <h3 class="banner2-caption" title=""></h3>
+                                <span class="banner2-price">$99,999</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="pic img7">
+                            <a href="javascript:void(0);"><img src="http://placehold.it/266x266?text=商品圖" alt="" title="" class="itemImgCen"></a>
+                        </div>
+                        <div class="txt">
+                            <a href="javascript:void(0);">
+                                <h3 class="banner2-caption" title=""></h3>
+                                <span class="banner2-price">$99,999</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="banner2-tab"></div>
+            </div>
+    	</div>
+    </div>
+
+*/
+
+.banner2-head {
+    width: 100%;
+    height: 30px;
+    border-bottom: 5px solid;
+    padding-top: 10px;
+
+
+    @include fontSize($defFont + 6);
+    font-weight: bold;
+}
+
+
+
+
+
+/*##[categoryTopBar]商品排序模組
 
     <div class="categoryTopBar">
         <div class="navOrder categoryOrder">
