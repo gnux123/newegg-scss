@@ -91,7 +91,7 @@ $chooseAreaWidth:1176px;
 	.chooseBox {
 		@include clearAfter;
 		position:relative;
-		width:$chooseAreaWidth;
+		/*width:100%;*/
 		height:$chooseBoxHeight;
 		border:1px solid #698eb8;
 		border-bottom-width:3px;

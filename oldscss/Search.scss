@@ -64,10 +64,16 @@ $searchListAreaWidth:($RWDMaxWidth - $searchFilterAreaWidth - 15);
 		.box {
 			$boxNum:4; /*一列幾個*/
 			$searchBoxMargin:10px; /*彼此間距*/
-			$searchBoxWidth:($searchListAreaWidth - $searchBoxMargin * $boxNum - ($boxNum * 2)) / 4; /*寬度(innnerWidth) = (總寬-間距-邊框)/4*/
-			margin-left:$searchBoxMargin;
+			$searchBoxWidth:($searchListAreaWidth - $searchBoxMargin * $boxNum - ($boxNum * 2)) / 3; /*寬度(innnerWidth) = (總寬-間距-邊框)/3*/
 			margin-bottom:10px;
-			width:$searchBoxWidth;
-		}
+			/*margin-left:$searchBoxMargin;
+			width:$searchBoxWidth;*/
+			margin-left:1%;
+			width:32%;
+		}	
 	}
+}
+
+.searchBox .SpecialDeal {
+	height:18px;
 }

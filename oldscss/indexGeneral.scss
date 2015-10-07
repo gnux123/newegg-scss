@@ -30,7 +30,6 @@
 	.tab {
 		margin:0 6px;
 		height:36px;
-		background-color:rgba(217, 217, 217, .8);
 		ul {
 			@include clearAfter;
 		}
@@ -40,8 +39,8 @@
 			width:16.6%;
 			height:26px;
 			color: #fff;
-			background:rgba(217, 217, 217, .8);
-			border-left:2px solid rgba(217, 217, 217, .8);
+			background:#9d9d9d;
+			border-left:2px solid #9d9d9d;
 			text-decoration: none;
 			font-size: 15px;
 			font-weight: bold;
@@ -75,9 +74,9 @@
 				height: 0;
 				border-style: solid;
 				border-width: 0 4px 5px 4px;
-				border-color: transparent transparent rgba(217, 217, 217, .8) transparent;
+				border-color: transparent transparent #9d9d9d transparent;
 				line-height: 0px;
-				_border-color: #000 #000 rgba(217, 217, 217, .8) #000;
+				_border-color: #000 #000 #9d9d9d #000;
 				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
 			}
 		}
@@ -104,15 +103,20 @@ $indexlimitedWidth:205px;
 .limitedArea {
 	float:left;
 	width:$indexlimitedWidth;
+	background:#FFFFFF;
+	cursor: pointer;
 	.tit {
-		width: 205px;
-		height: 50px;
+		width: 203px;
+		height: 47px;
 		color: #fff;
-		background: url(/Themes/img/limitedAreaBG.jpg);
+		background: url(/Themes/img/limitedAreaBG.jpg) no-repeat -1px top;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 23px;
 		text-align: center;
 		line-height: 50px;
+		border: 2px solid #C95B66;
+		border-bottom: 0;
+		border-top: 0;
 		img {  
 			vertical-align: middle;
 			padding: 0 10px 7px 0;
@@ -120,23 +124,81 @@ $indexlimitedWidth:205px;
 	}
 	.limited {
 		width:203px;
-		height:301px;
-		border:1px solid #C95B66;
+		height:307px;
+		border:2px solid #C95B66;
 		border-top:0;
 		.box {
 			margin:0;
 			border:0;
-			discount{
-				
+			position: relative;
+			width: 100%;
+			.discount {
+			    position: absolute;
+				top: 0;
+				left: 0;
+				/*background: url(/Themes/img/NewEggFlash/FlashDiscountHomeBg.png) no-repeat top -2px left -1px;*/
+				width: 78px;
+				height: 87px;
+				z-index: 100;	
+				p {
+					position: absolute;
+					top: 3px;
+					left: 6px;
+					font-size: 13px; 
+					border-bottom: 2px solid #EDBFC3;
+					font-weight: bolder;
+					span {
+						left: -2px;
+						position: relative;
+						font-size: 30px;	
+						color: #CD4754;
+						font-weight: normal;
+					}
+				}
+			}
+			.TimeHeight {
+				height:40px;
+				.Time {
+					.countdowntxt {
+						margin-top:3px;
+						width: 12px;
+						float: right;
+						font-size: 13px; 
+						white-space: normal;
+						margin-right: 5px;
+						font-weight: bolder;
+						padding: 1px 0;
+					}
+					.countdown {
+						max-width: 130px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-align: right;
+						float: right;
+						margin-top: 3px;	
+						font-size: 18px;
+						.countdownnumber {
+							float: right;
+						}
+						span {display:inline-block; margin:0 1px;padding: 5px 0px;}
+						.hour , .minute , .second {
+							background: #929292;
+							padding: 5px 3px;
+							border-radius: 4px;
+							display:inline-block;
+							color: #FFFFFF;
+						}
+					}
+				}
 			}
 			h3 {
-				height:54px;
+				height:37px;
 				line-height:18px;
 				white-space:pre-line;
 			}
-			$limitedPicWidth:180px;
+			$limitedPicWidth:170px;
 			.pic {
-				margin:15px auto 8px;
+				margin:10px auto 5px;
 				width:$limitedPicWidth;
 				height:$limitedPicWidth;
 				text-align:center;
@@ -148,6 +210,26 @@ $indexlimitedWidth:205px;
 			.txt {
 				margin:0 5px;
 				a,a:hover,a:visited{border-bottom:0;color:inherit;}
+			}
+			.MoreProduct {
+				width: 100%;
+				height: 16px;
+				background-color: #DB7E87;
+				text-align: right;
+				color: #FFFFFF;
+				padding: 2px 0;
+				font-size: 14px;
+				cursor: pointer;
+				.doublearrow {
+				    display: block;
+					width: 13px;
+					height: 11px;
+					background: url(/Themes/img/doublearrow.png) no-repeat;
+					float: right;
+					margin-top: 2px;
+					margin-right: 5px;
+				}
+				p {float: right; line-height: 16px;}
 			}
 			.price {
 				float:right;
@@ -167,56 +249,74 @@ $mainClassificationdMinWidth:($RWDMinWidth - $indexlimitedWidth - 15);
 .mainClassification {
 	float: right;
 	width:$mainClassificationdMaxWidth;
-	border-left: thin solid #D5D5D5;
-	border-right: thin solid #D5D5D5;
-	border-bottom: thin solid #D5D5D5;
+	border-left:0;
+	border-right:0;
+    border-bottom: 3px solid #EB8A54;
 	@media screen and (max-width: 1280px) {
 		width:$mainClassificationdMinWidth;
 	}
 	.tab {
 		li {
 			float: left;
-			width:($mainClassificationdMaxWidth / 6);
+			width:(($mainClassificationdMaxWidth - 12 ) / 6);
 			height: 38px;
-			color: #000;
+			color: #666666;
 			text-decoration: none;
-			font-size: 18px;
+			font-size: 20px;
 			font-weight: bold;
 			text-align: center;
 			padding:5px 0;
 			line-height: 40px;
 			cursor:pointer;
+			background:#FFFFFF;
+			margin-left: 1px;
+			margin-right: 1px;
+			position: relative;
+				i {
+					overflow: hidden;
+					height: 38px;
+					display: block;
+				}
 			@media screen and (max-width: 1280px) {
-				width:($mainClassificationdMinWidth / 6);
+				width:($mainClassificationdMinWidth / 6)-2;
 			}
 			&:hover, &.active {
 				height: 38px;
 				color: #fff;
-				background-color: #D6AE7A;
+				background-color: #EB8A54;
+				.tabarrow {
+					top: 50px;
+					left: 68px;
+					border-right: 10px solid transparent;
+					border-left: 10px solid transparent;
+					border-top: 15px solid #EB8A54;
+					position: absolute;
+					display: block;
+				}
 			}
 			&+li {
 				&:hover, &.active {
-					background:#87CDCF;
+					background:#EB8A54;
 				}
 			}
 			&+li+li {
 				&:hover, &.active {
-					background:#82B964;
+					background:#EB8A54;
 				}
 			}
 			&+li+li+li {
 				&:hover, &.active {
-					background:#669BD3;
+					background:#EB8A54;
 				}
 			}
 			&+li+li+li+li {
 				&:hover, &.active {
-					background:#C4C2C2;
+					background:#EB8A54;
 				}
 			}
 			&+li+li+li+li+li {
 				&:hover, &.active {
-					background:#EC7375;
+					background:#EB8A54;
 				}
 			}
 			&+li+li+li+li+li+li {
@@ -229,6 +329,7 @@ $mainClassificationdMinWidth:($RWDMinWidth - $indexlimitedWidth - 15);
 	.boxArea {
 		@include clearAfter;
 		padding:20px 0;
+		background-color: #FFFFFF;
 		ul {
 			width:100%;
 			height:260px;
@@ -239,16 +340,17 @@ $mainClassificationdMinWidth:($RWDMinWidth - $indexlimitedWidth - 15);
 		$mainClassPicWidth:200px;
 		width:$mainClassPicWidth;
 		/*margin:20px 0 0 20px;*/
-		padding-left:20px;
+		padding-left:18px;
 		border:0;
 		+.box {
-			margin-left:20px;
-			border-left:1px solid #d5d5d5;
+			margin-left:20px; 
+			border-left:1px dashed #d5d5d5;
 		}
 		.pic {
 			margin:0;
 			width:$mainClassPicWidth;
 			height:$mainClassPicWidth;
+			overflow:hidden;
 			img {
 				max-width:$mainClassPicWidth;
 				max-height:$mainClassPicWidth;
@@ -256,6 +358,7 @@ $mainClassificationdMinWidth:($RWDMinWidth - $indexlimitedWidth - 15);
 		}
 		.txt {
 			height:60px;
+			text-align: left;
 		}
 		h3 {
 		}

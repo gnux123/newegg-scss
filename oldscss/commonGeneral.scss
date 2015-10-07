@@ -1,9 +1,14 @@
-﻿//out: ../css/commonGeneral.css, compress: true,﻿  includePath: includes/﻿
+﻿//compileCompressed: ../css/commonGeneral.css,﻿  includePath: includes/﻿
+@import "compass";
 @import "compass/reset";
 @import "_importSCSS";
 
 /*基本框架*/
+html {
+	min-width:1024px;
+}
 body {
+	min-width:1024px;
 	font-family:微軟正黑體;
 	color:#666;
 }
@@ -32,11 +37,11 @@ a {
 	padding-left:$RWDMainPadding;
 	padding-right:$RWDRightPadding;
 	width:$RWDMaxWidth;
-	// @media screen and (max-width: 1280px) {
-	// 	padding-left:15px;/*手機修正*/
-	// 	padding-right:0;/*手機修正*/
-	// 	width:$RWDMinWidth;
-	// }
+	@media screen and (max-width: 1280px) {
+		padding-left:10px;/*手機修正*/
+		padding-right:0;/*手機修正*/
+		width:$RWDMinWidth;
+	}
 }
 
 /*所有內頁共同Padding*/
@@ -86,6 +91,12 @@ div.bannerLoad {
 	}
 	.welcome {
 		color:#F37225;
+	}
+	.headerBN {
+		margin-left:11px;
+		width:300px;
+		height:52px;
+		overflow:hidden;
 	}
 	.quickMenu {
 		@include clearAfter;
@@ -221,8 +232,12 @@ div.bannerLoad {
 	@extend .clear;
 	@include clearAfter;
 	height:50px;
-	.ad {
+	.topperSpec {
 		@include clearAfter;
+		float:left;
+		width:206px;
+		height:50px;
+
 		img {
 			float:left;
 		}
@@ -247,7 +262,7 @@ div.bannerLoad {
 .menudropDown {
 	position:relative;
 	z-index:9;
-	padding:5px 0;
+	padding:5px 0 4px;
 	height:16px;
 	overflow:hidden;
 	background-image:url(/Themes/img/Icon/arrowUpDown.png);
@@ -308,12 +323,12 @@ div.bannerLoad {
 			background:none;
 		}
 		.count {
-			margin-left:2px;
+			margin-left:3px;
 			width:100%;
 			height:100%;
 			text-align:center;
 			line-height:30px;
-			font-size:20px;
+			font-size:16px;
 			color:#fff;
 		}
 		.service {
@@ -325,13 +340,15 @@ div.bannerLoad {
 			@include border-bottom-left-radius(5px);
 			@include box-shadow(0 0 2px #666);
 			.text {
-				padding-left:19px;
+				padding-left:13px;
+				padding-top:5px;
 				padding-bottom:5px;
-				line-height:22px;
+				line-height:18px;
 			}
 			.pageTop {
-				border-top:1px solid #fff;
-				padding:5px 0 0 12px;
+				border-top:1px solid #f7d0bb;
+				padding:5px 0 0 4px;
+				text-align: center;
 				span{
 					color:#fff;
 					line-height:20px;
@@ -340,6 +357,7 @@ div.bannerLoad {
 					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 					filter: alpha(opacity = 60);
 					opacity: 0.6;
+					font-size: 14px;
 					&:hover{
 						-webkit-opacity: 1;
 						-moz-opacity: 1;
@@ -349,7 +367,7 @@ div.bannerLoad {
 					}
 				}
 				.icon{
-					padding-left: 10px;
+					padding-left: 0px;
 				}
 			}
 		}
@@ -407,15 +425,38 @@ div.bannerLoad {
 		float:left;
 		margin:50px 0 0 50px;
 		width:260px;
+		overflow:hidden;
 		text-align:center;
 		.map {
 		}
 		.code {
-			margin:20px;
+			@include clearAfter;
+			float:right;
+			height:157px;
+			.ver {
+				float:left;
+				margin:20px 10px;
+				a, a:hover {
+					border:0;
+					font-size:14px;
+					text-decoration:none;
+					font-weight:bold;
+					color:#172d4b;
+				}
+				p {
+					margin-bottom:5px;
+					text-align:center;
+				}
+				img {
+					width:95px;
+					height:95px;
+				}
+			}
 		}
 	}
 	.address {
 		text-align:center;
+		line-height: 25px;
 	}
 	/*Back to top*/
 	.pageTop {
@@ -438,4 +479,161 @@ div.bannerLoad {
 
 		}
 	}
+}
+
+/*Elevator*/
+.elevator {
+    display: none;
+	position: fixed;
+	left: 50%;
+	z-index: 2;
+	margin-left:-650px;
+	width: 35px;
+	height: auto;
+	a, a:hover {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border:0;
+	}
+	.menu {
+		font-size: 13px;
+		line-height: 1.2em;
+		text-align: center;
+	}
+	.up, .down {
+		.text {
+			background:#a0a0a0;
+			border:1px solid #adadad;
+			font-size: 14px;
+			color:#fff;
+			&:hover {
+				background:#787878;
+				border-color:#787878;
+			}
+			&:before, &:after {
+				content:" ";
+				display:block;
+				background-repeat:no-repeat;
+				background-position:center;
+			}
+		}
+	}
+	.up .text {
+		&:before {
+			height: 12px;
+			background-image:url(/Themes/img/Icon/navTop.png);
+		}
+	}
+	.down .text {
+		&:after {
+			height: 12px;
+			background-image:url(/Themes/img/Icon/navDown.png);
+		}
+	}
+	.text {
+		margin-bottom: 5px;
+		padding-top:2px;
+		width: 35px;
+		height: (35px - 2 - 2);/*扣除paddingTop和border*/
+		overflow:hidden;
+		background:#e6e6e6;
+		border:1px solid #ccc;
+		color:#737373;
+		&:hover, &.active {
+			background:#eb8a54;
+			border-color:#eb8a54;
+			a {
+				color:#fff;
+			}
+		}
+		a {
+			color:#737373;
+		}
+	}
+}
+
+//writer:vincent.c.su
+//sampleAddress: none
+//describe: logo牆for首頁及櫥窗頁面使用
+.carousel-logo-wall {
+	padding: 0 40px;
+	background: #fff;
+	overflow: hidden;
+
+	border-width: 1px;
+	border-style: solid;
+
+	li {
+		@include float(left);
+		background: #fff;
+		overflow: hidden;
+		border-left: 1px dashed #d5d5d5;
+
+
+		text-align: center;
+
+		&:first-child { border-left: 0; }
+
+		& > img {
+			height: 100%;
+		}
+	}
+
+	.prev,
+	.next {
+		position: absolute;
+		top:0;
+		display: block;
+		width: 40px;
+		height: 0;
+		padding-top: 85px;
+		overflow: hidden;
+		margin: 0;
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			margin: -15px 0 0 -15px;
+			content: "";
+			display: block;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			background: url(/Themes/img/Icon/Close.png) center no-repeat;
+		}
+
+
+
+	}
+	.prev {
+		left:0px;
+		&:before { @include rotate(-90deg); }
+
+	}
+
+	.next {
+		right: 0px;
+		&:before { @include rotate(90deg); }
+	}
+}
+
+.carousel-logo-index {
+	@include float(left);
+	position: relative;
+	margin-top:20px;
+	width: 1094px;
+	height:84px;
+	border-color: #d5d5d5;
+
+	li {
+		width: 135.8px;
+		height: 60px;
+		margin:12.5px 0;
+
+	}
+
+	.prev,
+	.next { background: #d5d5d5; }
 }

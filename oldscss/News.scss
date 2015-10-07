@@ -38,6 +38,14 @@
 	float:right;
 	width:847px;
 	@include clearAfter;
+	.News {
+		.ArticPic {
+			img {    
+				max-width: 194px;
+				max-height: 145px;
+			}
+		}
+	} 
 }
 $darkGray:#373d3f;
 $gray:#808183;

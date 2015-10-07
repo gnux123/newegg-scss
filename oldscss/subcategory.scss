@@ -1,21 +1,48 @@
-﻿@charset "utf-8";
+//compileCompressed: ../css/subcategory.css, includePath: includes/
 @import "_importSCSS";
 
+//writter: [vincent]
+//describe: subCategory banner2 new listst settings
+//sampleAddress: NA
+
+$color-lists: 	   #3e3a39 #c07d2e #de7884 #75852e #c03f40 #80b870 #248c6a #e39300 #63b2af #339ecf #0757a2 #162c84 #e95b32;
+$color-lists-lite: #b2b0b0 #e6cbab #f2c9ce #c8ceab #e6b2b3 #cde3c1 #a7d1c3 #f4d499 #c1e0df #add8ec #9cbcda #a2abce #f6bdad;
+//設計風尚.國際名品.美妝保養.保健養生.樂活時尚.運動健身.戶外休旅.親子寵物.居家用品.生活家電.數位3C.電腦周邊.美蛋直購
+
+@for $i from 1 through length($color-lists) {
+	.catcolorbg#{$i} {
+		background-color: nth($color-lists, $i);
+	}
+
+	.catcolortxt#{$i},
+	.catcolortop#{$i},
+	.catcolorright#{$i},
+	.catcolorbottom#{$i},
+	.catcolorleft#{$i} {
+		color: nth($color-lists, $i);
+	}
+}
+
 /*Banner2*/
-.banner2 {
+.banner2 > div {
 	/*float: left;
 	width: 1174px;
 	height: 427px;
 	border-left: thin solid #D5D5D5;
 	border-right: thin solid #D5D5D5;*/
+	width: 100%;
+    padding: 2.5px 0 5px 20px;
+
+	color: #fff;
+	letter-spacing: 0.5px;
 }
 .banner2-head {
 	/*float: left;
 	width: 1176px;*/
 	height: 30px;
-	border-bottom: 5px solid #EC7375;
+	border-bottom: 5px solid;
+	padding-top: 10px;
 	font-size: 22px;
-	color: #EC7375;
 	font-weight: bold;
 }
 .banner2-tab ul {
@@ -53,6 +80,22 @@
     height: 340px;
     overflow:hidden;
     border:1px solid #D5D5D5;
+	&.singleImg {
+		position:relative;
+		padding:0;
+		height:410px;
+		border:0;
+		li {
+			margin:0;
+			float:none;
+			width:1176px;
+			overflow:hidden;
+			img {
+				max-width:1176px;
+				max-height:410px;
+			}
+		}
+	}
 }
 .banner2 .list:after {
     content:" ";
@@ -67,7 +110,7 @@
 	margin-left: 11px;
 	margin-right: 11px;
 	float: left;
-    
+
 }
 .banner2 .list .box {
     width:266px;

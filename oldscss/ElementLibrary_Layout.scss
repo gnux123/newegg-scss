@@ -35,7 +35,7 @@ h3{/*For 產品名稱*/
     height:45px;
     line-height:54px;
     padding-left:8px;
-	margin-left: -58.5px;
+	margin-left: -58.5px; 
 	a {
 		margin:0 3px;
 	}
@@ -82,7 +82,7 @@ $BorderWidth:1px;
 }
 .Tab,.TabNoHover{/*單一無邊線頁籤 和 無hover變色的頁籤 樣式*/
 	list-style:none;
-	color:#bfbfbf;
+	color:#666;
 	line-height: 45px;
 	width:25%;/*有4個tab*/
 	text-align:center;
@@ -95,7 +95,7 @@ $BorderWidth:1px;
 	a,a:visited{
 		line-height: 45px;
 		display:block;
-		color:#bfbfbf;
+		color:#666;
 		border-bottom:0;
 	}
 	a:hover{color:#fff;border-bottom:0;}
@@ -324,6 +324,7 @@ div.SpecialDeal{
 		margin-right:5px;
 		@include border-radius(5px);
 	}
+	span.SpecialDealClass0{background:#b4b4b4;color:#fff;line-height: 17px;font-size: 13px;}
 	span.SpecialDealClass1-1{background:#ffbe33;color:#fff;}/*實心 滿額折(現折)*/
 	span.SpecialDealClass1-2{border:1px solid #ffbe33;color:#ffbe33;}/*空心 滿額折(現折*/
 	span.SpecialDealClass2-1{background:#e75968;color:#fff;cursor:pointer;}/*實心 折價券*/
@@ -410,13 +411,33 @@ p.ChoseStyle{
 		cursor:pointer;
 		@include transition(100);
 	}
-	span:hover,span.selected{color:#fff;background:#f78d51;}/*被選中時的樣式*/
+	/*被選中時的樣式*/
+	@mixin focusStyle {
+		background:#f78d51;
+		color:#fff;
+	}
+	/*缺貨時的樣式*/
+	@mixin grayStyle {
+		background:none;
+		color:#ccc;
+	}
+	span:hover,span.selected{@include focusStyle;}
+	span.gray {
+		@include grayStyle;
+		&:hover {
+			@include focusStyle;
+}
+		&.selected {
+			@include focusStyle;
+		}
+	}
 }
 
 /*會員中心最上方會有的單元說明方框*/
 .TopExplanationArea{
-	margin-top:-10px;
-	height:112px;
+	margin-top:-30px;
+	padding-top:40px;
+	height:72px;
 	width:100%;
 	min-width: $RWDMinWidth;
 	background: url(/Themes/img/ElementLibrary/ExpEgg.png) no-repeat top right;
@@ -555,6 +576,22 @@ ul.OneLine{
   height:200px;
   background:#fff;
   text-align: center;
+
+  img {
+	  position: relative;
+	  top:50%;
+	  margin:0 auto;
+  	  margin-top:-91px;
+  }
+
+  p.tips {
+	  font-size:30px;
+	  font-weight: bold;
+	  letter-spacing: 1px;
+	  line-height:200px;
+  }
+
+
 }
 
 .LightBoxMsg{display:none;position:fixed;}
@@ -568,7 +605,7 @@ ul.OneLine{
 	background-color:#fff;
 	border:3px solid #ec8b54;
 	.MsgContent{
-		margin:60px 50px 30px 50px;
+		margin:0px 50px 30px 50px;
 		text-align:center;
 		line-height:1.2em;
 		font-size:22px;

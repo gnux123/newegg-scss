@@ -1,191 +1,27 @@
-﻿/*CatSec 9*/
-/*設計風尚*/
-.catcolorbg1 {
-	background-color: #3E3A39;
-}
-.catcolortxt1 {
-	color: #3E3A39;
-}
-.catcolortop1 {
-	color: #3E3A39;
-}
-.catcolorright1 {
-	color: #3E3A39;
-}
-.catcolorbottom1 {
-	color: #3E3A39;
-}
-.catcolorleft1 {
-	color: #3E3A39;
-}
-/*國際精品*/
-.catcolorbg2 {
-	background-color: #C07D2E;
-}
-.catcolortxt2 {
-	color: #C07D2E;
-}
-.catcolortop2 {
-	color: #C07D2E;
-}
-.catcolorright2 {
-	color: #C07D2E;
-}
-.catcolorbottom2 {
-	color: #C07D2E;
-}
-.catcolorleft2 {
-	color: #C07D2E;
-}
-/*家電用品*/
-.catcolorbg3 {
-	background-color: #339ECF;
-}
-.catcolortxt3 {
-	color: #339ECF;
-}
-.catcolortop3 {
-	color: #339ECF;
-}
-.catcolorright3 {
-	color: #339ECF;
-}
-.catcolorbottom3 {
-	color: #339ECF;
-}
-.catcolorleft3 {
-	color: #339ECF;
-}
-/*居家生活*/
-.catcolorbg4 {
-	background-color: #63B2AF;
-}
-.catcolortxt4 {
-	color: #63B2AF;
-}
-.catcolortop4 {
-	color: #63B2AF;
-}
-.catcolorright4 {
-	color: #63B2AF;
-}
-.catcolorbottom4 {
-	color: #63B2AF;
-}
-.catcolorleft4 {
-	color: #63B2AF;
-}
-/*運動健身*/
-.catcolorbg5 {
-	background-color: #82B964;
-}
-.catcolortxt5 {
-	color: #82B964;
-}
-.catcolortop5 {
-	color: #82B964;
-}
-.catcolorright5 {
-	color: #82B964;
-}
-.catcolorbottom5 {
-	color: #82B964;
-}
-.catcolorleft5 {
-	color: #82B964;
-}
-/*戶外休旅*/
-.catcolorbg6 {
-	background-color: #258D6A;
-}
-.catcolortxt6 {
-	color: #258D6A;
-}
-.catcolortop6 {
-	color: #258D6A;
-}
-.catcolorright6 {
-	color: #258D6A;
-}
-.catcolorbottom6 {
-	color: #258D6A;
-}
-.catcolorleft6 {
-	color: #258D6A;
-}
-/*電腦週邊*/
-.catcolorbg7 {
-	background-color: #122B65;
-}
-.catcolortxt7 {
-	color: #122B65;
-}
-.catcolortop7 {
-	color: #122B65;
-}
-.catcolorright7 {
-	color: #122B65;
-}
-.catcolorbottom7 {
-	color: #122B65;
-}
-.catcolorleft7 {
-	color: #122B65;
-}
-/*數位3C*/
-.catcolorbg8 {
-	background-color: #0757A2;
-}
-.catcolortxt8 {
-	color: #0757A2;
-}
-.catcolortop8 {
-	color: #0757A2;
-}
-.catcolorright8 {
-	color: #0757A2;
-}
-.catcolorbottom8 {
-	color: #0757A2;
-}
-.catcolorleft8 {
-	color: #0757A2;
-}
-/*好食市集*/
-.catcolorbg9 {
-	background-color: #EA5A32;
-}
-.catcolortxt9 {
-	color: #EA5A32;
-}
-.catcolortop9 {
-	color: #EA5A32;
-}
-.catcolorright9 {
-	color: #EA5A32;
-}
-.catcolorbottom9 {
-	color: #EA5A32;
-}
-.catcolorleft9 {
-	color: #EA5A32;
+//compileCompressed: ../css/category.css, includePath: includes/
+
+//writter: [vincent]
+//describe: category section3 new listst settings
+//sampleAddress: NA
+
+$color-lists: 	   #3e3a39 #c07d2e #de7884 #75852e #c03f40 #80b870 #248c6a #e39300 #63b2af #339ecf #0757a2 #162c84 #e95b32;
+$color-lists-lite: #b2b0b0 #e6cbab #f2c9ce #c8ceab #e6b2b3 #cde3c1 #a7d1c3 #f4d499 #c1e0df #add8ec #9cbcda #a2abce #f6bdad;
+//設計風尚.國際名品.美妝保養.保健養生.樂活時尚.運動健身.戶外休旅.親子寵物.居家用品.生活家電.數位3C.電腦周邊.美蛋直購
+
+@for $i from 1 through length($color-lists) {
+	.catcolorbg#{$i} {
+		background-color: nth($color-lists, $i);
+	}
+
+	.catcolortxt#{$i},
+	.catcolortop#{$i},
+	.catcolorright#{$i},
+	.catcolorbottom#{$i},
+	.catcolorleft#{$i} {
+		color: nth($color-lists, $i);
+	}
 }
 
-/*.catcolortxt9 {
-	color: #EA5A32;
-}
-.catcolortop9 {
-	color: #EA5A32;
-}
-.catcolorright9 {
-	color: #EA5A32;
-}
-.catcolorbottom9 {
-	color: #EA5A32;
-}
-.catcolorleft9 {
-	color: #EA5A32;
-}*/
 /*Banner*/
 .banner {
 	position:relative;
@@ -271,15 +107,15 @@
 .banner-bg {
 	float: left;
 	width: 613px;
-	height: 172px;
-    background-repeat: no-repeat;
+	height: 140px;
+    background-repeat: no-repeat; 
     background-position: 300px 5px;
 	margin-left: -372px;
 	z-index:0;
-	margin-top: 14px;
+	margin-top: 45px;
 	position: absolute;
 }
-.banner-bgcolor {
+.banner-bgcolor { 
 	width: 100%;
 	height: 441px;
 	z-index: -2;
@@ -314,16 +150,25 @@
 .banner-bg-img9 {
 	background-image: url(../img/banner-bg-9.png);
 }
+.banner-bg-img11 {
+	background-image: url(../img/banner-bg-11.png);
+}
+.banner-bg-img12 {
+	background-image: url(../img/banner-bg-12.png);
+}
+.banner-bg-img13 {
+	background-image: url(../img/banner-bg-13.png);
+}
+
 .banner-bg2 {
-	float: left;
-	margin-left: 850px;
-	width: 172px;
-	height: 399px;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 1;
 	position: absolute;
-	margin-top: 150px;
+	top:150px;
+	right: -120px;
+	width: 172px;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-position:center top;
+	z-index: 1;
 }
 .banner-bg2-img1 {
 	background-image: url(../img/banner-bg2-1.png);
@@ -351,6 +196,15 @@
 }
 .banner-bg2-img9 {
 	background-image: url(../img/banner-bg2-9.png);
+}
+.banner-bg2-img11 {
+	background-image: url(../img/banner-bg2-11.png);
+}
+.banner-bg2-img12 {
+	background-image: url(../img/banner-bg2-12.png);
+}
+.banner-bg2-img13 {
+	background-image: url(../img/banner-bg2-13.png);
 }
 .banner-ad {
 	width: 180px;
@@ -406,29 +260,35 @@
 	margin-bottom: 16px;
 }
 .carousel4 .pagination li {
-	margin-bottom: 16px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 10px 0;
+	background-color: #d5d5d5;
 }
 .carousel4 .pagination li a {
+	position: relative;
+	display: block;
 	width: 20px;
 	height: 20px;
 	color: #fff;
-	background-color: #999;
+	//background-color: #d5d5d5;
+
 	text-align: center;
 	line-height: 20px;
-	margin-top: 10px;
+	// margin-top: 10px;
 	text-decoration: none;
-	float: right;
 }
-.carousel4 .pagination li a:hover {
-	width: 20px;
-	height: 20px;
-	color: #fff;
-	text-align: center;
-	line-height: 20px;
-	margin-top: 10px;
-	text-decoration: none;
-	float: right;
-}
+// .carousel4 .pagination li a:hover {
+// 	width: 20px;
+// 	height: 20px;
+// 	color: #fff;
+// 	text-align: center;
+// 	line-height: 20px;
+// 	margin-top: 10px;
+// 	text-decoration: none;
+// 	float: right;
+// }
 .carousel4 .pagination li a.selected {
 	background-color: #80b870;
 }

@@ -1,7 +1,7 @@
 @import "_importSCSS";
 
 .Info{
-	width:1076px;
+	width:1000px;
 	margin:0 auto;
 	&>img{
 		width:100%;
@@ -15,31 +15,29 @@
 	}
 	.Achievement{
 		height:600px;
-		padding-left:118px;
+		/*padding-left:118px;*/
 		img{
 			float:right;
 			width:560px;
 			height:auto;
-			margin-top:80px;
+			margin-top:100px;
 		}
 		.Tit{
 			font-size:27px;
 			padding-top:100px;
 			margin:20px 4em 30px 0;
-			text-indent:-4em;
 		}
 		p{
 			font-size:18px;
 			line-height:30px;
 			margin:20px 4em 20px 0;
-			text-indent:-4em;
 			width:55%;
 		}
 		p:after{
 			content:'';
 			width:130%;
 			height:2px;
-			margin-left:-4em;
+			margin-left:-3em;
 			display:block;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d5d5d5+0,d5d5d5+22&amp;0+1,0.3+4,1+16,0.85+46,0+76 */
 background: -moz-linear-gradient(left,  rgba(213,213,213,0) 0%, rgba(213,213,213,0) 1%, rgba(213,213,213,0.3) 4%, rgba(213,213,213,1) 16%, rgba(213,213,213,0.97) 22%, rgba(213,213,213,0.85) 46%, rgba(213,213,213,0) 76%); /* FF3.6+ */

@@ -108,7 +108,10 @@ $outterWidth:455px;
 		input.btn {
 			width:$register_fillForm_innerWidth;
 			&.btn-signup {
+				background: url("/Themes/img/ShoppingProcess/OrangeBigBtnBG.jpg");
+				height:60px;
 			}
+			&.gray{background:#ccc;}
 			&.btn-pswHide {
 				position:absolute;
 				top:-3px;

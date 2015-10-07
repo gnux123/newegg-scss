@@ -81,8 +81,8 @@ $RWDMaxWidth:($RWDOuterWidth - $RWDMainPadding - $RWDRightPadding);
 			padding-left:0;
 			width:$RWDMinWidth;/*寬1004px*/
 		@media screen and (max-width: 1280px) {
-			padding-left:10px;/*手機修正*/
-			padding-right:0;/*手機修正*/
+			padding-left:10px;
+			padding-right:0;
 		}
 		.mainMenuBox, .pathLink, .bread {
 			margin-left:-58.5px;
@@ -90,7 +90,7 @@ $RWDMaxWidth:($RWDOuterWidth - $RWDMainPadding - $RWDRightPadding);
 				margin-left:0;
 			}
 		}
-}
+	}
 
 /*全RWD頁面專用 ex.首頁/分類頁/次分類頁*/
 @mixin mainPaddingRWD {
@@ -101,8 +101,8 @@ $RWDMaxWidth:($RWDOuterWidth - $RWDMainPadding - $RWDRightPadding);
 		padding-right:$RWDRightPadding;
 		width:$RWDMaxWidth;
 		@media screen and (max-width: 1280px) {
-			padding-left:10px;/*手機修正*/
-			padding-right:0;/*手機修正*/
+			padding-left:10px;
+			padding-right:0;
 			width:$RWDMinWidth;
 		}
 		.mainMenuBox, .pathLink {
@@ -112,24 +112,26 @@ $RWDMaxWidth:($RWDOuterWidth - $RWDMainPadding - $RWDRightPadding);
 
 /*解除頁面寬度內縮 ex.活動頁/閃購頁/關於新蛋網*/
 @mixin mainPaddingRemove {
+	padding:0;
+	width:100%;
+	@media screen and (max-width: 1280px) {
+		margin:0;
 		padding:0;
-		width:100%;
+		width:auto;/*IE*/
+		width:initial;
+	}
+	.mainMenuArea {
+		margin:0 auto;
+		padding-left:$RWDMainPadding;
+		padding-right:$RWDRightPadding;
+		width:$RWDMaxWidth;
 		@media screen and (max-width: 1280px) {
-			padding-left:10px;/*手機修正*/
-			padding-right:0;/*手機修正*/
+			padding-left:0;
+			padding-right:0;
+			width:$RWDMinWidth - 10;
 		}
-		.mainMenuArea {
-			margin:0 auto;
-			padding-left:$RWDMainPadding;
-			padding-right:$RWDRightPadding;
-			width:$RWDMaxWidth;
-			@media screen and (max-width: 1280px) {
-				padding-left:0;
-				padding-right:0;
-				width:$RWDMinWidth;
-			}
-			.mainMenuBox {
-				margin:0;
-			}
-		}
+	}
+	.mainMenuBox, .pathLink, .bread {
+		margin-left:0;
+	}
 }

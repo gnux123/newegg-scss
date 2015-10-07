@@ -1,4 +1,6 @@
-﻿@import "_importSCSS";
+//compileCompressed: ../css/StoreGeneral.css, includePath: includes/
+@import "compass";
+@import "_importSCSS";
 
 .topper {
 	.searchbar {
@@ -6,6 +8,10 @@
 			background:#fff;
 		}
 	}
+}
+
+section a,section a:hover,section a:visited {
+	border-bottom:0;
 }
 
 .toperHeaderBG {
@@ -51,7 +57,7 @@ $searchFilterAreaWidth:206px;
 	width:900px;
 	@media screen and (max-width: 1280px) {
 		width:748px;
-	} 
+	}
 }
 .banner {
 	width:900px;
@@ -115,6 +121,7 @@ $searchFilterAreaWidth:206px;
 }
 
 div.section-bg {
+	display: none;
     margin-bottom:-65px;
 }
 
@@ -128,13 +135,10 @@ section.section, section.section3 {
 }
 section.section3 {
 	margin-left:80px;
-	@media screen and (max-width: 1280px) {
-		margin-left:0;
-	}
 }
+
 div.section-divider {
     border:0;
-    border-top:1px solid #999;
 }
 .group2 {
     margin-top:65px;
@@ -178,8 +182,9 @@ div.box16 .divider {
     display:none;
 }
 .box16 .caption, .box14 .caption {
-    font-size: 16px;
+    font-size: 15px;
     height: 37px;
+	-webkit-line-clamp: 2;
     padding: 0;
     float: right;
     line-height: 18px;
@@ -202,4 +207,326 @@ div.box16 .divider {
 }
 .elevator a {
 	color: #fff;
+}
+
+//writter: [vincent]
+//describe: category section3 new layout settings
+//sampleAddress: Store?StoreID=735
+
+$color-lists: 	   #3e3a39 #c07d2e #de7884 #75852e #c03f40 #80b870 #248c6a #e39300 #63b2af #339ecf #0757a2 #162c84 #e95b32;
+$color-lists-lite: #b2b0b0 #e6cbab #f2c9ce #c8ceab #e6b2b3 #cde3c1 #a7d1c3 #f4d499 #c1e0df #add8ec #9cbcda #a2abce #f6bdad;
+//設計風尚.國際名品.美妝保養.保健養生.樂活時尚.運動健身.戶外休旅.親子寵物.居家用品.生活家電.數位3C.電腦周邊.美蛋直購
+.section3 {
+	position: relative;
+	margin-top: 40px;
+	padding-bottom: 100px;
+
+	.section-bg { display: none; }
+	.group2 { margin-top:0; }
+
+	.group2,
+	.group2 + .group3 {
+		height: 640px;
+		overflow: hidden;
+	}
+
+	.group2 .box11,
+	.group3 .box16 {
+		.box12,
+		.caption4,
+		.price {
+			position: relative;
+			float:none;
+			left: 50%;
+			width: 222px;
+			margin:5px auto 0 -111px;
+		}
+
+		.caption4 {
+			font-size: 15px;
+			text-align: left;
+
+		}
+	}
+
+	.group2 .box11 {
+		width: 273px;
+		height:319px;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+
+		& + .box11 {
+			border-width: 1px;
+			border-style: solid;
+			height: 317px;
+		}
+	}
+
+
+	.group2 + .group3 {
+		width: 491px;
+		@include pie-clearfix;
+
+		.box13 {
+			width: 346px;
+			height: 319px;
+			border-top: 1px solid;
+			border-bottom: 0;
+			a { display: block; }
+
+			img,
+			a,
+			a img {
+				width: 100%;
+				height: 100%;
+
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.box15 {
+			margin-left: 0;
+			width: 145px;
+			height: 320px;
+		}
+
+		.box15 .title {
+			margin:0;
+			width: 100%;
+			height: 56px;
+
+			font-size: 32px;
+			line-height: 56px;
+			letter-spacing: 1px;
+			color:#fff;
+		}
+
+		.box15 .box-category3 {
+			width: 100%;
+			padding:0;
+			border:0;
+			@include border-radius(0px);
+
+			background: transparent;
+
+			@for $i from 1 through length($color-lists-lite) {
+				&.catcolorbg#{$i} li:nth-child(odd) { background: nth($color-lists-lite, $i); }
+			}
+
+
+		}
+
+
+		.box15 .box-category3 ul {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+
+		.box15 .box-category3 ul li {
+			display: block;
+			width: 100%;
+			height: 33px;
+
+			margin-top:0px;
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				text-align: center;
+				line-height: 33px;
+			}
+		}
+
+		.box16 {
+			width: 245px;
+			height: 317px;
+			border-bottom: 1px solid;
+
+			.caption { height: 54px; }
+		}
+
+	}
+
+	.img11 {
+		width: 135px;
+		height: 135px;
+		max-width: 135px;
+		max-height: 135px;
+	}
+
+	& > div.divider {  border-top: 0; }
+	.section-divider { display: none; }
+
+
+	.carousel4 {
+		position: relative;
+		height: 639px;
+
+		.listcontent {
+			width: 199px;
+			height: 637px;
+			border-width: 1px 1px 1px 0;
+			border-style: solid;
+		}
+
+		.box14 {
+			width: 100%;
+			height: 211px;
+		}
+
+		.divider {
+			width: 100%;
+			height: 0;
+		}
+
+		.pagination {
+			position: absolute;
+			right: -10px;
+			margin-top: 220px;
+			z-index:3;
+
+
+		}
+
+		@for $i from 1 through length($color-lists-lite) {
+
+			&.catcolorleft#{$i} {
+				.more a {
+					&:hover,
+					&:visited {
+						color: nth($color-lists, $i);
+					}
+				}
+
+				li { background: nth($color-lists-lite, $i); }
+			}
+		}
+	}
+}
+
+
+//carousel-logo-wall
+.carousel-logo-cates {
+	position: absolute;
+	right:33px;
+	bottom:16px;
+	width: 885px;
+	height: 84px;
+
+	li {
+		width: 146.5px;
+		height: 65px;
+		margin:10px 0;
+
+	}
+}
+
+
+//shopUS
+$us-color: #e95b32;
+
+
+.section3.section_US {
+	margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 50px;
+
+	.group2+.group3 .box13 { border-top: 1px solid $us-color; }
+
+	.box14 { border: 0px; }
+
+	.box15 {
+		background-color: $us-color;
+		overflow: hidden;
+		li:nth-child(odd) { background:rgba(255,255,255,.1); }
+	}
+
+	.carousel4 .divider {
+		float:left;
+		border-top: 1px solid;
+	}
+
+
+	.carousel4 {
+	    float: left;
+	    width: 221px;
+		border-left: 1px solid;
+
+		.pagination {
+			float: right;
+			position: absolute;
+			right: -10px;
+			width: 20px;
+			margin-top: 220px;
+			z-index: 3;
+
+			li {
+				display: block;
+				width: 20px;
+				height: 20px;
+				margin: 10px 0;
+				background-color: #f6bdad;
+			}
+
+			li a {
+				display:block;
+				width: 20px;
+				height: 20px;
+				color: #fff;
+
+
+				text-align: center;
+				line-height: 20px;
+				text-decoration: none;
+				float: right;
+
+				&.catcolorbg { background-color: $us-color; }
+			}
+		}
+
+		.pagination .more a {
+			display: block;
+			width: 100%;
+			text-align: center;
+
+			&,
+			&:hover,
+			&:visited {	color: $us-color; }
+		}
+	}
+
+	.carousel4 .listcontent > div {
+		width: 100%;
+		height: 100%;
+	}
+
+
+
+	.box11,
+	.box16,
+	.carousel4,
+	.carousel4 .listcontent,
+	.carousel4 .divider,
+	.carousel-logo-wall {
+		border-color: $us-color;
+	}
+
+	.carousel-logo-cates .prev,
+	.carousel-logo-cates .next {
+		background-color: $us-color;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+	.bg .section2,
+	.section3.section_US,
+	section.section3 {
+		margin-left:0;
+	}
 }

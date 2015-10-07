@@ -102,8 +102,9 @@ body {
 				}
 			}			
 			&.btn-register {
-				background:$lightorangeStyle;
-				&:hover {background:darken($lightorangeStyle,5%);}
+				background: url("/Themes/img/ShoppingProcess/OrangeBigBtnBG.jpg");/*$lightorangeStyle;*/
+				height:60px;
+				/*&:hover {background:darken($lightorangeStyle,5%);}*/
 			}
 		}
 		.tipsRemember {

@@ -81,10 +81,13 @@ body {
 }
 .header .ad {
 	width: 300px;
-	height: 40px;
+	height: 52px;
     overflow:hidden;
 	float: left;
 	margin-left: 11px;
+	a {
+		border:0;
+	}
 }
 .header .icon {
 	margin-top: 25px;
@@ -348,7 +351,7 @@ body {
 .bread a {
 }
 /*Elevator*/
-.elevator {
+/*.elevator {
 	width: 80px;
 	height: auto;
 	border-top-right-radius: 10px;
@@ -421,7 +424,7 @@ body {
 	width: 40px;
 	text-align: center;
 	margin-bottom: 10px;
-}
+}*/
 /*Aside-icon*/
 .aside-icon {
 	position: absolute;
@@ -448,7 +451,7 @@ body {
 }
 .aside-icon .shoppingCart {
 	float: left;
-	width: 50px;
+	width: 40px;
 	height: 40px;
 	background-repeat: no-repeat;
 	background-image: url(../img/shoppingCart.png);
@@ -456,6 +459,7 @@ body {
 	position: absolute;
 	top: -40px;
 	right: 70px;
+	border-bottom: 1px solid #f7d0bb;
 }
 .aside-icon .shoppingCart .count {
 	font-size: 20px;
@@ -464,7 +468,7 @@ body {
 }
 .aside-icon .service {
 	float: left;
-	width: 50px;
+	width: 40px;
 	height: 140px;
 	background-repeat: no-repeat;
 	background-image: url(../img/service.png);
@@ -476,7 +480,7 @@ body {
 }
 .aside-icon .service .text  {
 	color: #fff;
-	font-size: 20px;
+	font-size: 16px;
 	float: left;
 	width: 25px;
 	text-decoration: none;
@@ -600,7 +604,7 @@ body {
 /*Footer*/
 .footer {
 	background-color: #F1F1F0;
-	height: 400px;
+	min-height: 400px;
 	margin: 0 auto;
 	clear: both;
 }
@@ -688,10 +692,15 @@ body {
     text-indent:-99999px;
 }
 .footer .map .LinkTo:hover{border-bottom:0;}
-.footer .code {
-	margin-top: 50px;
-}
 .footer .address {
     clear: both;
 	color: #162D4B;
 }
+
+/*Topad display after banner CSS*/
+.ad ~ .mainPadding .content .toperHeaderBG {height: 255px}
+.ad ~ .mainPadding .content .banner-bgcolor {top: 255px}
+.ad ~ .mainPadding .section .banner .banner-bg {top: 60px}
+
+
+

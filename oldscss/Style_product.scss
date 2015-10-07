@@ -8,7 +8,7 @@
 /*商品樣式*/
 .box {
 	float:left;
-	margin-left:10px;
+	/*margin-left:10px;*/
 	margin-bottom:10px;
 	border:1px solid #dfdfdf;
 	$boxImgWidth:200px;
@@ -16,6 +16,7 @@
 		margin:10px auto 5px;
 		width:$boxImgWidth;
 		height:$boxImgWidth;
+		overflow:hidden;
 		text-align:center;
 		a {
 			display:block;

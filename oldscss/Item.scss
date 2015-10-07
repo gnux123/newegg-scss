@@ -177,6 +177,16 @@ $productOutwidthWidth:1000px;
 		@include clearAfter;
 		float:right;
 		width:($productOutwidthWidth - $productLeftWidth - 40);
+/*		.ChooseAnyIcon {
+			display: block;
+			width: 46px; 
+			height: 29px;
+			position: absolute;
+			right: 170px;
+			top: 30px;
+			background: url("/Themes/img/Icon/ChooseAnyImg.png");
+			cursor: pointer;
+		}*/
 		.productContent{
 			@include clearAfter;
 			position:relative;
@@ -253,6 +263,7 @@ $productOutwidthWidth:1000px;
 				.InsExp{cursor: pointer;position:relative;display:inline;}
 					.Installment{
 					position:absolute;
+					z-index:1;
 					top:20px;
 					right:-80px;
 					width:241px;
@@ -305,10 +316,14 @@ $productOutwidthWidth:1000px;
 				height:81px;
 				line-height:81px;
 				font-size:21px;
+				color:#fff;
+				border-bottom:0;
+				&>img{margin-right:8px;vertical-align:text-bottom;}
 			}
 			.putInCart{}
-			.HavenIt{float:right;}
-			.NoStock{background:none;background-color:#b4b4b4;}
+			.HavenIt, .putInChooseAny{float:right;}
+			.putInChooseAny {padding-left: 15px;} 
+			.NoStock{background:none;background-color:#b4b4b4;} 
 			.OrgBgBtn{margin-left:8px;}
 			.StartSolid{color:#fff;height:81px;line-height:81px;background-color:#b4b4b4;}
 		}
@@ -384,23 +399,26 @@ $productOutwidthWidth:1000px;
 		}
 	}
 	.items{
-		$itemHeight:320px;
+		/*$itemHeight:320px;*/
 		@include clearAfter;
 		position:relative;
 		padding:17px 0 8px 0;
-		height:$itemHeight;
+		/*height:$itemHeight;*/
 		overflow:hidden;
 		border:1px solid #D5D5D5;
 		.box {
 			border:0;
 			width:($SkimItemBoxWidth - 10 * 4 - 2 * 3) / 4;
-			height:$itemHeight;
+			/*height:$itemHeight;*/
 			border:0 solid #D5D5D5;
 			&+.box {
 				border-left-width:1px;
 			}
 			.pic {
 				margin:20px auto;
+			}
+			.SpecialDeal {
+				height: 18px;
 			}
 		}
 		.productItem{
@@ -474,3 +492,4 @@ div.jqZoomPup {
 	-khtml-opacity: 0.5;
 	filter: alpha(Opacity=50);
 }
+

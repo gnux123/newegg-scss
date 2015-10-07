@@ -175,10 +175,8 @@
 											  cursor: pointer;
 									  }
 									  .Editor , .Stockpile , .Cancel{
-										a {
-											color:#666666;
+											color:#666666; 
 											cursor: pointer;
-										}
 									  }
 								}
 							}
@@ -267,10 +265,8 @@
 											  cursor: pointer;
 									  }
 									  .Editor , .Stockpile , .Cancel{
-										a {
 											color:#666666;
 											cursor: pointer;
-										}
 									  }
 								}
 							}
@@ -476,10 +472,8 @@
 											  cursor: pointer;
 									  }
 									  .Editor , .Stockpile , .Cancel{
-										a {
 											color:#666666;
 											cursor: pointer;
-										}
 									  }
 									  
 								}
@@ -569,10 +563,8 @@
 											  cursor: pointer; 
 									  }
 									  .Editor , .Stockpile , .Cancel{
-										a {
 											color:#666666;
 											cursor: pointer; 
-										}
 									  }
 								}
 							}
@@ -1260,7 +1252,7 @@
 								.Installment {
 									line-height: 2;
 									position: relative;
-									height: 350px;
+									height: 380px;
 									.InstallmentLeft {
 										float:left;
 										.InstallmentTit {
