@@ -1,3 +1,13 @@
+a {
+    &,
+    &:hover,
+    &:before,
+    &:after {
+        @include transition-duration(0.2s);
+        @include transition-timing-function(linear);
+    }
+}
+
 /*#[coupon-use-button] 使用折價券按鈕
 
     <span class="SpecialDeal SpecialDealClass2-1 couponClick">使用折價券</span>
