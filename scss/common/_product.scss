@@ -130,7 +130,7 @@
 
 	.marketPrice {
         @include float(left);
-		margin:0 5px;
+		margin: 0 5px;
 
 		@include fontSize($defFont - 3);
 		text-decoration:line-through;

@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     concatCss = require('gulp-concat-css'),
     styleguide = require('gulp-styledocco'),
-    replace = require('gulp-replace');
+    replace = require('gulp-replace'),
+    plumber = require('gulp-plumber');
     //git = require('git-semver-tags');
 
 var vers = '1.0.0'; //version
@@ -39,6 +40,7 @@ gulp.task('livereload', function(){
 
 gulp.task('sass', function(){
     return gulp.src(_address.sass)
+            .pipe(plumber())
             .pipe(sass({
                     includePaths: [_address.include],
                     outputStyle: 'expanded',
@@ -51,6 +53,7 @@ gulp.task('sass', function(){
             .pipe(replace('img/', '/Themes/img/')) //replace imgPath to stable server
             .pipe(minifyCss({compatibility: 'ie8'}))
             .pipe(rename({ suffix: "-" + vers }))
+            .pipe(plumber.stop())
             .pipe(gulp.dest(_address.css));
 
 });
@@ -63,6 +66,7 @@ gulp.task('copyfiles', function(){
 
 gulp.task('styleguide', function(){
     return gulp.src(_address.sass)
+            .pipe(plumber())
             .pipe(sass({
                   includePaths: [_address.include],
                   outputStyle: 'expanded',
@@ -79,7 +83,8 @@ gulp.task('styleguide', function(){
                   'styleguide/js/main.js'
               ],
               'no-minify': false
-            }));
+            }))
+            .pipe(plumber.stop());
 });
 
 
