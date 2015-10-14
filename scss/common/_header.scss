@@ -315,46 +315,54 @@
 
     <div class="pullDown">
         <ul class="pullDownList">
-                <li class="menulihover">
-                    <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
-                    <span></span>
-                </li>
-                <li class="">
-                    <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeHealth"></i>運動健身</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="store3C"></i>數位3C</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeappliance"></i>生活家電</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeLiving"></i>居家親子</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeFoods"></i>好食市集</a>
-                    <span></span>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="storeNeweggUSA"></i>美國新蛋直購</a>
-                    <span></span>
-                </li>
+            <li categoryid="1279" class="">
+                <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
+                <span></span>
+            </li>
+            <li categoryid="734" class="">
+                <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
+                <span></span>
+            </li>
+            <li categoryid="1929" class="">
+                <a href="javascript:void(0);"><i class="storeBeauty"></i>美妝保養</a>
+                <span></span>
+            </li>
+            <li categoryid="1930" class="">
+                <a href="javascript:void(0);"><i class="storeHealthcare"></i>保健養生</a>
+                <span></span>
+            </li>
+            <li categoryid="736" class="">
+                <a href="javascript:void(0);"><i class="storeFoods"></i>樂活食尚</a>
+                <span></span>
+            </li>
+            <li categoryid="735" class="">
+                <a href="javascript:void(0);"><i class="storeSport"></i>運動健身</a>
+                <span></span>
+            </li>
+            <li categoryid="7" class="">
+                <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
+                <span></span>
+            </li>
+            <li categoryid="1928" class="">
+                <a href="javascript:void(0);"><i class="storeLovely"></i>親子寵物</a>
+                <span></span>
+            </li>
+            <li categoryid="6" class="">
+                <a href="javascript:void(0);"><i class="storeLiving"></i>居家用品</a>
+                <span></span>
+            </li>
+            <li categoryid="3" class="">
+                <a href="javascript:void(0);"><i class="storeAppliance"></i>生活家電</a>
+                <span></span>
+            </li>
+            <li categoryid="264" class="">
+                <a href="javascript:void(0);"><i class="storeDigital"></i>數位3C</a>
+                <span></span>
+            </li>
+            <li categoryid="1" class="">
+                <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
+                <span></span>
+            </li>
         </ul>
     </div>
 
@@ -524,16 +532,16 @@
 */
 
 .pullDown .pullDownList {
-    background-color: #e6e4e7;
+    background-color: $gray-shade-lw;
 
     li {
-        line-height: 50px;
+        line-height: 40.5px;
 
         & > a {
             display:block;
         	border-bottom:0;
 
-        	color: #5E5E63;
+        	color: $font-color;
             @include fontSize($defFont + 4);
         	text-decoration: none;
         }
@@ -544,51 +552,30 @@
             -moz-transition: margin-left .2s linear;
             -o-transition: margin-left .2s linear;
 
-            background:url(#{$img-path}nav-icon.png) no-repeat;
+            background:url(#{$img-path}Icon/Store/category-icons.png) no-repeat;
 
-            //設計風尚
-            &.storeClothing { background-position: 0 0; }
-            //國際精品
-            &.storeFashion { background-position: 0 -25px; }
-            //家電用品
-            &.storeappliance { background-position: 0 -50px; }
-            //居家生活
-            &.storeLiving { background-position: 0 -75px; }
-            //運動健身
-            &.storeHealth { background-position: 0 -100px; }
-            //戶外休旅
-            &.storeOutdoor { background-position: 0 -125px; }
-            //電腦周邊
-            &.storeComputer { background-position: 0 -150px; }
-            //數位3C
-            &.store3C { background-position: 0 -175px; }
-            //好食市集
-            &.storeFoods { background-position: 0 -200px; }
-            //美蛋直購
-            &.storeNeweggUSA { background-position: 0 -225px; }
+            @for $i from 1 through length($cates-name) {
+                $name: nth($cates-name, $i);
+                &.store#{$name} { background-position: 0px (-25 * ($i - 1))#{px}; }
+            }
         }
 
 
         //hover & menulihover class settings
         &:hover,
         &.menulihover {
-            background: #eda16f;
+            background: $orange-l;
+
 
             a { color: #fff; }
 
             i {
                 margin-left:30px; //側邊選單效果位移度
 
-                &.storeClothing { background-position: -25px 0; }
-                &.storeFashion { background-position: -25px -25px; }
-                &.storeappliance { background-position: -25px -50px; }
-                &.storeLiving { background-position: -25px -75px; }
-                &.storeHealth { background-position: -25px -100px; }
-                &.storeOutdoor { background-position: -25px -125px; }
-                &.storeComputer { background-position: -25px -150px; }
-                &.store3C { background-position: -25px -175px; }
-                &.storeFoods { background-position: -25px -200px; }
-                &.storeNeweggUSA { background-position: -25px -225px; }
+                @for $i from 1 through length($cates-name) {
+                    $name: nth($cates-name, $i);
+                    &.store#{$name} { background-position: -25px (-25 * ($i - 1))#{px}; }
+                }
             }
 
             span {
@@ -596,7 +583,7 @@
                 height: 0;
                 border-style: solid;
                 border-width: 15px 0 15px 22px;
-                border-color: transparent transparent transparent #eda16f;
+                border-color: transparent transparent transparent $orange-l;
 
             }
 
