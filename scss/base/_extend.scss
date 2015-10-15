@@ -105,13 +105,14 @@
     display: inline-block;
     position: absolute;
     z-index: 1;
-    top:0;
-    left:0;
-    width: 46px;
-    height: 46px;
+    top:50%;
+    left:3px;
+    width: 39px;
+    height: 34px;
+    margin-top: -17px;
     overflow: hidden;
 
-    background: url(#{$img-path}section-icon.png) no-repeat;
+    background: url(#{$img-path}Icon/Store/window.png) no-repeat;
 }
 
 %btn_frame {
