@@ -366,165 +366,74 @@
         </ul>
     </div>
 
-    <!-- [子選單模組] -->
-    <div class="yMenuListCon">
-        <div class="yMenuListConin storeFashion" style="display:block;">
-                <h2><a href="javascript:void(0);">國際名品</a></h2>
+    <div id="SecMenu">
+        <!-- [子選單模組] -->
+        <ul class="pullDownListSec" parentid="1279">
+            <li class="liBG selected" categoryid="1432">
+                <a><i class=""></i>活動專區</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1236">
+                <a><i class=""></i>手感工藝</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1374">
+                <a><i class=""></i>文藝書籍</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1281">
+                <a><i class=""></i>食尚餐廚</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="779">
+                <a><i class=""></i>衣裳穿搭</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1282">
+                <a><i class=""></i>品味家居</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1291">
+                <a><i class=""></i>設計文物</a>
+                <span class="arrowhover"></span>
+            </li>
+            <li class="liBG" categoryid="1280">
+                <a><i class=""></i>生活樂趣</a>
+                <span class="arrowhover"></span>
+            </li>
+        </ul>
+        <!-- [子選單模組結束] -->
+
+        <!-- 子選單第二層 -->
+        <div class="yMenuListCon">
+            <div class="yMenuListConin storeDesign">
                 <div class="yMenuColLCinList">
+                    <div class="yMenuLCinList" parentid="1432">
+                        <h3>活動專區</h3>
+                        <p>
+                            <a href="/Category?CategoryID=1137" class="">【限時88折】木入三分</a>
+                            <a href="/Category?CategoryID=1745" class="">【獨家85折】Me &amp; A Cup of Hot Chocolate 絲巾</a>
+                            <a href="/Category?CategoryID=1191" class="">【全館88折】Lemnos日本設計家居</a>
+                            <a href="/Category?CategoryID=1419" class="">【獨家8折】SHOKAY犛牛絨圍巾</a>
+                            <a href="/Category?CategoryID=1506" class="">【最夯免比價】STRELKA工具書 七折</a>
+                            <a href="/Category?CategoryID=1788" class="">【限時78折】LEON'S設計寵物抱枕</a>
+                            <a href="/Category?CategoryID=1467" class="">【經典工藝85折】WANTZ享瓷</a>
+                            <a href="/Category?CategoryID=1724" class="">【指定商品76折贈錶帶】Martian摩絢聲控錶</a>
+                        </p>
 
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 【開幕特企】</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">【新品優惠】三宅一生BAO BAO限時↘5折起</a>
-                                <a href="javascript:void(0);">【獨家優惠➳】Michael Kors限時優惠↘4折起</a>
-                                <a href="javascript:void(0);">【下殺折扣】歐系品牌包款↘4.5折起</a>
-                                <a href="javascript:void(0);">【開幕慶☞】皮夾特選↘$999起</a>
-                            </p>
+                        <!-- 選單下方圖片 -->
+                        <div class="MenuListImg">
+                            <a href="/Category?CategoryID=1419" target="_blank">
+                            <img src="https://ssl-images.newegg.com.tw/pic/category/設計風尚/活動SHOKAY.png">
+                            </a>
                         </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 精品包款</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">3.1 Phillip Lim</a>
-                                <a href="javascript:void(0);">Balenciaga</a>
-                                <a href="javascript:void(0);">BALLY</a>
-                                <a href="javascript:void(0);">Bottega Veneta</a>
-                                <a href="javascript:void(0);">Burberry</a>
-                                <a href="javascript:void(0);">Calvin Klein</a>
-                                <a href="javascript:void(0);">Cambridge Satchel</a>
-                                <a href="javascript:void(0);">CÉLINE</a>
-                                <a href="javascript:void(0);">CHANEL</a>
-                                <a href="javascript:void(0);">Chloe</a>
-                                <a href="javascript:void(0);">COACH</a>
-                                <a href="javascript:void(0);">FENDI</a>
-                                <a href="javascript:void(0);">GUCCI</a>
-                                <a href="javascript:void(0);">GIVENCHY</a>
-                                <a href="javascript:void(0);">HERMÈS</a>
-                                <a href="javascript:void(0);">Leghila</a>
-                                <a href="javascript:void(0);">Louis Vuitton</a>
-                                <a href="javascript:void(0);">LONGCHAMP</a>
-                                <a href="javascript:void(0);">Michael Kors</a>
-                                <a href="javascript:void(0);">MIU MIU</a>
-                                <a href="javascript:void(0);">Moschino</a>
-                                <a href="javascript:void(0);">MULBERRY</a>
-                                <a href="javascript:void(0);">Proenza Schouler</a>
-                                <a href="javascript:void(0);">Prada</a>
-                                <a href="javascript:void(0);">REBECCA MINKOFF</a>
-                                <a href="javascript:void(0);">Salvatore Ferragamo</a>
-                                <a href="javascript:void(0);">TOD'S</a>
-                                <a href="javascript:void(0);">Tory Burch</a>
-                                <a href="javascript:void(0);">Vivienne Westwood</a>
-                                <a href="javascript:void(0);">YSL</a>
-                            </p>
-                        </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 時尚腕錶</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">Agnes.b</a>
-                                <a href="javascript:void(0);">Armani</a>
-                                <a href="javascript:void(0);">CITIZEN</a>
-                                <a href="javascript:void(0);">CASIO</a>
-                                <a href="javascript:void(0);">DKNY</a>
-                                <a href="javascript:void(0);">Daniel Wellington</a>
-                                <a href="javascript:void(0);">DIESEL</a>
-                                <a href="javascript:void(0);">EMPORIO ARMANI</a>
-                                <a href="javascript:void(0);">FOSSIL </a>
-                                <a href="javascript:void(0);">KOMONO</a>
-                                <a href="javascript:void(0);">Kenneth Cole</a>
-                                <a href="javascript:void(0);">MICHAEL KORS</a>
-                                <a href="javascript:void(0);">MBMJ</a>
-                                <a href="javascript:void(0);">Nixon</a>
-                                <a href="javascript:void(0);">SWATCH</a>
-                                <a href="javascript:void(0);">SKAGEN</a>
-                                <a href="javascript:void(0);">SEIKO</a>
-                            </p>
-                        </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 香水香氛</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">Anna Sui</a>
-                                <a href="javascript:void(0);">Abercrombie &amp; Fitch</a>
-                                <a href="javascript:void(0);">Adidas</a>
-                                <a href="javascript:void(0);">BVLGARI </a>
-                                <a href="javascript:void(0);">Chanel</a>
-                                <a href="javascript:void(0);">Clive Christian</a>
-                                <a href="javascript:void(0);">Chloe</a>
-                                <a href="javascript:void(0);">Calvin Klein</a>
-                                <a href="javascript:void(0);">Diptyque</a>
-                                <a href="javascript:void(0);">Dior </a>
-                                <a href="javascript:void(0);">DKNY </a>
-                                <a href="javascript:void(0);">Dermalogica 德卡</a>
-                                <a href="javascript:void(0);">EVE LOM</a>
-                                <a href="javascript:void(0);">Elizabeth Arden</a>
-                                <a href="javascript:void(0);">Fresh</a>
-                                <a href="javascript:void(0);">GUCCI </a>
-                                <a href="javascript:void(0);">Giorgio Armani</a>
-                                <a href="javascript:void(0);">Hermes</a>
-                                <a href="javascript:void(0);">HERVE GAMBS法國頂級香氛</a>
-                                <a href="javascript:void(0);">Jo Malone</a>
-                                <a href="javascript:void(0);">Jurlique</a>
-                                <a href="javascript:void(0);">KENZO</a>
-                                <a href="javascript:void(0);">Kiehl's</a>
-                                <a href="javascript:void(0);">LaMer 海洋拉娜</a>
-                                <a href="javascript:void(0);"> L'OCCITANE</a>
-                                <a href="javascript:void(0);">MONTBLANC</a>
-                                <a href="javascript:void(0);">MARC JACOBS</a>
-                                <a href="javascript:void(0);">Ralph Lauren</a>
-                                <a href="javascript:void(0);">Salvatore Ferragamo</a>
-                                <a href="javascript:void(0);">Tom Ford</a>
-                                <a href="javascript:void(0);">VERSACE</a>
-                                <a href="javascript:void(0);">Vivienne Westwood</a>
-                                <a href="javascript:void(0);">YSL </a>
-                                <a href="javascript:void(0);">其他</a>
-                            </p>
-                        </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 風尚鞋款</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">Chiara Ferragni 眨眼鞋</a>
-                                <a href="javascript:void(0);">TOMS</a>
-                            </p>
-                        </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 飾品配件</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">Burberry</a>
-                                <a href="javascript:void(0);">Coach</a>
-                                <a href="javascript:void(0);">Dogeared</a>
-                                <a href="javascript:void(0);">DAKS</a>
-                                <a href="javascript:void(0);">Forever21</a>
-                                <a href="javascript:void(0);">GUCCI</a>
-                                <a href="javascript:void(0);">Gorjana</a>
-                                <a href="javascript:void(0);">Les Nereides</a>
-                                <a href="javascript:void(0);">La Mer Collections</a>
-                                <a href="javascript:void(0);">Michael Kors</a>
-                                <a href="javascript:void(0);">Pandora</a>
-                                <a href="javascript:void(0);">Tiffany&amp;Co</a>
-                                <a href="javascript:void(0);">VITA FEDE</a>
-                                <a href="javascript:void(0);">Vivienne Westwood</a>
-                            </p>
-                        </div>
-                        <div class="yMenuLCinList" style="display:block;">
-                        <h3>| 新銳眼鏡</h3>
-
-                            <p>
-                                <a href="javascript:void(0);">COACH</a>
-                                <a href="javascript:void(0);">FENDI </a>
-                                <a href="javascript:void(0);">GUCCI </a>
-                                <a href="javascript:void(0);">MARC BY MARC JACOBS</a>
-                                <a href="javascript:void(0);">Ray Ban</a>
-                                <a href="javascript:void(0);">YSL(Saint Laurent Paris) </a>
-                            </p>
-                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- end of 子選單第二層 -->
     </div>
-    <!-- [子選單模組結束] -->
+
 
     <div class="banner-ad2" name="advBannerTopLeft" data-url="/AdvEvent/Partial_AdvLeftTopBanner">
         <a href="javascript:void(0);" target="_blank"><img src="http://placehold.it/206x36"></a>
@@ -591,6 +500,26 @@
 
     }
 }
+
+//新子選模組樣式-二級選單外框樣式
+.pullDownListSec {
+    position: absolute;
+    top: 0;
+    left: 206px;
+    width: 175px;
+    height: 484px;
+    overflow: hidden;
+
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: $gray-shade-l;
+    background: #fff;
+
+    @include fontSize($defFont);
+}
+
+
+
 
 //子選單模組樣式設計
 .yMenuListConin {

@@ -1,49 +1,6 @@
 $(function() {
     var states = null;
 
-    $.fn.selectCustom = function(){
-      var _select = this,
-          _selectLength = _select.find("option").length,
-          _orgText = _select.find("option").eq(0).text();
-
-        _select.hide();
-        _select.parent().prepend("<div class='selectText'>\
-        <span></span>\
-        <ul class='selectLists'></ul>\
-        </div>");
-
-        var _lists = $("ul.selectLists"),
-            _nowText = $(".selectText");
-
-        _lists.hide();
-        _nowText.find("span").text(_orgText);
-
-        for(i=0; i<_selectLength; i++) {
-          var _text = _select.find("option").eq(i).text();
-          _lists.append("<li>"+_text+"</li>");
-        }
-
-
-        _nowText.hover(function(){
-          _lists.show();
-        },function(){
-          _lists.hide();
-        });
-
-
-        _lists.find("li").hover(function(){
-              $(this).addClass("mOver").siblings("li").removeClass("mOver");
-        });
-
-        _lists.find("li").click(function(){
-          var _index = $(this).index(),
-              _liText = $(this).text();
-          $(".selectText > span").text(_liText);
-          _select.find("option").eq(_index).attr("selected","selected");
-        });
-    }
-
-
     $(".menudropDown").click(function(){
         if(states == null || states == true){
             $("#mainMenu").slideDown();
@@ -206,5 +163,51 @@ $(function() {
         });
         prev.hide();
     });
+
+
+    $.fn.selectCustom = function(){
+      var _select = this,
+          _selectLength = _select.find("option").length,
+          _orgText = _select.find("option").eq(0).text();
+
+        _select.hide();
+        _select.parent().prepend("<div class='selectText'>\
+        <span></span>\
+        <ul class='selectLists'></ul>\
+        </div>");
+
+        var _lists = $("ul.selectLists"),
+            _nowText = $(".selectText");
+
+        _lists.hide();
+        _nowText.find("span").text(_orgText);
+
+        for(i=0; i<_selectLength; i++) {
+          var _text = _select.find("option").eq(i).text();
+          _lists.append("<li>"+_text+"</li>");
+        }
+
+
+        _nowText.hover(function(){
+          _lists.show();
+        },function(){
+          _lists.hide();
+        });
+
+
+        _lists.find("li").hover(function(){
+              $(this).addClass("mOver").siblings("li").removeClass("mOver");
+        });
+
+        _lists.find("li").click(function(){
+          var _index = $(this).index(),
+              _liText = $(this).text();
+          $(".selectText > span").text(_liText);
+          _select.find("option").eq(_index).attr("selected","selected");
+        });
+    }
+
+
+    $(".select_example").selectCustom();
 
 });

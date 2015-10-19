@@ -1,0 +1,104 @@
+/*#會員註冊頁面樣式
+
+    <div class="wrapper">
+        <div class="mainPadding">
+            <div class="registerArea">
+                <div class="fillFormArea">
+                    <div class="Tit ColorBarTit mainTitBar">
+                        <i class="icon icon-register"><img src="img/Icon/SignUpImg.png" alt=""></i>
+                        歡迎加入新蛋會員
+                    </div>
+
+                    <div class="fillFormBox">
+                        <div id="emailTip" class="fillForm_contentList">
+                            <div class="tit"><span class="red">*</span>帳號</div>
+                            <div class="txt">
+                                <input type="text" name="Email" id="account_email" tabindex="1" placeholder="請輸入e-mail">
+                                <span class="errMsg" id="EmailRulesCheck" style="display:none"></span>
+                            </div>
+                        </div>
+
+                        <div id="pwdTip" class="fillForm_contentList pswBar focus">
+                            <div class="tit"><span class="red">*</span>密碼</div>
+                            <div class="td_txt showRusultBg"><div id="showResult1"></div></div>
+
+                            <div class="txt">
+                                <input type="password" name="PWD" id="account_pwd" class="account_pwd" onkeyup="VerifyPwdRule(this.value,$('#account_email').val());" maxlength="16" tabindex="2" onfocus="VerifyPwdRule(this.value,$('#account_email').val());" placeholder="6-16碼數字或英文字母">
+
+                                <input type="button" value="隱藏密碼" id="hide_pwd" class="btn btn-pswHide" style="display:none">
+                                <input type="button" value="顯示密碼" id="show_pwd" class="btn btn-pswShow">
+                                <div class="pswRuleBox" id="ShowPasswordRule">
+                                    <ol>
+                                        <li class="ruleTerm">為保證您的個資安全，請確認您的密碼必須符合以下條件：</li>
+                                        <li id="pwdcheck_email"><img src="/Themes/img/Account/unchecked.png">帳密不得相同</li>
+                                        <li id="pwdcheck_length"><img src="/Themes/img/Account/unchecked.png">密碼長度為6~16字元</li>
+                                    </ol>
+                                </div>
+                                 <div id="showResult" class="pswSecure step1" style="display:none"><p>密碼強度</p></div>
+                                <div class="errMsg"><span id="password_rules" style="display:none"></span></div>
+                            </div>
+                        </div>
+
+                        <div id="rePwdTip" class="fillForm_contentList rePswBar">
+                            <div class="tit"><span class="red">*</span>確認密碼</div>
+                            <div class="txt">
+                                <input type="password" name="PWDtxt" id="account_confirmpassword" maxlength="16" tabindex="3" placeholder="請再次輸入密碼">
+                                <span class="errMsg" id="PassWordRuleSay" style="display: none">確認密碼與密碼不一致，請重新輸入</span>
+                            </div>
+                        </div>
+
+                        <div class="fillForm_contentList telBar">
+                            <div class="tit"><span class="red">*</span>驗證碼</div>
+                            <div class="txt">
+                                <div id="googlecaptcha"><div><div style="width: 304px; height: 78px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="304" title="reCAPTCHA 小工具" role="presentation" height="78" id="I0_1445247148167" name="I0_1445247148167" src="https://www.google.com/recaptcha/api2/anchor?k=6LdBUgATAAAAAMLJw020y8KArh95QbmWer4P_q7k&amp;co=aHR0cHM6Ly9zZWN1cmUubmV3ZWdnLmNvbS50dw..&amp;hl=zh-TW&amp;type=image&amp;v=r20151013164303&amp;theme=light&amp;size=normal&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.zh_TW.Av2YNWH8XE4.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPgA7fnHyvr6I6K55o-3854jg-SJg#id=I0_1445247148167&amp;parent=https%3A%2F%2Fsecure.newegg.com.tw&amp;pfname=&amp;rpctoken=24295284"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                                <input type="hidden" id="gcap" name="gcap" value="">
+                            </div>
+                        </div>
+
+                        <div class="tipsOrder">
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="MessagePaper" id="account_messagepaper" tabindex="7" checked="checked" value="1">訂閱電子報，取得最新活動資訊
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="AgreePaper" id="account_agreepaper" tabindex="5">我已閱讀完畢，並同意<a href="/Policies/Member" target="_blank">會員服務條款</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="googlecaptchaM" name="googlecaptchaM" value="">
+                        <input type="submit" id="submitdata" name="submitdata" value="加入會員" class="btn btn-signup gray">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+*/
+
+.registerArea {
+    @include float(right);
+    width: 455px;
+    min-height: 700px;
+    margin: 20px -20px 0 0;
+    @include pie-clearfix;
+
+    .fillFormArea {
+        @include float(left);
+        width: 455px;
+        background: #fff;
+        border: 1px solid $gray-shade-l;
+    }
+
+    .mainTitBar {
+        padding: 0 30px;
+        height: 48px;
+        background: $orange-m;
+
+        @include fontSize($defFont + 4);
+        line-height: 48px;
+        color: #fff;
+    }
+}
