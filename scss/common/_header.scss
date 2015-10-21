@@ -311,129 +311,138 @@
 
 
 /*
-##[pullDown]側邊欄選單模組
-
+##[pullDown]側邊主選單模組
     <div class="pullDown">
         <ul class="pullDownList">
-            <li categoryid="1279" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeDesign"></i>設計風尚</a>
                 <span></span>
             </li>
-            <li categoryid="734" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeFashion"></i>國際名品</a>
                 <span></span>
             </li>
-            <li categoryid="1929" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeBeauty"></i>美妝保養</a>
                 <span></span>
             </li>
-            <li categoryid="1930" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeHealthcare"></i>保健養生</a>
                 <span></span>
             </li>
-            <li categoryid="736" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeFoods"></i>樂活食尚</a>
                 <span></span>
             </li>
-            <li categoryid="735" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeSport"></i>運動健身</a>
                 <span></span>
             </li>
-            <li categoryid="7" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeOutdoor"></i>戶外休旅</a>
                 <span></span>
             </li>
-            <li categoryid="1928" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeLovely"></i>親子寵物</a>
                 <span></span>
             </li>
-            <li categoryid="6" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeLiving"></i>居家用品</a>
                 <span></span>
             </li>
-            <li categoryid="3" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeAppliance"></i>生活家電</a>
                 <span></span>
             </li>
-            <li categoryid="264" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeDigital"></i>數位3C</a>
                 <span></span>
             </li>
-            <li categoryid="1" class="">
+            <li>
                 <a href="javascript:void(0);"><i class="storeComputer"></i>電腦週邊</a>
                 <span></span>
             </li>
         </ul>
-    </div>
 
-    <div id="SecMenu">
-        <!-- [子選單模組] -->
-        <ul class="pullDownListSec" parentid="1279">
-            <li class="liBG selected" categoryid="1432">
-                <a><i class=""></i>活動專區</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1236">
-                <a><i class=""></i>手感工藝</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1374">
-                <a><i class=""></i>文藝書籍</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1281">
-                <a><i class=""></i>食尚餐廚</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="779">
-                <a><i class=""></i>衣裳穿搭</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1282">
-                <a><i class=""></i>品味家居</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1291">
-                <a><i class=""></i>設計文物</a>
-                <span class="arrowhover"></span>
-            </li>
-            <li class="liBG" categoryid="1280">
-                <a><i class=""></i>生活樂趣</a>
-                <span class="arrowhover"></span>
-            </li>
-        </ul>
-        <!-- [子選單模組結束] -->
+        <div id="SecMenu">
+            <ul class="pullDownListSec">
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題1<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題2<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題3<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題4<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題5<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題6<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題7<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題8<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題9<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題10<i></i></a></li>
+            </ul>
+            <ul class="pullDownListSec">
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題1<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題2<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題3<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題4<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題5<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題6<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題7<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題8<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題9<i></i></a></li>
+                <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題10<i></i></a></li>
+            </ul>
 
-        <!-- 子選單第二層 -->
-        <div class="yMenuListCon">
-            <div class="yMenuListConin storeDesign">
-                <div class="yMenuColLCinList">
-                    <div class="yMenuLCinList" parentid="1432">
-                        <h3>活動專區</h3>
-                        <p>
-                            <a href="/Category?CategoryID=1137" class="">【限時88折】木入三分</a>
-                            <a href="/Category?CategoryID=1745" class="">【獨家85折】Me &amp; A Cup of Hot Chocolate 絲巾</a>
-                            <a href="/Category?CategoryID=1191" class="">【全館88折】Lemnos日本設計家居</a>
-                            <a href="/Category?CategoryID=1419" class="">【獨家8折】SHOKAY犛牛絨圍巾</a>
-                            <a href="/Category?CategoryID=1506" class="">【最夯免比價】STRELKA工具書 七折</a>
-                            <a href="/Category?CategoryID=1788" class="">【限時78折】LEON'S設計寵物抱枕</a>
-                            <a href="/Category?CategoryID=1467" class="">【經典工藝85折】WANTZ享瓷</a>
-                            <a href="/Category?CategoryID=1724" class="">【指定商品76折贈錶帶】Martian摩絢聲控錶</a>
-                        </p>
+            <div class="yMenuListCon">
+                <div class="yMenuListConin storeDesign">
+                    <div class="yMenuColLCinList">
 
-                        <!-- 選單下方圖片 -->
-                        <div class="MenuListImg">
-                            <a href="/Category?CategoryID=1419" target="_blank">
-                            <img src="https://ssl-images.newegg.com.tw/pic/category/設計風尚/活動SHOKAY.png">
-                            </a>
+                        <div class="yMenuLCinList">
+                            <h3>第三層選單標題1</h3>
+                            <p>
+                                <a href="javascript:void(0);">第三層選單子選項1</a>
+                                <a href="javascript:void(0);">第三層選單子選項2</a>
+                                <a href="javascript:void(0);">第三層選單子選項3</a>
+                                <a href="javascript:void(0);">第三層選單子選項4</a>
+                                <a href="javascript:void(0);">第三層選單子選項5</a>
+                                <a href="javascript:void(0);">第三層選單子選項6</a>
+                                <a href="javascript:void(0);">第三層選單子選項7</a>
+                                <a href="javascript:void(0);">第三層選單子選項8</a>
+                                <a href="javascript:void(0);">第三層選單子選項9</a>
+                                <a href="javascript:void(0);">第三層選單子選項10</a>
+                            </p>
+                            <div class="MenuListImg">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <img src="https://ssl-images.newegg.com.tw/pic/category/設計風尚/活動SHOKAY.png">
+                                </a>
+                            </div>
                         </div>
+
+                        <div class="yMenuLCinList">
+                            <h3>第三層選單標題2</h3>
+                            <p>
+                                <a href="javascript:void(0);">第三層選單子選項1</a>
+                                <a href="javascript:void(0);">第三層選單子選項2</a>
+                                <a href="javascript:void(0);">第三層選單子選項3</a>
+                                <a href="javascript:void(0);">第三層選單子選項4</a>
+                                <a href="javascript:void(0);">第三層選單子選項5</a>
+                                <a href="javascript:void(0);">第三層選單子選項6</a>
+                                <a href="javascript:void(0);">第三層選單子選項7</a>
+                                <a href="javascript:void(0);">第三層選單子選項8</a>
+                                <a href="javascript:void(0);">第三層選單子選項9</a>
+                                <a href="javascript:void(0);">第三層選單子選項10</a>
+                            </p>
+                            <div class="MenuListImg">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <img src="https://ssl-images.newegg.com.tw/pic/category/設計風尚/活動SHOKAY.png">
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end of 子選單第二層 -->
-    </div>
 
+        </div>
+
+    </div>
 
     <div class="banner-ad2" name="advBannerTopLeft" data-url="/AdvEvent/Partial_AdvLeftTopBanner">
         <a href="javascript:void(0);" target="_blank"><img src="http://placehold.it/206x36"></a>
@@ -473,10 +482,23 @@
         //hover & menulihover class settings
         &:hover,
         &.menulihover {
-            background: $orange-l;
+            background: $orange-ml;
 
+            a {
+                color: #fff;
 
-            a { color: #fff; }
+                &:before {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    top: 50%;
+                    right: 10px;
+                    width: 12px;
+                    height: 22px;
+                    margin-top: -11px;
+                    background: url(#{$img-path}Icon/arrow_hover.png) center no-repeat;
+                }
+            }
 
             i {
                 margin-left:30px; //側邊選單效果位移度
@@ -487,28 +509,24 @@
                 }
             }
 
-            span {
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 15px 0 15px 22px;
-                border-color: transparent transparent transparent $orange-l;
-
-            }
-
         }
 
     }
 }
 
 //新子選模組樣式-二級選單外框樣式
-.pullDownListSec {
+#SecMenu {
     position: absolute;
-    top: 0;
+    top:0;
     left: 206px;
-    width: 175px;
     height: 484px;
     overflow: hidden;
+}
+
+.pullDownListSec {
+    width: 175px;
+    height: 482px;
+
 
     border-width: 1px 1px 1px 0;
     border-style: solid;
@@ -516,6 +534,25 @@
     background: #fff;
 
     @include fontSize($defFont);
+
+    li {
+        position: relative;
+        height: 35px;
+        overflow: hidden;
+        padding-left: 20px;
+
+        line-height: 35px;
+    }
+
+    li a {
+        display: block;
+        width: 135px;
+        border-bottom: 0;
+
+        color: $font-color;
+    }
+
+
 }
 
 
