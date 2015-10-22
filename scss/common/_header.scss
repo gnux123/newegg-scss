@@ -163,24 +163,24 @@
 
     }
 
-     li {
-         &,
-         & a {
-             @include quickMenuStyle;
-         }
+    li {
+        &,
+        & a {
+            @include quickMenuStyle;
+        }
 
-         & a { display:block; }
+        & a { display:block; }
 
-         i {
-             display:block;
-             margin:0 auto;
-         }
+        i {
+            display:block;
+            margin:0 auto;
+        }
 
-         i.icon {
-             background-repeat:no-repeat;
-             background-position:center top;
-         }
-     }
+        i.icon {
+            background-repeat:no-repeat;
+            background-position:center top;
+        }
+    }
 }
 
 //header-panel
@@ -377,7 +377,7 @@
                 <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題9<i></i></a></li>
                 <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題10<i></i></a></li>
             </ul>
-            <ul class="pullDownListSec">
+            <ul class="pullDownListSec" style="display: none;">
                 <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題1<i></i></a></li>
                 <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題2<i></i></a></li>
                 <li class="liBG"><span class="arrowhover"></span><a href="">第三層選單標題3<i></i></a></li>
@@ -514,47 +514,100 @@
     }
 }
 
+
 //新子選模組樣式-二級選單外框樣式
 #SecMenu {
     position: absolute;
     top:0;
     left: 206px;
-    height: 484px;
-    overflow: hidden;
+    width: 741px;
+    height: 486px;
+    @include pie-clearfix;
+
+    & > ul,
+    & > div {
+        position: relative;
+        @include float(left);
+        display: block;
+        overflow: hidden;
+    }
+
+    & > ul,
+    & > div:before {
+        border-width: 1px 1px 1px 0;
+        border-style: solid;
+        border-color: $gray-shade-l;
+        background-color: #fff;
+    }
 }
 
 .pullDownListSec {
-    width: 175px;
-    height: 482px;
-
-
-    border-width: 1px 1px 1px 0;
-    border-style: solid;
-    border-color: $gray-shade-l;
-    background: #fff;
+    width: 174px;
+    height: 484px;
+    background: url(#{$img-path}navcolor.gif) repeat-y;
 
     @include fontSize($defFont);
 
     li {
         position: relative;
+        display: block;
+        width: 100%;
         height: 35px;
         overflow: hidden;
-        padding-left: 20px;
 
         line-height: 35px;
+
+        a {
+            position: absolute;
+            left: 20px;
+            display: inline-block;
+            width: 135px;
+            border-bottom: 0;
+
+            color: $font-color;
+        }
+
+
+        //hover & menulihover class settings
+        &:hover,
+        &.selected {
+            background: $orange-ml;
+
+            a { color: #fff; }
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                top: 50%;
+                right: 10px;
+                width: 12px;
+                height: 22px;
+                margin-top: -11px;
+                background: url(#{$img-path}Icon/arrow_hover.png) center no-repeat;
+            }
+        }
+
     }
-
-    li a {
-        display: block;
-        width: 135px;
-        border-bottom: 0;
-
-        color: $font-color;
-    }
-
 
 }
 
+
+.yMenuListCon {
+    width: 566px;
+    height: 100%;
+
+    &:before {
+        position: absolute;
+        z-index: -1;
+        left:0;
+        top:0;
+        display: block;
+        content: "";
+        width: 529px;
+        height: 484px;
+    }
+}
 
 
 
