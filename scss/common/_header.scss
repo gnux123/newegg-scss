@@ -415,7 +415,7 @@
                             </div>
                         </div>
 
-                        <div class="yMenuLCinList">
+                        <div class="yMenuLCinList" style="display:none;">
                             <h3>第三層選單標題2</h3>
                             <p>
                                 <a href="javascript:void(0);">第三層選單子選項1</a>
@@ -456,16 +456,12 @@
         line-height: 40.5px;
 
         & > a {
-            display:block;
-        	border-bottom:0;
-
         	color: $font-color;
             @include fontSize($defFont + 4);
         	text-decoration: none;
         }
 
         i {
-            margin-left: 20px;
             -webkit-transition: margin-left .2s linear;
             -moz-transition: margin-left .2s linear;
             -o-transition: margin-left .2s linear;
@@ -486,23 +482,10 @@
 
             a {
                 color: #fff;
-
-                &:before {
-                    position: absolute;
-                    display: block;
-                    content: "";
-                    top: 50%;
-                    right: 10px;
-                    width: 12px;
-                    height: 22px;
-                    margin-top: -11px;
-                    background: url(#{$img-path}Icon/arrow_hover.png) center no-repeat;
-                }
+                &:before { background: url(#{$img-path}Icon/arrow_hover.png) center no-repeat; }
             }
 
             i {
-                margin-left:30px; //側邊選單效果位移度
-
                 @for $i from 1 through length($cates-name) {
                     $name: nth($cates-name, $i);
                     &.store#{$name} { background-position: -25px (-25 * ($i - 1))#{px}; }
@@ -515,23 +498,7 @@
 }
 
 
-//新子選模組樣式-二級選單外框樣式
 #SecMenu {
-    position: absolute;
-    top:0;
-    left: 206px;
-    width: 741px;
-    height: 486px;
-    @include pie-clearfix;
-
-    & > ul,
-    & > div {
-        position: relative;
-        @include float(left);
-        display: block;
-        overflow: hidden;
-    }
-
     & > ul,
     & > div:before {
         border-width: 1px 1px 1px 0;
@@ -542,31 +509,13 @@
 }
 
 .pullDownListSec {
-    width: 174px;
-    height: 484px;
     background: url(#{$img-path}navcolor.gif) repeat-y;
-
     @include fontSize($defFont);
 
     li {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 35px;
-        overflow: hidden;
-
         line-height: 35px;
 
-        a {
-            position: absolute;
-            left: 20px;
-            display: inline-block;
-            width: 135px;
-            border-bottom: 0;
-
-            color: $font-color;
-        }
-
+        a { color: $font-color; }
 
         //hover & menulihover class settings
         &:hover,
@@ -576,91 +525,41 @@
             a { color: #fff; }
 
             &:before {
-                position: absolute;
-                display: block;
-                content: "";
-                top: 50%;
-                right: 10px;
-                width: 12px;
-                height: 22px;
-                margin-top: -11px;
                 background: url(#{$img-path}Icon/arrow_hover.png) center no-repeat;
             }
+
         }
 
     }
 
 }
 
-
-.yMenuListCon {
-    width: 566px;
-    height: 100%;
-
-    &:before {
-        position: absolute;
-        z-index: -1;
-        left:0;
-        top:0;
-        display: block;
-        content: "";
-        width: 529px;
-        height: 484px;
-    }
-}
-
-
-
-//子選單模組樣式設計
-.yMenuListConin {
-    background:#fff;
-	background: rgba(255,255,255,.95);
-
-    h2,
-    h2 a {
-        @include fontSize($defFont + 8);
-        text-decoration:underline;
-        border-bottom:0;
+//子選單內容模組樣式設計
+.yMenuLCinList {
+    h3 {
+        color: $font-color;
+        @include fontSize($defFont + 3);
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: 0.5px;
     }
 
-
-
-    .yMenuLCinList h3 {
-        color: #233223;
-        @include fontSize($defFont + 1);
-    	font-weight: bold;
-    }
-
-    .yMenuColLCinList p {
-        color: #656565;
+    p {
         @include fontSize($defFont - 2);
 
         a {
-            border-right: thin solid #656565;
-            border-bottom:0;
-
-
-            color: #7f7e7e;
+            border-left: 1px solid $gray-shade-d;
             text-decoration: none;
-
-            &:hover {
-                color: #eda16f;
-                text-decoration: underline;
-            }
+            color: $font-color;
         }
 
-    }
-
-}
-
-//子選單color styles
-.yMenuListCon .yMenuListConin {
-    @each $cate in $cates-name {
-        $i: index($cates-name, $cate);
-        $color: nth($color-light-list, $i);
-        &.store#{$cate} h2 a { color:$color; }
+        a:hover { color: $orange-ml; }
     }
 }
+
+
+
+
 
 /*##[pullDown]側邊欄選單模組-下拉樣式
     <div class="mainMenuBox" style="margin-left: 0;">

@@ -101,7 +101,6 @@ h3 {
 .footer { height: 400px; }
 
 .mainPadding {
-	position:relative;
 	margin:0 auto 50px auto;
 	height: auto;
 }
@@ -157,6 +156,8 @@ h3 {
 .footer-limiter {
 	.ad a { border:0; }
 }
+
+.topper-limiter .topperSpec { @include float(left); }
 
 //header設定部分
 .header {
@@ -384,6 +385,10 @@ h3 {
 
 }
 
+.section {
+	@include pie-clearfix;
+}
+
 
 //side Menus
 .pullDown {
@@ -467,54 +472,160 @@ h3 {
 
 
 //子選單框架樣式設計
-.yMenuListConin {
-    position: absolute;
-	display:none;
-    top: 0;
-    left: $side-width#{px};
-	width: 744px;
-    height: 486px;
-	padding: 0 20px;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    h2,
-    h2 a {
-        margin-top: 20px;
-        margin-bottom: 15px;
-        width: 100%;
-        border-bottom: 0;
+//側邊欄主選模組樣式-一級選單外框樣式
+.pullDown .pullDownList li {
+    & > a {
+        display:block;
+        border-bottom:0;
     }
 
-    .yMenuLCinList {
-        @include pie-clearfix;
+    i { margin-left: 20px; }
+
+    &:hover,
+    &.menulihover {
+        a:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 50%;
+            right: 10px;
+            width: 12px;
+            height: 22px;
+            margin-top: -11px;
+        }
+
+        i {
+            margin-left:30px; //側邊選單效果位移度
+        }
+    }
+
+}
+
+//側邊欄主選模組樣式-二級選單&三級選單外框樣式
+#SecMenu {
+    position: absolute;
+    top:0;
+    left: 206px;
+	display: none;
+    width: 741px;
+    height: 486px;
+    @include pie-clearfix;
+
+    & > ul,
+    & > div {
+        position: relative;
+        @include float(left);
+        display: block;
+        overflow: hidden;
+    }
+}
+
+.pullDownListSec {
+    width: 174px;
+    height: 484px;
+
+    li {
+        position: relative;
+        display: block;
         width: 100%;
-        height: auto;
-        margin-right: 10px;
-        margin-bottom: 20px;
+        height: 35px;
+        overflow: hidden;
+
+        &:hover:before,
+        &.selected:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 50%;
+            right: 10px;
+            width: 12px;
+            height: 22px;
+            margin-top: -11px;
+        }
+    }
+
+    li a {
+        position: absolute;
+        left: 20px;
+        display: inline-block;
+        width: 135px;
+        border-bottom: 0;
+    }
+}
+
+
+.yMenuListCon {
+    width: 566px;
+    height: 100%;
+
+    &:before {
+        position: absolute;
+        z-index: -1;
+        left:0;
+        top:0;
+        display: block;
+        content: "";
+        width: 529px;
+        height: 484px;
+    }
+
+    .yMenuListConin {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
     }
 
-    .yMenuLCinList h3 {
-        @include float(left);
-        position: relative;
-        display: inline-block;
-        margin: 0 auto 2px;
+    .yMenuLCinList {
+        display: block;
+        width: 500px;
+        padding: 0 15px;
+        height: 100%;
+
+        h3 {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            border-left: 5px solid $gray-shade-d;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+
+        p {
+            display: inline-block;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            @include pie-clearfix;
+        }
+
+        p a {
+            @include float(left);
+            display: inline-block;
+            margin: 10px 0px;
+            padding: 0 5px;
+            border-bottom: 0;
+        }
+
     }
 
-    .yMenuColLCinList p {
-        @include float(left);
-        margin: 0;
+    .MenuListImg {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
         width: 100%;
-        height: auto;
-    }
+        height: 245px;
 
-    .yMenuColLCinList p a {
-        @include float(left);
-        display: inline-block;
-        margin-top: 10px;
-        margin-right: 4px;
-        padding: 0 8px 1px 5px;
+        a,
+        a img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            border-bottom: 0px;
+        }
     }
 }
 
