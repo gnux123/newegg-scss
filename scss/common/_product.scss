@@ -93,6 +93,7 @@
 
 	.pic {
 		height:$prod-s-width#{px};
+        overflow: hidden;
 
 		a { display:block; }
 		img {

@@ -24,8 +24,6 @@ body,input {
 	color: $font-color;
 }
 
-img { vertical-align: middle; }
-
 
 a {
 	@include transition(100);
@@ -103,6 +101,7 @@ h3 {
 .mainPadding {
 	margin:0 auto 50px auto;
 	height: auto;
+	@include pie-clearfix;
 }
 
 //寬度設定部分
@@ -157,7 +156,11 @@ h3 {
 	.ad a { border:0; }
 }
 
-.topper-limiter .topperSpec { @include float(left); }
+.topper-limiter .topperSpec {
+	@include float(left);
+	display: block;
+	height: 50px;
+}
 
 //header設定部分
 .header {
@@ -374,7 +377,10 @@ h3 {
         height: 50px;
 
 		a,
-		a img { @include float(left); }
+		a img {
+			@include float(left);
+			border: 0px;
+		}
     }
 
     .ad3,
@@ -386,7 +392,13 @@ h3 {
 }
 
 .section {
-	@include pie-clearfix;
+	@include float(left);
+	margin-bottom: 50px;
+
+	&:first-child { margin-bottom: 0; }
+
+
+	a { border-bottom: 0px; }
 }
 
 

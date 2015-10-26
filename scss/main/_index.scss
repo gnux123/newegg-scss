@@ -204,8 +204,8 @@
         text-align:center;
 
         img {
-            max-width:100%;
-            max-height:100%;
+            width:100%;
+            height:100%;
         }
     }
 
@@ -518,5 +518,117 @@
     .txt { height:70px; }
     .price { @include float(right); }
     .marketPrice { margin: 5px; }
+
+}
+
+
+/*#[section-head] 首頁櫥窗標題
+
+    <div class="section">
+        <div class="section-head colorline1">
+            <div class="icon"><i></i></div>
+            <div class="section-title">設計風尚</div>
+        </div>
+
+        <div class="section-head colorline2">
+            <div class="icon"><i></i></div>
+            <div class="section-title">國際名品</div>
+        </div>
+
+        <div class="section-head colorline3">
+            <div class="icon"><i></i></div>
+            <div class="section-title">美妝保養</div>
+        </div>
+
+        <div class="section-head colorline4">
+            <div class="icon"><i></i></div>
+            <div class="section-title">保健養生</div>
+        </div>
+
+        <div class="section-head colorline5">
+            <div class="icon"><i></i></div>
+            <div class="section-title">樂活時尚</div>
+        </div>
+
+        <div class="section-head colorline6">
+            <div class="icon"><i></i></div>
+            <div class="section-title">運動健身</div>
+        </div>
+
+        <div class="section-head colorline7">
+            <div class="icon"><i></i></div>
+            <div class="section-title">戶外休旅</div>
+        </div>
+
+        <div class="section-head colorline8">
+            <div class="icon"><i></i></div>
+            <div class="section-title">親子寵物</div>
+        </div>
+
+        <div class="section-head colorline9">
+            <div class="icon"><i></i></div>
+            <div class="section-title">居家用品</div>
+        </div>
+
+        <div class="section-head colorline10">
+            <div class="icon"><i></i></div>
+            <div class="section-title">生活家電</div>
+        </div>
+
+        <div class="section-head colorline11">
+            <div class="icon"><i></i></div>
+            <div class="section-title">數位3C</div>
+        </div>
+
+        <div class="section-head colorline12">
+            <div class="icon"><i></i></div>
+            <div class="section-title">電腦周邊</div>
+        </div>
+    </div>
+
+*/
+
+.section .section-head {
+    width: 100%;
+    height: 39px;
+    margin-bottom: 10px;
+
+    text-align: left;
+    line-height: 39px;
+    @include pie-clearfix;
+
+    & > div {
+        position: relative;
+        @include float(left);
+        display: inline-block;
+    }
+
+    .icon {
+        width: 69px;
+        height: 39px;
+
+        i {
+            left: 50%;
+            margin-left: -20px;
+        }
+    }
+
+    .section-title {
+        padding-left: 10px;
+
+        @include fontSize($defFont + 6);
+        line-height: 39px;
+        font-weight: bold;
+    }
+
+
+    @for $i from 1 through length($color-list) {
+        &.colorline#{$i} {
+            .icon { background-color: nth($color-light-list, $i); }
+            .icon i { background-position: 0px (($i - 1) * -34)#{px}; }
+            .section-title { color: nth($color-list, $i); }
+
+        }
+    }
 
 }

@@ -271,8 +271,9 @@
 
 .topper {
     a {
-       color: #5E5E63;
+       color: $font-color;
        text-decoration: none;
+       border-bottom: 0;
     }
 
     .dropdown {
@@ -683,11 +684,11 @@
 #FloatingAccount {
     @include pie-clearfix;
 
-    @include translate3d(90px,0,0);
+    @include translate3d(0,0,0);
     @include transition-duration(0.5s);
 
     &.active {
-        @include translate3d(0,0,0);
+        @include translate3d(-90px,0,0);
     }
 
     .service {
@@ -708,7 +709,7 @@
         @include float(left);
         @include quickMenuStyle;
         position: relative;
-        display: block;
+        display: none;
         width: 90px;
         height: auto;
 

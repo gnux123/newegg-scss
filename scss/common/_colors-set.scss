@@ -28,14 +28,14 @@
 }
 
 
-//for other cates
-$sec-cates: 2 6 8 4 9 10;
-
-$sub-color-list: colorsCal($color-list,$sec-cates);
-$sub-color-list-light: colorsCal($color-light-list,$sec-cates);
-
-@for $num from 1 through length($sec-cates) {
-    .colorbg1#{$num} { background-color: nth($sub-color-list-light, $num); }
-     .colortxt1#{$num} { color: nth($sub-color-list, $num); }
-    .colorline1#{$num} { border-bottom: nth($sub-color-list-light, $num); }
-}
+// //for other cates
+// $sec-cates: 2 6 8 4 9 10;
+//
+// $sub-color-list: colorsCal($color-list,$sec-cates);
+// $sub-color-list-light: colorsCal($color-light-list,$sec-cates);
+//
+// @for $num from 1 through length($sec-cates) {
+//     .colorbg1#{$num} { background-color: nth($sub-color-list-light, $num); }
+//      .colortxt1#{$num} { color: nth($sub-color-list, $num); }
+//     .colorline1#{$num} { border-bottom: nth($sub-color-list-light, $num); }
+// }
