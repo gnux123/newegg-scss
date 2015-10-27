@@ -609,7 +609,7 @@
 
         i {
             left: 50%;
-            margin-left: -20px;
+            margin-left: -19.5px;
         }
     }
 
@@ -621,7 +621,7 @@
         font-weight: bold;
     }
 
-
+    //section-head cates color settings
     @for $i from 1 through length($color-list) {
         &.colorline#{$i} {
             .icon { background-color: nth($color-light-list, $i); }

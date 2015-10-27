@@ -347,13 +347,24 @@ hr {
 
 */
 .img {
+	position: relative;
 	width: 150px;
 	height: 150px;
 	margin: 2px auto 0 auto;
+	overflow:hidden;
+
+	a {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 
 	img {
 		width:100%;
 		height: 100%;
+		-webkit-transform: scale(0.93);
+				transform: scale(0.93);
 	}
 }
 
@@ -365,6 +376,8 @@ hr {
 	img {
 		width:100%;
 		height: 100%;
+		-webkit-transform: scale(0.93);
+				transform: scale(0.93);
 	}
 }
 
@@ -376,6 +389,8 @@ hr {
 		width:100%;
 		height:100%;
 		margin: 0 auto;
+		-webkit-transform: scale(0.93);
+				transform: scale(0.93);
 	}
 }
 
@@ -431,6 +446,8 @@ hr {
 		width:100%;
 		height: 100%;
 		margin: 0 auto;
+		-webkit-transform: scale(0.93);
+				transform: scale(0.93);
 	}
 }
 

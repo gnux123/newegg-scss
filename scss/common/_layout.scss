@@ -393,6 +393,7 @@ h3 {
 
 .section {
 	@include float(left);
+	width: $frame-max-width#{px};
 	margin-bottom: 50px;
 
 	&:first-child { margin-bottom: 0; }

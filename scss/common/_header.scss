@@ -802,6 +802,45 @@
         }
 
     }
+}
 
 
+/*##[elevator]左側浮動分類選單(電梯)
+
+    <div id="elevatorWindowArea" class="elevator">
+        <div class="menu">
+            <div class="up" onclick="elevatorAction(1); return false;">
+                <a href="javascript:void(0)"><div class="text">頁頂</div></a>
+            </div>
+            <div id="elevatorWinGroup" class="group">
+                <div class="text active"><a href="javascript:void(0)">設計風尚</a></div>
+                <div class="text"><a href="javascript:void(0)">國際名品</a></div>
+                <div class="text"><a href="javascript:void(0)">美妝保養</a></div>
+                <div class="text"><a href="javascript:void(0)">保健養生</a></div>
+                <div class="text"><a href="javascript:void(0)">樂活食尚</a></div>
+                <div class="text"><a href="javascript:void(0)">運動健身</a></div>
+                <div class="text"><a href="javascript:void(0)">戶外休旅</a></div>
+                <div class="text"><a href="javascript:void(0)">生活家電</a></div>
+                <div class="text"><a href="javascript:void(0)">居家用品</a></div>
+                <div class="text"><a href="javascript:void(0)">親子寵物</a></div>
+                <div class="text"><a href="javascript:void(0)">數位３Ｃ</a></div>
+                <div class="text"><a href="javascript:void(0)">電腦周邊</a></div>
+                <div class="text"><a href="javascript:void(0)">海外直購</a></div>
+            </div>
+            <div class="down" onclick="elevatorAction(2); return false;">
+                <a href="javascript:void(0)"><div class="text">頁尾</div></a>
+            </div>
+        </div>
+    </div>
+
+*/
+
+.elevator {
+    //display: none;
+    position: fixed;
+    left: 50%;
+    z-index: 2;
+    margin-left: -640px;
+    width: 37px;
+    height: auto;
 }
