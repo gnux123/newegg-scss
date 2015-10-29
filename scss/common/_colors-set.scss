@@ -22,7 +22,11 @@
 
     }
 
-    .colorbg#{$i} { background-color: nth($color-light-list, $i); }
+    .colorbg,
+    .colorwinbg {
+        &#{$i} { background-color: nth($color-light-list, $i); }
+
+    }
     .colortxt#{$i} { color: nth($color-light-list, $i);  }
     .colorline#{$i} { border-bottom: 1px solid nth($color-light-list, $i); }
 }
