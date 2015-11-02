@@ -204,6 +204,22 @@
         text-align:center;
     }
 
+    .pic a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     .txt { margin: 3px auto; }
 
     .txt a,
@@ -519,9 +535,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: -100px 0 0 -100px;
-        max-width: 200px;
-        max-height: 200px;
     }
 
     .txt { height:70px; }
