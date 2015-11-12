@@ -63,6 +63,12 @@ gulp.task('copyfiles', function(){
             .pipe(copy('styleguide/'));
 });
 
+//copy to develop env
+gulp.task('copycss', function(){
+    return gulp.src(['css/{*,*/*}'])
+            .pipe(copy('D:/projects/NETWWebsite2.0/01_Branch/Branch_Task20151023/TWNewEgg.ECWeb/TWNewEgg.ECWeb/Themes/'));
+});
+
 gulp.task('styleguide', function(){
     return gulp.src(_address.sass)
             .pipe(plumber())
@@ -98,7 +104,7 @@ gulp.task('watch', function () {
 });
 
 //build task
-gulp.task('build',['sass', 'copyfiles', 'styleguide']);
+gulp.task('build',['sass', 'copyfiles', 'copycss', 'styleguide']);
 
 //watch task
 gulp.task('server', ['clean', 'webserver', 'watch']);
