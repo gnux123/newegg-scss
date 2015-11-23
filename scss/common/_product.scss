@@ -80,46 +80,66 @@
 
 }
 
-.box {
-    background: #fff;
+.box,
+.box2 {
+    position: relative;
+    display: block;
+
     a {
         text-decoration: none;
         border:0;
     }
-    .pic,
-    .txt {
-    	width:$prod-s-width#{px};
-    }
+
 
 	.pic {
         position: relative;
-		height:$prod-s-width#{px};
         overflow: hidden;
 
 		a { display:block; }
 	}
 
 	.txt {
+        position: relative;
+        bottom: 0;
 		@include pie-clearfix;
         margin:5px auto;
-        // margin-top:5px;
 
 		@include fontSize($defFont);
 		color:$font-color;
 
-        h3 { @include fontSize($defFont); }
-        a { @include pie-clearfix; }
+        a {
+            display: block;
+            width: 100%;
+            height: auto;
+            @include pie-clearfix;
+        }
+
+        .subTit {
+            display: block;
+            width: 94%;
+            height: 14px;
+            padding:0 3%;
+            @include ellipsis;
+
+            @include fontSize($defFont - 3);
+            line-height: 14px;
+            color: #925e29;
+        }
+
+        h3, .caption { @include fontSize($defFont); }
 	}
 
     h3,
+    .caption,
     .marketPrice,
     .price {
 		@include wrapWord;
 		line-height:20px;
     }
 
-	h3 {
-        width:94%;
+	h3,
+    .caption {
+        width:100%;
 		height:40px;
         padding: 0 3%;
         margin-bottom: 5px;
@@ -138,11 +158,29 @@
 	.price {
         @include float(right);
 		margin:0 5px;
+        padding: 0;
         height:20px;
 
-		font-weight:bold;
+		font-weight:100;
+        @include fontSize($defFont);
 		color:$font-red-color;
 	}
+}
+
+.box {
+    .pic,
+    .txt {
+    	width:$prod-s-width#{px};
+    }
+
+    .pic { height:$prod-s-width#{px}; }
+}
+
+.box2Top {
+    h3,
+    .caption {
+        margin-top: 10px;
+    }
 }
 
 
