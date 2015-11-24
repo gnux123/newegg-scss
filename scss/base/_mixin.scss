@@ -15,6 +15,14 @@
 	@include transition-timing-function(linear);
 }
 
+//background color
+@mixin backgroundTrans($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
+
 //select客製化樣式mixin
 @mixin selectorStyle {
 	@include box-sizing(border-box);

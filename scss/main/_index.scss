@@ -37,28 +37,30 @@
         }
 	}
 
-    .tab { margin:0 6px; }
+    .tab {
+        margin:0 6px;
+        background-color: $gray-shade-m;
+    }
     .tab ul li {
         width:16.6%;
-        border-left:2px solid rgba(217, 217, 217, .8);
+        border-left:2px solid $gray-shade-m;
+        background-color: $gray-shade-m;
 
         .arrow {
-            border-color: transparent transparent rgba(217, 217, 217, 0.8) transparent;
-            _border-color: #000 #000 rgba(217, 217, 217, 0.8) #000;
+            border-color: transparent transparent $gray-shade-m transparent;
+            _border-color: #000 #000 $gray-shade-m #000;
             _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
         }
 
         &:hover, &.selected {
             background:#606060;
             border-color:#606060;
-        }
-    }
+            .arrow {
+                border-color: transparent transparent #606060 transparent;
+                _border-color: #000 #000 #606060 #000;
+                _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+            }
 
-    .tab ul li:hover, .tab ul li.selected {
-        .arrow {
-            border-color: transparent transparent #606060 transparent;
-            _border-color: #000 #000 #606060 #000;
-            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
         }
     }
 }
@@ -638,9 +640,9 @@
     .section-title {
         padding-left: 10px;
 
-        @include fontSize($defFont + 6);
+        @include fontSize($defFont + 14);
         line-height: 39px;
-        font-weight: bold;
+        font-weight: lighter;
     }
 
     //section-head cates color settings
