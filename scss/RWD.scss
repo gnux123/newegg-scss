@@ -6,6 +6,8 @@
 @import "_base";
 
 @media screen and (max-width:1279px) {
+    .none { display: none; }
+
     .header,
     .topper,
     .footer {
@@ -36,13 +38,37 @@
 
     .topper .searchbar .input { width: 415px; }
 
+    .IndexRightBanner {
+        position: absolute;
+        right: 10px;
+    }
+
+    .banner .tab {
+        width: 562px;
+        ul li {
+            width: 19.9%;
+            &:first-child + li + li + li + li + li {
+                display:none;
+            }
+        }
+
+    }
+
     //[banner-adv]sixInOne settings
     .banner-adv {
         width: ($min-width - 240)#{px};
     }
 
     .boxArea .box {
-        width: 33.25%;
+        width: 33.24%;
+    }
+
+    .section {
+        width: 100%;
+
+        .combobox { width: 196px; }
+
+        .carousel-logo-wall  { display: none; }
     }
 
 
