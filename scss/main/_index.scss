@@ -93,7 +93,7 @@
 .indexBoxArea {
     @include float(left);
 	@include pie-clearfix;
-    margin: 15px 0 50px 0;
+    margin: 15px 0 25px 0;
     width:100%;
 }
 
@@ -655,4 +655,59 @@
         }
     }
 
+}
+
+
+/*#[carousel-logo] 首頁LOGO牆輪播
+        <div class="carousel-logo-wall carousel-logo-index">
+            <ul id="carousel-logo">
+                <li class="pic">
+                    <a href="/Category?CategoryID=1752"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_1.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1604"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_2.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1153"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_3.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1275"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_4.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1704"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_5.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1733"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_6.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1608"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_7.jpg" /></a>
+                </li>
+                <li class="pic">
+                    <a href="/Category?CategoryID=1235"><img src="http://10.16.131.67/Pic/SubCategoryStore/Manufacture/35_8.jpg" /></a>
+                </li>
+            </ul>
+            <a id="prev1" class="prev" href="javascript:void(0);">< </a>
+            <a id="next1" class="next" href="javascript:void(0);">> </a>
+        </div>
+*/
+
+.carousel-logo-index {
+    @include float(left);
+    position: relative;
+    margin-top: 12px;
+    width: ($frame-max-width - 80)#{px};
+    height: 80px;
+    border-color: $gray-shade-l;
+
+    li {
+        width: 135.8px;
+        height: 60px;
+        margin: 10px 0;
+    }
+
+    .prev,
+    .next {
+        padding-top: 80px;
+        background: $gray-shade-m;
+    }
 }

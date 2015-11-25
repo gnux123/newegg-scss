@@ -587,6 +587,20 @@ hr {
 		height: 115px;
 	}
 
+	.cellSingleImage {
+	    width: 194px;
+	    height: 203px;
+
+		img {
+		    display: block;
+			max-width: 194px;
+		    max-height: 203px;
+		    margin: 0 auto;
+		}
+	}
+
+
+
 	//首頁櫥窗使用
 	&.box2Top {
 		height: 280px;
@@ -601,6 +615,17 @@ hr {
 			width: 180px;
 			height: 180px;
 		}
+
+		.cellSingleImage {
+		    width: 194px;
+		    height: 279px;
+		}
+
+		.cellSingleImage img {
+			max-width: 194px;
+			max-height: 279px;
+		}
+
 
 		& + .box2Top .border,
 		& + .box2Top + .box2 + .box2 .border {
@@ -1046,3 +1071,61 @@ hr {
 	<span class="errMsg" id="PassWordRuleSay" style="display: none">error texts.</span>
 
 */
+
+
+/*#[LOGO-WALL] LOGO牆共用樣式*/
+.carousel-logo-wall {
+    padding: 0 40px;
+    background: #fff;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+
+	li {
+		float: left;
+	    background: #fff;
+	    overflow: hidden;
+	    border-left: 1px dashed $gray-shade-l;
+	    text-align: center;
+
+		&:first-child { border-left:0; }
+	}
+
+	.prev,
+	.next {
+		position: absolute;
+	    top: 0;
+	    display: block;
+	    width: 40px;
+	    height: 0;
+	    padding-top: 85px;
+	    overflow: hidden;
+	    margin: 0;
+
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			margin: -15px 0 0 -15px;
+			content: "";
+			display: block;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			background: url(#{$img-path}Icon/Close.png) center no-repeat;
+		}
+	}
+
+	.prev {
+		left:0px;
+		&:before { @include rotate(-90deg); }
+
+	}
+
+	.next {
+		right: 0px;
+		&:before { @include rotate(90deg); }
+	}
+
+}

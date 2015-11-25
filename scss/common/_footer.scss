@@ -1,3 +1,78 @@
+/*##[bottomer]bottomer列表連結樣式
+	<div class="bottomer">
+	    <div class="icon">
+	        <ul>
+				<li>
+					<a href="/Promotions/CardInstallment">
+						<i class=" ">
+							<img src="https://ssl-images.newegg.com.tw/pic/AdvImage/0/0/28/908/StartImg.png" title="刷卡分期">
+						</i>
+						<div class="text">刷卡分期</div>
+					</a>
+				</li>
+				<li>
+					<a href="/Promotions/CardInstallment">
+						<i class=" ">
+							<img src="https://ssl-images.newegg.com.tw/pic/AdvImage/0/0/28/908/StartImg.png" title="刷卡分期">
+						</i>
+						<div class="text">刷卡分期</div>
+					</a>
+				</li>
+				<li>
+					<a href="/Promotions/CardInstallment">
+						<i class=" ">
+							<img src="https://ssl-images.newegg.com.tw/pic/AdvImage/0/0/28/908/StartImg.png" title="刷卡分期">
+						</i>
+						<div class="text">刷卡分期</div>
+					</a>
+				</li>
+			</ul>
+	    </div>
+	</div>
+
+*/
+.bottomer {
+    width: ($frame-min-width - 320)#{px};
+	height: 120px;
+	margin: 0 auto;
+    text-align: center;
+
+	.icon {
+		width: auto;
+		height: 100%;
+	}
+
+	.icon ul {
+		@include pie-clearfix;
+		height: 100%;
+		li {
+			@include float(left);
+		    display: inline-block;
+		    padding: 0 10px;
+		    width: 100%;
+
+			i {
+				position: relative;
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+			}
+
+			.text {
+			    @include fontSize($defFont + 5);
+			    margin-top: 5px;
+			}
+		}
+
+		a,
+		a:hover {
+			color: $font-color;
+    		border-bottom: 0;
+		}
+	}
+
+}
+
 /*
 ##[footer]footer版面樣式
 
@@ -68,16 +143,20 @@
 .footer {
 	background-color: $gray-shade-lw;
 
-    a { border-bottom:0; }
-    a:hover { text-decoration: underline; }
+	.footer-limiter { @include pie-clearfix; }
+
+    a {
+		border-bottom:0;
+		&:hover { text-decoration: underline; }
+	}
 
     .icon {
-        li a,
-        li a:hover { border-bottom: 0; }
-
         li a {
+			&,
+			&:hover { border-bottom: 0; }
+
             @include fontSize($defFont);
-            color: #162D4B;
+            color:  $font-color;
         }
 
         li i {
@@ -97,27 +176,31 @@
 
     li { text-align: left; }
 
-    .selection { @include float(left); }
-    .selection ul li a {
-        color: #172D4B;
-    	@include fontSize($defFont + 2);
-    	border-bottom:0;
-    }
+    .selection {
+		@include float(left);
+		ul li a {
+			color: $font-color;
+			@include fontSize($defFont + 2);
+			border-bottom:0;
+		}
+	}
 
 
     //infoArea
     .infoArea {
         text-align: center;
 
-        .map { background:url(#{$img-path}Common/map.png) no-repeat center; }
-
-        .map .LinkTo:hover { border-bottom:0; }
+        .map {
+			background:url(#{$img-path}Common/map.png) no-repeat center;
+			.LinkTo:hover { border-bottom:0; }
+		}
     }
 
     //address
     .address {
-        color: #162D4B;
+        color:  $font-color;
         text-align: center;
+		line-height: 25px;
     }
 
 	.pageTop {
@@ -125,6 +208,4 @@
 		text-indent:100%;
 		cursor:pointer;
 	}
-
-
 }

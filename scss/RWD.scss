@@ -6,8 +6,6 @@
 @import "_base";
 
 @media screen and (max-width:1279px) {
-    .none { display: none; }
-
     .header,
     .topper,
     .footer {
@@ -65,10 +63,13 @@
 
     .section {
         width: 100%;
-
+        .none { display: none; }
         .combobox { width: 196px; }
 
-        .carousel-logo-wall  { display: none; }
+        .carousel-logo-index {
+            width: 900px;
+            li { width: 150px; }
+        }
     }
 
 

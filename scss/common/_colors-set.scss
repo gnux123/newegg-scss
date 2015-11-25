@@ -28,7 +28,7 @@
 
     }
     .colortxt#{$i} { color: nth($color-light-list, $i);  }
-    .colorline#{$i} { border-bottom: 1px solid nth($color-light-list, $i); }
+    .colorline#{$i} { border-bottom: 2px solid nth($color-light-list, $i); }
 }
 
 
