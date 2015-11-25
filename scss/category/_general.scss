@@ -234,6 +234,8 @@
 
 */
 
+.content > .section { margin-bottom: 40px; }
+
 //group2
 .group2 .box11 {
     @include float(left);
@@ -451,7 +453,7 @@
     position: relative;
     width:1000px;
     height: auto;
-    margin:40px auto 0px auto;
+    margin:0 auto 40px auto;
     padding-bottom: 100px;
 
     @include pie-clearfix;

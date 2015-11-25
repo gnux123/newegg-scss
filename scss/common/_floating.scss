@@ -42,7 +42,7 @@
         background-color: $orange-m;
         @include border-top-left-radius(5px);
         @include border-bottom-left-radius(5px);
-        @include box-shadow(-2px 1px 5px $gray-shade-d);
+        @include box-shadow(0px 0px 3px $gray-shade-d);
     }
 
     .FloatingCon {
@@ -73,6 +73,7 @@
 
     .service .text {
         position: relative;
+        display: none;
         padding: 10px 12px;
 
         @include fontSize($defFont);
@@ -84,7 +85,7 @@
         position:fixed;
         display:none;
 	    z-index:9;
-        top:30%;
+        bottom: 15%;
         right:0;
         cursor:pointer;
     }
@@ -95,7 +96,7 @@
         height: 40px;
         background: url(#{$img-path}shoppingCart.png) no-repeat;
         background-position: 1px 4px;
-        border-bottom: 1px solid #fff;
+        //border-bottom: 1px solid #fff;
     }
 
     .count {

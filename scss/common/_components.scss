@@ -1002,11 +1002,17 @@ hr {
 .banner,
 .banner-title + .banner {
     @extend  %banner;
+}
 
+.banner-title + .banner{
 	.tab {
-		&, & ul li { background-color:rgba(217, 217, 217, .8); }
+		&, & ul li { @include backgroundTrans($gray-shade-l, 0.7); }
 
 	}
+}
+
+.banner {
+	position: inherit;
 }
 
 

@@ -65,6 +65,17 @@
     }
 }
 
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 682px;
+    z-index: -1;
+}
+
+.ad ~ .mainPadding .section .banner .banner-bg { top: 60px; }
+
 /*
 #[IndexRightBanner]首頁右邊Banner
 ---
@@ -178,10 +189,11 @@
 }
 
 .limitedArea .limited {
-    width:201px;
-    height:299px;
-    border:2px solid $pink-m;
-    border-top:0;
+    width: 201px;
+    width: 203px \9;
+    height: 299px;
+    border: 2px solid $pink-m;
+    border-top: 0;
 }
 
 .limitedArea .limited .box {
@@ -515,6 +527,8 @@
     width: 24.91%;
     height: 100%;
     border-left: 1px dashed $gray-shade-l;
+
+    margin-left: -1px \9;
 
     .pic, a {
         margin:0 auto;
