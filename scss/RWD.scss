@@ -6,79 +6,13 @@
 @import "_base";
 
 @media screen and (max-width:1279px) {
-    .header,
-    .topper,
-    .footer {
-        &-limiter {
-          width: $frame-min-width#{px};
-          padding: 0 $outer-min-left#{px};
-        }
-    }
 
-    .mainPadding {
-      width: $frame-min-width#{px};
-      padding:0 $outer-min-left#{px};
-
-      &.clearPadding { width: $min-width#{px}; }
-    }
-
-    .subCategory {
-      width: $frame-min-width - ($side-width + 15)#{px};
-    }
-
-    //header-settings
-
-    //header-quickMenu
-    .header .quickMenu > ul > li {
-        padding:0;
-        width:85px;
-    }
-
-    .topper .searchbar .input { width: 415px; }
-
-    .IndexRightBanner {
-        position: absolute;
-        right: 10px;
-    }
-
-    .banner .tab {
-        width: 562px;
-        ul li {
-            width: 19.9%;
-            &:first-child + li + li + li + li + li {
-                display:none;
-            }
-        }
-
-    }
-
-    //[banner-adv]sixInOne settings
-    .banner-adv {
-        width: ($min-width - 240)#{px};
-    }
-
-    .boxArea .box {
-        width: 33.24%;
-    }
-
-    .section {
-        width: 100%;
-        .none { display: none; }
-        .combobox { width: 196px; }
-
-        .carousel-logo-index {
-            width: 900px;
-            li { width: 150px; }
-        }
-    }
-
+    @import "rwd/_header";
+    @import "rwd/_main";
+    @import "rwd/_category";
 
     //footer-use
     .footer > .footer-limiter li { margin-right:15px; }
-
-
-    //category banner
-    .banner-title + .banner { width: 748px; }
 
 
     //search result rwd

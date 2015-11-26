@@ -115,9 +115,20 @@ h3 {
 }
 
 //分類寬度設定
-.aside2 { width: $side-width#{px}; }
+.CategoryArea {
+	width: 100%;
+	@include pie-clearfix;
+}
+
+.aside2 {
+	@include float(left);
+	width: $side-width#{px};
+}
+
 .subCategory {
-  width: $frame-max-width - ($side-width + 15)#{px};
+	@include float(right);
+	@include pie-clearfix;
+  	width: ($frame-max-width - ($side-width + 15))#{px};
 }
 
 

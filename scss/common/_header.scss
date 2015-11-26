@@ -622,9 +622,13 @@
 
 .mainMenuBox {
     position: relative;
-    margin-left: -58.5px;
+    margin-left: 0px;
     width: 206px;
     height: 25px;
+
+    ul.pullDownList {
+        height: 486px;
+    }
 }
 
 .menudropDown {

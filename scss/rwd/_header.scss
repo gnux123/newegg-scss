@@ -1,0 +1,38 @@
+.header,
+.topper,
+.footer {
+	&-limiter {
+	  width: $frame-min-width#{px};
+	  padding: 0 $outer-min-left#{px};
+	}
+}
+
+.mainPadding {
+  width: $frame-min-width#{px};
+  padding:0 $outer-min-left#{px};
+
+  &.clearPadding { width: $min-width#{px}; }
+}
+
+.header .quickMenu > ul > li {
+	padding:0;
+	width:85px;
+}
+
+.topper .searchbar .input { width: 415px; }
+
+.IndexRightBanner {
+	position: absolute;
+	right: 10px;
+}
+
+.banner .tab {
+	width: 562px;
+	ul li {
+		width: 19.9%;
+		&:first-child + li + li + li + li + li {
+			display:none;
+		}
+	}
+
+}

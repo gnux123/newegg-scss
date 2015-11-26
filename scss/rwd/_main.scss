@@ -1,0 +1,19 @@
+//[banner-adv]sixInOne settings
+.banner-adv {
+	width: ($min-width - 240)#{px};
+}
+
+.boxArea .box {
+	width: 33.24%;
+}
+
+.section {
+	width: 100%;
+	.none { display: none; }
+	.combobox { width: 196px; }
+
+	.carousel-logo-index {
+		width: 900px;
+		li { width: 150px; }
+	}
+}

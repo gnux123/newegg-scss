@@ -149,6 +149,7 @@
     display: block;
     width:100%;
     height: 30px;
+    margin: 10px 0;
 
     .navOrder {
         position: absolute;
@@ -288,7 +289,7 @@
     width: $side-width#{px};
     height:auto;
     margin-bottom: $gutter#{px};
-    padding-top: 30px;
+    padding-top: 50px;
 
 
     word-wrap:break-word;
@@ -436,6 +437,20 @@
 
         }
 
+    }
+}
+
+//商品列表模組設定
+.box {
+    @include float(left);
+    width: 32%;
+    margin-left:10px;
+    margin-bottom:10px;
+    border:1px solid $gray-shade-l;
+
+    .pic {
+		margin:10px auto 5px;
+		text-align:center;
     }
 
 }

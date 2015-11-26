@@ -1,0 +1,24 @@
+.content {
+	width: 100%;
+	overflow: hidden;
+}
+
+//category-index
+.banner-title {
+	&,
+	& + .banner { width: 748px; }
+
+	& + .banner .banner-bg2 {
+		z-index: 3;
+	}
+}
+
+.section3 { z-index: 4; }
+
+
+//category-sub
+.subCategory {
+  width: ($frame-min-width - ($side-width + 15))#{px};
+
+  .box{ width: 31.8%; }
+}
