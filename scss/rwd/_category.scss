@@ -22,3 +22,9 @@
 
   .box{ width: 31.8%; }
 }
+
+.chooseArea {
+	.chooseBox { width: ($frame-min-width - 82)#{px}; }
+
+	#subPageContainer li { width: 229.5px; }
+}
