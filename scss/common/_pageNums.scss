@@ -11,13 +11,18 @@
 */
 
 .PageArea{
-	@include pie-clearfix;
-	position:relative;
+	@include float(left);
+	position: relative;
+	width: 100%;
+	height: auto;
 	margin-top:30px;
-	font-size:24px;
-	text-align:center;
 
-	a,span {
+	@include fontSize($defFont + 8);
+	text-align:center;
+	@include pie-clearfix;
+
+	a,
+	span {
 		padding:0 5px;
 		vertical-align:middle;
 		color:$font-color;

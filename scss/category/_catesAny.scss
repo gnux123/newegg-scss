@@ -284,17 +284,18 @@
         @include float(left);
         display: block;
         width: 218px;
-        height: 100%;
 
         border-left: 1px solid $gray-shade-l;
 
         &:first-child { border-left: 0; }
+
+        &,
+        &.box { height: 325px; }
     }
 
     //single box module
     .box {
         margin-left: 1px;
-        height: 100%;
         border-width: 0 0 0 1px;
     }
 }

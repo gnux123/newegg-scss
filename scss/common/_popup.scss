@@ -1,0 +1,23 @@
+//##燈箱效果
+.LightBoxUnderLay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+	.LightBoxMsg {
+	    display: block;
+	    position: fixed;
+
+		&.ProcessWindow {
+			width: 400px;
+	    	height: 182px;
+		}
+	}
+
+}

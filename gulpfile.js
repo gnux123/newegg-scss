@@ -103,8 +103,17 @@ gulp.task('watch', function () {
   gulp.watch([_address.sass, 'js/main.js'], ['copyfiles', 'styleguide', 'livereload']);
 });
 
+//for company sass-watch
+gulp.task('sass-watch', function(){
+    gulp.watch([_address.sass],['sass', 'copyfiles', 'copycss']);
+});
+
 //build task
 gulp.task('build',['sass', 'copyfiles', 'copycss', 'styleguide']);
 
 //watch task
 gulp.task('server', ['clean', 'webserver', 'watch']);
+
+
+//sass-watch task
+gulp.task('vstudio', ['clean', 'sass-watch']);
