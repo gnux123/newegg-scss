@@ -1,5 +1,6 @@
 {
   "name": "newegg-scss",
+  "version": "1.0.0",
   "description": "A package for newegg company use.",
   "author": "vincent.C.sue <gnux123@gmail.com>",
   "dependencies": {
