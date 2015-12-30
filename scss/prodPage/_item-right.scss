@@ -12,10 +12,34 @@
 
 .productContent {
     h3.itemName {
-        margin-top: 5px;
+        margin: 5px 0 10px 0;
         @include fontSize($defFont + 6);
         line-height: 32px;
         color: #000;
+    }
+
+    p { margin: 10px 0; }
+
+    p.activityExplanation {
+        text-align: right;
+        @include fontSize($defFont - 4);
+        margin-bottom: 15px;
+    }
+}
+
+p.ChoseStyle {
+    line-height: 22px;
+    span {
+        padding:2px 5px;
+        cursor:pointer;
+
+        &.gray { color: $gray-shade-m; }
+
+        &.selected,
+        &.gray.selected {
+            background: $orange-m;
+            color: #fff;
+        }
     }
 }
 
@@ -34,7 +58,7 @@
     .small {
         margin-right: 5px;
         @include fontSize($defFont);
-        font-weight: bold;
+        font-weight: lighter;
     }
 
     .marketPrice {
@@ -191,6 +215,12 @@
     }
 
     & ~ p { margin-bottom: $gutter#{px}; }
+
+    & + a {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
 
 //分期付款表格

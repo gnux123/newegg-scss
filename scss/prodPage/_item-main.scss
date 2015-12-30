@@ -99,7 +99,7 @@
 
     .tab {
         @include float(left);
-        width: 16.667%;
+        width: 20%;
         height: 55px;
 
         @include fontSize($defFont + 3);
@@ -109,13 +109,12 @@
         cursor: pointer;
 
         &.hover {
-            background: $font-organe-color;
+            background: $orange-m;
             color: #fff;
         }
     }
 
     .detail {
-        display: none;
         padding: 60px;
         * { max-width: 878px; }
 

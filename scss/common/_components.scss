@@ -1135,3 +1135,55 @@ hr {
 	}
 
 }
+
+//writer: vincent.c.su
+//write-date: 2015/10/20
+//sampleAddress: none
+//describe: 折價券及相關優惠狀態顯示for全站
+.cartDiscount {
+	margin:11px 5px 0 0;
+	padding:3px 3px 1px 3px;
+
+	font-size:15px;
+	line-height:15px;
+
+    &.borderRound {
+	padding:3px 6px 1px 6px;
+		@include border-radius(4px);
+    }
+
+    &.borderBtn {
+        height:20px;
+        border-width: 0px 1px 0 1px;
+        border-style: solid;
+        border-color: #999;
+        cursor:pointer;
+
+        &:hover { color:#e6eb3e; }
+        &:active,
+        &.active {
+            height: 20px;
+            border-width: 1px 0 0 1px;
+            border-style: solid;
+            border-color: #999;
+        }
+    }
+
+    &.bOcW {
+        background-color:#e91;
+        color:#fff;
+        text-shadow:0 0 2px #880;
+    }
+
+    &.bYcB {
+        background-color:#59f;
+        color:#e6eb3e;
+        text-shadow:0 0 2px #992;
+    }
+
+    &.bMcW {
+        background-color:#f49;
+        color:#fff;
+        text-shadow:0 0 1px #992;
+    }
+}
